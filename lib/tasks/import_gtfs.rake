@@ -51,51 +51,70 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
   end
   
   paths = []
-  if(mode == "bus" || mode == "all") paths.push("db/gtfs/google_bus") end
-  if(mode == "rail" || mode == "all") paths.push("db/gtfs/google_rail") end
+  if(args.mode == "bus" || args.mode == "all")
+    paths.push "db/gtfs/google_bus"
+  end
+  if(args.mode == "rail" || args.mode == "all")
+    paths.push "db/gtfs/google_rail"
+  end
   
+  # ROUTES
   if(args.type == "all" || args.type == "routes")
+    puts ""
+    puts "Importing Routes ..."
     RouteDirection.destroy_all
     Route.destroy_all
     
     paths.each do |p|
-      CSV.foreach('#{p}/routes.txt', :headers => true) do |row|
+      CSV.foreach("#{p}/routes.txt", :headers => true) do |row|
         import_route(row)
       end
     end
   end
   
+  # STOPS
   if(args.type == "all" || args.type == "stops")
+    puts ""
+    puts "Importing Stops ..."
     Stop.destroy_all
     
     paths.each do |p|
-      CSV.foreach('#{p}/stops.txt', :headers => true) do |row|
+      CSV.foreach("#{p}/stops.txt", :headers => true) do |row|
         import_stop(row)
       end
     end
   end
   
+  # TRIPS
   if(args.type == "all" || args.type == "trips")
+    puts ""
+    puts "Importing Trips ..."
     Trip.destroy_all
     
     paths.each do |p|
-      CSV.foreach('#{p}/trips.txt', :headers => true) do |row|
+      CSV.foreach("#{p}/trips.txt", :headers => true) do |row|
         import_trip(row)
       end
     end
   end
   
+  # STOP TIMES
   if(args.type == "all" || args.type == "times")
+    puts ""
+    puts "Importing Stop Times ..."
     StopTime.destroy_all
     
     paths.each do |p|
-      CSV.foreach('#{p}/stop_times.txt', :headers => true) do |row|
+      CSV.foreach("#{p}/stop_times.txt", :headers => true) do |row|
         import_stoptime(row)
       end
     end
   end
   
+  # SIMPLIFIED STOPS
   if(args.type == "all" || args.type == "simplifiedstops")
+    puts ""
+    puts "Generating Simplified Stops ..."
     SimplifiedStop.generate_stops
   end
 end

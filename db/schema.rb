@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20110905021855) do
   add_index "route_directions", ["route_short_name"], :name => "index_route_directions_on_route_short_name"
 
   create_table "routes", :force => true do |t|
-    t.string   "route_id"
+    t.integer  "route_id"
     t.string   "route_short_name"
     t.string   "route_long_name"
     t.string   "route_desc"
@@ -41,14 +41,14 @@ ActiveRecord::Schema.define(:version => 20110905021855) do
   add_index "routes", ["route_id"], :name => "index_routes_on_route_id"
 
   create_table "simplified_stops", :force => true do |t|
+    t.integer  "route_id"
     t.integer  "route_direction_id"
+    t.integer  "direction_id"
     t.integer  "stop_id"
+    t.string   "stop_name"
     t.integer  "stop_sequence"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "route_id"
-    t.integer  "direction_id"
-    t.string   "stop_name"
   end
 
   add_index "simplified_stops", ["route_direction_id"], :name => "index_simplified_stops_on_route_direction_id"
@@ -93,16 +93,16 @@ ActiveRecord::Schema.define(:version => 20110905021855) do
   add_index "stops", ["stop_id"], :name => "index_stops_on_stop_id"
 
   create_table "trips", :force => true do |t|
-    t.string   "route_id"
+    t.integer  "route_id"
     t.string   "service_id"
     t.string   "trip_id"
     t.string   "trip_headsign"
     t.integer  "block_id"
+    t.integer  "direction_id"
     t.string   "trip_short_name"
     t.string   "shape_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "direction_id"
   end
 
   add_index "trips", ["route_id"], :name => "index_trips_on_route_id"
