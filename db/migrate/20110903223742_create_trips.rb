@@ -6,6 +6,7 @@ class CreateTrips < ActiveRecord::Migration
       t.string "trip_id"
       t.string "trip_headsign"
       t.integer "block_id"
+      t.integer "direction_id"
       t.string "trip_short_name"
       t.string "shape_id"
       t.timestamps

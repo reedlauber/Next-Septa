@@ -3,7 +3,9 @@ class CreateSimplifiedStops < ActiveRecord::Migration
     create_table :simplified_stops do |t|
       t.integer "route_id"
       t.integer "route_direction_id"
+      t.integer "direction_id"
       t.integer "stop_id"
+      t.string "stop_name"
       t.integer "stop_sequence"
       t.timestamps
     end

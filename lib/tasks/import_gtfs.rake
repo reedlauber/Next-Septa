@@ -1,7 +1,7 @@
 desc "Import GTFS data"
 require "csv"
-task :import_gtfs, [:type] => :environment do |t, args|
-  args.with_defaults(:type => "all")
+task :import_gtfs, [:type, :mode] => :environment do |t, args|
+  args.with_defaults(:type => "all", :mode => "bus")
   
   puts "Starting import for: \"#{args.type}\""
   
@@ -50,46 +50,49 @@ task :import_gtfs, [:type] => :environment do |t, args|
     stoptime.save
   end
   
+  paths = []
+  if(mode == "bus" || mode == "all") paths.push("db/gtfs/google_bus") end
+  if(mode == "rail" || mode == "all") paths.push("db/gtfs/google_rail") end
+  
   if(args.type == "all" || args.type == "routes")
     RouteDirection.destroy_all
     Route.destroy_all
-    #CSV.foreach('db/gtfs/google_rail/routes.txt', :headers => true) do |row|
-    #  import_route(row)
-    #end
-    CSV.foreach('db/gtfs/google_bus/routes.txt', :headers => true) do |row|
-      import_route(row)
+    
+    paths.each do |p|
+      CSV.foreach('#{p}/routes.txt', :headers => true) do |row|
+        import_route(row)
+      end
     end
   end
   
   if(args.type == "all" || args.type == "stops")
     Stop.destroy_all
-    CSV.foreach('db/gtfs/google_rail/stops.txt', :headers => true) do |row|
-      import_stop(row)
-    end
-    CSV.foreach('db/gtfs/google_bus/stops.txt', :headers => true) do |row|
-      import_stop(row)
+    
+    paths.each do |p|
+      CSV.foreach('#{p}/stops.txt', :headers => true) do |row|
+        import_stop(row)
+      end
     end
   end
   
   if(args.type == "all" || args.type == "trips")
     Trip.destroy_all
-    CSV.foreach('db/gtfs/google_rail/trips.txt', :headers => true) do |row|
-      import_trip(row)
-    end
-    CSV.foreach('db/gtfs/google_bus/trips.txt', :headers => true) do |row|
-      import_trip(row)
+    
+    paths.each do |p|
+      CSV.foreach('#{p}/trips.txt', :headers => true) do |row|
+        import_trip(row)
+      end
     end
   end
   
   if(args.type == "all" || args.type == "times")
-    #StopTime.destroy_all
-    #CSV.foreach('db/gtfs/google_rail/stop_times.txt', :headers => true) do |row|
-    #  import_stoptime(row)
-    #end
-
-    #CSV.foreach('db/gtfs/google_bus/stop_times.txt', :headers => true) do |row|
-    #  import_stoptime(row)
-    #end
+    StopTime.destroy_all
+    
+    paths.each do |p|
+      CSV.foreach('#{p}/stop_times.txt', :headers => true) do |row|
+        import_stoptime(row)
+      end
+    end
   end
   
   if(args.type == "all" || args.type == "simplifiedstops")
