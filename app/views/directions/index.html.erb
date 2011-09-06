@@ -1,0 +1,5 @@
+<ul id="directions" class="snw-items">
+	<% @directions.each do |d| %>
+	<li><a href="/<%=params[:route_type] + "/" + params[:route_id] + "/" + d.direction_id.to_s %>" class="snw-section"><%="To: " + d.direction_name %></a></li>
+	<% end %>
+</ul>

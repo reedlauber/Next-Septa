@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NEXT|Septa</title>
+  <%= stylesheet_link_tag 'webapp-reset', 'main' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div id="container">
+		<hgroup id="header" class="snw-choose-<%=@header_choose %>">
+			<h1 class="snw-section"><a href="/">NEXT&rarr;Septa</a></h1>
+			<% if(@header_2 != nil) %>
+			<h2 class="snw-section">
+				<% if(@header_2_path != nil) %>
+				<a href="<%=@header_2_path%>"><%=@header_2 %></a>
+				<% else %>
+				<%=@header_2 %>
+				<% end %>
+			</h2>
+			<% end %>
+			<% if(@header_3 != nil) %>
+			<h3 class="snw-section">
+				<% if(@header_3_path != nil) %>
+				<a href="<%=@header_3_path%>"><%=@header_3 %></a>
+				<% else %>
+				<%=@header_3 %>
+				<% end %>
+			</h3>
+			<% end %>
+			<% if(@header_4 != nil) %><h4 class="snw-section"><a href="<%=@header_4_path%>"><%=@header_4 %></a></h4><% end %>
+		</hgroup>
+		<%= yield %>
+		<% if(params[:route_type] != nil) %>
+		<footer id="footer">
+			<ul>
+				<li><a href="/subways" class="snw-section">Subways</a></li>
+				<li><a href="/buses" class="snw-section">Buses</a></li>
+				<li><a href="/trolleys" class="snw-section">Trolleys</a></li>
+				<li><a href="/trains" class="snw-section">Trains</a></li>
+			</ul>
+		</footer>
+		<% end %>
+	</div>
+</body>
+</html>
