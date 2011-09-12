@@ -1,6 +1,6 @@
 Nextsepta::Application.routes.draw do
   root :to => "beta#index"
-  root :to => "index#index", :constraints => { :subdomain => "beta" }
+  root :to => "home#index", :constraints => { :subdomain => "beta" }
   
   get "/beta" => "home#index"
   
