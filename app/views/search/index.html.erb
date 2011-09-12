@@ -1,0 +1,12 @@
+<%=render "partials/lookup" %>
+<% if(@routes != nil && @routes.count > 0) %>
+<ul>
+	<% @routes.each do |r| %>
+	<li><a href="/" class="snw-section">(<%=r.route_short_name %>) <%=r.route_long_name %></a></li>
+	<% end %>
+</ul>
+<% else %>
+<div class="snw-content">
+	Sorry, couldn't find any matching routes.
+</div>
+<% end %>

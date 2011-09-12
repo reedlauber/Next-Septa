@@ -4,7 +4,7 @@
   <title>NEXT&rarr;Septa</title>
   <meta content="width=device-width,minimum-scale=1,maximum-scale=1" name="viewport">
   <%= stylesheet_link_tag 'webapp-reset', 'main' %>
-  <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="/stylesheets/mobile.css" />
+  <link rel="stylesheet" type="text/css" media="screen and (max-screen-width: 480px)" href="/stylesheets/mobile.css" />
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -12,7 +12,7 @@
 		<hgroup id="header" class="snw-choose-<%=@header_choose %>">
 			<h1 class="snw-section"><a href="/">NEXT&rarr;Septa</a></h1>
 			<% if(@header_2 != nil) %>
-			<h2 class="snw-section">
+			<h2 class="snw-section<%=(' snw-route-type-' + @route_type if @route_type) %><%=(' snw-route-' + @route_id.downcase if @route_id)%>">
 				<% if(@header_2_path != nil) %>
 				<a href="<%=@header_2_path%>"><%=@header_2 %></a>
 				<% else %>
