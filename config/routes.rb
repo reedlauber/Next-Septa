@@ -2,7 +2,7 @@ Nextsepta::Application.routes.draw do
   root :to => "beta#index"
   root :to => "index#index", :constraints => { :subdomain => "beta" }
   
-  get "/beta" => "index#index"
+  get "/beta" => "home#index"
   
   get "/search(/:term)" => "search#index"
   
