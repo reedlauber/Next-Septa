@@ -58,20 +58,6 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
     paths.push "db/gtfs/google_rail"
   end
   
-  # ROUTES
-  if(args.type == "all" || args.type == "routes")
-    puts ""
-    puts "Importing Routes ..."
-    RouteDirection.destroy_all
-    Route.destroy_all
-    
-    paths.each do |p|
-      CSV.foreach("#{p}/routes.txt", :headers => true) do |row|
-        import_route(row)
-      end
-    end
-  end
-  
   # STOPS
   if(args.type == "all" || args.type == "stops")
     puts ""
@@ -107,6 +93,20 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
     paths.each do |p|
       CSV.foreach("#{p}/stop_times.txt", :headers => true) do |row|
         import_stoptime(row)
+      end
+    end
+  end
+
+  # ROUTES
+  if(args.type == "all" || args.type == "routes")
+    puts ""
+    puts "Importing Routes ..."
+    RouteDirection.destroy_all
+    Route.destroy_all
+
+    paths.each do |p|
+      CSV.foreach("#{p}/routes.txt", :headers => true) do |row|
+        import_route(row)
       end
     end
   end

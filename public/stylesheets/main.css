@@ -1,6 +1,6 @@
 a, a:hover, a:visited, a:active { color:#222;text-decoration:none; }
 
-.snw-section { height:40px;line-height:40px;padding:0 8px;text-shadow:0 1px 1px rgba(255, 255, 255, 0.6);position:relative;
+.snw-section { padding:16px 8px;text-shadow:0 1px 1px rgba(255, 255, 255, 0.6);position:relative;
 	background-image:-moz-linear-gradient(center top, rgba(255, 255, 255, 0.4), rgba(200, 200, 200, 0.4));
 	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.4)), to(rgba(200, 200, 200, 0.4))); }
 
@@ -25,10 +25,11 @@ a, a:hover, a:visited, a:active { color:#222;text-decoration:none; }
 		.snw-stoptime time { font-size:1.4em;color:#4a4a4a;font-weight:bold; }
 		.snw-stoptime span { text-transform:uppercase;color:#666; }
 		.snw-stoptime-left { position:relative; }
-		.snw-stoptimes .snw-stoptime-left:after { content:'\2192';position:absolute;top:0;right:16px; }
+		.snw-stoptimes .snw-stoptime-left:after { content:'\2192';position:absolute;top:0;right:-4px; }
 
-.snw-stoptime { overflow:auto; }
-	.snw-stoptime-left, .snw-stoptime-left { float:left;width:50%; }
+.snw-stoptime { overflow:auto;clear:both; }
+	.snw-stoptime-left, .snw-stoptime-right { float:left;width:50%; }
+	.snw-stoptime-right { float:right;text-align:right; }
 
 .snw-items li { border-top:1px solid #ddd }
 .snw-items li:first-child { border:0; }
@@ -40,7 +41,7 @@ a, a:hover, a:visited, a:active { color:#222;text-decoration:none; }
 
 html, body { background-color:#5a5a5a;color:#333;font:12px Helvetica,Arial,Verdana,Sans-serif;height:100%;background-image:url(../images/snw-bg-noise.png); }
 
-#container { margin:0 auto;width:480px;background-color:#fff;
+#container { margin:0 auto;width:320px;background-color:#fff;
 	-moz-box-shadow:0 4px 8px rgba(0, 0, 0, 0.5);-webkit-box-shadow:0 4px 8px rgba(0, 0, 0, 0.5);box-shadow:0 4px 8px rgba(0, 0, 0, 0.5); }
 
 	#header { color:#222;letter-spacing:1px;font-weight:bold;text-shadow:0 0 1px rgba(255, 255, 255, 0.8); }
@@ -49,6 +50,7 @@ html, body { background-color:#5a5a5a;color:#333;font:12px Helvetica,Arial,Verda
 			#header h1 a { color:#fafafa;text-shadow:0 1px 0px rgba(0, 0, 0, 0.5); }
 		#header h2 { font-size:1.2em;background-color:#3baf4d; }
 		#header h3 { font-size:1.1em; }
+			#header h3 span { white-space:nowrap; }
 		
 		#header h2.snw-route-type-buses { background-color:#41525c; }
 		#header h2.snw-route-type-subways { background-color:#f58220; }

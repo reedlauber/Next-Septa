@@ -14,7 +14,7 @@
 			<% if(@header_2 != nil) %>
 			<h2 class="snw-section<%=(' snw-route-type-' + @route_type if @route_type) %><%=(' snw-route-' + @route_id.downcase if @route_id)%>">
 				<% if(@header_2_path != nil) %>
-				<a href="<%=@header_2_path%>"><%=@header_2 %></a>
+				<a href="<%=@header_2_path %>"><%=@header_2 %></a>
 				<% else %>
 				<%=@header_2 %>
 				<% end %>
@@ -23,7 +23,7 @@
 			<% if(@header_3 != nil) %>
 			<h3 class="snw-section">
 				<% if(@header_3_path != nil) %>
-				<a href="<%=@header_3_path%>"><%=@header_3 %></a>
+				<a href="<%=@header_3_path %>"><%=@header_3 %></a>
 				<% else %>
 				<%=@header_3 %>
 				<% end %>
@@ -38,7 +38,7 @@
 				<li><a href="/subways" class="snw-section">Subways</a></li>
 				<li><a href="/buses" class="snw-section">Buses</a></li>
 				<li><a href="/trolleys" class="snw-section">Trolleys</a></li>
-				<li><a href="/trains" class="snw-section">Trains</a></li>
+				<li><a href="http://isepta.org" class="snw-section" target="_blank">Trains</a></li>
 			</ul>
 		</footer>
 		<% end %>
