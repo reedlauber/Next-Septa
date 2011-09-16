@@ -1,5 +1,5 @@
-<ul id="routes" class="snw-items">
+<ul id="routes" class="nxs-items">
 	<% @route_types.each do |r| %>
-	<li><a href="/<%=params[:route_type] + "/" + r.route_short_name %>" class="snw-section snw-subway">(<%=r.route_short_name %>) <%=r.route_long_name %></a></li>
+	<li class="nxs-section"><a href="/<%=params[:route_type] + "/" + r.route_short_name %>"><span class="nxs-routelabel"><%=r.route_short_name %></span><%=r.route_long_name %></a></li>
 	<% end %>
 </ul>

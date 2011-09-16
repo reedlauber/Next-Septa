@@ -1,20 +1,20 @@
 <section id="times">
-	<header class="snw-stoptime-header">
-		<div class="snw-stoptime-left">
+	<header class="nxs-stoptime-header">
+		<div class="nxs-stoptime-left">
 			Departs
 		</div>
-		<div class="snw-stoptime-right">
+		<div class="nxs-stoptime-right">
 			Arrives
 		</div>
 	</header>
-	<ul class="snw-stoptimes">
+	<ul class="nxs-stoptimes">
 		<% @stop_times.each do |st| %>
-		<li class="snw-stoptime">
-			<div class="snw-stoptime-left">
+		<li class="nxs-stoptime">
+			<div class="nxs-stoptime-left">
 				<time datetime="<%=st["departure_stop_time"].departure_time %>"><%=st["departure_time"].to_formatted_s(:display_time) %></time>
 				<span>(<%=st["from_now"] %>)</span>
 			</div>
-			<div class="snw-stoptime-right">
+			<div class="nxs-stoptime-right">
 				<time datetime="<%=st["arrival_stop_time"].departure_time %>"><%=st["arrival_time"].to_formatted_s(:display_time) %></time>
 			</div>
 		</li>

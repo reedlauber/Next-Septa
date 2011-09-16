@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
     if(@route != nil)
       @route_type = params[:route_type]
       
-      @header_2 = @route.route_short_name
+      @header_2 = "<span class=\"nxs-routelabel\">#{@route.route_short_name}</span>".html_safe
       @header_2_path = "/#{params[:route_type]}/#{params[:route_id]}"
     
       @header_3 = "Choose Direction"
@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
   def create_headers_direction
     @direction = RouteDirection.where("route_short_name = '#{params[:route_id]}' AND direction_id = #{params[:direction]}").first
   
-    @header_2 += " - To: #{@direction.direction_name}"
+    @header_2 += "&rarr; #{@direction.direction_name}".html_safe
     @header_2_path = "/#{params[:route_type]}/#{params[:route_id]}/#{params[:direction]}"
   
     @header_3 = "Choose Starting Station"

@@ -9,10 +9,10 @@
 </head>
 <body>
 	<div id="container">
-		<hgroup id="header" class="snw-choose-<%=@header_choose %>">
-			<h1 class="snw-section"><a href="/">NEXT&rarr;Septa</a></h1>
+		<hgroup id="header" class="nxs-choose-<%=@header_choose %>" data-role="header">
+			<h1 class="nxs-section"><a href="/">NEXT&rarr;Septa</a></h1>
 			<% if(@header_2 != nil) %>
-			<h2 class="snw-section<%=(' snw-route-type-' + @route_type if @route_type) %><%=(' snw-route-' + @route_id.downcase if @route_id)%>">
+			<h2 class="nxs-section<%=(' nxs-route-type-' + @route_type if @route_type) %><%=(' nxs-route-' + @route_id.downcase if @route_id)%>">
 				<% if(@header_2_path != nil) %>
 				<a href="<%=@header_2_path %>"><%=@header_2 %></a>
 				<% else %>
@@ -21,7 +21,7 @@
 			</h2>
 			<% end %>
 			<% if(@header_3 != nil) %>
-			<h3 class="snw-section">
+			<h3 class="nxs-section">
 				<% if(@header_3_path != nil) %>
 				<a href="<%=@header_3_path %>"><%=@header_3 %></a>
 				<% else %>
@@ -29,16 +29,18 @@
 				<% end %>
 			</h3>
 			<% end %>
-			<% if(@header_4 != nil) %><h4 class="snw-section"><a href="<%=@header_4_path%>"><%=@header_4 %></a></h4><% end %>
+			<% if(@header_4 != nil) %><h4 class="nxs-section"><a href="<%=@header_4_path%>"><%=@header_4 %></a></h4><% end %>
 		</hgroup>
+		<div data-role="content">
 		<%= yield %>
+		</div>
 		<% if(params[:route_type] != nil) %>
-		<footer id="footer">
+		<footer id="footer" data-role="footer">
 			<ul>
-				<li><a href="/subways" class="snw-section">Subways</a></li>
-				<li><a href="/buses" class="snw-section">Buses</a></li>
-				<li><a href="/trolleys" class="snw-section">Trolleys</a></li>
-				<li><a href="http://isepta.org" class="snw-section" target="_blank">Trains</a></li>
+				<li><a href="/subways" class="nxs-section">Subways</a></li>
+				<li><a href="/buses" class="nxs-section">Buses</a></li>
+				<li><a href="/trolleys" class="nxs-section">Trolleys</a></li>
+				<li><a href="http://isepta.org" class="nxs-section" target="_blank">Trains</a></li>
 			</ul>
 		</footer>
 		<% end %>

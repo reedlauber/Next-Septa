@@ -1,7 +1,5 @@
-<ul id="stops" class="snw-items">
+<ul id="stops" class="nxs-items">
 	<% @stops.each do |s| %>
-	<li>
-		<a href="<%=@path + "/" + s.stop_id.to_s %>" class="snw-section"><%=s.stop_name %></a>
-	</li>
+	<li class="nxs-section"><a href="<%=@path + "/" + s.stop_id.to_s %>"><%=s.stop_name %></a></li>
 	<% end %>
 </ul>
