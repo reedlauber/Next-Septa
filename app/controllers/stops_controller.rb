@@ -1,6 +1,5 @@
 class StopsController < ApplicationController
-  ROUTE_TYPES = { "subways" => 1, "trains" => 2, "buses" => 3, "trolleys" => 4 }
-  #SERVICE_IDS = ["S3", "S1", "S1", "S1", "S1", "S1", "S2"]
+  ROUTE_TYPES = { "subways" => 1, "trains" => 2, "buses" => 3, "trolleys" => 0 }
   SERVICE_IDS = ["7", "1", "1", "1", "1", "1", "5"]
   Time::DATE_FORMATS[:display_time] = "%l:%M %P"
   Time::DATE_FORMATS[:compare_time] = "%H:%M:%S"

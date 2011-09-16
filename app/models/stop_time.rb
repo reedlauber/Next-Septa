@@ -1,23 +1,27 @@
 class StopTime < ActiveRecord::Base
   def convert!(to_stop)
-    to_stop_time = StopTime.where("trip_id = '#{self.trip_id}' AND stop_id = #{to_stop.stop_id}").first
-    
     d_time = self.departure_time
-    a_time = to_stop_time.departure_time
-  
     d_time_parts = d_time.split(':')
     if(d_time_parts[0].to_i > 23)
       d_time = "0" + (d_time_parts[0].to_i - 24).to_s + ":" + d_time_parts[1] + ":00"
     end
     
-    a_time_parts = a_time.split(':')
-    if(a_time_parts[0].to_i > 23)
-      a_time = "0" + (a_time_parts[0].to_i - 24).to_s + ":" + a_time_parts[1] + ":00"
-    end
-    
     depart_time = Time.parse(d_time)
-    arrive_time = Time.parse(a_time)
+    
     from_now = time_period_to_s depart_time - Time.now
+    
+    to_stop_time = StopTime.where("trip_id = '#{self.trip_id}' AND stop_id = #{to_stop.stop_id}").first
+    if(to_stop_time != nil)
+      a_time = to_stop_time.departure_time
+      a_time_parts = a_time.split(':')
+      if(a_time_parts[0].to_i > 23)
+        a_time = "0" + (a_time_parts[0].to_i - 24).to_s + ":" + a_time_parts[1] + ":00"
+      end
+      
+      arrive_time = Time.parse(a_time)
+    else
+      logger.error "Couldn't find TO stop_time for trip_id: '#{self.trip_id}' and stop_id: #{to_stop.stop_id}."
+    end
     
     { 
       "departure_time" => depart_time, 
