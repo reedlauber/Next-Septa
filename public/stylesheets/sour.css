@@ -11,7 +11,7 @@ h2 { font-size:1.4em; }
 h3 { font-size:1.2em; }
 h4 { font-size:1.1em; }
 
-/* Widgets */
+/* Floats */
 .s-left { float:left; }
 .s-right { float:right; }
 .s-clear { clear:both; }
@@ -19,6 +19,20 @@ h4 { font-size:1.1em; }
 .s-clearfix { display:inline-block; }
 html[xmlns] .s-clearfix { display:block; }
 
+/* Columns */
+.s-cols,.s-col-last { overflow:hidden; *overflow:visible;*zoom:1; }
+.s.col { float:left; }
+.s-col-1of1 { float:none; }
+.s-col-1of2 { width:50%; }
+.s-col-1of3 { width:33.33333%; }
+.s-col-2of3 { width:66.66666%; }
+.s-col-1of4 { width:25%; }
+.s-col-3of4 { width:75%; }
+.s-col-1of5 { width:20%; }
+.s-col-2of5 { width:40%; }
+.s-col-3of5 { width:60%; }
+.s-col-4of5 { width:80%; }
+.s-col-last { float:none;width:auto;_position:relative;_left:-3px;_margin-right:-3px; }
 
 /* Corners */
 .s-corner-all { -moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px; }

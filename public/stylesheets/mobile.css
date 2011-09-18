@@ -9,3 +9,7 @@
 @media screen and (min-width:321px) {
 	#container { width:480px; }
 }
+
+@media screen and (max-width: 319px) {
+	.s-col { float: none !important;width: auto !important; }
+}
