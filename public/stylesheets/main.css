@@ -17,8 +17,17 @@ a, a:hover, a:visited, a:active { color:#222;text-decoration:none; }
 .nxs-routelabel { font-size:1.8em;color:#444;text-transform:uppercase;position:relative;bottom:-3px; }
 .nxs-items .nxs-routelabel { color:#5a5a5a;border-right:1px solid #ddd;padding:0 12px 0 6px;margin-right:12px; }
 
-.nxs-routetype { background-color:#3366fd; }
+.nxs-routetype { background-color:#3366fd;position:relative;padding-left:36px; }
 .nxs-routetype:hover { background-color:#8bf; }
+	.nxs-routetype a:before { content:'';position:absolute;height:20px;width:20px;top:50%;left:8px;margin-top:-10px;
+	 	-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;
+	 	-moz-box-shadow:inset 1px 1px 1px rgba(0, 0, 0, 0.3), 1px 1px 0px rgba(255, 255, 255, 0.2); }
+
+.nxs-routetype-bsl a:before { background-color:#f58220; }
+.nxs-routetype-mfl a:before { background-color:#107dc1; }
+.nxs-routetype-buses a:before { background-color:#41525c; }
+.nxs-routetype-trolleys a:before { background-color:#539442; }
+.nxs-routetype-trains a:before { background-color:#477997; }
 
 .nxs-subways { background-color:#fdfd66; }
 .nxs-subways:hover { background-color:#ffa; }

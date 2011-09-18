@@ -62,14 +62,14 @@ a.s-inactive { text-decoration:none;cursor:default; }
 /* Form controls */
 .s-input { color:#444;border:1px solid #999;background-color:#f2f2f2;padding:6px 8px; }
 .s-input:focus { background-color:#fff;-moz-box-shadow:1px 1px 4px rgba(0, 0, 0, 0.3);-webkit-box-shadow:1px 1px 4px rgba(0, 0, 0, 0.3); }
-.s-input-text { width:320px;-moz-box-shadow:inset 1px 1px 4px rgba(0, 0, 0, 0.3);-webkit-box-shadow:inset 1px 1px 4px rgba(0, 0, 0, 0.3); }
+.s-input-text { width:320px;font:Helvetica,Arial,Verdana,Sans-serif;-moz-box-shadow:inset 1px 1px 4px rgba(0, 0, 0, 0.3);-webkit-box-shadow:inset 1px 1px 4px rgba(0, 0, 0, 0.3); }
 .s-input-bigtext { padding:5px 10px;width:480px; }
 .s-input-smalltext { width:180px; }
 .s-input-smallertext { width:72px; }
 .s-input-tinytext { width:40px; }
 .s-input-datetext { width:68px; }
 .s-input-numbertext { width:28px; }
-textarea.s-input { height:48px;width:360px;font-family:Lucida Grande,Lucida Sans Unicode,Verdana,Arial,Sans-serif; }
+textarea.s-input { height:48px;width:360px;font-family:Helvetica,Arial,Verdana,Sans-serif; }
 select.s-input { padding:4px;-moz-box-shadow:inset 1px 1px 4px rgba(0, 0, 0, 0.3); }
 .s-input-check { margin:0;padding:0;vertical-align:text-top;border:0;background-color:transparent; }
 .s-input-watermark { color:#a3a3a3; }
