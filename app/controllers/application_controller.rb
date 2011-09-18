@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
   def create_headers_direction
     @direction = RouteDirection.where("route_short_name = '#{params[:route_id]}' AND direction_id = #{params[:direction]}").first
   
-    @header_2 += "&rarr; #{@direction.direction_name}".html_safe
+    @header_2 += " &rarr; #{@direction.direction_name}".html_safe
     @header_2_path = "/#{params[:route_type]}/#{params[:route_id]}/#{params[:direction]}"
   
     @header_3 = "Choose Starting Station"
@@ -53,12 +53,12 @@ class ApplicationController < ActionController::Base
   def create_headers_from
     @from = SimplifiedStop.where("route_id = #{@route.route_id} AND stop_id = #{params[:from_stop]}").first
   
-    @header_3 = ("<span>" + @from.stop_name + " &rarr;</span> <span>Choose Ending Station</span>").html_safe
+    @header_3 = ("<span>" + @from.stop_name + " &rarr; Choose Ending Station</span>").html_safe
   
     if(params[:to_stop] != nil)
       @to = SimplifiedStop.where("route_id = #{@route.route_id} AND stop_id = #{params[:to_stop]}").first
     
-      @header_3 = ("<span>" + @from.stop_name + " &rarr;</span> <span>" + @to.stop_name + "</span>").html_safe
+      @header_3 = ("<span>" + @from.stop_name + " &rarr; " + @to.stop_name + "</span>").html_safe
     
       @header_choose = "h4"
     end

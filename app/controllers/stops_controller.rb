@@ -9,7 +9,7 @@ class StopsController < ApplicationController
     
     service_id = SERVICE_IDS[Time.zone.now.wday]
     
-    c_time = Time.now.to_formatted_s(:compare_time)
+    c_time = (Time.now - (60 * 5)).to_formatted_s(:compare_time)
     
     stop_times = StopTime.select("DISTINCT stop_times.*")
                     .joins("JOIN trips ON stop_times.trip_id = trips.trip_id")

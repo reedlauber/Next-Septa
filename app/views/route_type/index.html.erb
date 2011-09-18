@@ -1,5 +1,27 @@
+<% if(@route_types.count > 20) %>
+<div class="nxs-section nxs-quicknav">
+	<ul class="">
+		<li><a href="#20">20</a></li>
+		<li><a href="#30">30</a></li>
+		<li><a href="#40">40</a></li>
+		<li><a href="#50">50</a></li>
+		<li><a href="#60">60</a></li>
+		<li><a href="#70">70</a></li>
+		<li><a href="#80">80</a></li>
+		<li><a href="#90">90</a></li>
+		<li><a href="#103">100</a></li>
+		<li><a href="#201">more</a></li>
+	</ul>
+</div>
+<% end %>
 <ul id="routes" class="nxs-items">
 	<% @route_types.each do |r| %>
-	<li class="nxs-section"><a href="/<%=params[:route_type] + "/" + r.route_short_name %>"><span class="nxs-routelabel"><%=r.route_short_name %></span><%=r.route_long_name %></a></li>
+	<li class="nxs-section">
+		<% if(r.route_short_name[0] != @route_letter) %>
+		<% @route_letter = r.route_short_name[0] %>
+		<a name="<%=r.route_short_name %>" />
+		<% end %>
+		<a href="/<%=params[:route_type] + "/" + r.route_short_name %>"><span class="nxs-routelabel"><%=r.route_short_name %></span><%=r.route_long_name %></a>
+	</li>
 	<% end %>
 </ul>
