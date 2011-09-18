@@ -16,6 +16,7 @@ a, a:hover, a:visited, a:active { color:#222;text-decoration:none; }
 
 .nxs-routelabel { font-size:1.8em;color:#444;text-transform:uppercase;position:relative;bottom:-3px; }
 .nxs-items .nxs-routelabel { color:#5a5a5a;border-right:1px solid #ddd;padding:0 12px 0 6px;margin-right:12px; }
+.nxs-items .nxs-routetype { border:0; }
 
 .nxs-routetype { background-color:#3366fd;position:relative;padding-left:36px; }
 .nxs-routetype:hover { background-color:#8bf; }
