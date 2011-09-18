@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
   end
   
   def create_headers_route
-    @route_id = params[:route_id]
-    @route = Route.where("route_short_name = '#{params[:route_id]}'").first
+    @route_id = params[:route_id].upcase
+    @route = Route.find(:all, :conditions => ["route_short_name = ?", @route_id]).first
     
     if(@route != nil)
       @route_type = params[:route_type]
@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
   end
   
   def create_headers_direction
-    @direction = RouteDirection.where("route_short_name = '#{params[:route_id]}' AND direction_id = #{params[:direction]}").first
+    @direction = RouteDirection.find(:all, :conditions => ["route_short_name = ? AND direction_id = ?", @route_id, params[:direction]]).first
   
     @header_2 += " &rarr; #{@direction.direction_name}".html_safe
     @header_2_path = "/#{params[:route_type]}/#{params[:route_id]}/#{params[:direction]}"
@@ -51,12 +51,12 @@ class ApplicationController < ActionController::Base
   end
   
   def create_headers_from
-    @from = SimplifiedStop.where("route_id = #{@route.route_id} AND stop_id = #{params[:from_stop]}").first
+    @from = SimplifiedStop.find(:all, :conditions => ["route_id = ? AND stop_id = ?", @route.route_id, params[:from_stop]]).first
   
     @header_3 = ("<span>" + @from.stop_name + " &rarr; Choose Ending Station</span>").html_safe
   
     if(params[:to_stop] != nil)
-      @to = SimplifiedStop.where("route_id = #{@route.route_id} AND stop_id = #{params[:to_stop]}").first
+      @to = SimplifiedStop.find(:all, :conditions => ["route_id = ? AND stop_id = ?", @route.route_id, params[:to_stop]]).first
     
       @header_3 = ("<span>" + @from.stop_name + " &rarr; " + @to.stop_name + "</span>").html_safe
     
