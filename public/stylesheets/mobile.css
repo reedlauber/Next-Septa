@@ -1,4 +1,4 @@
-.nxs-items { height:48px;line-height:48px;-webkit-text-size-adjust:140%; }
+.nxs-items li { height:48px;line-height:48px;-webkit-text-size-adjust:140%; }
 
 #footer { -webkit-text-size-adjust:90%; }
 
@@ -11,5 +11,5 @@
 }
 
 @media screen and (max-width: 319px) {
-	.s-col { float: none !important;width: auto !important; }
+	.s-col { float:none !important;width: auto !important; }
 }
