@@ -70,7 +70,7 @@ var NextSepta = {};
 			if(_stops.length) {
 				setTimeout(function() {
 					_timer();
-				}, 55000);
+				}, 25000);
 			}
 		}
 		
