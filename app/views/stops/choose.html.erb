@@ -1,5 +1,10 @@
-<ul id="stops" class="nxs-items">
+<ul id="stops" class="nxs-items nxs-resize">
 	<% @stops.each do |s| %>
-	<li class="nxs-section"><a href="<%=@path + "/" + s.stop_id.to_s %>"><%=s.stop_name %></a></li>
+	<li class="nxs-section">
+		<a href="<%="#{@path}/#{s.stop_id}" %>"><%=s.stop_name %></a>
+		<% if @skip %>
+		<a href="<%="#{@path}/#{s.stop_id}/nodest" %>" class="nxs-skip">skip</a>
+		<% end %>
+	</li>
 	<% end %>
 </ul>

@@ -11,12 +11,12 @@
 		<% @stop_times.each do |st| %>
 		<li class="nxs-stoptime">
 			<div class="nxs-stoptime-left<%=" nxs-stoptime-nodest" if st["arrival_stop_time"] == nil %>">
-				<time datetime="<%=st["departure_stop_time"].departure_time %>"><%=st["departure_time"].to_formatted_s(:display_time) %></time>
+				<time datetime="<%=st["departure_time"].to_formatted_s(:display_iso_time) %>"><%=st["departure_time"].to_formatted_s(:display_time) %></time>
 				<span>(<%=st["from_now"] %>)</span>
 			</div>
 			<% if(st["arrival_stop_time"] != nil) %>
 			<div class="nxs-stoptime-right">
-				<time datetime="<%=st["arrival_stop_time"].departure_time %>"><%=st["arrival_time"].to_formatted_s(:display_time) %></time>
+				<time datetime="<%=st["arrival_time"].to_formatted_s(:display_iso_time) %>"><%=st["arrival_time"].to_formatted_s(:display_time) %></time>
 			</div>
 			<% end %>
 		</li>

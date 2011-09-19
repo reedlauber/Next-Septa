@@ -3,6 +3,7 @@ class StopsController < ApplicationController
   SERVICE_IDS = ["7", "1", "1", "1", "1", "1", "5"]
   Time::DATE_FORMATS[:display_time] = "%l:%M %P"
   Time::DATE_FORMATS[:compare_time] = "%H:%M:%S"
+  Time::DATE_FORMATS[:display_iso_time] = "%FT%H:%M:%S-04:00"
   
   def index
     create_headers
@@ -22,7 +23,9 @@ class StopsController < ApplicationController
   def from
     create_headers
     
-    @path = "/#{params[:route_type]}/#{params[:route_id]}/#{params[:direction]}"
+    @path = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}"
+    
+    @skip = true
     
     @stops = SimplifiedStop.where("route_id = #{@route.route_id} and direction_id = #{params[:direction]}").order("stop_sequence")
     
@@ -32,7 +35,7 @@ class StopsController < ApplicationController
   def to
     create_headers
     
-    @path = "/#{params[:route_type]}/#{params[:route_id]}/#{params[:direction]}/#{params[:from_stop]}"
+    @path = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}/#{params[:from_stop]}"
     
     @stops = SimplifiedStop.where("route_id = #{@route.route_id} AND direction_id = #{params[:direction]} AND stop_sequence > #{@from.stop_sequence}").order("stop_sequence")
     

@@ -20,8 +20,8 @@ class ApplicationController < ActionController::Base
     if(@route != nil)
       @route_type = params[:route_type]
       
-      @header_2 = "<span class=\"nxs-routelabel\">#{@route.route_short_name}</span>".html_safe
-      @header_2_path = "/#{params[:route_type]}/#{params[:route_id]}"
+      @header_2 = "<span class=\"nxs-routelabel\">#{@route.route_short_name}</span> #{@route.route_long_name}".html_safe
+      @header_2_path = "/#{@route_type}/#{@route_id}"
     
       @header_3 = "Choose Direction"
     
@@ -40,12 +40,12 @@ class ApplicationController < ActionController::Base
   def create_headers_direction
     @direction = RouteDirection.find(:all, :conditions => ["route_short_name = ? AND direction_id = ?", @route_id, params[:direction]]).first
   
-    @header_2 += " &rarr; #{@direction.direction_name}".html_safe
-    @header_2_path = "/#{params[:route_type]}/#{params[:route_id]}/#{params[:direction]}"
+    @header_2 = "<span class=\"nxs-routelabel\">#{@route.route_short_name}</span> &rarr; #{@direction.direction_name}".html_safe
+    @header_2_path = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}"
   
     @header_3 = "Choose Starting Station"
   
-    if(params[:from_stop] != nil)
+    if(params[:from_stop] != nil && params[:from_stop] != "nodest")
       create_headers_from
     end
   end
