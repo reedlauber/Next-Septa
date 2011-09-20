@@ -1,11 +1,11 @@
 .nxs-items li { height:48px;line-height:48px;-webkit-text-size-adjust:140%; }
 
 @media screen and (max-width:320px) {
-	#container { width:320px; }
+	#container, #subfooter { width:320px; }
 }
 
 @media screen and (min-width:321px) {
-	#container { width:480px; }
+	#container, #subfooter { width:480px; }
 }
 
 @media screen and (max-width: 319px) {
