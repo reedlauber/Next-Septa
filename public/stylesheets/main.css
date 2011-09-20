@@ -65,7 +65,7 @@ a, a:hover, a:visited, a:active { color:#222;text-decoration:none; }
 
 html, body { background-color:#5a5a5a;color:#333;font:12px Helvetica,Arial,Verdana,Sans-serif;height:100%;background-image:url(../images/nxs-bg-noise.png); }
 
-#container { margin:0 auto;width:480px;position:relative;
+#container { margin:0 auto;width:320px;position:relative;
 	-moz-box-shadow:0 4px 8px rgba(0, 0, 0, 0.5);-webkit-box-shadow:0 4px 8px rgba(0, 0, 0, 0.5);box-shadow:0 4px 8px rgba(0, 0, 0, 0.5); }
 
 	#header { color:#222;letter-spacing:1px;font-weight:bold;text-shadow:0 0 1px rgba(255, 255, 255, 0.8); }
