@@ -11,7 +11,7 @@
 <body>
 	<div id="container">
 		<hgroup id="header" class="nxs-choose-<%=@header_choose %>" data-role="header">
-			<h1 class="nxs-section"><a href="/beta">NEXT&rarr;Septa</a></h1>
+			<h1 class="nxs-section"><a href="/">NEXT&rarr;Septa<span>beta</span></a></h1>
 			<% if(@header_2 != nil) %>
 			<h2 class="nxs-section<%=(' nxs-route-type-' + @route_type if @route_type) %><%=(' nxs-route-' + @route_id.downcase if @route_id)%>">
 				<% if(@header_2_path != nil) %>
@@ -46,7 +46,11 @@
 		</footer>
 		<% end %>
 	</div>
-	<script defer>
+	<div id="subfooter">
+		<span id="follow"><a href="http://twitter.com/nextsepta">@nextsepta</a></span>
+		<span id="madeby">made by <a href="http://twitter.com/reedlauber">@reedlauber</a></span>
+	</div>
+	<script>
 		$(function() {
 			NextSepta.Manager({
 				components: {
@@ -55,7 +59,7 @@
 			}).init();
 		});
 	</script>
-	<script defer>
+	<script>
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-25696441-1']);
 	  _gaq.push(['_setDomainName', '.nextsepta.com']);

@@ -1,7 +1,5 @@
 .nxs-items li { height:48px;line-height:48px;-webkit-text-size-adjust:140%; }
 
-#footer { -webkit-text-size-adjust:90%; }
-
 @media screen and (max-width:320px) {
 	#container { width:320px; }
 }
