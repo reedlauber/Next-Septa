@@ -90,6 +90,12 @@ html, body { background-color:#5a5a5a;color:#333;font:12px Helvetica,Arial,Verda
 			-moz-box-shadow:inset 0 4px 8px rgba(0, 0, 0, 0.4);-webkit-box-shadow:inset 0 4px 8px rgba(0, 0, 0, 0.4);box-shadow:inset 0 4px 8px rgba(0, 0, 0, 0.4); }
 	
 	#content { background-color:#fff; }	
+	
+		#info { padding:8px;background-color:#555;color:#d0d0d0; }
+			#info li { margin-top:2em;line-height:1.2; }
+				#info a { color:#999; }
+				#info a:hover { text-decoration:underline; }
+		
 	.nxs-resize { overflow:auto; }
 		
 	#footer { background-color:#5b7cbf;overflow:auto; }

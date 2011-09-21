@@ -2,6 +2,7 @@ Nextsepta::Application.routes.draw do
   root :to => "home#index"
   
   get "/beta" => "home#index"
+  get "/info" => "info#index"
   
   get "/search(/:term)" => "search#index"
   
