@@ -25,14 +25,14 @@ class StopsController < ApplicationController
     
     @path = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}"
     
-    @skip = true
-    
     @stops = SimplifiedStop.where("route_id = #{@route.route_id} and direction_id = #{params[:direction]}").order("stop_sequence")
     
     render "choose"
   end
   
   def to
+    @choose_arrival = true
+    
     create_headers
     
     @path = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}/#{params[:from_stop]}"

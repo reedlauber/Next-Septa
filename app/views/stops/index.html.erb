@@ -3,9 +3,11 @@
 		<div class="nxs-stoptime-left">
 			Departs
 		</div>
+		<% if @to != nil %>
 		<div class="nxs-stoptime-right">
 			Arrives
 		</div>
+		<% end %>
 	</header>
 	<ul class="nxs-stoptimes">
 		<% @stop_times.each do |st| %>

@@ -39,11 +39,11 @@
 		</div>
 		<% if(params[:route_type] != nil) %>
 		<footer id="footer" class="nxs-routetype-<%=params[:route_type]%>" data-role="footer">
-			<ul>
-				<li class="nxs-section nxs-footer-subways"><a href="/subways" class="s-corner-all">Subways</a></li>
-				<li class="nxs-section nxs-footer-buses"><a href="/buses" class="s-corner-all">Buses</a></li>
-				<li class="nxs-section nxs-footer-trolleys"><a href="/trolleys" class="s-corner-all">Trolleys</a></li>
-				<li class="nxs-section nxs-footer-trains"><a href="http://isepta.org" class="s-corner-all" target="_blank">Trains</a></li>
+			<ul class="s-cols">
+				<li class="s-col s-col-1of4 nxs-section nxs-footer-subways"><a href="/subways" class="s-corner-all">Subways</a></li>
+				<li class="s-col s-col-1of4 nxs-section nxs-footer-buses"><a href="/buses" class="s-corner-all">Buses</a></li>
+				<li class="s-col s-col-1of4 nxs-section nxs-footer-trolleys"><a href="/trolleys" class="s-corner-all">Trolleys</a></li>
+				<li class="s-col s-col-last nxs-section nxs-footer-trains"><a href="http://isepta.org" class="s-corner-all" target="_blank">Trains</a></li>
 			</ul>
 		</footer>
 		<% end %>

@@ -38,10 +38,11 @@ class ApplicationController < ActionController::Base
   end
   
   def create_headers_direction
+    @direction_id = params[:direction]
     @direction = RouteDirection.find(:all, :conditions => ["route_short_name = ? AND direction_id = ?", @route_id, params[:direction]]).first
   
     @header_2 = "<span class=\"nxs-routelabel\">#{@route.route_short_name}</span> &rarr; #{@direction.direction_name}".html_safe
-    @header_2_path = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}"
+    @header_2_path = "/#{@route_type}/#{@route_id}/#{@direction_id}"
   
     @header_3 = "Choose Starting Station"
   
@@ -53,12 +54,13 @@ class ApplicationController < ActionController::Base
   def create_headers_from
     @from = SimplifiedStop.find(:all, :conditions => ["route_id = ? AND stop_id = ?", @route.route_id, params[:from_stop]]).first
   
-    @header_3 = ("<span>" + @from.stop_name + " &rarr; Choose Ending Station</span>").html_safe
-  
-    if(params[:to_stop] != nil)
+    if(params[:to_stop] == nil)
+      path = "/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}/choose"
+      @header_3 = ("<span>#{@from.stop_name} &rarr; <a href=\"#{path}\" class=\"nxs-choose\">choose</a></span>").html_safe
+    else
       @to = SimplifiedStop.find(:all, :conditions => ["route_id = ? AND stop_id = ?", @route.route_id, params[:to_stop]]).first
     
-      @header_3 = ("<span>" + @from.stop_name + " &rarr; " + @to.stop_name + "</span>").html_safe
+      @header_3 = ("<span>#{@from.stop_name} &rarr; #{@to.stop_name}</span>").html_safe
     
       @header_choose = "h4"
     end

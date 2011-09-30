@@ -2,9 +2,6 @@
 	<% @stops.each do |s| %>
 	<li class="nxs-section">
 		<a href="<%="#{@path}/#{s.stop_id}" %>"><%=s.stop_name %></a>
-		<% if @skip %>
-		<a href="<%="#{@path}/#{s.stop_id}/nodest" %>" class="nxs-skip">skip</a>
-		<% end %>
 	</li>
 	<% end %>
 </ul>

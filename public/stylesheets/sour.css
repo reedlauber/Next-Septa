@@ -21,7 +21,7 @@ html[xmlns] .s-clearfix { display:block; }
 
 /* Columns */
 .s-cols,.s-col-last { overflow:hidden; *overflow:visible;*zoom:1; }
-.s.col { float:left; }
+.s-col { float:left; }
 .s-col-1of1 { float:none; }
 .s-col-1of2 { width:50%; }
 .s-col-1of3 { width:33.33333%; }
