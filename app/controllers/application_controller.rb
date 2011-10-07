@@ -1,8 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  before_filter :check_cookies
   
   ROUTE_TYPES = { "subways" => 1, "trains" => 2, "buses" => 3, "trolleys" => 0 }
   ROUTE_TYPE_IDS = { 1 => "subways", 2 => "trains", 3 => "buses", 0 => "trolleys" }
+  
+  def check_cookies
+    @last_stop = cookies[:last_stop]
+  end
   
   def create_headers
     @header_2 = "Choose Route"

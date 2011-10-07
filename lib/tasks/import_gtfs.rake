@@ -5,49 +5,35 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
   
   puts "Starting import for: \"#{args.type}\""
   
-  def import_route(row)
-    puts "Importing route: " + row.field(1)
-    route = Route.new
+  def import_helper(row, obj, type, label_index, label_index_sec)
+    puts "Importing #{type}: " + row.field(label_index)# + (row.field(label_index_sec) if label_index_sec != nil)
     row.headers.each do |h|
       if(row.field(h) != nil)
-        route[h.lstrip] = row.field(h).lstrip
+        obj[h.lstrip] = row.field(h).lstrip
       end
     end
-    route.save
+    obj.save
+  end
+  
+  def import_route(row)
+    route = Route.new
+    import_helper(row, route, 'route', 1, nil)
     route.add_directions!
   end
   
-  def import_stop(row)
-    puts "Importing stop: " + row.field(1)
+  def import_stop(row)    
     stop = Stop.new
-    row.headers.each do |h|
-      if(row.field(h) != nil)
-        stop[h.lstrip] = row.field(h).lstrip
-      end
-    end
-    stop.save
+    import_helper(row, stop, 'stop', 1, nil)
   end
   
   def import_trip(row)
-    puts "Importing trip: " + row.field(2)
     trip = Trip.new
-    row.headers.each do |h|
-      if(row.field(h) != nil)
-        trip[h.lstrip] = row.field(h).lstrip
-      end
-    end
-    trip.save
+    import_helper(row, trip, 'trip', 3, nil)
   end
   
   def import_stoptime(row)
-    puts "Importing stop-time: " + row.field(0) + "-" + row.field(4)
     stoptime = StopTime.new
-    row.headers.each do |h|
-      if(row.field(h) != nil)
-        stoptime[h.lstrip] = row.field(h).lstrip
-      end
-    end
-    stoptime.save
+    import_helper(row, stoptime, 'stop-time', 0, 4)
   end
   
   paths = []

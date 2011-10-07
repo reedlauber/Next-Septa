@@ -18,6 +18,8 @@ class StopsController < ApplicationController
                     .order("departure_time")
                     .limit(5)
     @stop_times = StopTime.convert_list(stop_times, @to)
+    
+    cookies[:last_stop] = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}/#{@from.stop_id}"
   end
   
   def from
