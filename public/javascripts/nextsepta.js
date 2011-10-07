@@ -16,8 +16,20 @@ var NextSepta = {};
 			}
 		}
 		
+		function _setupHistory() {
+			if(window.history && window.history.pushState) {
+				$('.nxs-hist-link').click(function() {
+					var href = $(this).attr('href');
+					window.history.pushState({}, '', href);
+					return false;
+				});
+			}
+		}
+		
 		_self.init = function() {
 			//_resize();
+			
+			_setupHistory();
 			
 			$.each(_options.components, function(p, c) {
 				c.init(_self);
