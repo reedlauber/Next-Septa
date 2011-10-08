@@ -29,7 +29,7 @@ var NextSepta = {};
 		_self.init = function() {
 			//_resize();
 			
-			_setupHistory();
+			//_setupHistory();
 			
 			$.each(_options.components, function(p, c) {
 				c.init(_self);
