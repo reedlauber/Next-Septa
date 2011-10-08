@@ -110,6 +110,9 @@ html, body { background-color:#5a5a5a;color:#333;font:12px Helvetica,Arial,Verda
 				#info a { color:#999; }
 				#info a:hover { text-decoration:underline; }
 		
+		#lookup { position:relative; }
+			#lookup aside { position:absolute;top:50%;right:0;margin-top:-1em;line-height:1.1; }
+		
 		#times { position:relative; }
 	.nxs-resize { overflow:auto; }
 		
