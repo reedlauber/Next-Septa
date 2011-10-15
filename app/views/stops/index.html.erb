@@ -1,4 +1,4 @@
-<section id="times">
+<section id="times" data-route="<%=@route_id %>">
 	<header class="nxs-stoptime-header">
 		<div class="nxs-stoptime-left">
 			Departs
@@ -11,7 +11,7 @@
 	</header>
 	<ul class="nxs-stoptimes">
 		<% @stop_times.each do |st| %>
-		<li class="nxs-stoptime">
+		<li class="nxs-stoptime" data-block="<%=st["block_id"]%>">
 			<div class="nxs-stoptime-left<%=" nxs-stoptime-nodest" if st["arrival_stop_time"] == nil %>">
 				<time datetime="<%=st["departure_time"].to_formatted_s(:display_iso_time) %>"><%=st["departure_time"].to_formatted_s(:display_time) %></time>
 				<span>(<%=st["from_now"] %>)</span>
@@ -21,6 +21,8 @@
 				<time datetime="<%=st["arrival_time"].to_formatted_s(:display_iso_time) %>"><%=st["arrival_time"].to_formatted_s(:display_time) %></time>
 			</div>
 			<% end %>
+			<div class="nxs-stoptime-aside">
+			</div>
 		</li>
 		<% end %>
 	</ul>

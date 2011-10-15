@@ -48,8 +48,10 @@ a, a:hover, a:visited, a:active { color:#222;text-decoration:none; }
 		a.nxs-choose { display:inline;font-size:0.8em; }
 
 .nxs-stoptime { overflow:auto;clear:both; }
-	.nxs-stoptime-left { float:left;width:60%; }
-	.nxs-stoptime-right { float:right;width:40%;text-align:right; }
+	.nxs-stoptime-left { float:left;width:55%; }
+	.nxs-stoptime-right { float:left;width:30%;text-align:right; }
+	.nxs-stoptime-aside { float:left;width:15%;text-align:center; }
+		.nxs-stoptime-aside a { display:inline-block;height:16px;width:16px;opacity:0.7;background:url(../images/gentleface/black/pin_2_icon&16.png) no-repeat;text-indent:-9999px; }
 
 .nxs-items li { border-top:1px solid #fff;border-bottom:1px solid #ddd; }
 .nxs-items li:first-child { border-top:0; }
@@ -114,6 +116,8 @@ html, body { background-color:#5a5a5a;color:#333;font:12px Helvetica,Arial,Verda
 			#lookup aside { position:absolute;top:50%;right:0;margin-top:-1em;line-height:1.1; }
 		
 		#times { position:relative; }
+		
+		#map-inner { height:320px;width:320px; }
 	.nxs-resize { overflow:auto; }
 		
 	#footer { background-color:#5b7cbf; }

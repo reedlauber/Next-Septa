@@ -30,7 +30,9 @@ class StopTime < ActiveRecord::Base
       "arrival_time" => arrive_time, 
       "from_now" => from_now, 
       "departure_stop_time" => self,
-      "arrival_stop_time" => to_stop_time
+      "arrival_stop_time" => to_stop_time,
+      "trip_id" => self.trip_id,
+      "block_id" => self.block_id
     }
   end
   

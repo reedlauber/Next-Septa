@@ -7,6 +7,9 @@ Nextsepta::Application.routes.draw do
   
   get "/search(/:term)" => "search#index"
   
+  get "/locations/:route_id" => "location#index"
+  
+  get "/:route_type/:route_id/:direction/:from_stop(/:to_stop)/map" => "map#index"
   get "/:route_type/:route_id/:direction/:from_stop/choose" => "stops#to"
   get "/:route_type/:route_id/:direction/:from_stop/:to_stop" => "stops#index"
   get "/:route_type/:route_id/:direction/:from_stop" => "stops#index"

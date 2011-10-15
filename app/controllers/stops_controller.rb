@@ -12,7 +12,7 @@ class StopsController < ApplicationController
     
     c_time = (Time.now - (60 * 5)).to_formatted_s(:compare_time)
     
-    stop_times = StopTime.select("DISTINCT stop_times.*")
+    stop_times = StopTime.select("DISTINCT stop_times.*, trips.block_id")
                     .joins("JOIN trips ON stop_times.trip_id = trips.trip_id")
                     .where("trips.route_id = '#{@route.route_id}' AND stop_id = #{@from.stop_id} AND trips.direction_id = #{@direction.direction_id} AND service_id = '#{service_id}' AND departure_time > '#{c_time}'")
                     .order("departure_time")

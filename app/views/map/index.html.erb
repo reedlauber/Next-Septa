@@ -1,0 +1,23 @@
+<div id="map" data-lat="<%=@lat %>" data-lng="<%=@lng %>">
+	<div id="map-inner"></div>
+</div>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+<script>
+	$(function() {
+		var lat = parseFloat($('#map').attr('data-lat')),
+			lng = parseFloat($('#map').attr('data-lng'));
+		
+		var latlng = new google.maps.LatLng(lat, lng);
+	    var myOptions = {
+	      zoom: 16,
+	      center: latlng,
+	      mapTypeId: google.maps.MapTypeId.ROADMAP
+	    };
+		var map = new google.maps.Map(document.getElementById("map-inner"), myOptions);
+		var marker = new google.maps.Marker({
+			position: latlng,
+			map: map, 
+			title: 'Bus Location'
+		});
+	});
+</script>
