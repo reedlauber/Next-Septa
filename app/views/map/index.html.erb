@@ -7,17 +7,48 @@
 		var lat = parseFloat($('#map').attr('data-lat')),
 			lng = parseFloat($('#map').attr('data-lng'));
 		
-		var latlng = new google.maps.LatLng(lat, lng);
-	    var myOptions = {
-	      zoom: 16,
-	      center: latlng,
-	      mapTypeId: google.maps.MapTypeId.ROADMAP
-	    };
-		var map = new google.maps.Map(document.getElementById("map-inner"), myOptions);
-		var marker = new google.maps.Marker({
-			position: latlng,
-			map: map, 
-			title: 'Bus Location'
-		});
+		function _setupMap(userLatLng) {
+			var latlng = new google.maps.LatLng(lat, lng),
+				center = latlng;
+			
+			if(userLatLng) {
+				var bounds = new google.maps.LatLngBounds();
+				bounds.extend(latlng);
+				bounds.extend(userLatLng);
+				center = bounds.getCenter();
+			}	
+			
+		    var myOptions = {
+		      zoom: 16,
+		      center: center,
+		      mapTypeId: google.maps.MapTypeId.ROADMAP
+		    };
+			var map = new google.maps.Map(document.getElementById("map-inner"), myOptions);
+			var marker = new google.maps.Marker({
+				position: latlng,
+				map: map, 
+				icon: '/images/markers/bus.png',
+				title: 'Bus Location'
+			});
+			
+			if(userLatLng) {
+				var marker = new google.maps.Marker({
+					position: userLatLng,
+					map: map, 
+					title: 'Your Location'
+				});
+			}
+		}
+		
+		if(navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(function(position) {
+		    	var userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+		    	_setupMap(userLatLng)
+		    }, function() {
+		    	_setupMap();
+		    });
+		} else {
+			_setupMap();
+		}
 	});
 </script>

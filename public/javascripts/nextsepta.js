@@ -172,7 +172,7 @@ var NextSepta = {};
 			});
 		}
 		
-		function _getRealTime(routeId) {
+		function _getRealTimeData(routeId) {
 			NXS.Data.get('/locations/' + routeId, function(resp) {
 				var buses = {};
 				if(resp.bus) {
@@ -200,9 +200,9 @@ var NextSepta = {};
 				}
 			});
 			
-			var routeId = $('#times').attr('data-route');
-			if(routeId) {
-				_getRealTime(routeId);	
+			
+			if(_state.routeType === 'buses' && _state.routeId) {
+				_getRealTimeData(_state.routeId);	
 			}
 			
 			_timer();
