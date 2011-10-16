@@ -112,6 +112,9 @@ var NextSepta = {};
 			return _self;
 		};
 		
+		NXS._manager = _self;
+		NXS._components = _options.components;
+		
 		return _self;
 	};
 	
