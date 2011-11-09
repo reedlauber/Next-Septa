@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data | NEXT&rarr;Septa</title>
+  <%= stylesheet_link_tag 'webapp-reset', 'sour', 'typography', 'data' %>
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <%= javascript_include_tag 'jquery.min.js', 'nextsepta' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div id="container" class="s-corner-all-24 s-shadow">
+		<%= yield %>
+	</div>
+</body>
+</html>

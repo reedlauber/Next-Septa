@@ -3,7 +3,7 @@
 <head>
   <title>NEXT&rarr;Septa | Next Stop Times for SEPTA Buses, Subways and Tolleys</title>
   <meta content="width=device-width,minimum-scale=1,maximum-scale=1" name="viewport">
-  <%= stylesheet_link_tag 'webapp-reset', 'sour', 'main' %>
+  <%= stylesheet_link_tag 'webapp-reset', 'sour', 'typography', 'main' %>
   <link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" href="/stylesheets/mobile.css" />
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
@@ -14,7 +14,7 @@
 <body>
 	<div id="container">
 		<hgroup id="header" class="nxs-choose-<%=@header_choose %>" data-role="header">
-			<h1 class="nxs-section"><a href="/">NEXT&rarr;Septa<span>beta</span></a><a id="header-info" href="/info" class="s-corner-all-4">info</a></h1>
+			<h1 class="nxs-section"><a href="/">NEXT&rarr;Septa<span>beta</span></a><a id="header-info" href="/info" class="nxs-header-btn s-corner-all-4">info</a></h1>
 			<% if(@header_2 != nil) %>
 			<h2 class="nxs-section<%=(' nxs-route-type-' + @route_type if @route_type) %><%=(' nxs-route-' + @route_id.downcase if @route_id)%>">
 				<% if(@header_2_path != nil) %>

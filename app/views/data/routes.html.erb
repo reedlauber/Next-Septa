@@ -1,0 +1,13 @@
+<div id="data-index" class="s-cols">
+	<div class="s-col s-col-1of2">
+		<h1>Routes</h1>
+	
+		<ul class="data-list s-corner-all">
+		<% @routes.each do |r| %>
+			<li><a href="/data/routes/<%=r.route_short_name %>"><span class="nxs-routelabel"><%=r.route_short_name %></span> <%=r.route_long_name %><span class="icon"></span></a></li>
+		<% end %>
+		</ul>
+	</div>
+	<div class="s-col-last">
+	</div>
+</div>
