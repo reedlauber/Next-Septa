@@ -3,7 +3,7 @@ class StopsController < ApplicationController
   SERVICE_IDS = ["7", "1", "1", "1", "1", "1", "5"]
   Time::DATE_FORMATS[:display_time] = "%l:%M %P"
   Time::DATE_FORMATS[:compare_time] = "%H:%M:%S"
-  Time::DATE_FORMATS[:display_iso_time] = "%FT%H:%M:%S-04:00"
+  Time::DATE_FORMATS[:display_iso_time] = "%FT%H:%M:%S-" + (Time.now.isdst ? "04" : "05") + ":00"
   
   def index
     create_headers
