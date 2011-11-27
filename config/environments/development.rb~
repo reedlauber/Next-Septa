@@ -22,8 +22,5 @@ Nextsepta::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
-
-  # Set the time zone to Eastern US (Philadelphia) explicitly, in case the
-  # server time is set to something else.
-  config.time_zone = 'Eastern Time (US & Canada)'
 end
+
