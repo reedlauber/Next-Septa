@@ -46,4 +46,8 @@ Nextsepta::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  # Set the time zone to Eastern US (Philadelphia) explicitly, in case the
+  # server time is set to something else.
+  config.time_zone = 'Eastern Time (US & Canada)'
 end
