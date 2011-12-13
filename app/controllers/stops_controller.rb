@@ -10,12 +10,9 @@ class StopsController < ApplicationController
 
     service_id = SERVICE_IDS[Time.zone.now.wday]
 
-    # The local server time may not be easten, and Time.now is going to give
-    # local server time, so calculate the offset.
-    eastern_offset = (Time.now.isdst ? -4 : -5).hours
-    local_offset = (Time.now.utc_offset - eastern_offset)
-
-    c_time = (Time.now - local_offset - 5.minutes).to_formatted_s(:compare_time)
+    # The local server time may not be eastern, and Time.now is going to give
+    # local server time, so be sure to use Time.zone.now.
+    c_time = Time.zone.now.to_formatted_s(:compare_time)
 
     stop_times = StopTime.select("DISTINCT stop_times.*, trips.block_id")
                     .joins("JOIN trips ON stop_times.trip_id = trips.trip_id")
