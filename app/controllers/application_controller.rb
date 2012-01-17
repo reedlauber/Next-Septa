@@ -66,7 +66,7 @@ class ApplicationController < ActionController::Base
   end
   
   def create_headers_from
-    @from = SimplifiedStop.find(:all, :conditions => ["route_id = ? AND stop_id = ?", @route.route_id, params[:from_stop]]).first
+    @from = SimplifiedStop.where("route_id = ? AND stop_id =? AND direction_id = ?", @route.route_id, params[:from_stop], @direction.direction_id).first
   
     if(params[:to_stop] == nil)
       path = "/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}/choose"

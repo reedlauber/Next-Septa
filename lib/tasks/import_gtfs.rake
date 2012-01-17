@@ -159,8 +159,9 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
     start_time = Time.now
     
     puts "\nDeleting old values ..."
-    RouteDirection.destroy_all
+    ActiveRecord::Base.connection.execute("truncate table route_directions")
     total_time += timer_interval(start_time, "Time spent deleting values: ")
+    start_time = Time.now
     
     puts "\nCreating new values ..."
     RouteDirection.generate_directions
@@ -179,8 +180,9 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
     start_time = Time.now
     
     puts "\nDeleting old values ..."
-    SimplifiedStop.destroy_all
+    ActiveRecord::Base.connection.execute("truncate table simplified_stops")
     total_time += timer_interval(start_time, "Time spent deleting values: ")
+    start_time = Time.now
     
     puts "\nCreating new values ..."
     SimplifiedStop.generate_stops
