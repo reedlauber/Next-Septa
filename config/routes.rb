@@ -1,6 +1,6 @@
 Nextsepta::Application.routes.draw do
-  root :to => "home#index"
-  #root :to => "content#upgrade"
+  #root :to => "home#index"
+  root :to => "content#upgrade"
   
   get "/beta" => "home#index"
   get "/info" => "content#info"

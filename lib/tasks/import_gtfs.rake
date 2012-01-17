@@ -51,6 +51,14 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
   def import_fast(inst, columns, values)
     inst.import columns, values
   end
+  
+  def import_batch(inst, columns, batch, batch_num, batch_start)
+    start_time = Time.now
+    puts "\nInserting batch #{batch_num} (starting at #{batch_start}) ..."
+    import_fast(inst, columns, batch)
+    time_spent = timer_interval(start_time, "Time spent inserting batch: ")
+    time_spent
+  end
 
   # helper to delete existing records, read CSV data into array of arrays, and import
   def import_type(paths, type, file_name, columns)
@@ -59,10 +67,18 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
     inst = Object.const_get(type)
     
     batch_size = 50000
+    batch_num = 0
     
     total_time = 0
+    time_reading = 0
+    time_writing = 0
     start_time = Time.now
     elapsed = 0
+    
+    puts "\nDeleting old values ..."
+    ActiveRecord::Base.connection.execute("truncate table #{inst.table_name}")
+    total_time += timer_interval(start_time, "Time spent deleting values: ")
+    start_time = Time.now
 
     # loop over buses and/or rail files
     paths.each do |p|
@@ -83,49 +99,39 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
         end
         # add row data to total collection
         values << record_values
+        
+        if(values.count >= batch_size)
+          batch_start = batch_num * batch_size
+          batch_num += 1
+          time_reading += timer_interval(start_time, "\nTime spent reading values: ")
+          total_time += time_reading
+          time_writing += import_batch(inst, columns, values, batch_num, batch_start)
+          total_time += time_writing
+          start_time = Time.now
+          values = []
+        end
       end
       
-      puts "\n#{values.count} to import ..."
-      total_time += timer_interval(start_time, "Time spent reading values: ")
-      start_time = Time.now
-
-      puts "\nDeleting old values ..."
-      ActiveRecord::Base.connection.execute("truncate table #{inst.table_name}")
-      #inst.destroy_all
-      total_time += timer_interval(start_time, "Time spent deleting values: ")
-      start_time = Time.now
-      
-      if(values.count > batch_size)
-        batched_values = []
-        batch_num = 0
-        values.each do |v|
-          batched_values << v
-          if(batched_values.count == batch_size)
-            batch_start = batch_num * batch_size
-            batch_num += 1
-            puts "\nInserting batch #{batch_num} (#{batch_start} of #{values.count}) ..."
-            import_fast(inst, columns, batched_values)
-            batched_values = []
-            total_time += timer_interval(start_time, "Time spent inserting batch: ")
-            start_time = Time.now
-          end
-        end
+      if(values.count > 0)
+        puts "\n#{values.count} to import ..."
+        time_reading += timer_interval(start_time, "Time spent reading values: ")
+        total_time += time_reading
+        start_time = Time.now
         
-        if(batched_values.count > 0)
-          puts "\nInserting batch of #{batched_values.count} values ..."
-          import_fast(inst, columns, batched_values)
-          total_time += timer_interval(start_time, "Time spent inserting batch: ")
-        end
-      else
         puts "\nInserting new values ..."
         import_fast(inst, columns, values)
-        total_time += timer_interval(start_time, "Time spent inserting values: ")
+        time_writing += timer_interval(start_time, "Time spenting inserting values: ")
+        total_time += time_writing
       end
       
       puts "\nDone"
     end
     
+    total_reading_formatted = format_time time_reading
+    total_writing_formatted = format_time time_writing
     total_formatted = format_time total_time
+    puts "Total time reading: #{total_reading_formatted}"
+    puts "Total time writing: #{total_writing_formatted}"
     puts "Total time spent: #{total_formatted}"
   end
   
