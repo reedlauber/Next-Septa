@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
   end
   
   def create_headers
+    @title = "NEXT&rarr;Septa | Next Stop Times for SEPTA Buses, Subways and Tolleys".html_safe
     @header_2 = "Choose Route"
     @header_choose = "h2"
     
@@ -23,6 +24,8 @@ class ApplicationController < ActionController::Base
     @route = Route.find(:all, :conditions => ["route_short_name = ?", @route_id]).first
     
     if(@route != nil)
+      @title = "#{@route.route_short_name} | NEXT&rarr;Septa".html_safe
+      
       @route_type = params[:route_type]
       
       @header_2 = "<span class=\"nxs-routelabel\">#{@route.route_short_name}</span> #{@route.route_long_name}".html_safe
@@ -46,13 +49,19 @@ class ApplicationController < ActionController::Base
     @direction_id = params[:direction]
     @direction = RouteDirection.find(:all, :conditions => ["route_short_name = ? AND direction_id = ?", @route_id, params[:direction]]).first
   
-    @header_2 = "<span class=\"nxs-routelabel\">#{@route.route_short_name}</span> &rarr; #{@direction.direction_name}".html_safe
-    @header_2_path = "/#{@route_type}/#{@route_id}/#{@direction_id}"
+    if(@direction != nil)
+      # @title = "#{@route.route_short_name} - To #{@direction.direction_name} | NEXT&rarr;Septa".html_safe
+      
+      @header_2 = "<span class=\"nxs-routelabel\">#{@route.route_short_name}</span> &rarr; #{@direction.direction_name}".html_safe
+      @header_2_path = "/#{@route_type}/#{@route_id}/#{@direction_id}"
   
-    @header_3 = "Choose Starting Station"
+      @header_3 = "Choose Starting Station"
   
-    if(params[:from_stop] != nil && params[:from_stop] != "nodest")
-      create_headers_from
+      if(params[:from_stop] != nil && params[:from_stop] != "nodest")
+        create_headers_from
+      end
+    else
+      render "notfound"
     end
   end
   

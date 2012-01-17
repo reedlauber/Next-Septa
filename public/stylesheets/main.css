@@ -76,6 +76,11 @@
 .nxs-content { padding:1em;font-size:1.2em;
 	 -moz-box-shadow:inset 0 1px 8px rgba(0, 0, 0, 0.4);-webkit-box-shadow:inset 0 1px 8px rgba(0, 0, 0, 0.4);box-shadow:inset 0 1px 8px rgba(0, 0, 0, 0.4); }
 
+.nxs-content-static { padding:8px;background-color:#555;color:#d0d0d0; }
+	.nxs-content-static li { margin-top:2em;line-height:1.2; }
+		.nxs-content-static a { color:#999; }
+		.nxs-content-static a:hover { text-decoration:underline; }
+		.nxs-content-static p { margin:1em 0; }
 
 
 html, body { background-color:#5a5a5a;height:100%;background-image:url(../images/nxs-bg-noise.png); }
@@ -106,11 +111,6 @@ html, body { background-color:#5a5a5a;height:100%;background-image:url(../images
 			-moz-box-shadow:inset 0 4px 8px rgba(0, 0, 0, 0.4);-webkit-box-shadow:inset 0 4px 8px rgba(0, 0, 0, 0.4);box-shadow:inset 0 4px 8px rgba(0, 0, 0, 0.4); }
 	
 	#content { background-color:#fff; }	
-	
-		#info { padding:8px;background-color:#555;color:#d0d0d0; }
-			#info li { margin-top:2em;line-height:1.2; }
-				#info a { color:#999; }
-				#info a:hover { text-decoration:underline; }
 		
 		#lookup { position:relative; }
 			#lookup aside { position:absolute;top:50%;right:0;margin-top:-1em;line-height:1.1; }

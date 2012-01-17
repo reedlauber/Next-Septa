@@ -1,2 +1,0 @@
-class InfoController < ApplicationController
-end

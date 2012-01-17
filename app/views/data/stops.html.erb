@@ -1,0 +1,17 @@
+<div id="data-index" class="s-cols">
+	<div class="s-col s-col-1of2">
+		<h1><%=@route.route_short_name %> - To <%=@direction.direction_name %></h1>
+	
+		<ul class="data-list s-corner-all">
+		<% @stops.each do |stop| %>
+			<li>
+				<a href="/data/<%=@route.route_short_name %>/<%=@direction.direction_id %>/<%=stop.stop_id %>">
+					<span class="nxs-routelabel"><%=stop.stop_sequence %></span> <%=stop.stop_name %><span class="icon"></span>
+				</a>
+			</li>
+		<% end %>
+		</ul>
+	</div>
+	<div class="s-col-last">
+	</div>
+</div>

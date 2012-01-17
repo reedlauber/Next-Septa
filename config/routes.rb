@@ -1,13 +1,20 @@
 Nextsepta::Application.routes.draw do
-  root :to => "home#index"
+  #root :to => "home#index"
+  root :to => "content#upgrade"
   
   get "/beta" => "home#index"
-  get "/info" => "info#index"
+  get "/info" => "content#info"
+  get "/upgrade" => "content#upgrade"
   get "/debug" => "debug#index"
   
   get "/search(/:term)" => "search#index"
   
   get "/locations/:route_id" => "location#index"
+  
+  get "/data/:route_id/:direction_id/:stop_id" => "data#times"
+  get "/data/:route_id/:direction_id" => "data#stops"
+  get "/data/:route_id" => "data#directions"
+  get "/data" => "data#routes"
   
   match ':controller(/:action(/:id(.:format)))'
   

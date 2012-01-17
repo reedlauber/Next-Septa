@@ -4,7 +4,7 @@
 	
 		<ul class="data-list s-corner-all">
 		<% @routes.each do |r| %>
-			<li><a href="/data/routes/<%=r.route_short_name %>"><span class="nxs-routelabel"><%=r.route_short_name %></span> <%=r.route_long_name %><span class="icon"></span></a></li>
+			<li><a href="/data/<%=r.route_short_name %>"><span class="nxs-routelabel"><%=r.route_short_name %></span> <%=r.route_long_name %><span class="icon"></span></a></li>
 		<% end %>
 		</ul>
 	</div>

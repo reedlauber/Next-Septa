@@ -25,11 +25,13 @@ class StopsController < ApplicationController
   def from
     create_headers
     
-    @path = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}"
+    if(@direction != nil)
+      @path = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}"
     
-    @stops = SimplifiedStop.where("route_id = #{@route.route_id} and direction_id = #{params[:direction]}").order("stop_sequence")
+      @stops = SimplifiedStop.where("route_id = #{@route.route_id} and direction_id = #{params[:direction]}").order("stop_sequence")
     
-    render "choose"
+      render "choose"
+    end
   end
   
   def to
@@ -37,10 +39,12 @@ class StopsController < ApplicationController
     
     create_headers
     
-    @path = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}/#{params[:from_stop]}"
+    if(@direction != nil)
+      @path = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}/#{params[:from_stop]}"
     
-    @stops = SimplifiedStop.where("route_id = #{@route.route_id} AND direction_id = #{params[:direction]} AND stop_sequence > #{@from.stop_sequence}").order("stop_sequence")
+      @stops = SimplifiedStop.where("route_id = #{@route.route_id} AND direction_id = #{params[:direction]} AND stop_sequence > #{@from.stop_sequence}").order("stop_sequence")
     
-    render "choose"
+      render "choose"
+    end
   end
 end

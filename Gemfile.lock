@@ -24,6 +24,9 @@ GEM
       activesupport (= 3.0.9)
       arel (~> 2.0.10)
       tzinfo (~> 0.3.23)
+    activerecord-import (0.2.8)
+      activerecord (~> 3.0pre)
+      activerecord (~> 3.0pre)
     activeresource (3.0.9)
       activemodel (= 3.0.9)
       activesupport (= 3.0.9)
@@ -92,6 +95,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-import (>= 0.2.0)
   heroku
   pg
   rails (= 3.0.9)
