@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NEXT&rarr;Septa | Next Stop Times for SEPTA Buses, Subways and Tolleys</title>
-  <meta content="width=device-width,minimum-scale=1,maximum-scale=1" name="viewport">
-  <%= stylesheet_link_tag 'webapp-reset', 'sour', 'typography', 'main', 'map' %>
-  <link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" href="/stylesheets/mobile.css" />
-  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/images/nxs-logo.png" />
-  <%= javascript_include_tag 'jquery.min.js', 'nextsepta' %>
+	<title>Bus Location | NEXT&rarr;Septa</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+	<%= include_stylesheets :all, :public, :map, :media => "all" %>
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" href="/stylesheets/mobile.css" />
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/images/nxs-logo.png" />
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -23,11 +22,13 @@
 			<%= yield %>
 		</div>
 	</div>
+	<%= include_javascripts :all, :public, :map %>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
 	<script>
 		$(function() {
 			NextSepta.Manager({
 				components: {
-					stops: NextSepta.Stops()
+					map: NextSepta.Map()
 				}
 			}).init();
 		});

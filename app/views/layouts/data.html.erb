@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Data | NEXT&rarr;Septa</title>
-  <%= stylesheet_link_tag 'webapp-reset', 'sour', 'typography', 'data' %>
+  <title>Data | NEXT&rarr;Septa</title>	
+  <%= include_stylesheets :all, :data, :media => "all" %>
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-  <%= javascript_include_tag 'jquery.min.js', 'nextsepta' %>
   <%= csrf_meta_tag %>
 </head>
 <body>

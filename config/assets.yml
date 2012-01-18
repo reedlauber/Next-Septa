@@ -1,0 +1,32 @@
+package_assets: on
+
+javascripts:
+    all:
+        - public/javascripts/vendor/jquery.min.js
+        - public/javascripts/ns-core.js
+        - public/javascripts/ns-data.js
+    
+    public:    
+        - public/javascripts/ns-manager.js
+        - public/javascripts/ns-stops.js
+    
+    map:
+        - public/javascripts/ns-map.js
+        
+stylesheets:
+    all:
+        - public/stylesheets/webapp-reset.css
+        - public/stylesheets/sour.css
+        - public/stylesheets/typography.css
+    
+    public:
+        - public/stylesheets/main.css
+    
+    map:
+        - public/stylesheets/map.css
+    
+    mobile:
+        - public/stylesheets/mobile.css
+        
+    data:
+        - public/stylesheets/data.css
