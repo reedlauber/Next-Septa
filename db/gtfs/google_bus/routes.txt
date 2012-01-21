@@ -61,7 +61,6 @@ route_id,route_short_name,route_long_name,route_type,route_url
 9749,29,Pier 70 to 33rd-Dickinson,3,
 9750,3,33rd-Cecil B Moore to FTC,3,
 9751,30,Amtrak/30thStSta to 69th St TC,3,
-9860,306,Main Line IndPk to West Chester,3,
 9752,31,City Hall to 76th-City,3,
 9861,310,Horsham Breeze        ,3,
 9862,312,Cornwells Heights Park Lot Shuttle,3,

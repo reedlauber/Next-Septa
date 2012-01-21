@@ -15440,19 +15440,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 9859,1,3196975,"Paoli Railroad Station Express",8631,1,130408
 9859,1,3196976,"Paoli Railroad Station",8629,1,130405
 9859,1,3196977,"Paoli Railroad Station",8630,1,130407
-9860,1,3029342,"Main Line Industrial Park",8651,0,130410
-9860,1,3029343,"Main Line Industrial Park",8653,0,130410
-9860,1,3029344,"Main Line Industrial Park",8652,0,130410
-9860,1,3029345,"Main Line Industrial Park",8651,0,130410
-9860,1,3029346,"Main Line Industrial Park",8651,0,130410
-9860,1,3029347,"Main Line Industrial Park",8652,0,130410
-9860,1,3029348,"West Chester (Parkway Ctr)",8655,1,130412
-9860,1,3029349,"West Chester (Parkway Ctr)",8657,1,130412
-9860,1,3029350,"West Chester (Parkway Ctr)",8656,1,130412
-9860,1,3029351,"West Chester (Parkway Ctr)",8657,1,130412
-9860,1,3029352,"West Chester (Parkway Ctr)",8656,1,130412
-9860,1,3029353,"West Chester (Parkway Ctr)",8655,1,130412
-9860,1,3029354,"West Chester (Parkway Ctr)",8655,1,130412
 9861,1,3029368,"Horsham (To Willow Grove Park Mall)",8551,0,130424
 9861,1,3029369,"Horsham (To Willow Grove Park Mall)",8551,0,130424
 9861,1,3029370,"Horsham (To Willow Grove Park Mall)",8552,0,130424
