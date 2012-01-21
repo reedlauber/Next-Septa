@@ -13,7 +13,7 @@
 <ul id="stops" class="nxs-items nxs-resize">
 	<% @stops.each do |s| %>
 	<li class="nxs-section">
-		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/#{s.stop_id}" %>"><%=s.stop_name %></a>
+		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/" + (@from == nil ? "" : "#{@from.stop_id}/") + "#{s.stop_id}" %>"><%=s.stop_name %></a>
 	</li>
 	<% end %>
 </ul>
