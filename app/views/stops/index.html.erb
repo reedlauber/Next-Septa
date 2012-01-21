@@ -1,3 +1,21 @@
+<h2 class="nxs-section nxs-route-type-<%=@route_type %> nxs-route-<%=@route_id.downcase %>">
+	<a href="<%="/#{@route_type}/#{@route_id}" %>"><span class="nxs-routelabel"><%=@route.route_short_name %></span> &rarr; </a>
+	<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}" %>"><%=@direction.direction_name %></a>
+</h2>
+<h3 class="nxs-section nxs-section-instruction nxs-stoptimes-stopnames s-cols">
+	<div class="s-col s-col-1of2 nxs-stoptimes-stopnames-left">
+		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}" %>">
+			<%=@from.stop_name %>
+		</a>
+		<p>From</p>	
+	</div>
+	<div class="s-col s-col-1of2 nxs-stoptimes-stopnames-right">
+		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}/choose" %>">
+			<%=(@to == nil ? "choose" : @to.stop_name) %>
+		</a>
+		<p>To</p>
+	</div>
+</h3>
 <section id="times" data-route="<%=@route_id %>">
 	<header class="nxs-stoptime-header">
 		<div class="nxs-stoptime-left">
@@ -21,8 +39,7 @@
 				<time datetime="<%=st["arrival_time"].to_formatted_s(:display_iso_time) %>"><%=st["arrival_time"].to_formatted_s(:display_time) %></time>
 			</div>
 			<% end %>
-			<div class="nxs-stoptime-aside">
-			</div>
+			<div class="nxs-stoptime-aside"></div>
 		</li>
 		<% end %>
 	</ul>

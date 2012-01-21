@@ -12,30 +12,11 @@
 </head>
 <body>
 	<div id="container">
-		<hgroup id="header" class="nxs-choose-<%=@header_choose %>" data-role="header">
-			<h1 class="nxs-section"><a href="/">NEXT&rarr;Septa<span>beta</span></a><a id="header-info" href="/info" class="nxs-header-btn s-corner-all-4">info</a></h1>
-			<% if(@header_2 != nil) %>
-			<h2 class="nxs-section<%=(' nxs-route-type-' + @route_type if @route_type) %><%=(' nxs-route-' + @route_id.downcase if @route_id)%>">
-				<% if(@header_2_path != nil) %>
-				<a href="<%=@header_2_path %>"><%=@header_2 %></a>
-				<% else %>
-				<%=@header_2 %>
-				<% end %>
-			</h2>
-			<% end %>
-			<% if(@header_3 != nil) %>
-			<h3 class="nxs-section">
-				<% if(@header_3_path != nil) %>
-				<a href="<%=@header_3_path %>"><%=@header_3 %></a>
-				<% else %>
-				<%=@header_3 %>
-				<% end %>
-			</h3>
-			<% end %>
-			<% if(@header_4 != nil) %><h4 class="nxs-section"><a href="<%=@header_4_path%>"><%=@header_4 %></a></h4><% end %>
-		</hgroup>
+		<header id="header">
+			<h1 class="nxs-section"><a href="/">NEXT&rarr;Septa<span>beta</span></a><a id="header-info" href="/info" class="nxs-header-btn s-corner-all-24">i</a></h1>
+		</header>
 		<div id="content" data-role="content" data-type="<%=@route_type%>" data-route="<%=@route_id%>" data-direction="<%=@direction_id%>" data-from="<%=(@from.stop_id if @from != nil)%>" data-to="<%=(@to.stop_id if @to != nil)%>">
-		<%= yield %>
+			<%=yield %>
 		</div>
 		<% if(params[:route_type] != nil) %>
 		<footer id="footer" class="nxs-routetype-<%=params[:route_type]%>" data-role="footer">

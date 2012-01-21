@@ -1,7 +1,19 @@
+<h2 class="nxs-section nxs-route-type-<%=@route_type %> nxs-route-<%=@route_id.downcase %>">
+	<a href="<%="/#{@route_type}/#{@route_id}" %>"><span class="nxs-routelabel"><%=@route.route_short_name %></span> &rarr; </a>
+	<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}" %>"><%=@direction.direction_name %></a>
+</h2>
+<h3 class="nxs-section nxs-section-instruction">
+	<% if (@from == nil) %>
+	Choose Departing Stop
+	<% else %>
+	<%=@from.stop_name %>
+	<p>From</p>
+	<% end %>
+</h3>
 <ul id="stops" class="nxs-items nxs-resize">
 	<% @stops.each do |s| %>
 	<li class="nxs-section">
-		<a href="<%="#{@path}/#{s.stop_id}" %>"><%=s.stop_name %></a>
+		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/#{s.stop_id}" %>"><%=s.stop_name %></a>
 	</li>
 	<% end %>
 </ul>

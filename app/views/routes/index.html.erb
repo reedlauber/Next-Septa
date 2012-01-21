@@ -19,7 +19,7 @@
 	<li class="nxs-section">
 		<% if(r.route_short_name[0] != @route_letter) %>
 		<% @route_letter = r.route_short_name[0] %>
-		<a name="<%=r.route_short_name %>" />
+		<a name="<%=r.route_short_name %>" class="nxs-items-anchor" />
 		<% end %>
 		<a href="/<%=params[:route_type] + "/" + r.route_short_name %>"><span class="nxs-routelabel"><%=r.route_short_name %></span><%=r.route_long_name %></a>
 	</li>

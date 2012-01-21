@@ -14,21 +14,19 @@ class StopsController < ApplicationController
     
     stop_times = StopTime.select("DISTINCT stop_times.*, trips.block_id")
                     .joins("JOIN trips ON stop_times.trip_id = trips.trip_id")
-                    .where("trips.route_id = '#{@route.route_id}' AND stop_id = #{@from.stop_id} AND trips.direction_id = #{@direction.direction_id} AND service_id = '#{service_id}' AND departure_time > '#{c_time}'")
+                    .where("trips.route_id = '#{@route.route_id}' AND stop_id = #{@from.stop_id} AND trips.direction_id = #{@direction_id} AND service_id = '#{service_id}' AND departure_time > '#{c_time}'")
                     .order("departure_time")
                     .limit(5)
     @stop_times = StopTime.convert_list(stop_times, @to)
     
-    cookies[:last_stop] = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}/#{@from.stop_id}"
+    cookies[:last_stop] = "/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}"
   end
   
   def from
     create_headers
     
-    if(@direction != nil)
-      @path = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}"
-    
-      @stops = SimplifiedStop.where("route_id = #{@route.route_id} and direction_id = #{params[:direction]}").order("stop_sequence")
+    if(@direction != nil)    
+      @stops = SimplifiedStop.where("route_id = #{@route.route_id} and direction_id = #{@direction_id}").order("stop_sequence")
     
       render "choose"
     end
@@ -40,9 +38,7 @@ class StopsController < ApplicationController
     create_headers
     
     if(@direction != nil)
-      @path = "/#{@route_type}/#{@route_id}/#{@direction.direction_id}/#{params[:from_stop]}"
-    
-      @stops = SimplifiedStop.where("route_id = #{@route.route_id} AND direction_id = #{params[:direction]} AND stop_sequence > #{@from.stop_sequence}").order("stop_sequence")
+      @stops = SimplifiedStop.where("route_id = #{@route.route_id} AND direction_id = #{@direction_id} AND stop_sequence > #{@from.stop_sequence}").order("stop_sequence")
     
       render "choose"
     end

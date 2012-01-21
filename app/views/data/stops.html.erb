@@ -5,7 +5,7 @@
 		<ul class="data-list s-corner-all">
 		<% @stops.each do |stop| %>
 			<li>
-				<a href="/data/<%=@route.route_short_name %>/<%=@direction.direction_id %>/<%=stop.stop_id %>">
+				<a href="/data/<%=@route.route_short_name %>/<%=@direction_id %>/<%=stop.stop_id %>">
 					<span class="nxs-routelabel"><%=stop.stop_sequence %></span> <%=stop.stop_name %><span class="icon"></span>
 				</a>
 			</li>

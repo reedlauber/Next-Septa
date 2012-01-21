@@ -24,5 +24,5 @@ Nextsepta::Application.routes.draw do
   get "/:route_type/:route_id/:direction/:from_stop" => "stops#index"
   get "/:route_type/:route_id/:direction" => "stops#from"
   get "/:route_type/:route_id" => "directions#index"
-  get "/:route_type" => "route_type#index"
+  get "/:route_type" => "routes#index"
 end

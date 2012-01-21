@@ -1,3 +1,8 @@
+<h2 class="nxs-section nxs-route-type-<%=@route_type %> nxs-route-<%=@route_id.downcase %>">
+	<a href="<%="/#{@route_type}/#{@route_id}" %>">
+		<span class="nxs-routelabel"><%=@route.route_short_name %></span> | <%=@route.route_long_name %>
+	</a>
+</h2>
 <ul id="directions" class="nxs-items nxs-resize">
 	<% @directions.each do |d| %>
 	<li class="nxs-section"><a href="/<%=@route_type + "/" + @route_id + "/" + d.direction_id.to_s %>"><%="To: " + d.direction_name %></a></li>

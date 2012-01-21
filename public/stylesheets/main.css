@@ -1,9 +1,9 @@
-.nxs-section { padding:0 8px;min-height:48px;line-height:48px;text-shadow:0 1px 0 rgba(255, 255, 255, 0.4);font-weight:bold;position:relative;
+.nxs-section { padding:0.7em 10px;text-shadow:0 1px 0 rgba(255, 255, 255, 0.4);font-weight:bold;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 	background-image:-moz-linear-gradient(center top, rgba(220, 220, 220, 0.4), rgba(200, 200, 200, 0.4));
 	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(220, 220, 220, 0.4)), to(rgba(200, 200, 200, 0.4))); }
 
-	.nxs-section a { display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
-	a.nxs-section, span.nxs-section, .nxs-section a { display:block; }
+	.nxs-section a { white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+	a.nxs-section, span.nxs-section { display:block; }
 	a.nxs-section { font-weight:bold; }
 	.nxs-section .ui-icon { position:absolute;top:50%;right:8px;margin-top:-7px; }
 
@@ -12,8 +12,10 @@
 
 .nxs-section-choose { text-transform:uppercase; }
 
+.nxs-section-instruction { background-color:#aaa;box-shadow:inset 0 4px 4px rgba(0, 0, 0, 0.2); }
+	.nxs-section-instruction p { color:#666;font-size:0.6em;text-transform:uppercase; }
 
-.nxs-header-btn { position:absolute;top:50%;right:8px;margin-top:-1.1em;padding:6px 8px;line-height:1.0;font-size:0.6em;
+.nxs-header-btn { position:absolute;top:50%;right:12px;margin-top:-0.9em;padding:5px 8px 4px;font-size:0.6em;font-weight:bold;
 	-moz-box-shadow:inset 1px 1px 2px rgba(0, 0, 0, 0.3), 1px 1px 0px rgba(225, 225, 225, 0.2);
 	-webkit-box-shadow:inset 1px 1px 2px rgba(0, 0, 0, 0.3), 1px 1px 0px rgba(225, 225, 225, 0.2);
 	box-shadow:inset 1px 1px 2px rgba(0, 0, 0, 0.3), 1px 1px 0px rgba(225, 225, 225, 0.2);
@@ -29,10 +31,13 @@
 .nxs-routelabel { font-size:1.8em;color:#444;text-transform:uppercase;position:relative;bottom:-3px; }
 .nxs-items .nxs-routelabel { color:#5a5a5a;border-right:1px solid #ddd;padding:0 12px 0 6px;margin-right:12px; }
 .nxs-items .nxs-routetype { border:0; }
+.nxs-items .nxs-section { padding:0;font-size:1.2em; }
+.nxs-items a { display:block;padding:1.0em 10px; }
+.nxs-items a.nxs-items-anchor { padding:0; }
 
-.nxs-routetype { background-color:#5b7cbf;position:relative;padding-left:36px; }
+.nxs-routetype { background-color:#5b7cbf;position:relative;padding-left:32px !important; }
 .nxs-routetype:hover { background-color:#8bf; }
-	.nxs-routetype a:before { content:'';position:absolute;height:20px;width:20px;top:50%;left:8px;margin-top:-10px;
+	.nxs-routetype a:before { content:'';position:absolute;height:20px;width:20px;top:50%;left:12px;margin-top:-10px;
 	 	-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;
 	 	-moz-box-shadow:inset 1px 1px 1px rgba(0, 0, 0, 0.3), 1px 1px 0px rgba(255, 255, 255, 0.2);
 	 	-webkit-box-shadow:inset 1px 1px 1px rgba(0, 0, 0, 0.3), 1px 1px 0px rgba(255, 255, 255, 0.2);
@@ -46,6 +51,10 @@
 
 .nxs-subways { background-color:#fdfd66; }
 .nxs-subways:hover { background-color:#ffa; }
+
+.nxs-stoptimes-stopnames {  }
+	.nxs-stoptimes-stopnames div { overflow:hidden; }
+	.nxs-stoptimes-stopnames-right { text-align:right; }
 
 .nxs-stoptime-header { padding:8px 16px 0; }
 .nxs-stoptimes { }
@@ -61,9 +70,9 @@
 
 .nxs-stoptime { overflow:auto;clear:both; }
 	.nxs-stoptime-left { float:left;width:55%; }
-	.nxs-stoptime-right { float:left;width:30%;text-align:right; }
-	.nxs-stoptime-aside { float:left;width:15%;text-align:center; }
-		.nxs-stoptime-aside a { display:inline-block;height:16px;width:16px;opacity:0.7;background:url(../images/gentleface/black/pin_2_icon&16.png) no-repeat;text-indent:-9999px; }
+	.nxs-stoptime-right { float:left;width:35%;text-align:right; }
+	.nxs-stoptime-aside { float:left;width:10%;text-align:right; }
+		.nxs-stoptime-aside a { display:inline-block;height:16px;width:16px;opacity:0.7;background:url(../images/gentleface/black/pin_2_icon&16.png) no-repeat;overflow:hidden;text-indent:9999px; }
 
 .nxs-items li { border-top:1px solid #fff;border-bottom:1px solid #ddd; }
 .nxs-items li:first-child { border-top:0; }
@@ -91,29 +100,23 @@ html, body { background-color:#5a5a5a;height:100%;background-image:url(../images
 	#header { color:#222;letter-spacing:1px;font-weight:bold;text-shadow:0 0 1px rgba(255, 255, 255, 0.8); }
 	
 		#header h1 { font-size:1.6em;background-color:#222;position:relative; }
-			#header h1 a { color:#fafafa;text-shadow:0 1px 0px rgba(0, 0, 0, 0.5); }
+			#header h1 a { display:block;color:#fafafa;text-shadow:0 1px 0px rgba(0, 0, 0, 0.5); }
 				#header h1 a span { font-size:0.6em;margin-left:4px;color:#738EC4; }
 			
 		#header h2 { font-size:1.2em;background-color:#3baf4d; }
 		#header h3 { font-size:1.1em; }
 			#header h3 span { display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
 		
-		#header h2.nxs-route-type-buses { background-color:#41525c; }
-		#header h2.nxs-route-type-subways { background-color:#f58220; }
-		#header h2.nxs-route-type-trolleys { background-color:#539442; }
-		#header h2.nxs-route-type-trains { background-color:#477997; }
-		#header h2.nxs-route-mfl { background-color:#107dc1; }
-		
-	#header.nxs-choose-h2 h2,
-		#header.nxs-choose-h3 h3,
-		#header.nxs-choose-h4 h4 { min-height:0px;line-height:32px;background-color:#aaa;color:#f0f0f0;text-transform:uppercase;background-image:none;
-			text-shadow:0 1px 0px rgba(0, 0, 0, 0.5);
-			-moz-box-shadow:inset 0 4px 8px rgba(0, 0, 0, 0.4);-webkit-box-shadow:inset 0 4px 8px rgba(0, 0, 0, 0.4);box-shadow:inset 0 4px 8px rgba(0, 0, 0, 0.4); }
+		h2.nxs-route-type-buses { background-color:#41525c; }
+		h2.nxs-route-type-subways { background-color:#f58220; }
+		h2.nxs-route-type-trolleys { background-color:#539442; }
+		h2.nxs-route-type-trains { background-color:#477997; }
+		h2.nxs-route-mfl { background-color:#107dc1; }
 	
 	#content { background-color:#fff; }	
 		
 		#lookup { position:relative; }
-			#lookup aside { position:absolute;top:50%;right:0;margin-top:-1em;line-height:1.1; }
+			#lookup aside { position:absolute;top:50%;right:0;margin-top:-0.6em;line-height:1.1; }
 		
 		#times { position:relative; }
 		
@@ -121,8 +124,8 @@ html, body { background-color:#5a5a5a;height:100%;background-image:url(../images
 		
 	#footer { background-color:#5b7cbf; }
 		#footer li { text-align:center; }
-		#footer li.nxs-section { padding:0;height:42px;line-height:42px; }
-			#footer li a { margin:3px; }
+		#footer li.nxs-section { padding:0;height:44px;line-height:38px; }
+			#footer li a { display:block;margin:3px; }
 			#footer a:hover, #footer a:active,
 			.nxs-routetype-subways .nxs-footer-subways a,
 			.nxs-routetype-buses .nxs-footer-buses a,

@@ -1,4 +1,4 @@
-.nxs-items li { height:48px;line-height:48px;-webkit-text-size-adjust:140%; }
+.nxs-items li { -webkit-text-size-adjust:140%; }
 
 @media screen and (max-width:320px) {
 	#container, #subfooter { width:320px; }
