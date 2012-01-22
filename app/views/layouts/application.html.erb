@@ -13,7 +13,13 @@
 <body>
 	<div id="container">
 		<header id="header">
-			<h1 class="nxs-section"><a href="/">NEXT&rarr;Septa<span>beta</span></a><a id="header-info" href="/info" class="nxs-header-btn s-corner-all-24">i</a></h1>
+			<h1 class="nxs-section">
+				<% if(@back_path != nil) %>
+				<a id="header-back" href="<%=@back_path %>" class="nxs-header-btn nxs-header-iconbtn s-corner-all-24">back</a>
+				<% end %>
+				<a id="header-title" href="/">NEXT&rarr;Septa<span>beta</span></a>
+				<a id="header-info" href="/info" class="nxs-header-btn nxs-header-btn-right nxs-header-iconbtn s-corner-all-24">info</a>
+			</h1>
 		</header>
 		<div id="content" data-role="content" data-type="<%=@route_type%>" data-route="<%=@route_id%>" data-direction="<%=@direction_id%>" data-from="<%=(@from.stop_id if @from != nil)%>" data-to="<%=(@to.stop_id if @to != nil)%>">
 			<%=yield %>

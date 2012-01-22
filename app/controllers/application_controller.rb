@@ -21,6 +21,12 @@ class ApplicationController < ActionController::Base
   
   def read_params
     @title = "NEXT&rarr;Septa | Next Stop Times for SEPTA Buses, Subways and Tolleys".html_safe
+
+    @route_type = params[:route_type]
+
+    if(@route_type != nil)
+      @back_path = "/"
+    end
     
     if(params[:route_id] != nil)
       read_params_route
@@ -33,8 +39,8 @@ class ApplicationController < ActionController::Base
     
     if(@route != nil)
       @title = "#{@route.route_short_name} | NEXT&rarr;Septa".html_safe
-      
-      @route_type = params[:route_type]
+
+      @back_path += @route_type
     
       if(params[:direction] != nil)
         read_params_direction
@@ -46,10 +52,12 @@ class ApplicationController < ActionController::Base
   
   def read_params_direction
     @direction_id = params[:direction]
-    @direction = RouteDirection.find(:all, :conditions => ["route_short_name = ? AND direction_id = ?", @route_id, params[:direction]]).first
+    @direction = RouteDirection.find(:all, :conditions => ["route_short_name = ? AND direction_id = ?", @route_id, @direction_id]).first
   
     if(@direction != nil)
-      if(params[:from_stop] != nil && params[:from_stop] != "nodest")
+      @back_path += "/#{@route_id}"
+
+      if(params[:from_stop] != nil)
         read_params_stops
       end
     else
@@ -59,9 +67,17 @@ class ApplicationController < ActionController::Base
   
   def read_params_stops
     @from = SimplifiedStop.where("route_id = ? AND stop_id =? AND direction_id = ?", @route.route_id, params[:from_stop], @direction.direction_id).first
+
+    if(@from != nil)
+      @back_path += "/#{@direction_id}"
   
-    if(params[:to_stop] != nil)
-      @to = SimplifiedStop.find(:all, :conditions => ["route_id = ? AND stop_id = ?", @route.route_id, params[:to_stop]]).first
+      if(params[:to_stop] != nil)
+        @to = SimplifiedStop.find(:all, :conditions => ["route_id = ? AND stop_id = ?", @route.route_id, params[:to_stop]]).first
+
+        if(@to != nil)
+          @back_path += "/#{@from.stop_id}"
+        end
+      end
     end
   end
 end
