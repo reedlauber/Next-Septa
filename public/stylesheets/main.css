@@ -98,6 +98,10 @@
 		.nxs-content-static a:hover { text-decoration:underline; }
 		.nxs-content-static p { margin:1em 0; }
 
+.nxs-dialog { display:none;position:absolute;top:8px;right:0px;left:0px;margin:0 auto;width:258px;padding:24px;font-size:1.2em;color:#f3f3f3;background-color:#222;background-color:rgba(50, 50, 50, 0.9); }
+	.nxs-dialog h1 { font-size:1.4em; }
+	.nxs-dialog p { margin:1em 0; }
+	.nxs-dialog a { color:#eee; }
 
 html, body { background-color:#5a5a5a;height:100%;background-image:url(../images/nxs-bg-noise.png); }
 

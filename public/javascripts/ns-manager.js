@@ -7,24 +7,21 @@
 			}, options),
 			_state = {};
 		
-		function _resize() {
-			var $r = $('.nxs-resize');
-			if($r.length) {
-				var maxHeight = $(window).height() - $r.offset().top - $('#footer').outerHeight();
-				$r.css('maxHeight', maxHeight);
-			}
+		var $dialog;
+		function _setupDialog() {
+			$dialog = $('#isepta-dialog');
+
+			$('.nxs-dialog-open').click(function() {
+				$dialog.css('top', window.scrollY + 8);
+				$dialog.show();
+				return false;
+			});
+
+			$('.close', $dialog).click(function() {
+				$dialog.hide();
+			});
 		}
-		
-		function _setupHistory() {
-			if(window.history && window.history.pushState) {
-				$('.nxs-hist-link').click(function() {
-					var href = $(this).attr('href');
-					window.history.pushState({}, '', href);
-					return false;
-				});
-			}
-		}
-		
+
 		_self.getPath = function(add) {
 			var path = '';
 			var pathNames = ['routeType', 'routeId', 'direction', 'from', 'to'];
@@ -42,11 +39,8 @@
 		};
 		
 		_self.init = function() {
-			//_resize();
-			
-			//_setupHistory();
-			
 			var $content = $('#content');
+
 			_state = {
 				routeType: $content.attr('data-type'),
 				routeId: $content.attr('data-route'),
@@ -58,6 +52,8 @@
 			$.each(_options.components, function(p, c) {
 				c.init(_self, _state);
 			});
+
+			_setupDialog();
 			
 			return _self;
 		};

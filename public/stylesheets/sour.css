@@ -104,21 +104,36 @@ select.s-input { padding:4px;-moz-box-shadow:inset 1px 1px 4px rgba(0, 0, 0, 0.3
 .s-ctrl { margin-top:2px; }
 
 /* Buttons */
-.s-btn { color:#505050;background-color:#ccc;border:1px solid #a0a0a0;font-weight:bold;padding:4px 8px;margin-right:8px;cursor:pointer;
-    text-shadow:1px 1px 0 rgba(250, 250, 250, 0.6);
-  background-image:-moz-linear-gradient(center top, #f3f3f3, #c3c3c3);
-  background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#f3f3f3), to(#c3c3c3));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3f3f3', endColorstr='#c3c3c3',GradientType=0); /* ie */
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3f3f3', endColorstr='#c3c3c3', GradientType=0)"; }
-.s-btn:hover { -moz-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.3);-webkit-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.3);
-                background-image:-moz-linear-gradient(center top, #e0e0e0, #c3c3c3);
-                background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#e0e0e0), to(#c3c3c3));
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0e0e0', endColorstr='#c3c3c3',GradientType=0); /* ie */ }
-.s-btn:active { -moz-box-shadow:inset 0 -1px 2px rgba(0, 0, 0, 0.3);-webkit-box-shadow:inset 0 -1px 2px rgba(0, 0, 0, 0.3);
-                 background-image:-moz-linear-gradient(center top, #d6d6d6, #b0b0b0);
-                 background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#d6d6d6), to(#b0b0b0));
-                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d6d6d6', endColorstr='#b0b0b0',GradientType=0); /* ie */ }
-a.s-btn { text-decoration:none;color:#505050; }
+.s-btn { display:inline-block;color:#444;border:1px solid #a0a0a0;font-weight:bold;padding:4px 10px 5px;margin-right:8px;cursor:pointer;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);  
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+    background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+    background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+    background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0); }
+.s-btn-success { color:#f0f0f0;background-color: #57a957;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#62c462), to(#57a957));
+  background-image: -moz-linear-gradient(top, #62c462, #57a957);
+  background-image: -ms-linear-gradient(top, #62c462, #57a957);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #62c462), color-stop(100%, #57a957));
+  background-image: -webkit-linear-gradient(top, #62c462, #57a957);
+  background-image: -o-linear-gradient(top, #62c462, #57a957);
+  background-image: linear-gradient(top, #62c462, #57a957);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#57a957', GradientType=0);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #57a957 #57a957 #3d773d;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
+.s-btn:hover { background-position: 0 -15px; }
+.s-btn:active { -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05); }
+a.s-btn { text-decoration:none;color:#444 !important; }
+a.s-btn-success { color:#f0f0f0 !important; }
 
 .s-btn-disabled { background-image:-moz-linear-gradient(center top, #d6d6d6, #b0b0b0);color:#666; }
-.s-btn-small { font-size:0.8em;padding:2px 4px; }
+.s-btn-small { font-size:0.8em;padding:3px 6px 4px; }
