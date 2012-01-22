@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110905021855) do
+ActiveRecord::Schema.define(:version => 20120122200310) do
 
   create_table "route_directions", :force => true do |t|
     t.integer  "route_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20110905021855) do
     t.string   "direction_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "direction_long_name"
   end
 
   add_index "route_directions", ["route_id"], :name => "index_route_directions_on_route_id"
@@ -49,6 +50,8 @@ ActiveRecord::Schema.define(:version => 20110905021855) do
     t.integer  "stop_sequence"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "stop_lat"
+    t.decimal  "stop_lon"
   end
 
   add_index "simplified_stops", ["route_direction_id"], :name => "index_simplified_stops_on_route_direction_id"

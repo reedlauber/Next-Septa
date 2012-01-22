@@ -26,10 +26,10 @@ class ApplicationController < ActionController::Base
 
     if(@route_type != nil)
       @back_path = "/"
-    end
     
-    if(params[:route_id] != nil)
-      read_params_route
+      if(params[:route_id] != nil)
+        read_params_route
+      end
     end
   end
   

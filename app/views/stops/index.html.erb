@@ -1,6 +1,11 @@
 <h2 class="nxs-section nxs-route-type-<%=@route_type %> nxs-route-<%=@route_id.downcase %>">
-	<a href="<%="/#{@route_type}/#{@route_id}" %>"><span class="nxs-routelabel"><%=@route.route_short_name %></span> &rarr; </a>
-	<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}" %>"><%=@direction.direction_name %></a>
+	<a href="<%="/#{@route_type}/#{@route_id}" %>"><span class="nxs-routelabel"><%=@route.route_short_name %></span> | </a>
+	<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}" %>" class="nxs-routedirection">
+		<%=@direction.direction_name %>
+		<% if(@direction.direction_long_name != nil) %>
+		<span class="nsx-section-sub">To: <%=@direction.direction_long_name %></span>
+		<% end %>
+	</a>
 </h2>
 <h3 class="nxs-section nxs-section-instruction nxs-stoptimes-stopnames s-cols">
 	<div class="s-col s-col-1of2 nxs-stoptimes-stopnames-left">

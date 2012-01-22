@@ -5,6 +5,13 @@
 </h2>
 <ul id="directions" class="nxs-items nxs-resize">
 	<% @directions.each do |d| %>
-	<li class="nxs-section"><a href="/<%=@route_type + "/" + @route_id + "/" + d.direction_id.to_s %>"><%="To: " + d.direction_name %></a></li>
+	<li class="nxs-section">
+		<a href="/<%=@route_type + "/" + @route_id + "/" + d.direction_id.to_s %>">
+			<%=d.direction_name %>
+			<% if(d.direction_long_name != nil) %>
+			<span class="nsx-section-sub">To: <%=d.direction_long_name %></span>
+			<% end %>
+		</a>
+	</li>
 	<% end %>
 </ul>
