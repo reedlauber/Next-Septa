@@ -6,7 +6,7 @@
 <ul id="directions" class="nxs-items nxs-resize">
 	<% @directions.each do |d| %>
 	<li class="nxs-section">
-		<a href="/<%=@route_type + "/" + @route_id + "/" + d.direction_id.to_s %>">
+		<a href="/<%=@route_type + "/" + @route_id + "/" + d.direction_id.to_s %>" class="nxs-nav-link">
 			<%=d.direction_name %>
 			<% if(d.direction_long_name != nil) %>
 			<span class="nsx-section-sub">To: <%=d.direction_long_name %></span>
