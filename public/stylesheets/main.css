@@ -65,6 +65,8 @@
 
 .nxs-stoptimes-stopnames {  }
 	.nxs-stoptimes-stopnames div { overflow:hidden; }
+	.nxs-stoptimes-stopnames-switch { margin:0 4px;width:16px;height:16px; }
+		.nxs-stoptimes-stopnames-switch a { display:inline-block;height:16px;width:16px;background:url(../images/gentleface/black/arrow_two_head_2_icon&16.png) no-repeat; }
 	.nxs-stoptimes-stopnames-right { text-align:right; }
 
 .nxs-stoptime-header { padding:8px 16px 0; }
@@ -138,7 +140,7 @@ html, body { background-color:#5a5a5a;height:100%;background-image:url(../images
 	#content { background-color:#fff; }	
 		
 		#lookup { position:relative; }
-			#lookup aside { position:absolute;top:50%;right:0;margin-top:-0.6em;line-height:1.1; }
+			#lookup aside { position:absolute;top:50%;right:0;margin-top:-1.0em;line-height:1.1; }
 		
 		#times { position:relative; }
 		

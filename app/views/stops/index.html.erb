@@ -9,12 +9,17 @@
 </h2>
 <h3 class="nxs-section nxs-section-instruction nxs-stoptimes-stopnames s-cols">
 	<div class="s-col s-col-1of2 nxs-stoptimes-stopnames-left">
-		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}" %>">
+		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}" %>">
 			<%=@from.stop_name %>
 		</a>
 		<p>From</p>	
 	</div>
-	<div class="s-col s-col-1of2 nxs-stoptimes-stopnames-right">
+	<% if(@to != nil) %>
+	<div class="s-col nxs-stoptimes-stopnames-switch">
+		<a href="<%="/#{@route_type}/#{@route_id}/" + (@direction_id.to_i - 1).abs.to_s + "/#{@to.stop_id}/#{@from.stop_id}" %>" title="Reverse Stations"></a>
+	</div>
+	<% end %>
+	<div class="s-col s-col-last nxs-stoptimes-stopnames-right">
 		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}/choose" %>">
 			<%=(@to == nil ? "choose" : @to.stop_name) %>
 		</a>
