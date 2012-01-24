@@ -1,7 +1,7 @@
 <div id="lookup" class="nxs-section">
 	<form method="GET" action="/search">
 		<input id="term" name="term" type="text" class="s-input s-input-text s-input-smallertext s-corner-all" placeholder="Route #" />
-		<button class="s-btn s-corner-all">Go</button>
+		<button class="s-btn s-btn-success s-corner-all">Go</button>
 		<% if @last_stop != nil %>
 		<aside>
 			<a href="<%=@last_stop%>" class="s-btn s-corner-all">last</a>
