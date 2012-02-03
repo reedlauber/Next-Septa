@@ -36,15 +36,6 @@
 			_markerLayer.clearMarkers();
             _addMarker(bus.lng, bus.lat);
             _setCenter(bus.lng, bus.lat);
-            
-            var popup = new OpenLayers.Popup("offset",
-                   new OpenLayers.LonLat(bus.lng, bus.lat),
-                   new OpenLayers.Size(200, 200),
-                   bus.offset + " mins ago",
-                   true);
-            console.log(popup);
-
-			_map.addPopup(popup);
 		}
 
 		function _getBusLocation(routeId, vehicleId) {
