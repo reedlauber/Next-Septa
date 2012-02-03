@@ -9,7 +9,7 @@
                     gsat: { label: 'Satellite', layer: new OpenLayers.Layer.Google("Google Satellite", { type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 22 }) },
                     ghyb: { label: 'Hybrid', layer: new OpenLayers.Layer.Google("Google Hybrid", { type: google.maps.MapTypeId.HYBRID, numZoomLevels: 20 }) }
                 },
-                zoom: 13,
+                zoom: 16,
                 center: { lat:39.9523350, lng:-75.163789 } // Philadelphia
 			}, options),
 			_manager,
@@ -18,6 +18,8 @@
 		var _map, _proj, _mapProj, 
 			_vectorLayer, _markerLayer, _markerShadowLayer,
 			_markerPath = '/images/markers/bus.png';
+
+		var $map;
 
 		function _addUserLocation(userLatLng) {	
 			var bounds = new google.maps.LatLngBounds();
@@ -33,9 +35,15 @@
 		}
 		
 		function _updateBusLocation(bus) {
+			var label = '',
+				offset = parseInt(bus.Offset, 10);
+			if(!isNaN(offset)) {
+				label = offset + ' min' + (offset == 1 ? '' : 's') + ' ago';
+			}
+
 			_markerLayer.clearMarkers();
-            _addMarker(bus.lng, bus.lat);
             _setCenter(bus.lng, bus.lat);
+            _addMarker(bus.lng, bus.lat, label);
 		}
 
 		function _getBusLocation(routeId, vehicleId) {
@@ -50,37 +58,57 @@
 					_updateBusLocation(buses[vehicleId]);
 					setTimeout(function() {
 						_getBusLocation(routeId, vehicleId);
-					}, 120000); // 2 mins
+					}, 60000); // 1 min
 				} else {
 					// SHOW WARNING THAT DATA COULDN'T BE FOUND
 				}
 			});
 		}
 
-        function _addMarker(x, y) {
+		function _addMarkerInfo(marker, info) {
+			var $icon = $(marker.icon.imageDiv);
+			if($icon.length) {
+				var $info = $('<div class="ns-map-markerinfo s-corner-all-4"></div>').html(info).appendTo($icon);
+			}
+		}
+
+        function _addMarker(x, y, info) {
             var size = new OpenLayers.Size(32, 37),
                 offset = new OpenLayers.Pixel(-(size.w / 2), -size.h),
-                icon = new OpenLayers.Icon(_markerPath, size, offset);
+                icon = new OpenLayers.Icon(_markerPath, size, offset),
+                point = new OpenLayers.LonLat(x, y).transform(_proj, _map.getProjectionObject()),
+                marker = new OpenLayers.Marker(point, icon);
 
-            var point = new OpenLayers.LonLat(x, y).transform(_proj, _map.getProjectionObject());
+            _markerLayer.addMarker(marker);
 
-            _markerLayer.addMarker(new OpenLayers.Marker(point, icon));
+            if(info) {
+            	_addMarkerInfo(marker, info);
+            }
         }
 
-        function _setCenter(lng, lat) {
-            _map.setCenter(new OpenLayers.LonLat(lng, lat).transform(_proj, _map.getProjectionObject()), _zoom);
+        function _setCenter(lng, lat, zoom) {
+        	zoom = zoom || _zoom;
+            _map.setCenter(new OpenLayers.LonLat(lng, lat).transform(_proj, _map.getProjectionObject()), zoom);
         }
 
 		function _setupMapControls() {
+			var $zoom = $('<div class="ns-map-zoom"></div>').appendTo($map);
+			var $zoomIn = $('<a href="javascript:void(0)" data-zoom="in" class="s-shadow-small"></a>').appendTo($zoom);
+			var $zoomOut = $('<a href="javascript:void(0)" data-zoom="out" class="s-shadow-small"></a>').appendTo($zoom);
+
+			$('a', $zoom).click(function() {
+				var zoomFn = $(this).attr('data-zoom') === 'in' ? 'zoomIn' : 'zoomOut';
+				_map[zoomFn]();
+			});
 		}
 
 
         function _setupOverlayLayers() {
         	_vectorLayer = new OpenLayers.Layer.Vector("Vectors", { style: { strokeColor:'#3366DD', strokeWidth:6, strokeOpacity:0.7 } });
-            _markerShadowLayer = new OpenLayers.Layer.Markers("Shadows");
+            //_markerShadowLayer = new OpenLayers.Layer.Markers("Shadows");
             _markerLayer = new OpenLayers.Layer.Markers("Markers");
 
-            _map.addLayers([_vectorLayer, _markerShadowLayer, _markerLayer]);
+            _map.addLayers([_vectorLayer, _markerLayer]);
         }
 
         function _setupRouteOverlay() {
@@ -100,13 +128,13 @@
 		_self.init = function(manager, state) {
 			_manager = manager;
 
-			var $map = $('#' + _options.id);
+			$map = $('#' + _options.id);
 			var routeId = $map.attr('data-route'),
 				vehicleId = $map.attr('data-bus');
 
             _proj = new OpenLayers.Projection("EPSG:4326");
 
-            _map = new OpenLayers.Map(_options.id + '-inner', {
+            _map = NXS.Map = new OpenLayers.Map(_options.id + '-inner', {
                 sphericalMercator: true,
                 units: 'degrees',
                 controls: [
@@ -116,7 +144,7 @@
             _mapProj = _map.getProjectionObject();
 
             _map.addLayers([
-			    _options.baseLayers.gphy.layer
+			    _options.baseLayers.gmap.layer
 		    ]);
 
 			$('.olLayerDiv', $map).addClass('ns-shadow-inset');
@@ -127,7 +155,7 @@
 
             _getBusLocation(state.routeId, vehicleId);
 
-            _setCenter(_options.center.lng, _options.center.lat);
+            _setCenter(_options.center.lng, _options.center.lat, 13);
 
 			//if(navigator.geolocation) {
 			//	navigator.geolocation.getCurrentPosition(function(position) {
