@@ -11,6 +11,7 @@ javascripts:
         - public/javascripts/ns-stops.js
     
     map:
+        - public/javascripts/vendor/OpenLayers.js
         - public/javascripts/ns-map.js
         
 stylesheets:

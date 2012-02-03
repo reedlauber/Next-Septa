@@ -1,14 +1,17 @@
 class MapController < ApplicationController
   def index
-    create_headers
-    
     @back_path = "/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}"
     if(@to != nil)
       @back_path += "/#{@to.stop_id}"
     end
-    
-    ll = params[:ll].split(',')
-    @lat = ll[0]
-    @lng = ll[1]
+
+    @bus = params[:bus]
+
+    if(params[:trip] != nil)
+      trip = Trip.where("trip_id = ?", params[:trip]).first
+      if(trip != nil)
+        @shape_pts = Shape.where("shape_id = ?", trip.shape_id).order("shape_pt_sequence")
+      end
+    end
   end
 end

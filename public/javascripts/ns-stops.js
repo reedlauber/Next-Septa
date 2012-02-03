@@ -47,10 +47,11 @@
 		
 		function _updateRealTime(buses) {
 			$('.nxs-stoptime').each(function() {
-				var blockId = $(this).attr('data-block');
+				var blockId = $(this).attr('data-block'),
+					tripId = $(this).attr('data-trip');
 				if(blockId && blockId in buses) {
 					var bus = buses[blockId];
-					var mapUrl = _manager.getPath('map?ll=' + bus.lat + ',' + bus.lng);
+					var mapUrl = _manager.getPath('map?bus=' + bus.VehicleID + '&trip=' + tripId);
 					$('.nxs-stoptime-aside', this).html('<a href="' + mapUrl + '">map</a>')
 				}
 			});

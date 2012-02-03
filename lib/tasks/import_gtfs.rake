@@ -134,6 +134,11 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
     puts "Total time writing: #{total_writing_formatted}"
     puts "Total time spent: #{total_formatted}"
   end
+
+  # SHAPES
+  if(args.type == "all" || args.type = "shapes")
+    import_type(paths, "Shape", "shapes", [:shape_id, :shape_pt_lat, :shape_pt_lon, :shape_pt_sequence])
+  end
   
   # STOPS
   if(args.type == "all" || args.type == "stops")

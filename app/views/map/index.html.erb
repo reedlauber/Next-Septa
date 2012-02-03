@@ -1,3 +1,8 @@
-<div id="map" data-lat="<%=@lat %>" data-lng="<%=@lng %>">
-	<div id="map-inner"></div>
+<div id="map" data-bus="<%=@bus %>">
+	<div id="map-inner"></div> 
+	<% if(@shape_pts != nil) %>
+	<div id="map-shape" style="display:none;">
+		LINESTRING(<%=(@shape_pts.map {|pt| pt.shape_pt_lon.to_s + " " + pt.shape_pt_lat.to_s}).join(', ') %>)
+	</div>
+	<% end %>
 </div>
