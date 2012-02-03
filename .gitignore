@@ -5,17 +5,9 @@ log/*.log
 tmp/
 db/gtfs/google_rail/*
 db/gtfs/google_bus/transfers.txt
-
-db/gtfs/google_bus/shapes.txt
-
 db/gtfs/google_bus/fare_rules.txt
-
 db/gtfs/google_bus/fare_attributes.txt
-
 db/gtfs/google_bus/calendar_dates.txt
-
 db/gtfs/google_bus/calendar.txt
-
 db/gtfs/google_bus/agency.txt
-
 nxs-favicon.psd
