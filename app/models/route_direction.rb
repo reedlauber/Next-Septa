@@ -23,8 +23,18 @@ class RouteDirection < ActiveRecord::Base
       delta_x = (first_stop.stop_lon - last_stop.stop_lon).abs
       delta_y = (first_stop.stop_lat - last_stop.stop_lat).abs
 
-      nsew = delta_x > delta_y ? @@dir_names[:EastWest] : @@dir_names[:NorthSouth]
-      direction_name = nsew[direction]
+      direction = 0
+      if(delta_x > delta_y)
+        if(last_stop.stop_lon > first_stop.stop_lon)
+          direction = 1
+        end
+        direction_name = @@dir_names[:EastWest][direction]
+      else
+        if(last_stop.stop_lat > first_stop.stop_lat)
+          direction = 1
+        end
+        direction_name = @@dir_names[:NorthSouth][direction]
+      end
     end
     direction_name
   end
