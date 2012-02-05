@@ -15,7 +15,7 @@ javascripts:
         - public/javascripts/ns-templates-stoptime.js
     
     map:
-        - public/javascripts/vendor/OpenLayers.js
+        - public/javascripts/vendor/ns-openlayers.js
         - public/javascripts/ns-map.js
         
 stylesheets:

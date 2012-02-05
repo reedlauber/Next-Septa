@@ -4,7 +4,7 @@
 			_options = $.extend({
 				id: 'map',
                 baseLayers: {
-                    gphy: { label: 'Physical', layer: new OpenLayers.Layer.Google("Google Physical", { type: google.maps.MapTypeId.TERRAIN, numZoomLevels: 20 }) },
+                    gphy: { label: 'Physical', layer: new OpenLayers.Layer.Google("Google Physical", { type: google.maps.MapTypeId.TERRAIN, numZoomLevels: 18 }) },
                     gmap: { label: 'Streets', layer: new OpenLayers.Layer.Google("Google Streets", { type: google.maps.MapTypeId.ROADMAP, numZoomLevels: 20 }) },
                     gsat: { label: 'Satellite', layer: new OpenLayers.Layer.Google("Google Satellite", { type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 22 }) },
                     ghyb: { label: 'Hybrid', layer: new OpenLayers.Layer.Google("Google Hybrid", { type: google.maps.MapTypeId.HYBRID, numZoomLevels: 20 }) }
@@ -137,6 +137,7 @@
             _map = NXS.Map = new OpenLayers.Map(_options.id + '-inner', {
                 sphericalMercator: true,
                 units: 'degrees',
+                theme: null,
                 controls: [
 					new OpenLayers.Control.Navigation()
 				]
