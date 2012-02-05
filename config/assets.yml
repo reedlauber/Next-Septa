@@ -1,4 +1,5 @@
 package_assets: on
+allow_debugging: on
 
 javascripts:
     all:
