@@ -101,7 +101,7 @@
 								$list.append(html);
 							}
 
-							if(_state.routeType = 'buses') {
+							if(_state.routeType === 'buses') {
 								_updateRealTime();
 							}
 
