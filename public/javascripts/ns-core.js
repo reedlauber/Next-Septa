@@ -1,3 +1,7 @@
 var NextSepta = {
-	Components: {}
+	Components: {},
+	Templates: {},
+	template: function(template, data) {
+		return Mustache.to_html(template, data);
+	}
 };

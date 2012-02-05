@@ -24,10 +24,14 @@ class StopTime < ActiveRecord::Base
         logger.warn "Couldn't find TO stop_time for trip_id: '#{self.trip_id}' and stop_id: #{to_stop.stop_id}."
       end
     end
+
+    arrive_time_formatted = arrive_time == nil ? nil : arrive_time.to_formatted_s(:display_time)
     
     { 
       "departure_time" => depart_time, 
       "arrival_time" => arrive_time, 
+      "departure_time_formatted" => depart_time.to_formatted_s(:display_time),
+      "arrival_time_formatted" => arrive_time_formatted,
       "from_now" => from_now, 
       "departure_stop_time" => self,
       "arrival_stop_time" => to_stop_time,

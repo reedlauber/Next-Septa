@@ -7,9 +7,12 @@
 			},
 			_manager,
 			_state,
-			_stops = [];
+			_stops = [],
+			_buses = null;
 		
-		var _intervals = [{ l:'week', s:604800 }, { l:'day', s:86400 }, { l:'hr', s:3600 }, { l:'min', s:60 }]
+		var _intervals = [{ l:'week', s:604800 }, { l:'day', s:86400 }, { l:'hr', s:3600 }, { l:'min', s:60 }];
+
+		var $list;
 		
 		function _getRelTime(diff) {
 			if(diff < 0) {
@@ -45,12 +48,12 @@
 			}
 		}
 		
-		function _updateRealTime(buses) {
+		function _updateRealTime() {
 			$('.nxs-stoptime').each(function() {
 				var blockId = $(this).attr('data-block'),
 					tripId = $(this).attr('data-trip');
-				if(blockId && blockId in buses) {
-					var bus = buses[blockId];
+				if(blockId && blockId in _buses) {
+					var bus = _buses[blockId];
 					var mapUrl = _manager.getPath('map?bus=' + bus.VehicleID + '&trip=' + tripId);
 					$('.nxs-stoptime-aside', this).html('<a href="' + mapUrl + '">map</a>')
 				}
@@ -59,19 +62,68 @@
 		
 		function _getRealTimeData(routeId) {
 			NXS.Data.get('/locations/' + routeId, function(resp) {
-				var buses = {};
+				_buses = {};
 				if(resp.bus) {
 					$.each(resp.bus, function(i, bus) {
-						buses[bus.BlockID] = bus;
+						_buses[bus.BlockID] = bus;
 					});
 				}
-				_updateRealTime(buses);
+				_updateRealTime();
+			});
+		}
+
+		function _setupPaging() {
+			var offset = 0;
+
+			var cache = {
+				"0": {
+					$first: $('li:first', $list)
+				}
+			};
+
+			$('.nxs-stoptimes-pager').click(function() {
+				var fwd = $(this).attr('data-dir') === 'fwd';
+				var prevKey = offset.toString();
+				offset += fwd ? 5 : -5;
+				var cacheKey = offset.toString();
+
+				if(cacheKey in cache) {
+					$list.scrollTo(cache[cacheKey].$first, 500);
+				} else {
+					NXS.Data.get(window.location.pathname, function(data) {
+						if(data && data.length) {
+							var html = NXS.template(NXS.Templates.stopTime, { stop_times:data });
+							var $first;
+							if(offset < 0) {
+								$list.prepend(html);
+								$list.scrollTo(cache[prevKey].$first);
+							} else {
+								$list.append(html);
+							}
+
+							if(_state.routeType = 'buses') {
+								_updateRealTime();
+							}
+
+							$first = $('li[data-trip=' + data[0].trip_id + ']', $list);
+							$list.scrollTo($first, 500);
+							cache[cacheKey] = { $first:$first };
+						} else {
+							offset = parseInt(prevKey, 10); // hackalicious
+						}
+					}, null, { offset:offset });
+				}
 			});
 		}
 		
 		_self.init = function(manager, state) {
 			_manager = manager;
 			_state = state;
+
+			$list = $('#times-list');
+			$list.height($list.height());
+
+			_setupPaging();
 			
 			$('.nxs-stoptime-left').each(function() {
 				var ts = $('time', this).attr('datetime'),

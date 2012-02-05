@@ -69,8 +69,8 @@
 		.nxs-stoptimes-stopnames-switch a { display:inline-block;height:16px;width:16px;background:url(../images/gentleface/black/arrow_two_head_2_icon&16.png) no-repeat; }
 	.nxs-stoptimes-stopnames-right { text-align:right; }
 
-.nxs-stoptime-header { padding:8px 16px 0; }
-.nxs-stoptimes { }
+.nxs-stoptime-header { padding:8px 16px 0;width:90%; }
+.nxs-stoptimes { overflow:hidden; }
 	.nxs-stoptime { padding:10px 16px;position:relative; }
 		.nxs-stoptime time { font-size:1.4em;color:#4a4a4a;font-weight:bold; }
 		.nxs-stoptime span { color:#666; }
@@ -86,6 +86,10 @@
 	.nxs-stoptime-right { float:left;width:35%;text-align:right; }
 	.nxs-stoptime-aside { float:left;width:10%;text-align:right; }
 		.nxs-stoptime-aside a { display:inline-block;height:16px;width:16px;opacity:0.7;background:url(../images/gentleface/black/pin_2_icon&16.png) no-repeat;overflow:hidden;text-indent:9999px; }
+
+.nxs-stoptimes-pager { display:block;margin-top:-4px;height:24px;text-indent:-9999px;background:url(../images/gentleface/black/br_down_icon&16.png) no-repeat center center; }
+.nxs-stoptimes-pager[data-dir=back] { background-image:url(../images/gentleface/black/br_up_icon&16.png); }
+.nxs-stoptimes-pager:hover { background-color:#eee; }
 
 .nxs-items li { border-top:1px solid #fff;border-bottom:1px solid #ddd; }
 .nxs-items li:first-child { border-top:0; }

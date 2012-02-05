@@ -27,7 +27,7 @@
 	</div>
 </h3>
 <section id="times" data-route="<%=@route_id %>">
-	<header class="nxs-stoptime-header">
+	<header class="nxs-stoptime-header s-clearfix">
 		<div class="nxs-stoptime-left">
 			Departs
 		</div>
@@ -37,20 +37,22 @@
 		</div>
 		<% end %>
 	</header>
-	<ul class="nxs-stoptimes">
+	<a href="javascript:void(0)" class="nxs-stoptimes-pager" data-dir="back">back</a>
+	<ul id="times-list" class="nxs-stoptimes">
 		<% @stop_times.each do |st| %>
 		<li class="nxs-stoptime" data-block="<%=st["block_id"]%>" data-trip="<%=st["trip_id"] %>">
 			<div class="nxs-stoptime-left<%=" nxs-stoptime-nodest" if st["arrival_stop_time"] == nil %>">
-				<time datetime="<%=st["departure_time"].to_formatted_s(:display_iso_time) %>"><%=st["departure_time"].to_formatted_s(:display_time) %></time>
+				<time datetime="<%=st["departure_time_formatted"] %>"><%=st["departure_time"].to_formatted_s(:display_time) %></time>
 				<span data-time="<%=st["departure_time"] %>">(<%=st["from_now"] %>)</span>
 			</div>
 			<% if(st["arrival_stop_time"] != nil) %>
 			<div class="nxs-stoptime-right">
-				<time datetime="<%=st["arrival_time"].to_formatted_s(:display_iso_time) %>"><%=st["arrival_time"].to_formatted_s(:display_time) %></time>
+				<time datetime="<%=st["arrival_time_formatted"] %>"><%=st["arrival_time"].to_formatted_s(:display_time) %></time>
 			</div>
 			<% end %>
 			<div class="nxs-stoptime-aside"></div>
 		</li>
 		<% end %>
 	</ul>
+	<a href="javascript:void(0)" class="nxs-stoptimes-pager" data-dir="fwd">more</a>
 </section>

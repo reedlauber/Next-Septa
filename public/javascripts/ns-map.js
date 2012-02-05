@@ -144,7 +144,7 @@
             _mapProj = _map.getProjectionObject();
 
             _map.addLayers([
-			    _options.baseLayers.gmap.layer
+			    _options.baseLayers.gphy.layer
 		    ]);
 
 			$('.olLayerDiv', $map).addClass('ns-shadow-inset');
