@@ -56,3 +56,16 @@
 	</ul>
 	<a href="javascript:void(0)" class="nxs-stoptimes-pager" data-dir="fwd">more</a>
 </section>
+
+<% content_for :js do %>
+	<%= include_javascripts :stops %>
+	<script>
+		$(function() {
+			NextSepta.Manager({
+				components: {
+					stops: NextSepta.Stops()
+				}
+			}).init();
+		});
+	</script>
+<% end %>

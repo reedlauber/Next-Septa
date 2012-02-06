@@ -11,6 +11,8 @@ javascripts:
     
     public:    
         - public/javascripts/ns-manager.js
+
+    stops:
         - public/javascripts/ns-stops.js
         - public/javascripts/ns-templates-stoptime.js
     

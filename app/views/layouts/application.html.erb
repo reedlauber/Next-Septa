@@ -46,15 +46,7 @@
 		<a href="javascript:void(0)" class="s-btn s-corner-all close">Cancel</a>
 	</div>
 	<%= include_javascripts :all, :public %>
-	<script>
-		$(function() {
-			NextSepta.Manager({
-				components: {
-					stops: NextSepta.Stops()
-				}
-			}).init();
-		});
-	</script>
+	<%= yield :js %>
 	<script>
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-25696441-1']);
