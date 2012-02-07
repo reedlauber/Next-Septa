@@ -42,7 +42,7 @@
 		<% @stop_times.each do |st| %>
 		<li class="nxs-stoptime" data-block="<%=st["block_id"]%>" data-trip="<%=st["trip_id"] %>">
 			<div class="nxs-stoptime-left<%=" nxs-stoptime-nodest" if st["arrival_stop_time"] == nil %>">
-				<time datetime="<%=st["departure_time_formatted"] %>"><%=st["departure_time"].to_formatted_s(:display_time) %></time>
+				<time datetime="<%=st["departure_time"].to_formatted_s(:display_iso_time) %>"><%=st["departure_time_formatted"] %></time>
 				<span data-time="<%=st["departure_time"] %>">(<%=st["from_now"] %>)</span>
 			</div>
 			<% if(st["arrival_stop_time"] != nil) %>
