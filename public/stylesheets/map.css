@@ -1,3 +1,5 @@
+.olLayerGoogleCopyright, .olLayerGooglePoweredBy { display:none !important; }
+
 .nxs-back-btn { left:8px;right:auto; }
 
 .ns-map-zoom { position:absolute;top:56px;left:8px;z-index:9999;opacity:0.8; }
