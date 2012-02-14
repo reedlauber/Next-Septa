@@ -17,33 +17,53 @@
 
 		var _map, _proj, _mapProj, 
 			_vectorLayer, _markerLayer, _markerShadowLayer,
-			_markerPath = '/images/markers/bus.png';
+			_bus, _user,
+			_markers = {
+				bus: {
+					width: 32,
+					height: 37,
+					path: '/images/markers/bus.png'
+				},
+				user: {
+					width: 24,
+					height: 24,
+					path: '/images/gentleface/black/pin_map_icon&24.png'
+				}
+			};
 
 		var $map;
 
-		function _addUserLocation(userLatLng) {	
-			var bounds = new google.maps.LatLngBounds();
-			bounds.extend(latlng);
-			bounds.extend(userLatLng);
-			map.fitBounds(bounds);
+		function _setExtendedLocation() {
+			if(_bus && _user) {
+				var bounds = new OpenLayers.Bounds();
+				bounds.extend(new OpenLayers.LonLat(_bus.lng, _bus.lat).transform(_proj, _map.getProjectionObject()));
+				bounds.extend(new OpenLayers.LonLat(_user.lon, _user.lat).transform(_proj, _map.getProjectionObject()));
+				_map.zoomToExtent(bounds);
+			} else if(_bus) {
+            	_setCenter(_bus.lng, _bus.lat);
+			} else if(_user) {
+            	_setCenter(_bus.lng, _bus.lat);
+			}
+		}
 
-			var marker = new google.maps.Marker({
-				position: userLatLng,
-				map: map, 
-				title: 'Your Location'
-			});
+		function _addUserLocation() {
+			_setExtendedLocation();
+			_addMarker(_user.lon, _user.lat, null, 'user');
 		}
 		
-		function _updateBusLocation(bus) {
+		function _updateBusLocation() {
 			var label = '',
-				offset = parseInt(bus.Offset, 10);
+				offset = parseInt(_bus.Offset, 10);
 			if(!isNaN(offset)) {
 				label = offset + ' min' + (offset == 1 ? '' : 's') + ' ago';
 			}
 
 			_markerLayer.clearMarkers();
-            _setCenter(bus.lng, bus.lat);
-            _addMarker(bus.lng, bus.lat, label);
+			_setExtendedLocation();
+			if(_user) {
+				_addMarker(_user.lon, _user.lat, null, 'user');
+			}
+            _addMarker(_bus.lng, _bus.lat, label);
 		}
 
 		function _getBusLocation(routeId, vehicleId) {
@@ -55,7 +75,8 @@
 					});
 				}
 				if(vehicleId in buses) {
-					_updateBusLocation(buses[vehicleId]);
+					_bus = buses[vehicleId];
+					_updateBusLocation();
 					setTimeout(function() {
 						_getBusLocation(routeId, vehicleId);
 					}, 60000); // 1 min
@@ -72,10 +93,12 @@
 			}
 		}
 
-        function _addMarker(x, y, info) {
-            var size = new OpenLayers.Size(32, 37),
+        function _addMarker(x, y, info, marker) {
+        	var marker = _markers[marker || 'bus'];
+
+            var size = new OpenLayers.Size(marker.width, marker.height),
                 offset = new OpenLayers.Pixel(-(size.w / 2), -size.h),
-                icon = new OpenLayers.Icon(_markerPath, size, offset),
+                icon = new OpenLayers.Icon(marker.path, size, offset),
                 point = new OpenLayers.LonLat(x, y).transform(_proj, _map.getProjectionObject()),
                 marker = new OpenLayers.Marker(point, icon);
 
@@ -158,12 +181,12 @@
 
             _setCenter(_options.center.lng, _options.center.lat, 13);
 
-			//if(navigator.geolocation) {
-			//	navigator.geolocation.getCurrentPosition(function(position) {
-			//    	var userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-			//    	_addUserLocation(userLatLng);
-			//    });
-			//}
+			if(navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function(position) {
+					_user = { lat:position.coords.latitude, lon:position.coords.longitude };
+					_addUserLocation();
+			    });
+			}
 
 			return _self;
 		};
