@@ -137,7 +137,7 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
 
   # SHAPES
   if(args.type == "all" || args.type = "shapes")
-    #import_type(paths, "Shape", "shapes", [:shape_id, :shape_pt_lat, :shape_pt_lon, :shape_pt_sequence])
+    import_type(paths, "Shape", "shapes", [:shape_id, :shape_pt_lat, :shape_pt_lon, :shape_pt_sequence])
   end
   
   # STOPS
