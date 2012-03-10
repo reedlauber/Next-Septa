@@ -53,7 +53,7 @@ route_id,route_short_name,route_long_name,route_type,route_url
 10101,20,Franklin Mills Mall to FTC,3,
 10243,201,Ft Wash Office Ctr to Fort Wash Sta,3,
 10417,204,Eagleview to Paoli Station,3,
-10418,205,Phoenixville to Paoli Sta,3,
+10418,205,Great Valley CorpCtr to Paoli Sta,3,
 10244,206,Great Valley Corp Ctr to Paoli Sta,3,
 10103,21,Penn's Landing to 69th St TC,3,
 10105,22,Warminster/Willow Grove to OTC,3,
