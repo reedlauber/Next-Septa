@@ -10,10 +10,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120131023303) do
+ActiveRecord::Schema.define(:version => 20120218125607) do
 
   create_table "route_directions", :force => true do |t|
-    t.integer  "route_id"
+    t.string   "route_id"
     t.string   "route_short_name"
     t.integer  "direction_id"
     t.string   "direction_name"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20120131023303) do
   add_index "route_directions", ["route_short_name"], :name => "index_route_directions_on_route_short_name"
 
   create_table "routes", :force => true do |t|
-    t.integer  "route_id"
+    t.string   "route_id"
     t.string   "route_short_name"
     t.string   "route_long_name"
     t.string   "route_desc"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20120131023303) do
   add_index "shapes", ["shape_id"], :name => "index_shapes_on_shape_id"
 
   create_table "simplified_stops", :force => true do |t|
-    t.integer  "route_id"
+    t.string   "route_id"
     t.integer  "route_direction_id"
     t.integer  "direction_id"
     t.integer  "stop_id"
@@ -113,7 +113,7 @@ ActiveRecord::Schema.define(:version => 20120131023303) do
   add_index "stops", ["stop_id"], :name => "index_stops_on_stop_id"
 
   create_table "trips", :force => true do |t|
-    t.integer  "route_id"
+    t.string   "route_id"
     t.string   "service_id"
     t.string   "trip_id"
     t.string   "trip_headsign"

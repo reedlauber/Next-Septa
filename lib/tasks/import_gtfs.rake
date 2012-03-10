@@ -90,9 +90,9 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
         # data for individual row
         record_values = [] 
         # loop over headers and pull value for each column
-        row.headers.each do |h| 
-          if(row.field(h) != nil)
-            record_values << row.field(h).strip
+        columns.each do |h| 
+          if(row.field(h.to_s) != nil)
+            record_values << row.field(h.to_s).strip
           else
             record_values << nil
           end
@@ -136,7 +136,7 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
   end
 
   # SHAPES
-  if(args.type == "all" || args.type = "shapes")
+  if(args.type == "all" || args.type == "shapes")
     import_type(paths, "Shape", "shapes", [:shape_id, :shape_pt_lat, :shape_pt_lon, :shape_pt_sequence])
   end
   

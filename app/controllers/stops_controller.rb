@@ -44,7 +44,7 @@ class StopsController < ApplicationController
   
   def from
     if(@direction != nil)    
-      @stops = SimplifiedStop.where("route_id = #{@route.route_id} and direction_id = #{@direction_id}").order("stop_sequence")
+      @stops = SimplifiedStop.where("route_id = ? and direction_id = ?", @route.route_id, @direction_id).order("stop_sequence")
     
       render "choose"
     end
@@ -54,7 +54,7 @@ class StopsController < ApplicationController
     @choose_arrival = true
     
     if(@direction != nil)
-      @stops = SimplifiedStop.where("route_id = #{@route.route_id} AND direction_id = #{@direction_id} AND stop_sequence > #{@from.stop_sequence}").order("stop_sequence")
+      @stops = SimplifiedStop.where("route_id = ? AND direction_id = ? AND stop_sequence > ?", @route.route_id, @direction_id, @from.stop_sequence).order("stop_sequence")
     
       render "choose"
     end
