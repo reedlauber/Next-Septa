@@ -309,7 +309,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 535,Rhawn St & Castor Av     ,40.061933,-75.056416,,,1
 536,Rhawn St & Roosevelt Blvd,40.05688,-75.047147,,,1
 537,Rhawn St & Torresdale Av,40.035311,-75.025331,,,1
-539,33rd St & Dickinson St Loop,39.93512,-75.199022,,,1
+539,33rd St & Dickinson St Loop,39.93553,-75.198572,,,1
 540,Morris St & 20th St,39.930458,-75.178448,,,1
 541,Morris St & Broad St,39.929189,-75.168985,,,1
 542,Morris St & 7th St,39.927665,-75.157315,,,1
@@ -921,12 +921,10 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 1940,Drexel Hill Jct Station,39.946887,-75.292658,,,1
 1943,Woodland Av Station,39.924662,-75.339706,,,1
 1944,Springfield Mall Station,39.918171,-75.348886,,,1
-1945,96 Signal - not a stop            ,39.915539,-75.364634,,,1
 1946,Providence Rd Station,39.916787,-75.380921,,,1
 1947,Orange St Station,39.918612,-75.393844,,,1
 1948,Orange St Station,39.918513,-75.393833,,,1
 1949,Providence Rd Station,39.91667,-75.380874,,,1
-1950,SIG  96 - not a stop,39.91544,-75.364539,,,1
 1951,Springfield Mall Station,39.918002,-75.34898,,,1
 1952,Woodland Av Station,39.924608,-75.339588,,,1
 1953,Scenic Rd Station,39.940564,-75.325895,,,1
@@ -2440,7 +2438,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 15821,Harbison Av & Benner St ,40.024212,-75.062783,,,1
 15822,Olney Av & Mascher St ,40.035526,-75.123954,,,1
 15823,Front St & Olney Av ,40.035458,-75.121462,,,1
-15825,Harbison Av & Battersby St - FS,40.029777,-75.062789,,,1
+15825,Harbison Av & Robbins Av,40.029348,-75.062698,,,1
 15829,Battersby St & Frankford Av - FS,40.027427,-75.064731,,,1
 15831,Battersby St & Harbison Av,40.029224,-75.063006,,,1
 15833,Rising Sun Av & Chew Av - MBFS,40.037836,-75.111945,,,1
@@ -3530,7 +3528,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 17262,Broad St & Race St,39.956102,-75.162663,,,1
 17263,Broad St & Vine St - FS,39.958181,-75.16229,,,1
 17264,Broad St & Callowhill St - FS,39.959635,-75.16193,,,1
-17265,Broad St & Spring Garden St,39.962534,-75.161222,,,1
+17265,Broad St & Spring Garden St,39.962115,-75.161318,,,1
 17266,Broad St & Green St,39.963667,-75.161005,,,1
 17267,Broad St & Wallace St - FS,39.965295,-75.160679,,,1
 17268,Broad St & Ridge Av,39.966258,-75.160471,,,1
@@ -6640,7 +6638,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 21431,42nd St & Pine St,39.951307,-75.207331,,,1
 21432,42nd St & Baltimore Av,39.95004,-75.207358,,,1
 21433,42nd St & Chester Av,39.948844,-75.207303,,,1
-21434,42nd St & Woodland Av,39.946915,-75.207249,,,1
 21435,University Av & Baltimore Av - MBFS,39.948803,-75.199474,,,1
 21436,22nd St & Arch St ,39.955907,-75.176222,,,1
 21437,Health Sciences Dr & Civic Center B,39.945568,-75.197135,,,1
@@ -6657,7 +6654,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 21450,34th St & Spruce St,39.950584,-75.192702,,,1
 21451,University Av & Veterans Hosp,39.949196,-75.199426,,,1
 21452,Woodland Av & 39th St - FS,39.94969,-75.201781,,,1
-21455,42nd St & Chester Av,39.948379,-75.207092,,,1
 21456,42nd St & Baltimore Av,39.949745,-75.20717,,,1
 21457,42nd St & Spruce St,39.95211,-75.20695,,,1
 21458,42nd St & Locust St,39.953332,-75.206651,,,1
@@ -7644,7 +7640,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 22557,State Rd & Arendell Av ,40.046912,-74.992712,,,1
 22558,State Rd & Delaire Rd - FS,40.0486,-74.989967,,,1
 22559,State Rd & Convent Ln,40.049666,-74.988196,,,1
-22560,State Rd & Filter St ,40.051875,-74.984578,,,1
+22560,State Rd & Fitler St ,40.051875,-74.984578,,,1
 22561,Grant Av & State Rd - FS,40.053282,-74.982986,,,1
 22562,Grant Av & Torresdale Av ,40.058212,-74.98783,,,1
 22563,Morrell Av & Crestmont Av - MBNS,40.064792,-74.986683,,,1
@@ -8796,7 +8792,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 23805,Richmond St & Buckius St ,39.999405,-75.069267,,,1
 23806,Richmond St & Ash St ,40.000239,-75.067585,,,1
 23807,Richmond St & Kirkbride St ,40.000913,-75.066199,,,1
-23808,Bridge St & Richmond St - FS,40.002595,-75.064501,,,1
+23808,Richmond St & Bridge St,40.00231,-75.064467,,,1
 23809,Bridge St & Salmon St,40.003241,-75.065679,,,1
 23810,Whitaker Av & Bleigh Av ,40.05906,-75.075188,,,1
 23811,Whitaker Av & Shelmire Av ,40.060297,-75.074023,,,1
@@ -11939,7 +11935,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 29432,10th St & Packer Av  FS,39.911225,-75.165473,,,1
 29433,Moyamensing & Packer Av - FS,39.91268,-75.182866,,,1
 29434,Penrose Av & Pattison Av,39.908274,-75.189112,,,1
-29435,Bartram Av & Island Rd - MBFS,39.893866,-75.238963,,,1
+29435,Bartram Av & Island Rd - MBFS,39.893795,-75.238919,,,1
 29437,Tinicum Island Rd &  Stevens Dr,39.864805,-75.273926,,,1
 29438,Bartram Av & 84th St - MBFS,39.892606,-75.240264,,,1
 29439,Island Av & Penrose Av - MBFS,39.888234,-75.233121,,,1
@@ -12487,7 +12483,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30281,Columbus Commons 2,39.916543,-75.14055,,,1
 30282,Columbus Commons 3,39.916162,-75.141555,,,1
 30283,Grays Ferry Av & 35th St,39.940019,-75.199595,,,1
-30284,Island Av & Penrose Av - MBNS,39.888068,-75.232485,,,1
+30284,Island Av & Penrose Av - MBNS,39.888047,-75.232622,,,1
 30285,Broad St & Erie Av - FS,40.009386,-75.151043,,,1
 30288,Whitaker Av & Cottman Av,40.057571,-75.076635,,,1
 30289,Torresdale Av & Kensington Av - FS,40.005846,-75.095552,,,1
@@ -12536,7 +12532,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30359,6th St & Welsh St Chester Tran Ctr,39.849673,-75.360307,,31036,0
 30360,UPS Customer Center & Deliveries,39.859937,-75.245885,,,1
 30361,UPS Employee lot #1 inside,39.859,-75.25899,,,1
-30362,5 11 Hog Island Rd,39.864669,-75.235364,,,1
+30362,5 11 Hog Island Rd,39.864561,-75.235317,,,1
 30363,Elmwood Av & Henderson Dr - FS,39.907936,-75.260821,,,0
 30364,Elmwood Av & Bonsall Av - MBNS,39.907521,-75.257376,,,0
 30366,Grays Ferry Av & Peltz St,39.940258,-75.188025,,,1
@@ -12610,7 +12606,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30460,Front St & Duncannon Av,40.029178,-75.122647,,,1
 30461,Church Rd & Park Av - FS,40.082841,-75.251078,,,1
 30462,Ridge Pk & Chemical Rd,40.096124,-75.295865,,,1
-30464,Cornwells Heights Station,40.070279,-74.955842,,,78
+30464,Cornwells Heights Station,40.069554,-74.957751,,,78
 30465,Margaret St & Frankford Av,40.016778,-75.083671,,,1
 30467,4th St & Depot St,40.105344,-75.341974,,,1
 30468,1st Av & Moore Rd - MBNS,40.095036,-75.408477,,,0
@@ -12872,7 +12868,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30813,Morris Rd & Cathcart Rd,40.173955,-75.270154,,,0
 30814,Woodland Av & 39th St,39.949754,-75.201421,,,1
 30815,Civic Center Blvd & Health Sciences,39.946385,-75.197366,,,1
-30817,Woodland Av & 42nd St - MBNS,39.947306,-75.206534,,,1
 30818,Philmont Av & Overhill Av,40.131701,-75.012924,,,1
 30819,Philmont Av & Overhill Av,40.131458,-75.013052,,,1
 30820,42nd St & Pine St,39.951105,-75.207213,,,1
@@ -13255,7 +13250,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 31319,West Trenton Av & Doloro Dr - MBNS,40.210796,-74.795159,,,1
 31320,Broad St & Pattison Av - 1,39.904602,-75.173571,,,1
 31323,Penrose Av & 20th St 1,39.912537,-75.182654,,,1
-31324,Columbus Blvd & Oregon Av,39.913681,-75.138,,,1
+31324,Columbus Blvd & Oregon Av - MBNS,39.913681,-75.138,,,1
 31325,Cardinal Av & City Av - FS,39.993765,-75.241453,,,1
 31328,West Trenton Av & Lafayette Av,40.214638,-74.787077,,,1
 31329,Lincoln Hwy & Oak Ln,40.191029,-74.828854,,,1
@@ -13349,3 +13344,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 31475,Island Av & Escort Av,39.883911,-75.230758,,,0
 31476,Enterprise Av & Executive Av,39.882396,-75.225948,,,0
 31487,Broad St & Pattison Av - FS,39.905592,-75.173378,,,0
+31511,Harbison Av & Frankford Av - FS,40.027749,-75.062316,,,0
+31515,Pattison Av & Penrose Av,39.907445,-75.189741,,,0
+31516,Westminster Av & 47th St ,39.969002,-75.215922,,,0
