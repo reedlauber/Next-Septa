@@ -8,8 +8,18 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-	<div id="container" class="s-corner-all-24 s-shadow">
-		<%= yield %>
+	<div id="container">
+		<header class="data-header">NEXT&rarr;Septa <strong>Data</strong></header>
+		<div class="s-corner-all-24 s-shadow data-content">
+			<% if @bc != nil && @bc.count > 0 %>
+			<ul class="data-nav">
+				<% @bc.each do |bc| %>
+				<li><a href="<%= bc[:url] %>"><%= bc[:text] %></a></li>
+				<% end %>
+			</ul>
+			<% end %>
+			<%= yield %>
+		</div>
 	</div>
 </body>
 </html>

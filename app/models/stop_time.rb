@@ -1,5 +1,15 @@
 class StopTime < ActiveRecord::Base
+  def self.parse_time(time_str)
+    d_time_parts = time_str.split(':')
+    if(d_time_parts[0].to_i > 23)
+      time_str = "0" + (d_time_parts[0].to_i - 24).to_s + ":" + d_time_parts[1] + ":00"
+    end
+    
+    Time.parse(time_str)
+  end
+
   def convert!(to_stop)
+    #TODO: convert these calls to use above parse_time method
     d_time = self.departure_time
     d_time_parts = d_time.split(':')
     if(d_time_parts[0].to_i > 23)

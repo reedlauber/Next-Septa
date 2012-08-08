@@ -1,0 +1,24 @@
+<div id="data-index" class="s-cols">
+	<div class="s-col s-col-1of2">
+		<h1>Trips (<%=@route.route_short_name %> - <%=@direction.direction_name %>)</h1>
+	
+		<% [@weekdays, @saturdays, @sundays].each do |list| %>
+		<% if(list.count > 0) %>
+		<h2><%= list[0][:service_label] %>s</h2>
+		<ul class="data-list s-corner-all">
+			<% list.each do |t| %>
+			<li>
+				<a href="<%= "/data/#{@route_id}/#{@direction_id}/#{t[:trip_id]}" %>">
+					<span class="nxs-routelabel"><%= t[:start_time].to_formatted_s(:display_time) %></span>
+					To: <%= t[:trip_headsign] %>
+					<span class="icon"></span>
+				</a>
+			</li>
+			<% end %>
+		</ul>
+		<% end %>
+		<% end %>
+	</div>
+	<div class="s-col-last">
+	</div>
+</div>

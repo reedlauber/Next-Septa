@@ -1,12 +1,12 @@
 <div id="data-index" class="s-cols">
 	<div class="s-col s-col-1of2">
-		<h1><%=@route.route_short_name %> - To <%=@direction.direction_name %></h1>
+		<h1>Stops (<%=@route.route_short_name %> - To <%=@trip.trip_headsign %>)</h1>
 	
-		<ul class="data-list s-corner-all">
+		<ul class="data-list data-list-last s-corner-all">
 		<% @stops.each do |stop| %>
 			<li>
-				<a href="/data/<%=@route.route_short_name %>/<%=@direction_id %>/<%=stop.stop_id %>">
-					<span class="nxs-routelabel"><%=stop.stop_sequence %></span> <%=stop.stop_name %><span class="icon"></span>
+				<a href="javascript:void(0)">
+					<span class="nxs-routelabel"><%=stop[:arrival_time].to_formatted_s(:display_time) %></span> <%=stop[:stop_name] %><span class="icon"></span>
 				</a>
 			</li>
 		<% end %>

@@ -11,8 +11,9 @@ Nextsepta::Application.routes.draw do
   
   get "/locations/:route_id" => "location#index"
   
-  get "/data/:route_id/:direction_id/:stop_id" => "data#times"
-  get "/data/:route_id/:direction_id" => "data#stops"
+  get "/data/:route_id/:direction_id/:trip_id/:stop_id" => "data#times"
+  get "/data/:route_id/:direction_id/:trip_id" => "data#stops"
+  get "/data/:route_id/:direction_id" => "data#trips"
   get "/data/:route_id" => "data#directions"
   get "/data" => "data#routes"
   
