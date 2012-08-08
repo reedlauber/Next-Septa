@@ -22,7 +22,9 @@ h2 { margin-bottom:0.4em; }
 			.data-list a:hover { background-color:rgba(255, 255, 255, 0.3); }
 			.data-list a:hover .icon { display:block; }
 
-		.data-list-last a { cursor:default; }
+	.data-list-last { background:#dadada; }
+	.data-list-last li { background:transparent none;border-top-color:#eee; }
+		.data-list-last a { cursor:default;background-color:transparent; }
 			.data-list-last a:hover .icon { display:none; }
 
 .nxs-routelabel { font-size:1.8em;color:#444;text-transform:uppercase;position:relative;bottom:-3px;color:#5a5a5a;border-right:1px solid #bbb;padding:0 12px 0 6px;margin-right:12px; }

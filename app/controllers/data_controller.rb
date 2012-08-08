@@ -10,6 +10,7 @@ class DataController < ApplicationController
     @route_id = params[:route_id].upcase
     @route = Route.where("route_short_name = ?", @route_id).first
     @directions = RouteDirection.where("route_id = ?", @route.route_id).order("direction_id")
+    @stops = SimplifiedStop.where("route_id = ? AND direction_id = 0", @route.route_id).order("stop_sequence")
     generate_breadcrumbs
     render :layout => "data"
   end

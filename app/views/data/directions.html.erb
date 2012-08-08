@@ -1,7 +1,7 @@
 <div id="data-index" class="s-cols">
+	<h1>Route <%=@route.route_short_name %></h1>
 	<div class="s-col s-col-1of2">
-		<h1><%=@route.route_short_name %></h1>
-	
+		<h2>Directions</h2>
 		<ul class="data-list s-corner-all">
 		<% @directions.each do |d| %>
 			<li>
@@ -12,5 +12,16 @@
 		</ul>
 	</div>
 	<div class="s-col-last">
+		<h2>Route Stops</h2>
+		<ul class="data-list data-list-last s-corner-all">
+			<% @stops.each do |s| %>
+			<li>
+				<a href="javascript:void(0)">
+					<span class="nxs-routelabel"><%=s.stop_sequence %></span> 
+					<%= s.stop_name %>
+				</a>
+			</li>
+			<% end %>
+		</ul>
 	</div>
 </div>

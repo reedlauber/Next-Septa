@@ -6,7 +6,7 @@
 		<% @stops.each do |stop| %>
 			<li>
 				<a href="javascript:void(0)">
-					<span class="nxs-routelabel"><%=stop[:arrival_time].to_formatted_s(:display_time) %></span> <%=stop[:stop_name] %><span class="icon"></span>
+					<span class="nxs-routelabel"><%=stop[:arrival_time].to_formatted_s(:display_time) %></span> <%=stop[:stop_name] %>
 				</a>
 			</li>
 		<% end %>
