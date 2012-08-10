@@ -24,8 +24,9 @@ class StopsController < ApplicationController
       end
     end
     
-    stop_times = StopTime.select("DISTINCT stop_times.*, t.block_id")
+    stop_times = StopTime.select("DISTINCT stop_times.*, t.block_id, tv.stop_count, tv.first_stop_sequence, tv.last_stop_sequence")
                     .joins("JOIN trips t ON stop_times.trip_id = t.trip_id")
+                    .joins("LEFT OUTER JOIN trip_variants tv ON t.trip_variant_id = tv.id")
                     .where("t.route_id = '#{@route.route_id}' AND stop_id = #{@from.stop_id} AND t.direction_id = #{@direction_id} AND service_id = '#{service_id}' AND departure_time #{compare_dir} '#{c_time}'")
                     .order("departure_time #{sort_dir}")
                     .limit(5)

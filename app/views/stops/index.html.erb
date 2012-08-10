@@ -9,7 +9,7 @@
 </h2>
 <h3 class="nxs-section nxs-section-instruction nxs-stoptimes-stopnames s-cols">
 	<div class="s-col s-col-1of2 nxs-stoptimes-stopnames-left">
-		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}" %>">
+		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}" %>" title="<%=@from.stop_name %>">
 			<%=@from.stop_name %>
 		</a>
 		<p>From</p>	
@@ -20,7 +20,7 @@
 	</div>
 	<% end %>
 	<div class="s-col s-col-last nxs-stoptimes-stopnames-right">
-		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}/choose" %>">
+		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}/choose" %>" title="<%=(@to == nil ? "Choose Destination" : @to.stop_name) %>">
 			<%=(@to == nil ? "choose" : @to.stop_name) %>
 		</a>
 		<p>To</p>
@@ -41,16 +41,21 @@
 	<ul id="times-list" class="nxs-stoptimes">
 		<% @stop_times.each do |st| %>
 		<li class="nxs-stoptime" data-block="<%=st["block_id"]%>" data-trip="<%=st["trip_id"] %>">
-			<div class="nxs-stoptime-left<%=" nxs-stoptime-nodest" if st["arrival_stop_time"] == nil %>">
-				<time datetime="<%=st["departure_time"].to_formatted_s(:display_iso_time) %>"><%=st["departure_time_formatted"] %></time>
-				<span data-time="<%=st["departure_time"] %>">(<%=st["from_now"] %>)</span>
+			<div class="s-clearfix">
+				<div class="nxs-stoptime-left<%=" nxs-stoptime-nodest" if st["arrival_stop_time"] == nil %>">
+					<time datetime="<%=st["departure_time"].to_formatted_s(:display_iso_time) %>"><%=st["departure_time_formatted"] %></time>
+					<span data-time="<%=st["departure_time"] %>">(<%=st["from_now"] %>)</span>
+				</div>
+				<% if(st["arrival_stop_time"] != nil) %>
+				<div class="nxs-stoptime-right">
+					<time datetime="<%=st["arrival_time_formatted"] %>"><%=st["arrival_time"].to_formatted_s(:display_time) %></time>
+				</div>
+				<% end %>
+				<div class="nxs-stoptime-aside"></div>
 			</div>
-			<% if(st["arrival_stop_time"] != nil) %>
-			<div class="nxs-stoptime-right">
-				<time datetime="<%=st["arrival_time_formatted"] %>"><%=st["arrival_time"].to_formatted_s(:display_time) %></time>
+			<div class="nxs-stoptime-coverage" title="approx. route coverage">
+				<i class="nxs-stoptime-coverage-value" style="margin-left:<%=st["coverage_left"]%>%;margin-right:<%=st["coverage_right"]%>%;"></i>
 			</div>
-			<% end %>
-			<div class="nxs-stoptime-aside"></div>
 		</li>
 		<% end %>
 	</ul>

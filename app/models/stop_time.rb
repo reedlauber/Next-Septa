@@ -36,6 +36,10 @@ class StopTime < ActiveRecord::Base
     end
 
     arrive_time_formatted = arrive_time == nil ? nil : arrive_time.to_formatted_s(:display_time)
+    coverage_left = ((self.first_stop_sequence.to_i - 1) / self.stop_count.to_f) * 100
+    coverage_left = 0 if coverage_left < 0
+    coverage_right = (1 - (self.last_stop_sequence.to_i / self.stop_count.to_f)) * 100
+    coverage_right = 0 if coverage_right < 0
     
     { 
       "departure_time" => depart_time, 
@@ -46,7 +50,9 @@ class StopTime < ActiveRecord::Base
       "departure_stop_time" => self,
       "arrival_stop_time" => to_stop_time,
       "trip_id" => self.trip_id,
-      "block_id" => self.block_id
+      "block_id" => self.block_id,
+      "coverage_left" => coverage_left,
+      "coverage_right" => coverage_right
     }
   end
   

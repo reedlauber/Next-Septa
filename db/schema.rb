@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120218125607) do
+ActiveRecord::Schema.define(:version => 20120809214854) do
 
   create_table "route_directions", :force => true do |t|
     t.string   "route_id"
@@ -112,6 +112,18 @@ ActiveRecord::Schema.define(:version => 20120218125607) do
 
   add_index "stops", ["stop_id"], :name => "index_stops_on_stop_id"
 
+  create_table "trip_variants", :force => true do |t|
+    t.integer  "route_id"
+    t.integer  "direction_id"
+    t.string   "trip_headsign"
+    t.integer  "stop_count"
+    t.string   "variant_name"
+    t.integer  "first_stop_sequence"
+    t.integer  "last_stop_sequence"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "trips", :force => true do |t|
     t.string   "route_id"
     t.string   "service_id"
@@ -123,6 +135,7 @@ ActiveRecord::Schema.define(:version => 20120218125607) do
     t.string   "shape_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "trip_variant_id"
   end
 
   add_index "trips", ["route_id"], :name => "index_trips_on_route_id"

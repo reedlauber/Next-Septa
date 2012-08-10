@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  route_id: 1
+  direction_id: 1
+  trip_headsign: MyString
+  stop_count: 1
+  variant_name: MyString
+  first_stop_sequence: 1
+  last_stop_sequence: 1
+
+two:
+  route_id: 1
+  direction_id: 1
+  trip_headsign: MyString
+  stop_count: 1
+  variant_name: MyString
+  first_stop_sequence: 1
+  last_stop_sequence: 1

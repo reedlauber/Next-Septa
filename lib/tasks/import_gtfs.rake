@@ -197,4 +197,25 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
     puts "\nDone"
     puts "Total time spend: #{total_formatted}"
   end
+
+  # TRIP VARIANTS
+  if(args.type == "all" || args.type == "variants")
+    puts "\n\n!!! Generating Trip Variants !!!"
+
+    total_time = 0
+    start_time = Time.now
+
+    puts "\nDeleting old values ..."
+    ActiveRecord::Base.connection.execute("truncate table trip_variants")
+    total_time += timer_interval(start_time, "Time spent deleting values: ")
+    start_time = Time.now
+
+    puts "\nCreating new values ..."
+    TripVariant.generate_variants
+    total_time += timer_interval(start_time, "Time spent creating values: ")
+    
+    total_formatted = format_time total_time
+    puts "\nDone"
+    puts "Total time spend: #{total_formatted}"
+  end
 end
