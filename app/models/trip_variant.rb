@@ -31,7 +31,7 @@ class TripVariant < ActiveRecord::Base
 
 	private
 	def self.trip_stop_info(trip)
-		StopTime.find_by_sql("SELECT MIN(stop_sequence) min_sequence, MAX(stop_sequence) max_sequence " + 
+		StopTime.find_by_sql("SELECT MIN(stop_sequence) as min_sequence, MAX(stop_sequence) as max_sequence " + 
 			"FROM stop_times " + 
 			"WHERE trip_id = '#{trip.trip_id}' " + 
 			"GROUP BY trip_id").first
