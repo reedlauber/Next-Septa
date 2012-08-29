@@ -34,7 +34,7 @@
 .nxs-header-iconbtn { padding:2px;height:15px;width:15px;border:2px solid #444;background-repeat:no-repeat;background-position:1px 1px;text-indent:-9999px;overflow:hidden; }
 
 .nxs-routelabel { font-size:1.6em;color:#444;text-transform:uppercase;position:relative;bottom:-3px; }
-.nxs-routedirection { margin:4px 0 0 4px; }
+.nxs-routedirection { margin:4px 0 0 4px;color:#444;text-transform:uppercase; }
 .nxs-items .nxs-routelabel { color:#5a5a5a;border-right:1px solid #ddd;padding:0 12px 0 6px;margin-right:12px; }
 .nxs-items .nxs-routetype { border:0; }
 .nxs-items .nxs-section { padding:0;font-size:1.2em; }
