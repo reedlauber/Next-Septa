@@ -6167,7 +6167,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 20825,Kingsessing Av & 62nd St,39.930262,-75.233612,,,1
 20826,Kingsessing Av & 65th St,39.92797,-75.236856,,,1
 20827,65th St & Chester St - East,39.928835,-75.238082,,,1
-20828,65th St & Windsar Av ,39.929194,-75.241682,,,1
+20828,65th St & Windsor St ,39.929194,-75.241682,,,1
 20829,65th St & Cobbs Creek Pkwy ,39.9295,-75.243157,,,1
 20831,Chester Av & Church Ln,39.926645,-75.245867,,,1
 20833,Chester Av & Duncan Av ,39.925689,-75.249022,,,1

@@ -116,7 +116,7 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 10717,9,4th-Walnut to Andorra,3,,,
 10806,90,PlymouthMtgMall to Norristown TC,3,,,
 10761,91,Graterford to Norristown TC,3,,,
-10807,92,Exton To King of Prussia,0,,,
+10807,92,Exton To King of Prussia,3,,,
 10763,93,Pottstown to Norristown TC,3,,,
 10764,94,Montgomery Mall to Chestnut Hill,3,,,
 10805,95,Swedeland to Willow Grove Park Mall,3,,,
