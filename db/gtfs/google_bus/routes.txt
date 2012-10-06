@@ -138,4 +138,3 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 10795,NHSL,Norristown TC to 69th St TC,0,A033B3,FFFFFF,
 10730,R,Henry-Midval&WissTC to Frankford TC,3,,,
 10740,XH,Broad-Erie to Cheltenham-Ogontz,3,,,
-

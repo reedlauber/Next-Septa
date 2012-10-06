@@ -9621,13 +9621,13 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10700,1,3313242,"Frankford Transportation Ctr",2061,0,139547
 10700,1,3313243,"Frankford Transportation Ctr",2052,0,139543
 10700,1,3313244,"Frankford Transportation Ctr",2064,0,139547
-10700,1,3313245,"Express Frankford Transportation Ctr",2057,0,139545
+10700,1,3313245,"Frankford Transportation Center",2057,0,139544
 10700,1,3313246,"Frankford Transportation Ctr",2054,0,139543
 10700,1,3313247,"Frankford Transportation Ctr",2066,0,139547
 10700,1,3313248,"Frankford Transportation Ctr",2051,0,139543
 10700,1,3313249,"Frankford Transportation Ctr",2057,0,139547
-10700,1,3313250,"Express Frankford Transportation Ctr",2059,0,139545
-10700,1,3313251,"Express Frankford Transportation Ctr",2058,0,139545
+10700,1,3313250,"Frankford Transportation Center",2059,0,139544
+10700,1,3313251,"Frankford Transportation Center",2058,0,139544
 10700,1,3313252,"Frankford Transportation Ctr",2060,0,139543
 10700,1,3313253,"Frankford Transportation Ctr",2052,0,139547
 10700,1,3313254,"Express Frankford Transportation Ctr",2063,0,139545
@@ -12840,48 +12840,48 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10741,1,3344223,"Paoli Railroad Station",8605,1,139942
 10741,1,3344224,"Paoli Railroad Station",8604,1,139935
 10741,1,3344225,"Paoli Railroad Station",8602,1,139942
-10743,1,3344311,"Horsham (To Willow Grove Park Mall)",8551,0,139964
-10743,1,3344312,"Horsham (To Willow Grove Park Mall)",8551,0,139964
-10743,1,3344313,"Horsham (To Willow Grove Park Mall)",8552,0,139964
-10743,1,3344314,"Horsham (To Willow Grove Park Mall)",8551,0,139964
-10743,1,3344315,"Horsham (To Willow Grove Park Mall)",8552,0,139964
-10743,1,3344316,"Horsham",8555,0,139961
-10743,1,3344317,"Horsham (To Willow Grove Park Mall)",8551,0,139964
-10743,1,3344318,"Horsham (To Willow Grove Park Mall)",8552,0,139964
-10743,1,3344319,"Horsham",8555,0,139961
-10743,1,3344320,"Horsham (To Willow Grove Park Mall)",8551,0,139964
-10743,1,3344321,"Horsham (To Willow Grove Park Mall)",8552,0,139964
-10743,1,3344322,"Horsham",8555,0,139961
-10743,1,3344323,"Horsham (To Willow Grove Park Mall)",8551,0,139964
-10743,1,3344324,"Horsham (To Willow Grove Park Mall)",8552,0,139964
-10743,1,3344325,"Horsham",8551,0,139961
-10743,1,3344326,"Horsham (To Willow Grove Park Mall)",8552,0,139964
-10743,1,3344327,"Horsham",8551,0,139961
-10743,1,3344328,"Horsham (To Willow Grove Park Mall)",8552,0,139965
-10743,1,3344329,"Horsham (To Willow Grove Park Mall)",8551,0,139963
-10743,1,3344330,"Horsham (To Willow Grove Station)",8552,0,139970
-10743,1,3344331,"Horsham (To Willow Grove Station)",8551,0,139969
-10743,1,3344332,"Horsham (To Willow Grove Park Mall)",8553,0,139962
-10743,1,3344333,"Horsham (To Willow Grove Station)",8554,0,139969
-10743,1,3344334,"Horsham (To Willow Grove Park Mall)",8553,0,139962
-10743,1,3344335,"Horsham (To Willow Grove Station)",8554,0,139969
-10743,1,3344336,"Horsham (To Willow Grove Park Mall)",8553,0,139966
-10743,1,3344337,"Horsham (To Willow Grove Park Mall)",8556,0,139962
-10743,1,3344338,"Horsham (To Willow Grove Park Mall)",8554,0,139966
-10743,1,3344339,"Horsham (To Willow Grove Station)",8553,0,139969
-10743,1,3344340,"Horsham (To Willow Grove Park Mall)",8556,0,139966
-10743,1,3344341,"Horsham (To Willow Grove Park Mall)",8554,0,139966
-10743,1,3344342,"Horsham (To Willow Grove Park Mall)",8553,0,139966
-10743,1,3344343,"Horsham (To Willow Grove Station)",8556,0,139969
-10743,1,3344344,"Horsham (To Willow Grove Park Mall)",8554,0,139966
-10743,1,3344345,"Horsham (To Willow Grove Park Mall)",8554,0,139966
-10743,1,3344346,"Horsham (To Willow Grove Park Mall)",8554,0,139966
-10743,1,3344347,"Horsham (To Willow Grove Park Mall)",8554,0,139966
-10743,1,3344348,"Horsham (To Willow Grove Park Mall)",8554,0,139967
-10743,1,3344349,"Horsham (To Willow Grove Park Mall)",8554,0,139967
-10743,1,3344350,"Horsham (To Willow Grove Park Mall)",8554,0,139968
-10743,1,3344351,"Horsham (To Willow Grove Park Mall)",8554,0,139967
-10743,1,3344352,"Horsham (To Willow Grove Park Mall)",8554,0,139966
+10743,1,3501922,"Horsham (To Willow Grove Park Mall)",8551,0,139964
+10743,1,3501923,"Horsham (To Willow Grove Park Mall)",8551,0,139964
+10743,1,3501924,"Horsham (To Willow Grove Park Mall)",8552,0,139964
+10743,1,3501925,"Horsham (To Willow Grove Park Mall)",8551,0,139964
+10743,1,3501926,"Horsham (To Willow Grove Park Mall)",8552,0,139964
+10743,1,3501927,"Horsham",8555,0,139961
+10743,1,3501928,"Horsham (To Willow Grove Park Mall)",8551,0,139964
+10743,1,3501929,"Horsham (To Willow Grove Park Mall)",8552,0,139964
+10743,1,3501930,"Horsham",8555,0,139961
+10743,1,3501931,"Horsham (To Willow Grove Park Mall)",8551,0,139964
+10743,1,3501932,"Horsham (To Willow Grove Park Mall)",8552,0,139964
+10743,1,3501933,"Horsham",8555,0,139961
+10743,1,3501934,"Horsham (To Willow Grove Park Mall)",8551,0,139964
+10743,1,3501935,"Horsham (To Willow Grove Park Mall)",8552,0,139964
+10743,1,3501936,"Horsham",8551,0,139961
+10743,1,3501937,"Horsham (To Willow Grove Park Mall)",8552,0,139964
+10743,1,3501938,"Horsham",8551,0,139961
+10743,1,3501939,"Horsham (To Willow Grove Park Mall)",8552,0,139965
+10743,1,3501940,"Horsham (To Willow Grove Park Mall)",8551,0,139963
+10743,1,3501941,"Horsham (To Willow Grove Station)",8552,0,139970
+10743,1,3501942,"Horsham (To Willow Grove Station)",8551,0,139969
+10743,1,3501943,"Horsham (To Willow Grove Park Mall)",8553,0,139962
+10743,1,3501944,"Horsham (To Willow Grove Station)",8554,0,139969
+10743,1,3501945,"Horsham (To Willow Grove Park Mall)",8553,0,139962
+10743,1,3501946,"Horsham (To Willow Grove Station)",8554,0,139969
+10743,1,3501947,"Horsham (To Willow Grove Park Mall)",8553,0,139966
+10743,1,3501948,"Horsham (To Willow Grove Park Mall)",8556,0,139962
+10743,1,3501949,"Horsham (To Willow Grove Park Mall)",8554,0,139966
+10743,1,3501950,"Horsham (To Willow Grove Station)",8553,0,139969
+10743,1,3501951,"Horsham (To Willow Grove Park Mall)",8556,0,139966
+10743,1,3501952,"Horsham (To Willow Grove Park Mall)",8554,0,139966
+10743,1,3501953,"Horsham (To Willow Grove Park Mall)",8553,0,139966
+10743,1,3501954,"Horsham (To Willow Grove Station)",8556,0,139969
+10743,1,3501955,"Horsham (To Willow Grove Park Mall)",8554,0,139966
+10743,1,3501956,"Horsham (To Willow Grove Park Mall)",8554,0,139966
+10743,1,3501957,"Horsham (To Willow Grove Park Mall)",8554,0,139966
+10743,1,3501958,"Horsham (To Willow Grove Park Mall)",8554,0,139966
+10743,1,3501959,"Horsham (To Willow Grove Park Mall)",8554,0,139967
+10743,1,3501960,"Horsham (To Willow Grove Park Mall)",8554,0,139967
+10743,1,3501961,"Horsham (To Willow Grove Park Mall)",8554,0,139968
+10743,1,3501962,"Horsham (To Willow Grove Park Mall)",8554,0,139967
+10743,1,3501963,"Horsham (To Willow Grove Park Mall)",8554,0,139966
 10746,1,3344363,"LUCY Gold Loop",8501,0,139973
 10746,1,3344364,"LUCY Gold Loop",8508,0,139973
 10746,1,3344365,"LUCY Gold Loop",8502,0,139973
@@ -14360,7 +14360,7 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10780,1,3348409,"Chester Trans. Ctr.",4402,0,140295
 10780,1,3348410,"Chester Trans. Ctr.",4407,0,140295
 10780,1,3348411,"Chester Trans. Ctr.",4403,0,140295
-10780,1,3348412,"Chester Trans. Ctr.",4400,0,140295
+10780,1,3348412,"Chester Trans. Ctr.",4410,0,140295
 10780,1,3348413,"Chester Trans. Ctr.",4404,0,140295
 10780,1,3348414,"Chester Trans. Ctr.",4408,0,140295
 10780,1,3348415,"Chester Trans. Ctr.",4405,0,140295
@@ -14373,7 +14373,7 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10780,1,3348422,"Chester Trans. Ctr.",4481,0,140295
 10780,1,3348423,"Chester Trans. Ctr.",4407,0,140295
 10780,1,3348424,"Chester Trans. Ctr.",4409,0,140295
-10780,1,3348425,"Chester Trans. Ctr.",4476,0,140295
+10780,1,3348425,"Chester Trans. Ctr.",4433,0,140295
 10780,1,3348426,"Chester Trans. Ctr.",4223,0,140295
 10780,1,3348427,"Chester Trans. Ctr.",4408,0,140293
 10780,1,3348428,"Chester Trans. Ctr.",4409,0,140292
@@ -14420,7 +14420,7 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10780,1,3348469,"69th Street Trans. Ctr.",4402,1,140296
 10780,1,3348470,"69th Street Trans. Ctr.",4407,1,140296
 10780,1,3348471,"69th Street Trans. Ctr.",4403,1,140296
-10780,1,3348472,"69th Street Trans. Ctr.",4400,1,140296
+10780,1,3348472,"69th Street Trans. Ctr.",4410,1,140297
 10780,1,3348473,"69th Street Trans. Ctr.",4404,1,140296
 10780,1,3348474,"69th Street Trans. Ctr.",4408,1,140296
 10780,1,3348475,"69th Street Trans. Ctr.",4405,1,140296
@@ -14432,7 +14432,7 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10780,1,3348481,"69th Street Trans. Ctr.",4481,1,140296
 10780,1,3348482,"69th Street Trans. Ctr.",4407,1,140296
 10780,1,3348483,"69th Street Trans. Ctr.",4409,1,140296
-10780,1,3348484,"69th Street Trans. Ctr.",4476,1,140297
+10780,1,3348484,"69th Street Trans. Ctr.",4433,1,140297
 10780,1,3348485,"69th Street Trans. Ctr.",4223,1,140297
 10780,1,3348486,"69th Street Trans. Ctr.",4408,1,140297
 10780,1,3348487,"69th Street Trans. Ctr.",4409,1,140299
@@ -14600,7 +14600,7 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10783,1,3349024,"Delaware County Community College",4355,0,140334
 10783,1,3349025,"Delaware County Community College",4480,0,140334
 10783,1,3349026,"Delaware County Community College",4482,0,140334
-10783,1,3349027,"Delaware County Community College",4476,0,140334
+10783,1,3349027,"Delaware County Community College",4433,0,140334
 10783,1,3349028,"Delaware County Community College",4779,0,140334
 10783,1,3349029,"Delaware County Community College",4480,0,140334
 10783,1,3349030,"Delaware County Community College",4476,0,140334
@@ -14628,7 +14628,7 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10783,1,3349052,"69th Street Trans. Ctr.",4481,1,140337
 10783,1,3349053,"69th Street Trans. Ctr.",4565,1,140337
 10783,1,3349054,"69th Street Trans. Ctr.",4482,1,140337
-10783,1,3349055,"69th Street Trans. Ctr.",4476,1,140337
+10783,1,3349055,"69th Street Trans. Ctr.",4433,1,140337
 10783,1,3349056,"69th Street Trans. Ctr.",4480,1,140337
 10783,1,3349057,"69th Street Trans. Ctr.",4480,1,140337
 10783,1,3349058,"Express 69th Street Trans. Ctr.",4475,1,140336
@@ -14696,14 +14696,14 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10784,1,3349228,"Darby Trans. Ctr.",4514,0,140340
 10784,1,3349229,"Tri State Mall",4218,0,140341
 10784,1,3349230,"Darby Trans. Ctr.",4512,0,140340
-10784,1,3349232,"Chester -- 9th-Highland",4513,0,140338
+10784,1,3349232,"Chester -- 9th-Highland",4410,0,140338
 10784,1,3349233,"Tri State Mall",4515,0,140341
 10784,1,3349234,"Chester -- 9th-Highland",4479,0,140338
 10784,1,3349235,"Tri State Mall",4516,0,140341
 10784,1,3349236,"Chester -- 9th-Highland",4517,0,140338
 10784,1,3349237,"Tri State Mall",4218,0,140341
 10784,1,3349238,"Chester -- 9th-Highland",4518,0,140338
-10784,1,3349239,"Tri State Mall",4513,0,140341
+10784,1,3349239,"Tri State Mall",4410,0,140341
 10784,1,3349240,"Chester -- 9th-Highland",4515,0,140338
 10784,1,3349241,"Tri State Mall",4479,0,140341
 10784,1,3349242,"Chester -- 9th-Highland",4516,0,140338
@@ -14768,13 +14768,13 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10784,1,3349303,"69th Street Trans. Ctr.",4517,1,140345
 10784,1,3349304,"69th Street Trans. Ctr.",4218,1,140345
 10784,1,3349305,"69th Street Trans. Ctr.",4518,1,140345
-10784,1,3349306,"69th Street Trans. Ctr.",4513,1,140343
+10784,1,3349306,"69th Street Trans. Ctr.",4410,1,140343
 10784,1,3349307,"69th Street Trans. Ctr.",4515,1,140345
 10784,1,3349308,"69th Street Trans. Ctr.",4479,1,140343
 10784,1,3349309,"69th Street Trans. Ctr.",4516,1,140345
 10784,1,3349310,"69th Street Trans. Ctr.",4517,1,140343
 10784,1,3349312,"69th Street Trans. Ctr.",4518,1,140343
-10784,1,3349313,"69th Street Trans. Ctr.",4513,1,140345
+10784,1,3349313,"69th Street Trans. Ctr.",4410,1,140345
 10784,1,3349315,"69th Street Trans. Ctr.",4479,1,140345
 10784,1,3349316,"69th Street Trans. Ctr.",4516,1,140343
 10784,1,3349317,"69th Street Trans. Ctr.",4650,1,140343
@@ -15102,7 +15102,7 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10792,1,3350489,"King of Prussia",4456,0,140417
 10792,1,3350490,"King of Prussia",4687,0,140417
 10792,1,3350491,"King of Prussia",4431,0,140417
-10792,1,3350492,"King of Prussia",4476,0,140417
+10792,1,3350492,"King of Prussia",4433,0,140417
 10792,1,3350493,"King of Prussia",4688,0,140417
 10792,1,3350494,"King of Prussia",4456,0,140417
 10792,1,3350495,"King of Prussia",4225,0,140417
@@ -15128,7 +15128,7 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10792,1,3350515,"69th Street Trans. Ctr.",4431,1,140420
 10792,1,3350516,"69th Street Trans. Ctr.",4707,1,140420
 10792,1,3350517,"69th Street Trans. Ctr.",4225,1,140420
-10792,1,3350518,"69th Street Trans. Ctr.",4476,1,140420
+10792,1,3350518,"69th Street Trans. Ctr.",4433,1,140420
 10792,1,3350519,"69th Street Trans. Ctr.",4225,1,140420
 10792,1,3350520,"69th Street Trans. Ctr.",4225,1,140420
 10792,1,3350521,"69th Street Trans. Ctr.",4456,1,140421
@@ -16046,9 +16046,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10799,1,3362987,"Fern Rock Trans Ctr",44,1,140511
 10799,1,3362988,"Olney Trans Ctr",41,1,140508
 10799,1,3362989,"Fern Rock Trans Ctr",8,1,140506
-10799,1,3362994,"Fern Rock Trans Ctr",27,1,140498
-10799,1,3362995,"Fern Rock Trans Ctr",23,1,140498
-10799,1,3363004,"Fern Rock Trans Ctr",21,1,140498
 10800,1,3353922,"Frankford Trans Ctr - A Stops",9,0,140512
 10800,1,3353923,"Frankford Trans Ctr - B Stops",14,0,140518
 10800,1,3353924,"Frankford Trans Ctr - A Stops",3,0,140512
@@ -26331,8 +26328,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10799,5,3353518,"8th St Station",42,0,140492
 10799,5,3353519,"8th St Station",41,0,140492
 10799,5,3353520,"8th St Station",42,0,140492
-10799,5,3353521,"AT&T Station",1,0,140487
-10799,5,3353522,"AT&T Station",2,0,140487
 10799,5,3353523,"AT&T Station",3,0,140486
 10799,5,3353524,"AT&T Station",4,0,140490
 10799,5,3353525,"AT&T Station",5,0,140490
@@ -26360,8 +26355,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10799,5,3353547,"AT&T Station",6,0,140490
 10799,5,3353548,"AT&T Station",3,0,140490
 10799,5,3353549,"AT&T Station",4,0,140490
-10799,5,3353550,"AT&T Station",2,0,140482
-10799,5,3353551,"8th St Station",41,0,140484
 10799,5,3353552,"Fern Rock Trans Ctr",5,1,140506
 10799,5,3353553,"Fern Rock Trans Ctr",1,1,140506
 10799,5,3353554,"Fern Rock Trans Ctr",7,1,140506
@@ -26455,9 +26448,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10799,5,3353642,"Fern Rock Trans Ctr",1,1,140506
 10799,5,3353643,"Fern Rock Trans Ctr",7,1,140506
 10799,5,3353644,"Fern Rock Trans Ctr",8,1,140506
-10799,5,3353645,"Fern Rock Trans Ctr",6,1,140495
-10799,5,3353646,"Fern Rock Trans Ctr",3,1,140503
-10799,5,3353647,"Fern Rock Trans Ctr",4,1,140503
 10799,5,3353648,"Fern Rock Trans Ctr",41,1,140509
 10799,5,3353649,"Fern Rock Trans Ctr",7,1,140506
 10799,5,3353650,"Fern Rock Trans Ctr",8,1,140506
@@ -26517,7 +26507,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10799,5,3353704,"Fern Rock Trans Ctr",6,1,140506
 10799,5,3353705,"Fern Rock Trans Ctr",6,1,140502
 10799,5,3353706,"Fern Rock Trans Ctr",42,1,140509
-10799,5,3353707,"Fern Rock Trans Ctr",42,1,140499
 10800,5,3354680,"Frankford Trans Ctr",8,0,140514
 10800,5,3354681,"Frankford Trans Ctr",6,0,140514
 10800,5,3354682,"Frankford Trans Ctr",3,0,140514
@@ -32674,22 +32663,22 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10717,7,3304403,"Wissahickon Trans Ctr",5004,0,139717
 10717,7,3304404,"Wissahickon Trans Ctr",5003,0,139717
 10717,7,3304405,"4th - Walnut",5002,0,139716
-10717,7,3304406,"4th - Walnut",5001,0,139716
+10717,7,3304406,"4th - Walnut",  5001,0,139716
 10717,7,3304407,"4th - Walnut",5002,0,139716
 10717,7,3304408,"4th - Walnut",5003,0,139716
 10717,7,3304409,"4th - Walnut",5004,0,139716
 10717,7,3304410,"4th - Walnut",5003,0,139716
-10717,7,3304411,"4th - Walnut",5001,0,139716
-10717,7,3304412,"4th - Walnut",5001,0,139716
+10717,7,3304411,"4th - Walnut",  5001,0,139716
+10717,7,3304412,"4th - Walnut",  5001,0,139716
 10717,7,3304413,"4th - Walnut",5002,0,139716
-10717,7,3304414,"4th - Walnut",5001,0,139716
+10717,7,3304414,"4th - Walnut",  5001,0,139716
 10717,7,3304415,"4th - Walnut",5002,0,139716
 10717,7,3304416,"4th - Walnut",5004,0,139716
 10717,7,3304417,"4th - Walnut",5003,0,139716
 10717,7,3304418,"4th - Walnut",5004,0,139716
 10717,7,3304419,"4th - Walnut",5003,0,139716
 10717,7,3304420,"Andorra",5002,1,139719
-10717,7,3304421,"Andorra",5001,1,139719
+10717,7,3304421,"Andorra",  5001,1,139719
 10717,7,3304422,"Andorra",5002,1,139719
 10717,7,3304423,"Andorra",5003,1,139719
 10717,7,3304424,"Andorra",5004,1,139719
@@ -32700,13 +32689,13 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10717,7,3304429,"Andorra",5003,1,139719
 10717,7,3304430,"Andorra",5004,1,139719
 10717,7,3304431,"Andorra",5003,1,139719
-10717,7,3304432,"Andorra",5001,1,139720
+10717,7,3304432,"Andorra",  5001,1,139720
 10717,7,3304433,"Andorra",5002,1,139719
-10717,7,3304434,"Andorra",5001,1,139719
+10717,7,3304434,"Andorra",  5001,1,139719
 10717,7,3304435,"Andorra",5002,1,139719
-10717,7,3304436,"Andorra",5001,1,139719
+10717,7,3304436,"Andorra",  5001,1,139719
 10717,7,3304437,"Andorra",5002,1,139719
-10717,7,3304438,"Andorra",5001,1,139719
+10717,7,3304438,"Andorra",  5001,1,139719
 10720,7,3304534,"At&t Station",3550,0,139739
 10720,7,3304535,"At&t Station",7275,0,139738
 10720,7,3304536,"At&t Station",3553,0,139739
@@ -33597,8 +33586,8 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10769,7,3346307,"Phoenixville",6141,0,140164
 10769,7,3346308,"Phoenixville",6153,0,140164
 10769,7,3346309,"Phoenixville",6152,0,140164
-10769,7,3346310,"Phoenixville",6141,0,140164
-10769,7,3346311,"Phoenixville",6141,0,140164
+10769,7,3346310,"Phoenixville",6153,0,140164
+10769,7,3346311,"Phoenixville",6152,0,140164
 10769,7,3346312,"Phoenixville",6096,0,140164
 10769,7,3346313,"Phoenixville",6151,0,140163
 10769,7,3346314,"Phoenixville",6152,0,140163
@@ -33616,8 +33605,8 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10769,7,3346326,"Norristown Trans Ctr",6141,1,140170
 10769,7,3346327,"Norristown Trans Ctr",6153,1,140170
 10769,7,3346328,"Norristown Trans Ctr",6152,1,140170
-10769,7,3346329,"Norristown Trans Ctr",6141,1,140170
-10769,7,3346330,"Norristown Trans Ctr",6141,1,140170
+10769,7,3346329,"Norristown Trans Ctr",6153,1,140170
+10769,7,3346330,"Norristown Trans Ctr",6152,1,140170
 10771,7,3346687,"Media",4154,0,140171
 10771,7,3346688,"Media",4155,0,140171
 10771,7,3346689,"Media",4154,0,140171
@@ -34479,8 +34468,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10799,7,3353716,"AT&T Station",6,0,140490
 10799,7,3353717,"AT&T Station",4,0,140490
 10799,7,3353718,"AT&T Station",5,0,140490
-10799,7,3353719,"AT&T Station",1,0,140487
-10799,7,3353720,"AT&T Station",2,0,140487
 10799,7,3353721,"AT&T Station",1,0,140490
 10799,7,3353722,"AT&T Station",2,0,140490
 10799,7,3353723,"AT&T Station",3,0,140490
@@ -34574,7 +34561,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10799,7,3353811,"AT&T Station",3,0,140486
 10799,7,3353812,"AT&T Station",1,0,140490
 10799,7,3353813,"AT&T Station",7,0,140490
-10799,7,3353814,"AT&T Station",4,0,140482
 10799,7,3353815,"Fern Rock Trans Ctr",6,1,140506
 10799,7,3353816,"Fern Rock Trans Ctr",2,1,140506
 10799,7,3353817,"Fern Rock Trans Ctr",3,1,140506
@@ -34590,8 +34576,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10799,7,3353827,"Fern Rock Trans Ctr",8,1,140506
 10799,7,3353828,"Fern Rock Trans Ctr",1,1,140506
 10799,7,3353829,"Fern Rock Trans Ctr",5,1,140506
-10799,7,3353830,"Fern Rock Trans Ctr",2,1,140503
-10799,7,3353831,"Fern Rock Trans Ctr",3,1,140503
 10799,7,3353832,"Fern Rock Trans Ctr",5,1,140506
 10799,7,3353833,"Fern Rock Trans Ctr",8,1,140506
 10799,7,3353834,"Fern Rock Trans Ctr",1,1,140506
@@ -34681,7 +34665,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10799,7,3353918,"Fern Rock Trans Ctr",6,1,140506
 10799,7,3353919,"Fern Rock Trans Ctr",2,1,140506
 10799,7,3353920,"Fern Rock Trans Ctr",3,1,140506
-10799,7,3353921,"Fern Rock Trans Ctr",2,1,140497
 10800,7,3354887,"Frankford Trans Ctr",8,0,140514
 10800,7,3354888,"Frankford Trans Ctr",6,0,140514
 10800,7,3354889,"Frankford Trans Ctr",3,0,140514
