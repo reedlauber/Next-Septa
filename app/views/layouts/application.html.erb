@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title><%=@title %></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 	<%= include_stylesheets :all, :public, :media => "all" %>
 	<%= include_stylesheets :mobile, :media => "screen and (max-width: 480px)" %>
 	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
@@ -42,7 +42,7 @@
 	<div id="isepta-dialog" class="nxs-dialog s-corner-all-12">
 		<h1>Taking you to iSepta...</h1>
 		<p>NEXT&rarr;Septa does not provide Regional Rail information because <a href="http://isepta.org" target="_blank">iSepta</a> already does it so well. So, head on over there if you're looking for trains.</p>
-		<a href="http://isepta.org" target="_blank" class="s-btn s-btn-success s-corner-all">Go to iSepta</a> 
+		<a href="http://isepta.org" target="_blank" class="s-btn s-btn-success s-corner-all">Go to iSepta</a>
 		<a href="javascript:void(0)" class="s-btn s-corner-all close">Cancel</a>
 	</div>
 	<%= include_javascripts :all, :public %>
