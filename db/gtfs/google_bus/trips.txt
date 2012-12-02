@@ -10484,40 +10484,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10704,1,3309249,"Fern Rock Trans Ctr",1243,1,139635
 10704,1,3309250,"Oxford - Cottman",1223,1,139636
 10704,1,3309251,"Fern Rock Trans Ctr",1208,1,139632
-10705,1,3302192,"Navy Yard Shuttle",7954,0,139641
-10705,1,3302193,"Navy Yard Shuttle",7955,0,139640
-10705,1,3302194,"Navy Yard Shuttle",7955,0,139640
-10705,1,3302195,"Navy Yard Shuttle",7955,0,139641
-10705,1,3302196,"Navy Yard Shuttle",7955,0,139640
-10705,1,3302197,"Navy Yard Shuttle",7955,0,139640
-10705,1,3302198,"Navy Yard Shuttle",7955,0,139640
-10705,1,3302199,"Navy Yard Shuttle",7955,0,139640
-10705,1,3302200,"Navy Yard Shuttle",7951,0,139641
-10705,1,3302201,"Navy Yard Shuttle",7951,0,139641
-10705,1,3302202,"Navy Yard Shuttle",7951,0,139641
-10705,1,3302203,"Navy Yard Shuttle",7951,0,139640
-10705,1,3302204,"Navy Yard Shuttle",7951,0,139640
-10705,1,3302205,"Navy Yard Shuttle",7951,0,139640
-10705,1,3302206,"Navy Yard Shuttle",7951,0,139641
-10705,1,3302207,"Navy Yard Shuttle",7952,0,139640
-10705,1,3302208,"Navy Yard Shuttle",7952,0,139640
-10705,1,3302209,"Navy Yard Shuttle",7952,0,139640
-10705,1,3302210,"Navy Yard Shuttle",7952,0,139640
-10705,1,3302211,"Navy Yard Shuttle",7952,0,139640
-10705,1,3302212,"Navy Yard Shuttle",7952,0,139640
-10705,1,3302213,"Navy Yard Shuttle",7952,0,139640
-10705,1,3302214,"Navy Yard Shuttle",7953,0,139640
-10705,1,3302215,"Navy Yard Shuttle",7953,0,139640
-10705,1,3302216,"Navy Yard Shuttle",7953,0,139640
-10705,1,3302217,"Navy Yard Shuttle",7953,0,139640
-10705,1,3302218,"Navy Yard Shuttle",7953,0,139640
-10705,1,3302219,"Navy Yard Shuttle",7953,0,139640
-10705,1,3302220,"Navy Yard Shuttle",7953,0,139640
-10705,1,3302221,"Navy Yard Shuttle",7954,0,139640
-10705,1,3302222,"Navy Yard Shuttle",7954,0,139640
-10705,1,3302223,"Navy Yard Shuttle",7954,0,139640
-10705,1,3302224,"Navy Yard Shuttle",7954,0,139640
-10705,1,3302225,"Navy Yard Shuttle",7954,0,139641
 10706,1,3311107,"Frankford Trans Ctr",2463,0,139642
 10706,1,3311108,"Frankford Trans Ctr",2459,0,139642
 10706,1,3311109,"Frankford Trans Ctr",2460,0,139642
@@ -12884,13 +12850,13 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10743,1,3501963,"Horsham (To Willow Grove Park Mall)",8554,0,139966
 10746,1,3344363,"LUCY Gold Loop",8501,0,139973
 10746,1,3344364,"LUCY Gold Loop",8508,0,139973
-10746,1,3344365,"LUCY Gold Loop",8502,0,139973
-10746,1,3344366,"LUCY Gold Loop",8510,0,139973
-10746,1,3344367,"LUCY Gold Loop",8506,0,139973
-10746,1,3344368,"LUCY Gold Loop",8502,0,139973
-10746,1,3344369,"LUCY Gold Loop",8510,0,139973
+10746,1,3344365,"LUCY Gold Loop",8510,0,139973
+10746,1,3344366,"LUCY Gold Loop",8506,0,139973
+10746,1,3344367,"LUCY Gold Loop",8502,0,139973
+10746,1,3344368,"LUCY Gold Loop",8510,0,139973
+10746,1,3344369,"LUCY Gold Loop",8511,0,139973
 10746,1,3344370,"LUCY Gold Loop",8505,0,139973
-10746,1,3344371,"LUCY Gold Loop",8511,0,139973
+10746,1,3344371,"LUCY Gold Loop",8510,0,139973
 10746,1,3344372,"LUCY Gold Loop",8510,0,139973
 10746,1,3344373,"LUCY Gold Loop",8505,0,139973
 10746,1,3344374,"LUCY Gold Loop",8511,0,139973
@@ -12914,8 +12880,8 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10746,1,3344392,"LUCY Gold Loop",8515,0,139973
 10746,1,3344393,"38th-Spruce",8503,0,139972
 10746,1,3344394,"38th-Spruce",8501,0,139972
-10746,1,3344395,"38th-Spruce",8510,0,139972
-10746,1,3344396,"38th-Spruce",8506,0,139972
+10746,1,3344395,"38th-Spruce",8506,0,139972
+10746,1,3344396,"38th-Spruce",8502,0,139972
 10746,1,3344397,"38th-Spruce",8507,0,139972
 10746,1,3344398,"LUCY Gold Loop",8504,0,139973
 10746,1,3344399,"LUCY Gold Loop",8503,0,139973
@@ -12941,15 +12907,15 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10746,1,3344419,"38th-Spruce",8507,0,139972
 10746,1,3344420,"38th-Spruce",8504,0,139972
 10746,1,3344421,"38th-Spruce",8503,0,139972
-10746,1,3344422,"38th-Spruce",8506,0,139972
+10746,1,3344422,"38th-Spruce",8510,0,139972
 10747,1,3344423,"LUCY Green Loop",8507,0,139975
 10747,1,3344424,"LUCY Green Loop",8502,0,139975
 10747,1,3344425,"LUCY Green Loop",8509,0,139975
 10747,1,3344426,"LUCY Green Loop",8506,0,139975
 10747,1,3344427,"LUCY Green Loop",8508,0,139975
 10747,1,3344428,"LUCY Green Loop",8505,0,139975
-10747,1,3344429,"LUCY Green Loop",8506,0,139975
-10747,1,3344430,"LUCY Green Loop",8510,0,139975
+10747,1,3344429,"LUCY Green Loop",8510,0,139975
+10747,1,3344430,"LUCY Green Loop",8506,0,139975
 10747,1,3344431,"LUCY Green Loop",8511,0,139975
 10747,1,3344432,"LUCY Green Loop",8505,0,139975
 10747,1,3344433,"LUCY Green Loop",8507,0,139975
@@ -12963,8 +12929,8 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10747,1,3344441,"LUCY Green Loop",8505,0,139975
 10747,1,3344442,"LUCY Green Loop",8502,0,139975
 10747,1,3344443,"LUCY Green Loop",8502,0,139975
-10747,1,3344444,"LUCY Green Loop",8511,0,139975
-10747,1,3344445,"LUCY Green Loop",8510,0,139975
+10747,1,3344444,"LUCY Green Loop",8510,0,139975
+10747,1,3344445,"LUCY Green Loop",8511,0,139975
 10747,1,3344446,"LUCY Green Loop",8505,0,139975
 10747,1,3344447,"LUCY Green Loop",8511,0,139975
 10747,1,3344448,"LUCY Green Loop",8510,0,139975
@@ -15245,213 +15211,212 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10794,1,3351154,"69th Street Trans. Ctr.",4568,1,140455
 10794,1,3351155,"69th Street Trans. Ctr.",4511,1,140455
 10794,1,3362078,"69th Street Trans. Ctr.",4474,1,140455
-10795,1,3408277,"Hughes Park Express",4012,0,140461
-10795,1,3408278,"Bryn Mawr Local",4009,0,140457
-10795,1,3408279,"Hughes Park Local",4010,0,140460
-10795,1,3408280,"Norrristown Limited",4010,0,140464
-10795,1,3408281,"Hughes Park Express",4004,0,140461
-10795,1,3408282,"Bryn Mawr Local",4001,0,140457
-10795,1,3408283,"Norrristown Limited",4002,0,140464
-10795,1,3408284,"Hughes Park Express",4015,0,140461
-10795,1,3408285,"Norristown Local",4018,0,140463
-10795,1,3408286,"Norristown Local",4002,0,140463
-10795,1,3408287,"Norristown Local",4013,0,140463
-10795,1,3408288,"Norristown Local",4006,0,140463
-10795,1,3408289,"Norristown Local",4010,0,140463
-10795,1,3408290,"Norristown Local",4018,0,140463
-10795,1,3408291,"Norristown Local",4002,0,140463
-10795,1,3408292,"Norristown Local",4013,0,140463
-10795,1,3408293,"Norristown Express",4022,0,140465
-10795,1,3408294,"Norristown Local",4036,0,140463
-10795,1,3408295,"Norristown Local",4010,0,140463
-10795,1,3408296,"Norristown Express",4028,0,140465
-10795,1,3408297,"Hughes Park Local",4013,0,140460
-10795,1,3408299,"Hughes Park Local",4029,0,140460
-10795,1,3408300,"Norristown Local",4006,0,140463
-10795,1,3408301,"Norristown Express",4013,0,140465
-10795,1,3408302,"Bryn Mawr Local",4014,0,140457
-10795,1,3408303,"Norristown Local",4010,0,140463
-10795,1,3408304,"Norristown Local",4031,0,140463
-10795,1,3408305,"Norristown Local",4036,0,140463
-10795,1,3408306,"Norrristown Limited",4007,0,140464
-10795,1,3408307,"Hughes Park Express",4009,0,140461
-10795,1,3408308,"Bryn Mawr Local",4002,0,140457
-10795,1,3408309,"Norrristown Limited",4003,0,140464
-10795,1,3408310,"Norristown Express",4028,0,140465
-10795,1,3408311,"Hughes Park Local",4013,0,140460
-10795,1,3408313,"Hughes Park Local",4030,0,140460
-10795,1,3408314,"Norrristown Limited",4011,0,140464
-10795,1,3408315,"Norristown Express",4021,0,140465
-10795,1,3408316,"Hughes Park Local",4023,0,140460
-10795,1,3408317,"Norristown Express",4031,0,140465
-10795,1,3408318,"Norristown Local",4032,0,140463
-10795,1,3408319,"Hughes Park Local",4025,0,140460
-10795,1,3408320,"Norrristown Limited",4026,0,140464
-10795,1,3408322,"Hughes Park Local",4030,0,140460
-10795,1,3408324,"Norristown Local",4027,0,140463
-10795,1,3408325,"Bryn Mawr Local",4011,0,140457
-10795,1,3408327,"Norristown Local",4031,0,140463
-10795,1,3408328,"Norristown Local",4036,0,140463
-10795,1,3408329,"Norristown Local",4013,0,140463
-10795,1,3408330,"Hughes Park Express",4015,0,140461
-10795,1,3408331,"Bryn Mawr Local",4001,0,140457
-10795,1,3408333,"Norrristown Limited",4017,0,140464
-10795,1,3408334,"Hughes Park Express",4006,0,140461
-10795,1,3408335,"Norristown Local",4005,0,140463
-10795,1,3408336,"Bryn Mawr Local",4002,0,140457
-10795,1,3408337,"Norrristown Limited",4007,0,140464
-10795,1,3408338,"Norristown Local",4033,0,140463
-10795,1,3408339,"Hughes Park Express",4004,0,140461
-10795,1,3408340,"Norristown Local",4002,0,140463
-10795,1,3408341,"Norristown Local",4001,0,140463
-10795,1,3408342,"Norristown Local",4002,0,140463
-10795,1,3408343,"Norristown Local",4003,0,140463
-10795,1,3408344,"Bryn Mawr Local",4012,0,140457
-10795,1,3408345,"Norrristown Limited",4014,0,140464
-10795,1,3408346,"Norristown Express",4022,0,140465
-10795,1,3408347,"Hughes Park Local",4023,0,140460
-10795,1,3408348,"Norristown Express",4024,0,140465
-10795,1,3408349,"Hughes Park Express",4025,0,140461
-10795,1,3408350,"Bryn Mawr Local",4030,0,140457
-10795,1,3408351,"Norristown Express",4026,0,140465
-10795,1,3408352,"Hughes Park Local",4027,0,140460
-10795,1,3408355,"Norristown Local",4024,0,140463
-10795,1,3408357,"Norristown Express",4021,0,140465
-10795,1,3408358,"Norristown Express",4035,0,140465
-10795,1,3408359,"Norristown Express",4020,0,140465
-10795,1,3408360,"Bryn Mawr Local",4033,0,140457
-10795,1,3408361,"Norristown Express",4022,0,140465
-10795,1,3408362,"Bryn Mawr Local",4023,0,140457
-10795,1,3408363,"Norristown Express",4032,0,140465
-10795,1,3408364,"Bryn Mawr Local",4031,0,140457
-10795,1,3408365,"Hughes Park Local",4027,0,140460
-10795,1,3408366,"Norristown Express",4026,0,140465
-10795,1,3408368,"Norristown Local",4009,0,140463
-10795,1,3408369,"Norrristown Limited",4006,0,140464
-10795,1,3408371,"Norristown Local",4004,0,140463
-10795,1,3408372,"Norristown Local",4031,0,140463
-10795,1,3408373,"Norristown Local",4001,0,140463
-10795,1,3408374,"Norrristown Limited",4006,0,140464
-10795,1,3408375,"Norristown Express",4021,0,140465
-10795,1,3408377,"Norristown Local",4007,0,140463
-10795,1,3408378,"Norristown Local",4019,0,140463
-10795,1,3408379,"Norristown Local",4023,0,140463
-10795,1,3408380,"Norristown Local",4020,0,140463
-10795,1,3408381,"Bryn Mawr Local",4027,0,140457
-10795,1,3408382,"Hughes Park Local",4023,0,140460
-10795,1,3408383,"Norristown Local",4032,0,140463
-10795,1,3408384,"Norristown Local",4036,0,140463
-10795,1,3408385,"Norristown Local",4032,0,140463
-10795,1,3408386,"Norristown Local",4033,0,140463
-10795,1,3408387,"Norristown Local",4031,0,140463
-10795,1,3408388,"Norristown Local",4033,0,140463
-10795,1,3408389,"Norristown Local",4036,0,140463
-10795,1,3408390,"Norristown Local",4036,0,140463
-10795,1,3408392,"Hughes Park Local",4033,0,140460
-10795,1,3408393,"Norristown Local",4033,0,140463
-10795,1,3408394,"69th Street Trans. Ctr. Local",4001,1,140468
-10795,1,3408395,"69th Street Trans. Ctr. Express",4004,1,140474
-10795,1,3408396,"69th Street Trans. Ctr. Express",4011,1,140478
-10795,1,3408397,"69th Street Trans. Ctr. Local",4002,1,140468
-10795,1,3408398,"69th Street Trans. Ctr. Express",4015,1,140474
-10795,1,3408400,"69th Street Trans. Ctr. Local",4009,1,140468
-10795,1,3408401,"69th Street Trans. Ctr. Local",4025,1,140473
-10795,1,3408403,"69th Street Trans. Ctr. Local",4001,1,140477
-10795,1,3408404,"69th Street Trans. Ctr. Local",4002,1,140477
-10795,1,3408405,"69th Street Trans. Ctr. Local",4003,1,140477
-10795,1,3408406,"69th Street Trans. Ctr. Local",4027,1,140473
-10795,1,3408408,"69th Street Trans. Ctr. Local",4006,1,140477
-10795,1,3408409,"69th Street Trans. Ctr. Local",4002,1,140477
-10795,1,3408410,"69th Street Trans. Ctr. Local",4013,1,140477
-10795,1,3408411,"69th Street Trans. Ctr. Local",4032,1,140477
-10795,1,3408412,"69th Street Trans. Ctr. Local",4033,1,140468
-10795,1,3408413,"69th Street Trans. Ctr. Express",4003,1,140478
-10795,1,3408414,"69th Street Trans. Ctr. Express",4006,1,140478
-10795,1,3408415,"69th Street Trans. Ctr. Local",4009,1,140473
-10795,1,3408418,"69th Street Trans. Ctr. Local",4030,1,140473
-10795,1,3408419,"69th Street Trans. Ctr. Limited",4021,1,140476
-10795,1,3408420,"69th Street Trans. Ctr. Local",4023,1,140473
-10795,1,3408421,"69th Street Trans. Ctr. Local",4006,1,140477
-10795,1,3408422,"69th Street Trans. Ctr. Local",4018,1,140477
-10795,1,3408423,"69th Street Trans. Ctr. Local",4002,1,140477
-10795,1,3408424,"69th Street Trans. Ctr. Local",4013,1,140477
-10795,1,3408425,"69th Street Trans. Ctr. Local",4006,1,140477
-10795,1,3408426,"69th Street Trans. Ctr. Local",4010,1,140477
-10795,1,3408427,"69th Street Trans. Ctr. Local",4010,1,140477
-10795,1,3408428,"69th Street Trans. Ctr. Local",4013,1,140477
-10795,1,3408429,"69th Street Trans. Ctr. Local",4018,1,140477
-10795,1,3408430,"69th Street Trans. Ctr. Local",4002,1,140477
-10795,1,3408431,"69th Street Trans. Ctr. Local",4010,1,140473
-10795,1,3408432,"69th Street Trans. Ctr. Local",4012,1,140468
-10795,1,3408433,"69th Street Trans. Ctr. Local",4027,1,140473
-10795,1,3408434,"69th Street Trans. Ctr. Limited",4026,1,140476
-10795,1,3408435,"69th Street Trans. Ctr. Express",4034,1,140478
-10795,1,3408436,"69th Street Trans. Ctr. Local",4013,1,140473
-10795,1,3408437,"69th Street Trans. Ctr. Express",4028,1,140478
-10795,1,3408440,"69th Street Trans. Ctr. Express",4007,1,140478
-10795,1,3408441,"69th Street Trans. Ctr. Local",4011,1,140468
-10795,1,3408442,"69th Street Trans. Ctr. Local",4004,1,140473
-10795,1,3408443,"69th Street Trans. Ctr. Express",4010,1,140478
-10795,1,3408444,"69th Street Trans. Ctr. Express",4015,1,140474
-10795,1,3408445,"69th Street Trans. Ctr. Local",4002,1,140477
-10795,1,3408446,"69th Street Trans. Ctr. Local",4023,1,140477
-10795,1,3408448,"69th Street Trans. Ctr. Local",4004,1,140477
-10795,1,3408449,"69th Street Trans. Ctr. Local",4001,1,140477
-10795,1,3408450,"69th Street Trans. Ctr. Local",4002,1,140468
-10795,1,3408451,"69th Street Trans. Ctr. Local",4023,1,140468
-10795,1,3408453,"69th Street Trans. Ctr. Local",4031,1,140468
-10795,1,3408454,"69th Street Trans. Ctr. Express",4022,1,140478
-10795,1,3408455,"69th Street Trans. Ctr. Local",4026,1,140477
-10795,1,3408456,"69th Street Trans. Ctr. Local",4032,1,140477
-10795,1,3408457,"69th Street Trans. Ctr. Local",4036,1,140477
-10795,1,3408458,"69th Street Trans. Ctr. Local",4031,1,140477
-10795,1,3408459,"69th Street Trans. Ctr. Local",4031,1,140477
-10795,1,3408460,"69th Street Trans. Ctr. Local",4033,1,140477
-10795,1,3408461,"69th Street Trans. Ctr. Local",4036,1,140477
-10795,1,3408462,"69th Street Trans. Ctr. Local",4036,1,140477
-10795,1,3408463,"69th Street Trans. Ctr. Local",4013,1,140477
-10795,1,3408464,"69th Street Trans. Ctr. Express",4014,1,140478
-10795,1,3408466,"69th Street Trans. Ctr. Express",4006,1,140474
-10795,1,3408467,"69th Street Trans. Ctr. Local",4025,1,140477
-10795,1,3408468,"69th Street Trans. Ctr. Local",4027,1,140477
-10795,1,3408470,"69th Street Trans. Ctr. Local",4013,1,140473
-10795,1,3408471,"69th Street Trans. Ctr. Express",4028,1,140478
-10795,1,3408472,"69th Street Trans. Ctr. Local",4029,1,140473
-10795,1,3408473,"69th Street Trans. Ctr. Express",4020,1,140478
-10795,1,3408474,"69th Street Trans. Ctr. Local",4023,1,140473
-10795,1,3408475,"69th Street Trans. Ctr. Limited",4022,1,140476
-10795,1,3408476,"69th Street Trans. Ctr. Local",4025,1,140473
-10795,1,3408477,"69th Street Trans. Ctr. Limited",4024,1,140476
-10795,1,3408478,"69th Street Trans. Ctr. Express",4022,1,140478
-10795,1,3408479,"69th Street Trans. Ctr. Express",4016,1,140478
-10795,1,3408481,"69th Street Trans. Ctr. Local",4001,1,140468
-10795,1,3408482,"69th Street Trans. Ctr. Local",4012,1,140473
-10795,1,3408483,"69th Street Trans. Ctr. Express",4026,1,140478
-10795,1,3408484,"69th Street Trans. Ctr. Local",4030,1,140473
-10795,1,3408486,"69th Street Trans. Ctr. Express",4033,1,140478
-10795,1,3408487,"69th Street Trans. Ctr. Local",4020,1,140477
-10795,1,3408488,"69th Street Trans. Ctr. Express",4032,1,140478
-10795,1,3408489,"69th Street Trans. Ctr. Local",4030,1,140468
-10795,1,3408490,"69th Street Trans. Ctr. Local",4010,1,140477
-10795,1,3408492,"69th Street Trans. Ctr. Local",4007,1,140477
-10795,1,3408494,"69th Street Trans. Ctr. Local",4019,1,140477
-10795,1,3408495,"69th Street Trans. Ctr. Local",4014,1,140468
-10795,1,3408496,"69th Street Trans. Ctr. Local",4020,1,140477
-10795,1,3408497,"69th Street Trans. Ctr. Limited",4036,1,140476
-10795,1,3408498,"69th Street Trans. Ctr. Local",4027,1,140468
-10795,1,3408499,"69th Street Trans. Ctr. Local",4036,1,140477
-10795,1,3408500,"69th Street Trans. Ctr. Local",4033,1,140477
-10795,1,3408501,"69th Street Trans. Ctr. Local",4032,1,140477
-10795,1,3408502,"69th Street Trans. Ctr. Local",4036,1,140477
-10795,1,3408503,"69th Street Trans. Ctr. Local",4033,1,140477
-10795,1,3408504,"69th Street Trans. Ctr. Local",4031,1,140477
-10795,1,3408505,"69th Street Trans. Ctr. Local",4032,1,140477
-10795,1,3408506,"69th Street Trans. Ctr. Local",4036,1,140477
-10795,1,3408507,"69th Street Trans. Ctr. Local",4031,1,140477
-10795,1,3408508,"69th Street Trans. Ctr. Local",4033,1,140477
-10795,1,3408509,"69th Street Trans. Ctr. Express",4008,1,140478
-10795,1,3408510,"69th Street Trans. Ctr. Express",4033,1,140474
-10795,1,3408511,"69th Street Trans. Ctr. Express",4023,1,140474
+10795,1,3507189,"Hughes Park Express",4012,0,140461
+10795,1,3507190,"Bryn Mawr Local",4009,0,140457
+10795,1,3507191,"Hughes Park Local",4010,0,140460
+10795,1,3507192,"Norrristown Limited",4010,0,140464
+10795,1,3507193,"Hughes Park Express",4004,0,140461
+10795,1,3507194,"Bryn Mawr Local",4001,0,140457
+10795,1,3507195,"Norrristown Limited",4002,0,140464
+10795,1,3507196,"Hughes Park Express",4015,0,140461
+10795,1,3507197,"Norristown Local",4018,0,140463
+10795,1,3507198,"Norristown Local",4002,0,140463
+10795,1,3507199,"Norristown Local",4013,0,140463
+10795,1,3507200,"Norristown Local",4006,0,140463
+10795,1,3507201,"Norristown Local",4010,0,140463
+10795,1,3507202,"Norristown Local",4018,0,140463
+10795,1,3507203,"Norristown Local",4002,0,140463
+10795,1,3507204,"Norristown Local",4013,0,140463
+10795,1,3507205,"Norristown Express",4022,0,140465
+10795,1,3507206,"Norristown Local",4010,0,140463
+10795,1,3507207,"Norristown Express",4028,0,140465
+10795,1,3507208,"Hughes Park Local",4013,0,140460
+10795,1,3507210,"Hughes Park Local",4029,0,140460
+10795,1,3507211,"Norristown Local",4006,0,140463
+10795,1,3507212,"Norristown Express",4013,0,140465
+10795,1,3507213,"Bryn Mawr Local",4014,0,140457
+10795,1,3507214,"Norristown Local",4010,0,140463
+10795,1,3507216,"Hughes Park Express",4009,0,140461
+10795,1,3507217,"Bryn Mawr Local",4002,0,140457
+10795,1,3507218,"Norrristown Limited",4003,0,140464
+10795,1,3507219,"Norristown Express",4028,0,140465
+10795,1,3507220,"Hughes Park Local",4013,0,140460
+10795,1,3507222,"Hughes Park Local",4030,0,140460
+10795,1,3507223,"Norrristown Limited",4011,0,140464
+10795,1,3507224,"Norristown Express",4020,0,140465
+10795,1,3507225,"Hughes Park Local",4023,0,140460
+10795,1,3507226,"Norristown Express",4031,0,140465
+10795,1,3507227,"Hughes Park Local",4025,0,140460
+10795,1,3507228,"Norrristown Limited",4026,0,140464
+10795,1,3507229,"Norristown Express",4034,0,140465
+10795,1,3507230,"Hughes Park Local",4030,0,140460
+10795,1,3507232,"Norristown Local",4027,0,140463
+10795,1,3507233,"Bryn Mawr Local",4011,0,140457
+10795,1,3507234,"Norrristown Limited",4013,0,140464
+10795,1,3507235,"Norristown Local",4013,0,140463
+10795,1,3507236,"Hughes Park Express",4015,0,140461
+10795,1,3507237,"Bryn Mawr Local",4001,0,140457
+10795,1,3507239,"Norrristown Limited",4017,0,140464
+10795,1,3507240,"Hughes Park Express",4006,0,140461
+10795,1,3507241,"Norristown Local",4005,0,140463
+10795,1,3507242,"Bryn Mawr Local",4002,0,140457
+10795,1,3507243,"Norrristown Limited",4007,0,140464
+10795,1,3507244,"Hughes Park Express",4004,0,140461
+10795,1,3507245,"Norristown Local",4002,0,140463
+10795,1,3507246,"Norristown Local",4001,0,140463
+10795,1,3507247,"Norristown Local",4002,0,140463
+10795,1,3507248,"Norristown Local",4003,0,140463
+10795,1,3507249,"Bryn Mawr Local",4012,0,140457
+10795,1,3507251,"Norristown Express",4022,0,140465
+10795,1,3507252,"Hughes Park Local",4023,0,140460
+10795,1,3507253,"Norristown Express",4024,0,140465
+10795,1,3507254,"Hughes Park Express",4025,0,140461
+10795,1,3507255,"Bryn Mawr Local",4030,0,140457
+10795,1,3507256,"Norristown Express",4026,0,140465
+10795,1,3507257,"Hughes Park Local",4027,0,140460
+10795,1,3507260,"Norristown Local",4024,0,140463
+10795,1,3507264,"Norristown Express",4021,0,140465
+10795,1,3507265,"Bryn Mawr Local",4033,0,140457
+10795,1,3507266,"Norristown Express",4022,0,140465
+10795,1,3507267,"Bryn Mawr Local",4023,0,140457
+10795,1,3507268,"Norristown Express",4032,0,140465
+10795,1,3507269,"Bryn Mawr Local",4031,0,140457
+10795,1,3507270,"Hughes Park Local",4027,0,140460
+10795,1,3507271,"Norristown Express",4026,0,140465
+10795,1,3507272,"Norristown Local",4018,0,140463
+10795,1,3507273,"Norristown Local",4009,0,140463
+10795,1,3507274,"Norrristown Limited",4006,0,140464
+10795,1,3507275,"Norristown Local",4007,0,140463
+10795,1,3507276,"Norristown Local",4004,0,140463
+10795,1,3507277,"Norristown Local",4001,0,140463
+10795,1,3507278,"Norrristown Limited",4006,0,140464
+10795,1,3507279,"Norristown Express",4020,0,140465
+10795,1,3507283,"Norristown Local",4023,0,140463
+10795,1,3507284,"Norristown Local",4020,0,140463
+10795,1,3507285,"Bryn Mawr Local",4027,0,140457
+10795,1,3507286,"Norrristown Limited",4008,0,140464
+10795,1,3507287,"Hughes Park Local",4033,0,140460
+10795,1,3507288,"Hughes Park Local",4023,0,140460
+10795,1,3507289,"Norristown Local",4036,0,140463
+10795,1,3507290,"Norristown Local",4031,0,140463
+10795,1,3507291,"Norristown Local",4032,0,140463
+10795,1,3507292,"Norristown Local",4033,0,140463
+10795,1,3507293,"Norristown Local",4036,0,140463
+10795,1,3507294,"Norristown Local",4031,0,140463
+10795,1,3507295,"Norristown Local",4032,0,140463
+10795,1,3507296,"Norristown Local",4033,0,140463
+10795,1,3507297,"Norristown Local",4036,0,140463
+10795,1,3507298,"Norristown Local",4031,0,140463
+10795,1,3507299,"Norristown Local",4032,0,140463
+10795,1,3507300,"Norristown Local",4033,0,140463
+10795,1,3507301,"Norristown Local",4036,0,140463
+10795,1,3507302,"Norristown Local",4031,0,140463
+10795,1,3507303,"Norristown Local",4033,0,140463
+10795,1,3507304,"Norristown Local",4036,0,140463
+10795,1,3507305,"Norristown Local",4036,0,140463
+10795,1,3507306,"69th Street Trans. Ctr. Local",4001,1,140468
+10795,1,3507307,"69th Street Trans. Ctr. Express",4004,1,140474
+10795,1,3507308,"69th Street Trans. Ctr. Express",4011,1,140478
+10795,1,3507309,"69th Street Trans. Ctr. Local",4002,1,140468
+10795,1,3507310,"69th Street Trans. Ctr. Express",4015,1,140474
+10795,1,3507311,"69th Street Trans. Ctr. Express",4013,1,140478
+10795,1,3507312,"69th Street Trans. Ctr. Local",4009,1,140468
+10795,1,3507313,"69th Street Trans. Ctr. Local",4025,1,140473
+10795,1,3507314,"69th Street Trans. Ctr. Express",4031,1,140478
+10795,1,3507315,"69th Street Trans. Ctr. Local",4001,1,140477
+10795,1,3507316,"69th Street Trans. Ctr. Local",4002,1,140477
+10795,1,3507317,"69th Street Trans. Ctr. Local",4003,1,140477
+10795,1,3507318,"69th Street Trans. Ctr. Local",4027,1,140473
+10795,1,3507319,"69th Street Trans. Ctr. Local",4008,1,140477
+10795,1,3507320,"69th Street Trans. Ctr. Local",4013,1,140477
+10795,1,3507321,"69th Street Trans. Ctr. Local",4006,1,140477
+10795,1,3507322,"69th Street Trans. Ctr. Local",4032,1,140477
+10795,1,3507323,"69th Street Trans. Ctr. Local",4033,1,140468
+10795,1,3507324,"69th Street Trans. Ctr. Express",4003,1,140478
+10795,1,3507325,"69th Street Trans. Ctr. Express",4006,1,140478
+10795,1,3507326,"69th Street Trans. Ctr. Local",4009,1,140473
+10795,1,3507329,"69th Street Trans. Ctr. Local",4030,1,140473
+10795,1,3507330,"69th Street Trans. Ctr. Limited",4020,1,140476
+10795,1,3507331,"69th Street Trans. Ctr. Local",4023,1,140473
+10795,1,3507332,"69th Street Trans. Ctr. Local",4010,1,140477
+10795,1,3507333,"69th Street Trans. Ctr. Local",4002,1,140477
+10795,1,3507334,"69th Street Trans. Ctr. Local",4013,1,140477
+10795,1,3507335,"69th Street Trans. Ctr. Local",4006,1,140477
+10795,1,3507336,"69th Street Trans. Ctr. Local",4010,1,140477
+10795,1,3507337,"69th Street Trans. Ctr. Local",4018,1,140477
+10795,1,3507338,"69th Street Trans. Ctr. Local",4018,1,140477
+10795,1,3507339,"69th Street Trans. Ctr. Local",4013,1,140477
+10795,1,3507340,"69th Street Trans. Ctr. Local",4002,1,140477
+10795,1,3507341,"69th Street Trans. Ctr. Local",4013,1,140477
+10795,1,3507342,"69th Street Trans. Ctr. Local",4010,1,140473
+10795,1,3507343,"69th Street Trans. Ctr. Local",4012,1,140468
+10795,1,3507344,"69th Street Trans. Ctr. Local",4027,1,140473
+10795,1,3507345,"69th Street Trans. Ctr. Limited",4026,1,140476
+10795,1,3507346,"69th Street Trans. Ctr. Express",4034,1,140478
+10795,1,3507347,"69th Street Trans. Ctr. Local",4013,1,140473
+10795,1,3507348,"69th Street Trans. Ctr. Express",4028,1,140478
+10795,1,3507351,"69th Street Trans. Ctr. Express",4007,1,140478
+10795,1,3507352,"69th Street Trans. Ctr. Local",4011,1,140468
+10795,1,3507353,"69th Street Trans. Ctr. Local",4004,1,140473
+10795,1,3507354,"69th Street Trans. Ctr. Express",4010,1,140478
+10795,1,3507355,"69th Street Trans. Ctr. Express",4015,1,140474
+10795,1,3507356,"69th Street Trans. Ctr. Local",4002,1,140477
+10795,1,3507358,"69th Street Trans. Ctr. Local",4004,1,140477
+10795,1,3507359,"69th Street Trans. Ctr. Local",4001,1,140477
+10795,1,3507360,"69th Street Trans. Ctr. Local",4002,1,140468
+10795,1,3507361,"69th Street Trans. Ctr. Local",4023,1,140468
+10795,1,3507363,"69th Street Trans. Ctr. Local",4031,1,140468
+10795,1,3507364,"69th Street Trans. Ctr. Express",4022,1,140478
+10795,1,3507365,"69th Street Trans. Ctr. Local",4026,1,140477
+10795,1,3507366,"69th Street Trans. Ctr. Local",4032,1,140477
+10795,1,3507367,"69th Street Trans. Ctr. Local",4036,1,140477
+10795,1,3507368,"69th Street Trans. Ctr. Local",4031,1,140477
+10795,1,3507369,"69th Street Trans. Ctr. Local",4020,1,140477
+10795,1,3507372,"69th Street Trans. Ctr. Express",4006,1,140474
+10795,1,3507373,"69th Street Trans. Ctr. Local",4025,1,140477
+10795,1,3507374,"69th Street Trans. Ctr. Local",4027,1,140477
+10795,1,3507376,"69th Street Trans. Ctr. Local",4013,1,140473
+10795,1,3507377,"69th Street Trans. Ctr. Express",4028,1,140478
+10795,1,3507378,"69th Street Trans. Ctr. Local",4029,1,140473
+10795,1,3507379,"69th Street Trans. Ctr. Express",4021,1,140478
+10795,1,3507380,"69th Street Trans. Ctr. Local",4023,1,140473
+10795,1,3507381,"69th Street Trans. Ctr. Limited",4022,1,140476
+10795,1,3507382,"69th Street Trans. Ctr. Local",4025,1,140473
+10795,1,3507383,"69th Street Trans. Ctr. Limited",4024,1,140476
+10795,1,3507384,"69th Street Trans. Ctr. Express",4022,1,140478
+10795,1,3507385,"69th Street Trans. Ctr. Express",4016,1,140478
+10795,1,3507387,"69th Street Trans. Ctr. Local",4001,1,140468
+10795,1,3507388,"69th Street Trans. Ctr. Local",4012,1,140473
+10795,1,3507389,"69th Street Trans. Ctr. Express",4026,1,140478
+10795,1,3507390,"69th Street Trans. Ctr. Local",4030,1,140473
+10795,1,3507392,"69th Street Trans. Ctr. Express",4033,1,140478
+10795,1,3507393,"69th Street Trans. Ctr. Express",4021,1,140478
+10795,1,3507395,"69th Street Trans. Ctr. Local",4030,1,140468
+10795,1,3507398,"69th Street Trans. Ctr. Local",4010,1,140477
+10795,1,3507399,"69th Street Trans. Ctr. Local",4002,1,140477
+10795,1,3507400,"69th Street Trans. Ctr. Local",4019,1,140477
+10795,1,3507401,"69th Street Trans. Ctr. Local",4014,1,140468
+10795,1,3507402,"69th Street Trans. Ctr. Local",4023,1,140477
+10795,1,3507403,"69th Street Trans. Ctr. Limited",4036,1,140476
+10795,1,3507404,"69th Street Trans. Ctr. Local",4027,1,140468
+10795,1,3507405,"69th Street Trans. Ctr. Local",4006,1,140477
+10795,1,3507407,"69th Street Trans. Ctr. Express",4008,1,140478
+10795,1,3507408,"69th Street Trans. Ctr. Local",4033,1,140477
+10795,1,3507409,"69th Street Trans. Ctr. Local",4036,1,140477
+10795,1,3507410,"69th Street Trans. Ctr. Local",4031,1,140477
+10795,1,3507411,"69th Street Trans. Ctr. Local",4032,1,140477
+10795,1,3507412,"69th Street Trans. Ctr. Local",4033,1,140477
+10795,1,3507413,"69th Street Trans. Ctr. Local",4036,1,140477
+10795,1,3507414,"69th Street Trans. Ctr. Local",4031,1,140477
+10795,1,3507415,"69th Street Trans. Ctr. Local",4032,1,140477
+10795,1,3507416,"69th Street Trans. Ctr. Local",4033,1,140477
+10795,1,3507417,"69th Street Trans. Ctr. Local",4036,1,140477
+10795,1,3507418,"69th Street Trans. Ctr. Local",4031,1,140477
+10795,1,3507419,"69th Street Trans. Ctr. Local",4033,1,140477
+10795,1,3507420,"69th Street Trans. Ctr. Local",4036,1,140477
+10795,1,3507421,"69th Street Trans. Ctr. Local",4036,1,140477
+10795,1,3507422,"69th Street Trans. Ctr. Express",4033,1,140474
+10795,1,3507423,"69th Street Trans. Ctr. Express",4023,1,140474
 10799,1,3362377,"AT&T Station",7,0,140490
 10799,1,3362378,"Walnut-Locust Station",21,0,140489
 10799,1,3362379,"AT&T Station",13,0,140490

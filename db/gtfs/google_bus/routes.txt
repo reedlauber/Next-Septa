@@ -102,7 +102,6 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 10702,68,UPS to Broad-Oregon,3,,,
 10703,7,Pier 70 to 33rd Dauphin,3,,,
 10704,70,Fkd-Gregg/Torr-Cottmn to FRTC,3,,,
-10705,71,Navy Yard Shuttle,3,,,
 10706,73,FTC to Richmond-Westmoreland,3,,,
 10707,75,Wayne Junction to Arrott Trans Ctr,3,,,
 10708,77,Roosevelt-St Vincent to ChestntHill,3,,,
