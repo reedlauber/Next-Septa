@@ -4,22 +4,27 @@ class StopTime < ActiveRecord::Base
     if(d_time_parts[0].to_i > 23)
       time_str = "0" + (d_time_parts[0].to_i - 24).to_s + ":" + d_time_parts[1] + ":00"
     end
-    
+
     Time.parse(time_str)
   end
 
   def convert!(to_stop)
-    #TODO: convert these calls to use above parse_time method
     d_time = self.departure_time
     d_time_parts = d_time.split(':')
+    depart_time = 0
+    time_diff = 0
+
     if(d_time_parts[0].to_i > 23)
       d_time = "0" + (d_time_parts[0].to_i - 24).to_s + ":" + d_time_parts[1] + ":00"
+      depart_time = Time.parse(d_time)
+      time_diff = (depart_time + (60 * 60 * 24)) - Time.now
+    else
+      depart_time = Time.parse(d_time)
+      time_diff = depart_time - Time.now
     end
-    
-    depart_time = Time.parse(d_time)
-    
-    from_now = time_period_to_s depart_time - Time.now
-    
+
+    from_now = time_period_to_s(time_diff)
+
     if(to_stop != nil)
       to_stop_time = StopTime.where("trip_id = '#{self.trip_id}' AND stop_id = #{to_stop.stop_id}").first
       if(to_stop_time != nil)
@@ -28,7 +33,7 @@ class StopTime < ActiveRecord::Base
         if(a_time_parts[0].to_i > 23)
           a_time = "0" + (a_time_parts[0].to_i - 24).to_s + ":" + a_time_parts[1] + ":00"
         end
-      
+
         arrive_time = Time.parse(a_time)
       else
         logger.warn "Couldn't find TO stop_time for trip_id: '#{self.trip_id}' and stop_id: #{to_stop.stop_id}."
@@ -40,13 +45,13 @@ class StopTime < ActiveRecord::Base
     coverage_left = 0 if coverage_left < 0
     coverage_right = (1 - (self.last_stop_sequence.to_i / self.stop_count.to_f)) * 100
     coverage_right = 0 if coverage_right < 0
-    
-    { 
-      "departure_time" => depart_time, 
-      "arrival_time" => arrive_time, 
+
+    {
+      "departure_time" => depart_time,
+      "arrival_time" => arrive_time,
       "departure_time_formatted" => depart_time.to_formatted_s(:display_time),
       "arrival_time_formatted" => arrive_time_formatted,
-      "from_now" => from_now, 
+      "from_now" => from_now,
       "departure_stop_time" => self,
       "arrival_stop_time" => to_stop_time,
       "trip_id" => self.trip_id,
@@ -55,7 +60,7 @@ class StopTime < ActiveRecord::Base
       "coverage_right" => coverage_right
     }
   end
-  
+
   def self.convert_list(stop_times, to_stop)
     converted = []
     stop_times.each do |stop_time|
@@ -63,7 +68,7 @@ class StopTime < ActiveRecord::Base
     end
     converted
   end
-  
+
   def time_period_to_s(time_period)
     time_str = ''
 
@@ -85,6 +90,6 @@ class StopTime < ActiveRecord::Base
       end
     end
 
-    time_str 
+    time_str
   end
 end
