@@ -1,10 +1,18 @@
 <div id="data-index" class="s-cols">
 	<div class="s-col s-col-1of2">
 		<h1>Routes</h1>
-	
+
 		<ul class="data-list s-corner-all">
 		<% @routes.each do |r| %>
-			<li><a href="/data/<%=r.route_short_name %>"><span class="nxs-routelabel"><%=r.route_short_name %></span> <%=r.route_long_name %><span class="icon"></span></a></li>
+			<li>
+				<a href="/data/<%=r.slug %>">
+					<span class="nxs-routelabel"><%=r.route_short_name %></span>
+					<% if r.route_type != 2 %>
+					<%=r.route_long_name %>
+					<% end %>
+					<span class="icon"></span>
+				</a>
+			</li>
 		<% end %>
 		</ul>
 	</div>

@@ -1,23 +1,66 @@
 class SimplifiedStop < ActiveRecord::Base
-  def self.generate_stops
-    columns = [:route_id, :route_direction_id, :direction_id, :stop_id, :stop_sequence, :stop_name, :stop_lat, :stop_lon]
-    stops = []
+	@@columns = [:route_id, :route_direction_id, :direction_id, :stop_id, :stop_sequence, :stop_name, :stop_lat, :stop_lon]
 
-    RouteDirection.all.each do |dir|
-      Stop.find_by_sql("SELECT DISTINCT s.stop_id, s.stop_name, st.stop_sequence, s.stop_lat, s.stop_lon " + 
-        "FROM stops s " + 
-        "JOIN stop_times st ON s.stop_id = st.stop_id " + 
-        "JOIN trips t ON st.trip_id = t.trip_id " + 
-        "JOIN routes r ON r.route_id = '#{dir.route_id}' " + 
-        "WHERE t.route_id = '#{dir.route_id}' " + 
-        "AND t.direction_id = #{dir.direction_id} " + 
-        "ORDER BY st.stop_sequence").each do |stop|
-          if(stop.stop_name != nil && stop.stop_name != "")
-            stops << [dir.route_id, dir.id, dir.direction_id, stop.stop_id, stop.stop_sequence, stop.stop_name, stop.stop_lat, stop.stop_lon]
-          end
-      end
-    end
+	def self.generate_stops
+		self.generate_bus_stops
+		self.generate_rail_stops
+	end
 
-    SimplifiedStop.import columns, stops
-  end
+	private
+
+	@@distinct_stops_bus_sql = "SELECT DISTINCT s.stop_id, s.stop_name, st.stop_sequence, s.stop_lat, s.stop_lon " +
+									"FROM stops s " +
+									"JOIN stop_times st ON s.stop_id = st.stop_id " +
+									"JOIN trips t ON st.trip_id = t.trip_id " +
+									"JOIN routes r ON r.route_id = ? " +
+									"WHERE t.route_id = ? " +
+									"AND t.direction_id = ? " +
+									"ORDER BY st.stop_sequence"
+
+	@@longest_trip_sql = "SELECT t.id, t.route_id, t.trip_id, count(st.*) stop_count " +
+							"FROM trips t " +
+							"JOIN stop_times st ON t.trip_id = st.trip_id " +
+							"WHERE t.direction_id = ? " +
+								"AND t.route_id = ? " +
+							"GROUP BY t.id, t.route_id, t.trip_id " +
+							"ORDER BY stop_count DESC " +
+							"LIMIT 1"
+
+	@@distinct_stops_rail_sql = "SELECT s.*, st.stop_sequence " +
+									"FROM stop_times st " +
+									"JOIN stops s ON st.stop_id = s.stop_id " +
+									"WHERE st.trip_id = ? " +
+									"ORDER BY st.stop_sequence"
+
+	def self.generate_bus_stops
+		stops = []
+
+		RouteDirection.joins("JOIN routes ON routes.route_id = route_directions.route_id").where("routes.route_type <> ?", 2).each do |dir|
+			Stop.find_by_sql([@@distinct_stops_bus_sql, dir.route_id, dir.route_id, dir.direction_id]).each do |stop|
+					if(stop.stop_name != nil && stop.stop_name != "")
+						stops << [dir.route_id, dir.id, dir.direction_id, stop.stop_id, stop.stop_sequence, stop.stop_name, stop.stop_lat, stop.stop_lon]
+					end
+			end
+		end
+
+		SimplifiedStop.import @@columns, stops
+	end
+
+	def self.generate_rail_stops
+		stops = []
+
+		RouteDirection.joins("JOIN routes ON routes.route_id = route_directions.route_id").where("routes.route_type = ?", 2).each do |dir|
+			longest_trip = Trip.find_by_sql([@@longest_trip_sql, dir.direction_id, dir.route_id]).first
+
+			if longest_trip != nil
+				Stop.find_by_sql([@@distinct_stops_rail_sql, longest_trip.trip_id]).each do |stop|
+						if(stop.stop_name != nil && stop.stop_name != "")
+							stops << [dir.route_id, dir.id, dir.direction_id, stop.stop_id, stop.stop_sequence, stop.stop_name, stop.stop_lat, stop.stop_lon]
+						end
+				end
+			end
+		end
+
+		SimplifiedStop.import @@columns, stops
+	end
 end

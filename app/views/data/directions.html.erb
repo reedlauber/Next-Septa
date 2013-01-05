@@ -5,7 +5,7 @@
 		<ul class="data-list s-corner-all">
 		<% @directions.each do |d| %>
 			<li>
-				<a href="/data/<%=@route.route_short_name %>/<%=d.direction_id %>">
+				<a href="/data/<%=@route.slug %>/<%=d.direction_id %>">
 				<span class="nxs-routelabel"><%=d.direction_id %></span> <%=d.direction_name %><span class="icon"></span></a>
 			</li>
 		<% end %>
@@ -14,13 +14,15 @@
 	<div class="s-col-last">
 		<h2>Route Stops</h2>
 		<ul class="data-list data-list-last s-corner-all">
+			<% sequence = 1 %>
 			<% @stops.each do |s| %>
 			<li>
 				<a href="javascript:void(0)">
-					<span class="nxs-routelabel"><%=s.stop_sequence %></span> 
+					<span class="nxs-routelabel"><%=sequence %></span>
 					<%= s.stop_name %>
 				</a>
 			</li>
+			<% sequence += 1 %>
 			<% end %>
 		</ul>
 	</div>

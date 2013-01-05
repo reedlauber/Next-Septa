@@ -35,7 +35,7 @@ class Importer
 		puts "\nDone"
 		read_timer.total("Total time reading", true)
 		write_timer.total("Total time writing", true)
-		total_timer.interval("Total time spent")
+		total_timer.total("Total time spent")
 	end
 
 	def import_route_extras
@@ -117,25 +117,47 @@ class Importer
 		timer.total("Total time spent")
 	end
 
+	# builds a reference hash to normalize CSV header columns with spaces to the expected trimmed versions
+	def get_clean_headers(original, columns)
+		cleaned = Hash.new
+		original.each do |h|
+			if columns.include? h.strip
+				cleaned[h.strip] = h
+			end
+		end
+		cleaned
+	end
+
 	# for a given path (rail vs buses), read in mode file and process rows
 	def import_path(path, file_name, inst, columns, read_timer, write_timer)
 		# collection holding all the data for the data type
 		values = []
 		batch_num = 0
+		clean_headers = nil
 
 		# open and read data from CSV file
 		CSV.foreach("#{path}/#{file_name}.txt", :headers => true) do |row|
 			read_timer.start
 
+			if(clean_headers == nil)
+				clean_headers = get_clean_headers(row.headers, columns)
+			end
+
 			# data for individual row
 			record_values = []
 			# loop over headers and pull value for each column
-			columns.each do |h|
-				if(row.field(h.to_s) != nil)
-					record_values << row.field(h.to_s).strip
-				else
-					record_values << nil
+			columns.each do |c|
+				key = clean_headers[c]
+				val = nil
+
+				if(key != nil)
+					val = row.field(key)
+					if(val != nil)
+						val.strip!
+					end
 				end
+
+				record_values << val
 			end
 			# add row data to total collection
 			values << record_values

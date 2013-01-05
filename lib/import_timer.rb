@@ -16,20 +16,22 @@ class ImportTimer
 		if stop_first
 			stop
 		end
-		formatted = ImportTimer.format_time(@old)
+		formatted = format_time(@old)
 		puts message + ": " + formatted
 	end
 
 	def interval(message, stop_timer = false)
 		elapsed = (Time.now - @start) * 1
-		formatted = ImportTimer.format_time(elapsed)
+		formatted = format_time(elapsed)
 		puts message + ": " + formatted
 		if stop_timer
 			stop
 		end
 	end
 
-	def self.format_time(secs)
+	private
+
+	def format_time(secs)
 	  hrs = 0
 	  mins = 0
 
