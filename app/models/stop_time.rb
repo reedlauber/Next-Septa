@@ -9,7 +9,7 @@ class StopTime < ActiveRecord::Base
   end
 
   def convert!(to_stop)
-    d_time = self.departure_time
+    d_time = self.departure_time.strip
     d_time_parts = d_time.split(':')
     depart_time = 0
     time_diff = 0
@@ -26,9 +26,9 @@ class StopTime < ActiveRecord::Base
     from_now = time_period_to_s(time_diff)
 
     if(to_stop != nil)
-      to_stop_time = StopTime.where("trip_id = '#{self.trip_id}' AND stop_id = #{to_stop.stop_id}").first
+      to_stop_time = StopTime.where("trip_id = ? AND stop_id = ?", self.trip_id, to_stop.stop_id).first
       if(to_stop_time != nil)
-        a_time = to_stop_time.departure_time
+        a_time = to_stop_time.departure_time.strip
         a_time_parts = a_time.split(':')
         if(a_time_parts[0].to_i > 23)
           a_time = "0" + (a_time_parts[0].to_i - 24).to_s + ":" + a_time_parts[1] + ":00"

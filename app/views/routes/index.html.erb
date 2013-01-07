@@ -1,4 +1,4 @@
-<% if(@route_types.count > 20) %>
+<% if(@routes.count > 20) %>
 <div class="nxs-section nxs-quicknav">
 	<ul class="">
 		<li><a href="#20">20</a></li>
@@ -15,13 +15,18 @@
 </div>
 <% end %>
 <ul id="routes" class="nxs-items">
-	<% @route_types.each do |r| %>
-	<li class="nxs-section">
+	<% @routes.each do |r| %>
+	<li class="nxs-section nxs-route nxs-route-<%=@route_type %>">
 		<% if(r.route_short_name[0] != @route_letter) %>
 		<% @route_letter = r.route_short_name[0] %>
 		<a name="<%=r.route_short_name %>" class="nxs-items-anchor" />
 		<% end %>
-		<a href="/<%=params[:route_type] + "/" + r.route_short_name %>" class="nxs-nav-link"><span class="nxs-routelabel"><%=r.route_short_name %></span><%=r.route_long_name %></a>
+		<a href="/<%=params[:route_type] + "/" + r.slug %>" class="nxs-nav-link">
+			<% if !r.is_rail? %>
+			<span class="nxs-routelabel"><%=r.route_short_name %></span>
+			<% end %>
+			<%=r.route_long_name %>
+		</a>
 	</li>
 	<% end %>
 </ul>

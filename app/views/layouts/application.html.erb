@@ -30,7 +30,7 @@
 				<li class="s-col s-col-1of4 nxs-section nxs-footer-subways"><a href="/subways" class="s-corner-all">Subways</a></li>
 				<li class="s-col s-col-1of4 nxs-section nxs-footer-buses"><a href="/buses" class="s-corner-all">Buses</a></li>
 				<li class="s-col s-col-1of4 nxs-section nxs-footer-trolleys"><a href="/trolleys" class="s-corner-all">Trolleys</a></li>
-				<li class="s-col s-col-last nxs-section nxs-footer-trains nxs-dialog-open"><a href="http://isepta.org" class="s-corner-all" target="_blank">Trains</a></li>
+				<li class="s-col s-col-last nxs-section nxs-footer-trains"><a href="/trains" class="s-corner-all">Trains</a></li>
 			</ul>
 		</footer>
 		<% end %>
@@ -38,12 +38,6 @@
 	<div id="subfooter">
 		<span id="follow"><a href="http://twitter.com/nextsepta">@nextsepta</a></span>
 		<span id="madeby">made by <a href="http://twitter.com/reedlauber">@reedlauber</a></span>
-	</div>
-	<div id="isepta-dialog" class="nxs-dialog s-corner-all-12">
-		<h1>Taking you to iSepta...</h1>
-		<p>NEXT&rarr;Septa does not provide Regional Rail information because <a href="http://isepta.org" target="_blank">iSepta</a> already does it so well. So, head on over there if you're looking for trains.</p>
-		<a href="http://isepta.org" target="_blank" class="s-btn s-btn-success s-corner-all">Go to iSepta</a>
-		<a href="javascript:void(0)" class="s-btn s-corner-all close">Cancel</a>
 	</div>
 	<%= include_javascripts :all, :public %>
 	<%= yield :js %>

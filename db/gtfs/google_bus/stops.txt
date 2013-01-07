@@ -141,14 +141,13 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 232,Wister St & Chelten Av ,40.051831,-75.157813,,,1
 235,Rodney St & Mt Airy Av,40.071208,-75.179338,,,1
 237,Stenton Av & Mt Airy Av ,40.068936,-75.181558,,,1
-240,Evergreen Av & Stenton Av - FS,40.080776,-75.202918,,,1
 241,Evergreen Av & Germantown Av ,40.076705,-75.20732,,,1
 242,Germantown Av & Bethlehem Pk,40.077019,-75.208052,,,1
 243,Bethlehem Pk & Montgomery Av ,40.09206,-75.214253,,,1
 244,Germantown Pk & Northwestern Av,40.085981,-75.230314,,,1
 246,Plymouth Meeting Mall,40.117134,-75.284011,,,1
 248,Germantown Pk & Northwestern Av -FS,40.085874,-75.230326,,,1
-250,Germantown Av & Bethlehem Pk - FS,40.076849,-75.207958,,,1
+250,Germantown Av & Bethlehem Pk 1 - FS,40.076849,-75.207958,,,1
 252,Stenton Av & Mt Airy Av   ,40.068999,-75.181854,,,1
 254,Stenton Av & Washington Ln,40.059577,-75.165696,,,1
 255,Wister St & Chelten Av - FS,40.052054,-75.157942,,,1
@@ -332,10 +331,8 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 567,41st St & Lancaster Av,39.964754,-75.205647,,,1
 573,Market St & 33rd St,39.955584,-75.188906,,,1
 574,Fairmount Av & 40th St,39.965186,-75.20261,,,1
-575,46th St & Market St,39.958753,-75.214004,,,1
 576,63rd St & Market St,39.962459,-75.246765,,,1
 577,63rd St & Haverford Av,39.971761,-75.244807,,,1
-579,Woodbine Av & 75th St,39.975619,-75.265398,,,1
 581,33rd St & Oxford St,39.981296,-75.188714,,,1
 582,33rd St & Girard Av,39.9752,-75.188392,,,1
 584,27th St & Poplar St,39.972649,-75.180663,,,1
@@ -464,6 +461,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 781,52nd St & Girard Av,39.971312,-75.225707,,,1
 784,Luzerne St & 12th St - MBFS,40.013077,-75.145526,,,1
 785,Wayne Av & Manheim St,40.0263,-75.169034,,,1
+787,Wayne Av & Carpenter Ln ,40.043264,-75.198863,,,1
 788,Wayne Av & Carpenter Ln,40.04339,-75.199158,,,1
 790,Wayne Av & Manheim St,40.026373,-75.169481,,,1
 791,Wayne Av & Berkley St,40.022342,-75.162204,,,1
@@ -490,6 +488,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 838,Erie Torresdale Station,40.00584,-75.095758,,,1
 839,Torresdale Av & Hunting Park Av,40.005932,-75.093412,,,1
 841,Fern Rock T C Nedro Av & 10th St,40.041984,-75.136969,,,1
+842,Godfrey Av & 5th St     ,40.045641,-75.128488,,,1
 843,Cheltenham Av & 2nd St - FS,40.05276,-75.121566,,,1
 844,Olney Av & Rising Sun Av Loop,40.0343,-75.115176,,,1
 845,Rising Sun Av & Wyoming Av,40.021742,-75.125681,,,1
@@ -497,7 +496,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 849,4th St & Girard Av  - FS     ,39.969732,-75.143135,,,1
 850,4th St & Market St ,39.950491,-75.147296,,,1
 851,4th St & Washington Av,39.934228,-75.150868,,,1
-852,Packer Marine Terminal ,39.901932,-75.139771,,,1
 853,4th St & Oregon Av ,39.914871,-75.155098,,,1
 855,2nd St & Oregon Av - FS,39.91447,-75.151476,,,1
 856,3rd St & Ellsworth St,39.933627,-75.149265,,,1
@@ -561,6 +559,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 970,Verree Rd & Rhawn St ,40.072634,-75.076124,,,1
 971,Verree Rd & Red Lion Rd ,40.104989,-75.033032,,,1
 972,Sandmeyer Ln & Red Lion Rd - MBFS,40.107792,-75.036425,,,1
+973,Verree Rd & Bustleton Av ,40.107834,-75.027017,,,1
 974,Northeast Av & Comcast,40.109389,-75.016036,,,1
 976,Academy Rd & Comly Rd - FS,40.089738,-74.984744,,,1
 979,Medford Rd & Atmore Rd - FS,40.100892,-74.969745,,,1
@@ -609,6 +608,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 1056,Cottman Av & Bustleton Av,40.047654,-75.06005,,,1
 1058,St Vincent St & Roosevelt Blvd ,40.04259,-75.055713,,,1
 1060,Township Line Rd & Cadwalader Av,40.081171,-75.116804,,,1
+1062,Royal Av & Mulford Rd -Bishop McDevitt HS,40.093822,-75.156731,,,1
 1063,Greenwood Av & Jenkintown Station,40.092083,-75.137202,,,1
 1064,Glenside Av & Easton Rd ,40.100634,-75.153415,,,1
 1066,Willow Grove Av & Wyndmoor Station,40.07401,-75.197498,,,1
@@ -738,13 +738,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 1349,Washington Ln & Chew Av ,40.050489,-75.173262,,,1
 1350,Andrews Av & Cheltenham Av ,40.068277,-75.148359,,,1
 1351,Mt Pleasant Av & Germantown Av ,40.058366,-75.189483,,,1
-1391,Market St & 56th St,39.960908,-75.232953,,,1
 1392,15th St Station,39.952502,-75.165298,,,1
-1396,Market St & 56th St - FS,39.960988,-75.232634,,,1
-1398,Market St & 57th St - FS,39.961241,-75.234653,,,1
-1399,Market St & 58th St - FS,39.961494,-75.236613,,,1
-1400,Market St & 59th St - FS,39.961738,-75.238585,,,1
-1401,Market St & 54th St,39.960393,-75.228762,,,1
 1417,56th St & Chestnut St - FS,39.959265,-75.233229,,,1
 1423,58th St & Kingsessing Av ,39.934642,-75.227158,,,1
 1465,Rhawn St & Verree Rd - FS,40.073178,-75.076192,,,1
@@ -755,7 +749,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 1489,Bustleton Av & Proctor Rd - FS,40.10336,-75.028497,,,1
 1492,Krewstown Rd & Rising Sun Av ,40.079941,-75.052288,,,1
 1495,Verree Rd & Marchman Rd -1 MBFS,40.091088,-75.054892,,,1
-1508,Byberry Rd & Academy Rd ,40.096151,-74.976887,,,1
 1520,Byberry Rd  & Thornton Rd - FS,40.102117,-74.981704,,,1
 1522,Mechanicsville Rd & Knights Rd,40.093267,-74.961902,,,1
 1524,Knights Rd & Lancelot Pl - MBFS,40.083015,-74.974587,,,1
@@ -853,10 +846,10 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 1762,Buckstown Rd & Sesame Pl ,40.187041,-74.871896,,,1
 1769,Lower Bucks Hospital,40.106088,-74.866905,,,0
 1772,Hulmeville Rd & Street Rd,40.09654,-74.944604,,,2
-1773,Hulmeville Rd & Street Rd,40.097066,-74.944518,,,2
-1776,Harrison St & Old Orchard Rd,40.106498,-74.866854,,,2
-1777,Mill St & Old U S 13,40.096667,-74.860033,,,0
-1780,Lincoln Hwy & Durham Rd ,40.159893,-74.910575,,,1
+1773,Hulmeville Rd & Street Rd - MBNS,40.097066,-74.944518,,,2
+1776,Old Orchard Rd & Harrison St,40.10657,-74.866889,,,2
+1777,Mill St & Old U S 13,40.096739,-74.860068,,,0
+1780,Lincoln Hwy & Durham Rd -MBNS,40.159893,-74.910575,,,1
 1781,Mill Creek Rd & Green Ln,40.133095,-74.858524,,,1
 1782,Beaver St & Garden St - FS,40.10403,-74.855773,,,0
 1783,Bristol Park Shop Ctr,40.10122,-74.872032,,,0
@@ -865,7 +858,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 1789,Bensalem Blvd & New Falls Rd ,40.123539,-74.904316,,,2
 1792,Bristol Park Shop Ctr,40.101273,-74.871949,,,0
 1793,Beaver St & Prospect St,40.103627,-74.855611,,,0
-1794,Mill Creek Rd & Green Ln,40.133177,-74.858736,,,1
+1794,Mill Creek Rd & Green Ln - FS,40.133177,-74.858736,,,1
 1795,Durham Rd & Lincoln Hwy ,40.159207,-74.910923,,,1
 1796,Creekside Apts Rd & Dunks Ferry Rd ,40.101882,-74.957526,,,1
 1799,Saint Mary Medical Center         ,40.202359,-74.925234,,,2
@@ -1469,7 +1462,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 6234,City Av & Decker Blvd - FS,40.006129,-75.215433,,,0
 6236,City Av & 47th St - FS,40.00244,-75.224023,,,0
 6237,City Av & 47th St - FS,40.002581,-75.223219,,,0
-6239,City Av & 53rd St,39.997449,-75.234377,,,0
+6239,City Av & 53rd St,39.997423,-75.234354,,,0
 6248,Clity Av & Berwick Rd,39.993001,-75.243889,,,1
 6249,City Av & Overbrook Av,39.991044,-75.248018,,,1
 6250,City Av & Cardinal Av,39.994042,-75.241653,,,1
@@ -1685,7 +1678,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 12274,Ridge Av & Green Ln,40.034182,-75.215917,,,1
 12275,Ridge Av & Green Ln,40.034245,-75.216129,,,1
 12278,Ridge Av & Hermit St,40.023556,-75.207757,,,1
-12288,Ridge Av & Domino Ln - MBFS,40.044469,-75.230075,,,1
 12289,Ridge Av & Wigard Av - MBFS,40.047333,-75.234773,,,1
 12293,Ridge Av & Jefferson St,39.977268,-75.169484,,,1
 12295,Ridge Av & Kingsley St,40.026146,-75.208931,,,1
@@ -1738,7 +1730,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 12973,South Gulph Rd & Long Rd - FS,40.082408,-75.380311,,,4
 12974,South Gulph Rd & Orchard Rd FS,40.079252,-75.368305,,,4
 12976,South Gulph Rd & Universal Corp,40.079922,-75.370446,,,4
-13012,Schuylkill Av & Market St  ,39.9544,-75.181187,,,1
 13021,Sedgley Av & 10th St,40.0016,-75.145655,,,1
 13106,Somerset St & Amber St,39.987355,-75.118962,,,1
 13107,Somerset St & Belgrade St,39.981355,-75.113582,,,1
@@ -2063,7 +2054,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 15236,Broad St & Flagship Dr ,39.888926,-75.175809,,,1
 15262,New Falls Rd & Edgley Rd ,40.154253,-74.855276,,,1
 15267,3rd St & Highland Av,39.831909,-75.391047,,,1
-15269,New Falls Rd & Woodbourne Rd - FS,40.154389,-74.855784,,,1
+15269,Woodbourne Rd & New Falls Rd - FS,40.154389,-74.855784,,,1
 15270,Bristol Pk & Cedar Av,40.0938,-74.908983,,,2
 15271,Lansdowne Av & 60th St,39.975833,-75.240354,,,1
 15272,Weccacoe Av & Wolf St,39.918559,-75.143894,,,1
@@ -2297,7 +2288,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 15643,Germantown Pk & Thomas Rd ,40.086445,-75.235459,,,1
 15644,Germantown Pk & Thornhill Dr ,40.085013,-75.244975,,,1
 15645,Germantown Pk & Joshua Rd,40.092927,-75.261863,,,1
-15646,Germantown Av & Duval Av ,40.044892,-75.181729,,,1
+15646,Germantown Av & Duval St,40.044892,-75.181729,,,1
 15647,Germantown Av & Washington Ln ,40.043221,-75.180973,,,1
 15648,Germantown Av & Tulpehocken St ,40.04216,-75.180057,,,1
 15649,Germantown Av & Walnut Ln,40.040495,-75.178665,,,1
@@ -2339,7 +2330,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 15716,Germantown Av & Juniata St ,40.018124,-75.155199,,,1
 15717,Germantown Av & Staub St ,40.016873,-75.154494,,,1
 15718,Germantown Av & Hunting Park Av,40.015863,-75.153966,,,1
-15719,Germantown Av & Luzerne St ,40.014487,-75.153157,,,1
+15719,Germantown Av & Lycoming St,40.014487,-75.153157,,,1
 15720,Germantown Av & Pike St ,40.012637,-75.152324,,,1
 15721,Broad St & Green Ln,40.045801,-75.143327,,,1
 15722,Olney Av & Clarkson Av ,40.032788,-75.113668,,,1
@@ -2559,7 +2550,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 15990,33rd St & Norris St,39.987015,-75.187371,,,1
 15991,33rd St & Diamond St,39.988495,-75.187035,,,1
 15992,33rd St & Susquehanna Av ,39.990074,-75.186675,,,1
-15993,33rd St & Dauphin St - FS,39.99193,-75.186291,,,1
 15994,33rd St & York St - FS,39.993482,-75.18592,,,1
 15995,33rd St & Cumberland St,39.994642,-75.18562,,,1
 15996,33rd St & Huntingdon St,39.996114,-75.185332,,,1
@@ -2816,7 +2806,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 16313,8th St & Porter St ,39.918222,-75.160928,,,1
 16314,8th St & Shunk St ,39.916964,-75.161192,,,1
 16316,Lehigh Av & 4th St,39.991792,-75.138309,,,1
-16317,Lehigh Av & 3rd St,39.991674,-75.137399,,,1
 16318,American St & Lehigh Av - FS,39.991341,-75.136207,,,1
 16319,American St & Cumberland St ,39.988755,-75.136772,,,1
 16320,American St & York St ,39.987015,-75.137099,,,1
@@ -2915,7 +2904,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 16425,Blair Mill Rd & Witmer Rd -1 MBFS,40.163811,-75.136094,,,1
 16426,Blair Mill Rd & Welsh Rd - MBNS,40.159274,-75.140812,,,1
 16427,Oxford Av & Rockwell Av ,40.066742,-75.08395,,,1
-16428,Oxford Av & Verree Rd ,40.065483,-75.083554,,,1
 16429,Oxford Av & Bleigh Av ,40.063751,-75.083456,,,1
 16430,Rising Sun Av & Cottman Av ,40.061619,-75.083904,,,1
 16431,Rising Sun Av & Saint Vincent St,40.059706,-75.086029,,,1
@@ -3233,7 +3221,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 16823,Wadsworth Av & Williams Av,40.077359,-75.175579,,,1
 16824,Wadsworth Av & Thouron St,40.075969,-75.176885,,,1
 16825,Easton Rd & Woolston Av - FS,40.07399,-75.17811,,,1
-16828,11th St & Tasker St - FS,39.929864,-75.163103,,,1
+16828,11th St & Tasker St,39.929721,-75.163128,,,1
 16831,11th St & Carpenter St,39.93833,-75.161195,,,1
 16832,11th St & Federal St ,39.934708,-75.161987,,,1
 16833,11th St & Ellsworth St ,39.935787,-75.161736,,,1
@@ -3322,9 +3310,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 16943,Old York Rd & Monument Av,40.180262,-75.105471,,,2
 16944,Old York Rd & Montgomery Av,40.179121,-75.105832,,,2
 16945,Old York Rd & Moreland Av - FS,40.177122,-75.106291,,,2
-16946,Old York Rd & Williams Ln,40.175579,-75.106737,,,2
 16947,Old York Rd & Lehman Av - FS,40.172956,-75.108345,,,2
-16948,Old York Rd & Fulmor Av,40.172308,-75.109062,,,2
 16949,Old York Rd & Newington Dr,40.166815,-75.110462,,,2
 16951,Old York Rd & Fairhill St - FS,40.151148,-75.114128,,,2
 16952,Old York Rd & Lincoln Av,40.149732,-75.114727,,,2
@@ -3406,12 +3392,10 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 17103,Philadelphia Airport Terminal A,39.876487,-75.249157,,30615,1
 17105,PHL D Terminal,39.878172,-75.241969,,30615,1
 17106,Old York Rd & Horsham Rd,40.171535,-75.109787,,,2
-17107,Old York Rd & Fulmor Av - FS,40.172193,-75.108971,,,2
 17109,Old York Rd & Lehman Av,40.173057,-75.108122,,,2
 17110,York Rd & Byberry Rd,40.174412,-75.106909,,,2
 17112,Old York Rd & Madison Av,40.186047,-75.103987,,,2
 17114,Old York & County Line -FS,40.190289,-75.102867,,,2
-17115,Street Rd & Jacksonville Rd,40.196974,-75.082985,,,2
 17117,Broad St & Venango St,40.007638,-75.151717,,,1
 17118,Broad St & Tioga St,40.006202,-75.152042,,,1
 17120,Broad St & Ontario St - FS,40.004526,-75.152389,,,1
@@ -3504,6 +3488,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 17227,Germantown Av & Carpenter Ln,40.054738,-75.186905,,,1
 17228,Germantown Av & Gorgas Ln,40.055345,-75.187187,,,1
 17229,Broad St & Curtin St ,39.910401,-75.1727,,,1
+17230,Broad St & Packer St - FS,39.911864,-75.172305,,,1
 17231,Broad St & Pollack St,39.912881,-75.172066,,,1
 17232,Broad St & Bigler St - FS,39.914416,-75.171742,,,1
 17233,Broad St & Shunk St,39.918037,-75.170949,,,1
@@ -3648,7 +3633,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 17425,Erie Av & Rising Sun Av ,40.007808,-75.140641,,,1
 17428,Germantown Pk & Westway Dr,40.087838,-75.254374,,,1
 17429,Germantown Pk & Thomas Rd - FS,40.086373,-75.235318,,,1
-17430,Stenton Av & Northwestern Av - FS,40.092861,-75.22361,,,1
 17432,Germantown Av & Hillcrest Av ,40.083532,-75.22243,,,1
 17433,Germantown Av & Bells Mill Rd ,40.082082,-75.219914,,,1
 17435,Germantown Av & Sunset Av ,40.080632,-75.217742,,,1
@@ -4442,7 +4426,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 18400,Ridge Av & Ferry Rd,40.007928,-75.192133,,,1
 18402,Ridge Av & Indiana Av ,40.00258,-75.18733,,,1
 18403,Ridge Av & Clearfield St,40.004883,-75.187571,,,1
-18404,Ridge Av & 35th St ,40.002053,-75.187131,,,1
 18405,Ridge Av & Hunting Park Av,40.000499,-75.1869,,,1
 18406,Ridge Av & Huntingdon St ,39.996529,-75.187623,,,1
 18407,Ridge Av & Cumberland St ,39.994886,-75.187297,,,1
@@ -4879,8 +4862,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 18987,Front St & Girard Av - FS,39.968958,-75.136003,,,1
 18988,Front St & Girard Av ,39.968948,-75.136145,,,1
 18991,Market St & 63rd St,39.962653,-75.247275,,,1
-18992,Market St & 60th St,39.961911,-75.240911,,,1
-18993,Market St & 52nd St,39.959932,-75.224949,,,1
 18995,Market St & 34th St - MBNS,39.955803,-75.191645,,,1
 18996,Market St & 30th St,39.954824,-75.183559,,,1
 19003,Front St & Berks St,39.978563,-75.133495,,,1
@@ -4898,8 +4879,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 19018,Front St & Berks St ,39.978787,-75.133601,,,1
 19025,Market St & 30th St - FS,39.954931,-75.183547,,,1
 19026,Market St & 34th St ,39.955883,-75.19135,,,1
-19028,Market St & 52nd St,39.960012,-75.224653,,,1
-19029,Market St & 60th St - FS,39.961982,-75.240604,,,1
 19031,Market St & Millbourne Av,39.962846,-75.251692,,,1
 19032,Market St & Millbourne Av,39.962713,-75.25194,,,1
 19033,Manayunk Av & Seville St,40.022565,-75.212689,,,1
@@ -4924,7 +4903,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 19053,Bethlehem Pk & Newton St,40.081178,-75.208181,,,1
 19054,Bethlehem Pk & Lynnebrook Ln - FS,40.083912,-75.209616,,,1
 19056,Paper Mill Rd & Biddle Woods Ln,40.087893,-75.210018,,,1
-19058,Montgomery Av & Paper Mill Rd - FS,40.089852,-75.209579,,,1
+19057,Montgomery Av & Paper Mill Rd  FS,40.089865,-75.209562,,,1
 19059,Germantown Pk & Hillcrest Av,40.083522,-75.222122,,,1
 19060,Nedro Av & 15th St,40.043192,-75.145844,,,1
 19061,Nedro Av & 16th St,40.043364,-75.147132,,,1
@@ -6402,17 +6381,17 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 21128,Knights Rd & McKinley Av - FS,40.102987,-74.952335,,,2
 21129,Knights Rd & Street Rd ,40.105317,-74.950154,,,2
 21130,Knights Rd & Byberry Rd,40.110804,-74.944898,,,2
-21131,Byberry Rd & Hulmeville Rd ,40.108351,-74.936133,,,2
+21131,Byberry Rd & Hulmeville Rd - FS,40.108351,-74.936133,,,2
 21132,Byberry Rd & Adams Rd,40.110028,-74.926855,,,2
 21133,Susquehanna Av & 7th St ,39.984912,-75.145341,,,1
 21134,Adams Rd & Adams Cr ,40.108612,-74.92316,,,2
-21135,Adams Rd & Ford Rd ,40.106309,-74.920928,,,2
+21135,Adams Rd & Ford Rd ,40.106434,-74.920844,,,2
 21136,Dauphin St & 22nd St,39.989512,-75.16899,,,1
 21138,Bridgewater Rd & Deerfield Dr ,40.105936,-74.928067,,,2
-21139,Bridgewater Rd & Winchester Rd ,40.102581,-74.926055,,,2
+21139,Bridgewater Rd & Winchester Rd - FS,40.102581,-74.926055,,,2
 21141,Bensalem Blvd & Roberts Rd ,40.099313,-74.919108,,,2
 21142,Bensalem Blvd & Farley Rd ,40.105695,-74.914873,,,2
-21143,Bensalem Blvd & Mt Vernon Rd ,40.110662,-74.911559,,,2
+21143,Bensalem Blvd & Mt Vernon Rd - FS,40.110662,-74.911559,,,2
 21144,Bensalem Blvd & Flushing Rd ,40.114677,-74.908974,,,2
 21145,Bensalem Blvd & Gibson Rd ,40.120145,-74.905975,,,2
 21149,Ford Rd & Wharton Rd,40.121327,-74.88576,,,0
@@ -6423,21 +6402,21 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 21163,Beaver St & 4th St - FS,40.108043,-74.855043,,,0
 21164,Beaver Dam Rd & Venice Av ,40.113939,-74.854179,,,1
 21165,Beaver Dam Rd & Lakeland Av,40.116231,-74.853853,,,1
-21168,Green Ln & Pacitfic Av,40.120598,-74.848396,,,1
-21170,Green Ln & N Fleetwing Dr ,40.1296,-74.85532,,,1
-21171,Mill Creek Rd & Blue Ridg Pass ,40.130171,-74.863141,,,1
+21168,Green Ln & Pacitfic Av - FS,40.120598,-74.848396,,,1
+21170,Green Ln & N Fleetwing Dr - FS,40.1296,-74.85532,,,1
+21171,Mill Creek Rd & Blue Ridge Pass -FS,40.130171,-74.863141,,,1
 21172,Bristol-Oxford Valley Rd & Border Rock Rd,40.132338,-74.870783,,,1
 21173,Bristol-Oxford Valley Rd & Cinder Ln,40.136859,-74.873909,,,1
-21174,New Falls Rd & Bristol-Oxford Valley Rd,40.140757,-74.875347,,,1
+21174,New Falls Rd & Brist Oxf Val Rd - FS,40.140757,-74.875347,,,1
 21175,Kensington Av & Allegheny Av ,39.996338,-75.11344,,,1
 21177,New Falls Rd & New Rodgers Rd,40.134389,-74.884643,,,1
 21178,New Falls Rd & Durham Rd ,40.132358,-74.88763,,,1
-21179,Durham Rd & S Tanglewood Dr ,40.133319,-74.889067,,,1
-21181,Durham Rd & Frosty Hollow Rd ,40.143756,-74.891842,,,1
-21182,Durham Rd & Country Club Apts ,40.150418,-74.894669,,,1
+21179,Durham Rd & S Tanglewood Dr - FS,40.133319,-74.889067,,,1
+21181,Durham Rd & Frosty Hollow Rd -FS,40.143756,-74.891842,,,1
+21182,Durham Rd & Sandybrook Dr - MBNS,40.151224,-74.895172,,,1
 21184,Durham Rd & Delaware Av,40.158192,-74.903008,,,1
-21187,Lincoln Hwy & Highland Park Way,40.167688,-74.8964,,,1
-21188,Lincoln Hwy & Honey Locust Rd - FS,40.169836,-74.893553,,,1
+21187,Lincoln Hwy & Highland Pk Wy 1 -FS,40.167688,-74.8964,,,1
+21188,Lincoln Hwy & Highland Pk Wy 2 -MBFS,40.169836,-74.893553,,,1
 21190,2nd St & Girard Av ,39.96959,-75.139556,,,1
 21191,Broad St & Olney Av - layover,40.038479,-75.144642,,31037,1
 21193,Nedro Av & 11th St,40.042173,-75.138704,,,1
@@ -6487,13 +6466,9 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 21269,Broad St & Constitution Av ,39.891443,-75.176095,,,1
 21270,Broad St & Intrepid Av,39.894166,-75.176369,,,1
 21271,Broad St & Kitty Hawk Av ,39.890149,-75.175923,,,1
-21275,Kitty Hawk Av & 21st St,39.889234,-75.1873,,,1
 21277,Flagship Dr & 13th St ,39.888904,-75.173556,,,1
 21278,Flagship Dr & 11th St ,39.88911,-75.16972,,,1
 21279,11th St & Kitty Hawk Av,39.890359,-75.169657,,,1
-21280,Kitty Hawk Av & League Island Blvd,39.89063,-75.166671,,,1
-21281,League Island & Constitution Av,39.891915,-75.166584,,,1
-21282,League Island & Constitution Av -FS,39.893522,-75.166825,,,1
 21283,Pattison Av & 20th St - MBNS,39.906203,-75.179454,,,1
 21284,20th St & Reserve Dr,39.907923,-75.183059,,,1
 21285,20th St & Hartranft St ,39.909119,-75.182784,,,1
@@ -6735,7 +6710,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 21550,Mantua Av & 36th St,39.967939,-75.195101,,,1
 21551,Mantua Av & 37th St,39.968424,-75.196777,,,1
 21552,Mantua Av & 38th St,39.968907,-75.198159,,,1
-21553,Mantua Av & 39th St,39.96882,-75.200682,,,1
+21553,Parrish St & 39th St,39.96882,-75.200682,,,1
 21554,Parrish St & 40th St,39.968482,-75.203074,,,1
 21560,41st St & Ogden St,39.969127,-75.205728,,,1
 21561,41st St & Westminster Av,39.970181,-75.205784,,,1
@@ -6743,16 +6718,16 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 21564,42nd St & Girard Av,39.97347,-75.208798,,,1
 21565,41st St & Parkside Av,39.975135,-75.206607,,,1
 21566,Parkside Av & 42nd St,39.976229,-75.209262,,,1
-21568,Parkside Av & Belmont Av,39.977493,-75.212731,,,1
-21569,Belmont Av & Concourse Dr,39.979942,-75.213922,,,1
+21568,Parkside Av & Belmont Av - MBNS,39.977493,-75.212731,,,1
+21569,Belmont Av & Concourse Dr,39.978494,-75.213566,,,1
 21570,Belmont Av & Lansdowne Dr,39.981914,-75.214277,,,1
 21571,Belmont Av & Montgomery Dr,39.985463,-75.215396,,,1
 21572,Belmont Av & Monument Rd - FS,39.995656,-75.218288,,,1
 21574,Belmont Av & Conshohocken Rd,39.999719,-75.219505,,,1
 21575,Belmont Av & Ford Rd,40.002077,-75.22016,,,1
 21576,Ford Rd & Monument Rd,40.001051,-75.215626,,,1
-21577,Ford Rd & Balwynne Rd,40.000467,-75.213264,,,1
-21578,Ford Rd & Balwynne Rd - MBFS,40.000092,-75.211783,,,1
+21577,Ford Rd & Balwynne Park Rd,40.000467,-75.213264,,,1
+21578,Ford Rd & Balwynne Park Rd -MBFS,40.000092,-75.211783,,,1
 21579,Ford Rd & Cranston Rd,39.999649,-75.210017,,,1
 21580,Cranston Rd & Conshohocken Av,40.001945,-75.211132,,,1
 21581,Conshohocken & Cranston - MBFS,40.002194,-75.21034,,,1
@@ -6783,7 +6758,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 21617,Fairmount Av & 39th St,39.965476,-75.199964,,,1
 21619,58th St & Woodland Av - FS,39.932523,-75.224661,,,1
 21620,Washington Ln & Stenton Av ,40.059889,-75.16528,,,1
-21622,Germantown Av & Chelten Av - FS,40.035926,-75.174733,,,1
 21623,Washington Ln & Stenton Av ,40.059425,-75.165578,,,1
 21624,Godfrey Av & 2nd St ,40.045085,-75.123477,,,1
 21625,Stenton Av & Washington Ln ,40.05903,-75.16455,,,1
@@ -7387,7 +7361,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 22293,Wynnfield Av & 50th St,39.991357,-75.225024,,,1
 22294,Wynnfield Av & Parkside Av,39.990136,-75.220573,,,1
 22296,Parkside Av & 49th St,39.992195,-75.219398,,,1
-22299,42nd St & Mantua Av,39.971587,-75.208662,,,1
 22302,Presidential & City Line Av - FS,40.007902,-75.210548,,,1
 22304,Conshohocken Av & E Country Club,40.003458,-75.203169,,,1
 22305,Conshohocken Av & E Cntry Club MBFS,40.0032,-75.204333,,,1
@@ -7395,10 +7368,10 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 22307,Conshohocken Av & W Country Club,40.002698,-75.207798,,,1
 22309,Cranston Rd & Conshohocken - FS,40.001828,-75.211309,,,1
 22310,Cranston Rd & Lankenau Av,40.000337,-75.209979,,,1
-22311,Ford St & Cranston Rd - FS,39.999798,-75.210091,,,1
-22312,Ford St & Cranstaton Rd - MBFS,40.000098,-75.211398,,,1
-22313,Ford St & Balwynne Rd ,40.000493,-75.212968,,,1
-22314,Ford St & Monument Rd,40.001078,-75.21533,,,1
+22311,Ford Rd & Cranston Rd - FS,39.999798,-75.210091,,,1
+22312,Ford Rd & Cranstaton Rd - MBFS,40.000098,-75.211398,,,1
+22313,Ford Rd & Balwynne Park Rd ,40.000493,-75.212968,,,1
+22314,Ford Rd & Monument Rd,40.001078,-75.21533,,,1
 22315,Belmont Av & Sherwood Rd,40.001729,-75.220209,,,1
 22316,Belmont Av & Sherwood Rd - FS,40.00104,-75.219974,,,1
 22317,Belmont Av & Parkside Av,39.99438,-75.218162,,,1
@@ -7414,7 +7387,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 22327,Ben Franklin Pkwy & 20th St,39.958977,-75.17265,,,1
 22328,20th St & Race St,39.957515,-75.17239,,,1
 22329,20th St & Arch St,39.955686,-75.172786,,,1
-22330,Brown St & Union St - MBNS,39.967281,-75.202704,,,1
+22330,Brown St & Union St,39.967425,-75.20206,,,1
 22331,Brown St & 39th St,39.967547,-75.200678,,,1
 22332,Brown St & 38th St,39.967702,-75.198398,,,1
 22333,Brown St & 37th St,39.967923,-75.196979,,,1
@@ -7562,19 +7535,15 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 22482,Roosevelt Blvd & Hellerman St,40.03551,-75.067088,,,1
 22483,Roosevelt Blvd & Magee Av,40.036039,-75.06478,,,1
 22484,Roosevelt Blvd & Unruh Av,40.036684,-75.062577,,,1
-22485,Roosevelt Blvd & Knorr St,40.037768,-75.060999,,,1
 22486,Roosevelt Blvd & Longshore Av,40.038951,-75.059716,,,1
 22487,Roosevelt Blvd & Tyson Av,40.040099,-75.058492,,,1
 22488,Roosevelt Blvd & Friendship St,40.042083,-75.056389,,,1
-22489,Roosevelt Blvd & Saint Vincent St,40.042501,-75.055902,,,1
 22490,Roosevelt Blvd & Guilford St,40.046078,-75.052041,,,1
 22491,Roosevelt Blvd & Revere St,40.050215,-75.050695,,,1
 22492,Tacony St & Bridge St - FS,40.008552,-75.068713,,,1
-22493,Roosevelt Blvd & Revere St,40.050393,-75.05067,,,1
 22494,Roosevelt Blvd & Hartel Av,40.051741,-75.050556,,,1
 22495,Roosevelt Blvd & Ryan Av,40.053967,-75.048854,,,1
 22496,Tacony St & Fraley St ,40.009387,-75.06436,,,1
-22497,Roosevelt Blvd & Loney St,40.055195,-75.0477,,,1
 22498,Roosevelt Blvd & Rhawn St,40.056396,-75.046404,,,1
 22499,Roosevelt Blvd & Stanwood St,40.057526,-75.045334,,,1
 22500,Tacony St & Carver St ,40.010787,-75.060973,,,1
@@ -7597,7 +7566,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 22520,Roosevelt Blvd & Fulmer St,40.083207,-75.02596,,,1
 22521,Roosevelt Blvd & Lott St,40.084541,-75.024662,,,1
 22522,Roosevelt Blvd & Bowler St - FS,40.08568,-75.02352,,,1
-22523,Roosevelt Blvd & Bluegrass Rd,40.086997,-75.022223,,,1
 22524,Roosevelt Blvd & Conwell Av,40.088723,-75.020521,,,1
 22525,Roosevelt Blvd & Red Lion Rd,40.094426,-75.015081,,,1
 22526,Roosevelt Blvd & Tomlinson Rd,40.096765,-75.012465,,,1
@@ -7609,7 +7577,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 22532,Cottman Av & Edmund St,40.028519,-75.033798,,,1
 22533,Torresdale Av & Bleigh Av,40.03138,-75.032517,,,1
 22534,Torresdale Av & Shelmire Av,40.03217,-75.030976,,,1
-22535,Roosevelt Blvd & Tomlinson Rd -MBFS,40.098702,-75.009803,,,1
 22536,Torresdale Av & Sheffield Av,40.033092,-75.029197,,,1
 22537,Roosevelt Blvd & Haldeman Ave,40.099759,-75.00814,,,1
 22538,Roosevelt Blvd & Plaza Dr - 1 FS,40.101615,-75.005443,,,1
@@ -7655,7 +7622,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 22583,Knights Rd & Woodhaven Rd - FS,40.08785,-74.970587,,,1
 22584,Knights Rd & Nanton Dr,40.089941,-74.967703,,,1
 22585,Franklin Mills & Design Center Dr,40.090806,-74.965006,,,2
-22586,Franklin Mills & Design Center Dr,40.090706,-74.96451,,,1
 22587,Academy Rd & Biscayne Dr - FS,40.092515,-74.96606,,,1
 22588,Academy Rd & Bandon Dr,40.093616,-74.967058,,,1
 22589,Academy Rd & Nanton Dr,40.0948,-74.968435,,,1
@@ -7665,7 +7631,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 22594,Spruce St & 38th St,39.951301,-75.199029,,,1
 22595,Frankford Av & Ellie Dr - FS,40.053767,-75.005927,,,1
 22596,Roosevelt Blvd & Comly St,40.032602,-75.079032,,,1
-22597,Roosevelt Blvd & Benner St,40.033216,-75.076664,,,1
 22598,Comly Rd & Norcom Rd,40.099233,-74.995469,,,1
 22600,Byberry Rd & Barbary Rd - FS,40.100747,-74.979786,,,1
 22601,Byberry Rd & Thornton Rd,40.102408,-74.981877,,,1
@@ -7830,10 +7795,8 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 22766,Roosevelt Blvd & Hornig Rd,40.112499,-74.990809,,,1
 22767,Roosevelt Blvd & Whitten St,40.092819,-75.017516,,,1
 22768,Roosevelt Blvd & Conwell Av,40.08918,-75.021063,,,1
-22769,Roosevelt Blvd & Bluegrass Rd,40.087525,-75.022658,,,1
 22770,Roosevelt Blvd & Bowler St,40.086155,-75.023979,,,1
 22771,Roosevelt Blvd & Lott St,40.084909,-75.025193,,,1
-22772,Roosevelt Blvd & Murray St,40.082391,-75.027597,,,1
 22773,Roosevelt Blvd & Fulmer St,40.083663,-75.026407,,,1
 22774,Cottman Av & Cottage St,40.033352,-75.037945,,,1
 22775,Cottman Av & Jackson St,40.032277,-75.037027,,,1
@@ -7963,25 +7926,20 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 22903,Roosevelt Blvd & Hoffnagle St,40.061119,-75.043765,,,1
 22904,Roosevelt Blvd & Stanwood St,40.058153,-75.045792,,,1
 22905,Roosevelt Blvd & Rhawn St,40.056987,-75.046957,,,1
-22906,Roosevelt Blvd & Loney St,40.055732,-75.048229,,,1
 22907,Roosevelt Blvd & Borbeck Av,40.05454,-75.049406,,,1
-22908,Roosevelt Blvd & Hartel Av,40.053089,-75.050845,,,1
 22909,Roosevelt Blvd & Napfle St,40.052118,-75.05137,,,1
 22910,Roosevelt Blvd & Faunce,40.050512,-75.051556,,,1
 22911,Roosevelt Blvd & Shelmire Av,40.04879,-75.051648,,,1
 22912,Roosevelt Blvd & Bleigh Av,40.046713,-75.052487,,,1
 22913,Roosevelt Blvd & Friendship St,40.042487,-75.057014,,,1
-22914,Roosevelt Blvd & Princeton Av,40.041891,-75.057667,,,1
 22915,Roosevelt Blvd & Tyson Av,40.040681,-75.058974,,,1
 22916,Roosevelt Blvd & Longshore Av,40.039533,-75.06021,,,1
-22917,Roosevelt Blvd & Knorr St,40.038323,-75.061505,,,1
 22918,Roosevelt Blvd & Unruh Av,40.037256,-75.062953,,,1
 22919,Roosevelt Blvd & Harbison,40.036849,-75.064255,,,1
 22920,Roosevelt Blvd & Magee Av,40.036629,-75.065214,,,1
 22921,Roosevelt Blvd & Hellerman St,40.036056,-75.067641,,,1
 22922,Roosevelt Blvd & Levick St,40.035597,-75.069629,,,1
 22924,Roosevelt Blvd & Devereaux Av,40.03438,-75.074766,,,1
-22925,Roosevelt Blvd & Benner St,40.033816,-75.077193,,,1
 22926,Roosevelt Blvd & Large St,40.033267,-75.079774,,,1
 22927,Roosevelt Blvd & Van Kirk St,40.032646,-75.082115,,,1
 22928,Roosevelt Blvd & Oxford Cir,40.032281,-75.083821,,,1
@@ -8050,21 +8008,12 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 22992,Oxford Av & Hellerman St ,40.047188,-75.087556,,,1
 22993,Oxford Av & Levick St,40.045664,-75.088309,,,1
 22995,Oxford Av & Algon Av,40.041367,-75.088376,,,1
-22996,Market St & 48th St - FS,39.959061,-75.216731,,,1
 22997,Oxford Av & Benner St,40.039328,-75.088492,,,1
-22998,Market St & 49th St - FS,39.959324,-75.218738,,,1
-22999,Market St & 50th St - FS,39.959541,-75.220639,,,1
 23000,Oxford Av & Langdon St - FS,40.037631,-75.088565,,,1
-23001,Market St & 51st St - FS,39.959776,-75.222693,,,1
 23002,Oxford Av & Frontenac St,40.034816,-75.087154,,,1
-23003,Market St & 53rd St - FS,39.960265,-75.226648,,,1
-23004,Market St & 54th St - FS,39.960482,-75.228443,,,1
-23005,Market St & 55th St - FS,39.960793,-75.230836,,,1
 23006,Oxford Av & Loretto Av,40.033491,-75.085411,,,1
 23007,Oxford Av & Roosevelt Blvd,40.032436,-75.084943,,,1
 23008,Cheltenham Av & Roosevelt Bvld,40.031283,-75.084098,,,1
-23009,Market St & 61st St - FS,39.962226,-75.242563,,,1
-23010,Market St & 62nd St,39.96247,-75.244582,,,1
 23011,Cheltenham Av & Large St,40.03061,-75.082836,,,1
 23012,Cheltenham Av & Horrocks St ,40.029623,-75.081115,,,1
 23013,Cheltenham Av & Oakland St ,40.028645,-75.079299,,,1
@@ -8318,7 +8267,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 23295,Bustleton Av & Levick St,40.035716,-75.070539,,,1
 23297,Bustleton Av & Robbins Av - FS,40.034042,-75.07173,,,1
 23298,Roosevelt Blvd & Garland St,40.029325,-75.106391,,,1
-23299,Roosevelt Blvd & Smylie Rd,40.028829,-75.107906,,,1
 23300,Roosevelt Blvd & D St,40.027247,-75.114344,,,1
 23301,Roosevelt Blvd & F St,40.0282,-75.109907,,,1
 23302,Roosevelt Blvd & B St,40.026496,-75.11944,,,1
@@ -8334,7 +8282,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 23312,Roosevelt Blvd & B St,40.025806,-75.119611,,,1
 23313,Roosevelt Blvd & Rorer St,40.026552,-75.114548,,,1
 23314,Roosevelt Blvd & F St,40.027442,-75.110088,,,1
-23315,Roosevelt Blvd & Smylie Rd,40.028213,-75.107755,,,1
 23316,Roosevelt Blvd & Whitaker Av,40.028735,-75.106074,,,1
 23317,Roosevelt Blvd & Pennway St,40.029187,-75.104737,,,1
 23319,Roosevelt Blvd & Langdon St,40.02736,-75.099236,,,1
@@ -8717,6 +8664,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 23731,Medford Rd & Vinton Rd,40.097927,-74.964676,,,1
 23733,Mechanicsville Rd & Verda Dr,40.093985,-74.962926,,,1
 23734,Franklin Mills & Design Ctr - MBFS,40.089681,-74.964883,,,2
+23736,Byberry Rd & Academy Rd - FS,40.096222,-74.976792,,,1
 23739,Byberry Rd & Townsend Rd,40.1036,-74.983277,,,1
 23740,Huntingdon Pk & Holy Redeemer Hos 1,40.108942,-75.080859,,,1
 23741,Huntingdon Pk & Holy Redeemer Hos 2,40.108409,-75.082071,,,1
@@ -9480,7 +9428,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 24643,Wharton St & 32nd St ,39.937874,-75.196971,,,1
 24644,Wharton St & 31st St ,39.937648,-75.195401,,,1
 24646,Allegheny Av & Napa St,40.005074,-75.180432,,,1
-24662,Washington Av & 26th St,39.9403,-75.18675,,,1
 24663,Washington Av & 24th St,39.939865,-75.183268,,,1
 24664,Washington Av & 23rd St ,39.939639,-75.181616,,,1
 24665,Washington Av & 22nd St ,39.939413,-75.180011,,,1
@@ -10273,7 +10220,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 25781,Washington Av & 13th St ,39.937463,-75.164799,,,1
 25785,Wynnfield Av & 53rd St,39.991679,-75.231203,,,1
 25786,Wynnefiled Av & 51st St,39.991496,-75.228238,,,1
-25789,Belmont Av & Conshohocken Rd - MBNS,39.996624,-75.21853,,,1
+25789,Belmont Av & Hayes Manor Dr - FS,39.997755,-75.218897,,,1
 25793,Delaware Av & Frankford Av,39.964954,-75.134,,,1
 25794,Columbus Blvd & Spring Garden St,39.960258,-75.137185,,,1
 25795,Spring Garden St & 2nd St,39.960678,-75.141199,,,1
@@ -10294,7 +10241,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 25826,Fox St & Hunting Park Av - MBNS,40.008844,-75.173293,,,1
 25827,Fox St & Roberts Av ,40.011929,-75.176071,,,1
 25828,Roosevelt Blvd & Godfrey Av,40.027794,-75.091018,,,1
-25832,Lincoln Hwy & Highland ParkRd  ,40.171081,-74.892382,,,1
+25832,Lincoln Hwy & Highland Pk Rd 1 -MBFS,40.171081,-74.892382,,,1
 25833,Lincoln Hwy & Woodbourne Rd ,40.176894,-74.884651,,,1
 25845,Wynnfield Av & Monument Rd,39.990691,-75.222037,,,1
 25867,Roosevelt Blvd & Hoffnagle St -MBNS,40.060323,-75.043344,,,1
@@ -10343,7 +10290,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 25956,Roosevelt Blvd & Hornig Rd - MBFS,40.111921,-74.991652,,,1
 25957,Roosevelt Blvd &  Bennett Rd - MBFS,40.103067,-75.004487,,,1
 25958,Roosevelt Blvd & Haldeman Av,40.100404,-75.008387,,,1
-25959,Roosevelt Blvd &Tomlinson Rd - MBNS,40.09851,-75.011129,,,1
 25960,Roosevelt Blvd & Strahle St - MBNS,40.063721,-75.042569,,,1
 25962,Township Line Rd & Susan Dr ,40.072755,-75.102859,,,1
 25965,Greenwood Av & Washington Ln,40.093933,-75.123209,,,1
@@ -11168,7 +11114,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 27647,Pennsylvania Av & Apel Av - FS,40.117407,-75.179757,,,1
 27648,Pennsylvania Av & Twining Rd,40.116816,-75.178788,,,1
 27652,North Hills Av & Chestnut Av,40.114055,-75.168619,,,1
-27654,Limekiln Pk & North Hills Av,40.116133,-75.166267,,,1
 27660,Fitzwatertown Rd & North Hills Av,40.128389,-75.160044,,,1
 27662,Fitzwatertown Rd & Susquehanna Rd,40.132417,-75.152712,,,1
 27666,Fitzwatertown Rd & Woodland Rd,40.138888,-75.144967,,,1
@@ -11393,29 +11338,29 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 28102,Oxford Valley Rd & S Bucks Town Rd,40.183204,-74.870279,,,1
 28104,Oxford Valley Rd & Trenton Rd,40.175497,-74.859382,,,1
 28107,Middletown Blvd & Town Center Dr,40.186832,-74.881317,,,1
-28109,Lincoln Hwy & Langhorne Sq Shop Ctr,40.168995,-74.895028,,,1
-28118,Woodbourne Rd & Terrace Rd,40.173892,-74.883927,,,1
+28109,Lincoln Hwy & Highland Pk Rd 2 -MBNS,40.168995,-74.895028,,,1
+28118,Woodbourne Rd & Terrace Rd -MBFS,40.172752,-74.882526,,,1
 28119,Woodbourne Rd & Harmony Rd,40.170159,-74.879455,,,1
 28121,Woodbourne Rd & Trenton Rd,40.167899,-74.876902,,,1
-28122,Woodbourne Rd & Bristol-Oxford Valley Rd,40.165997,-74.874772,,,1
+28122,Woodbourne Rd & Brist Oxf Val Rd -FS,40.165853,-74.874548,,,1
 28124,Woodbourne Rd & Cobalt Ridge Dr,40.159605,-74.868427,,,1
 28126,Woodbourne Rd & Quincy Dr,40.156479,-74.862151,,,1
 28128,New Falls Rd & Red Cedar Dr,40.156915,-74.852033,,,1
 28130,New Falls Rd & Wistar Rd,40.160431,-74.847789,,,1
 28131,New Falls Rd & Appletree Pl,40.162472,-74.845344,,,1
 28141,Bristol Pk & Edgley Rd,40.128985,-74.834477,,,1
-28143,Bristol Pk & Comfort Inn Hotel,40.123201,-74.840113,,,1
-28144,Bristol Pk & Ramada Inn Hotel,40.121264,-74.842011,,,1
+28143,Bristol Pk & Airport Rd - MBFS,40.123201,-74.840113,,,1
+28144,Bristol Pk & I276,40.121264,-74.842011,,,1
 28146,Green Ln & Wilson Av,40.113902,-74.840509,,,1
 28149,Green Ln & Farragut Av,40.110373,-74.837828,,,0
 28155,Pond St & Lincoln St,40.103181,-74.847934,,,0
 28156,Pond St & Jefferson Av,40.102465,-74.849289,,,0
 28157,Jefferson Av & Wood St,40.100952,-74.848319,,,0
 28158,Jefferson Av & Radcliffe St,40.099563,-74.847123,,,0
-28161,Radcliffe St & Walnut St,40.096422,-74.853136,,,0
+28161,Radcliffe St & Walnut St - FS,40.096422,-74.853136,,,0
 28165,Henry Av & Abbottsford Av - MBFS,40.010748,-75.181561,,,1
 28166,Weccacoe Av & Vandalia St,39.920176,-75.144619,,,1
-28167,Bath St & Otter St,40.097179,-74.860585,,,0
+28167,Bath St & Otter St - FS,40.097179,-74.860585,,,0
 28169,Pattison Av & 7th St ,39.903963,-75.162185,,,1
 28170,7th St & Pattison Av - MBFS,39.90646,-75.161715,,,1
 28171,Passyunk Av & 28th St 1 - MBNS,39.9214,-75.192562,,,1
@@ -11427,7 +11372,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 28188,State Rd & Industrial Dr,40.093661,-74.882586,,,2
 28190,State Rd & Elm Av,40.092068,-74.887674,,,2
 28193,State Rd & Linton Av,40.090229,-74.893793,,,2
-28196,State Rd & Rosa Av,40.088266,-74.900398,,,2
+28196,State Rd & Rosa Av - FS,40.088266,-74.900398,,,2
 28198,State Rd & Cedar Av,40.087201,-74.903944,,,2
 28199,Lancaster Av & 60th St ,39.982752,-75.241458,,,1
 28201,Cedar Av & Main Av,40.090233,-74.905507,,,2
@@ -11447,31 +11392,31 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 28241,Galloway Rd & Thunder Hollow Apts,40.134996,-74.943491,,,2
 28242,Galloway Rd & Richlieu Rd - 1,40.131834,-74.94298,,,2
 28245,Galloway Rd & Hulmeville Rd,40.110403,-74.9358,,,2
-28246,Hulmeville Rd & Byberry Rd,40.108355,-74.937104,,,2
+28246,Hulmeville Rd & Byberry Rd - FS,40.108355,-74.937104,,,2
 28247,Hulmeville Rd & Park Av,40.105266,-74.939125,,,2
 28258,Bristol Pk & Hulmeville Rd,40.074986,-74.958993,,,1
 28260,Bristol Pk & Station Av,40.076135,-74.953591,,,1
-28267,Bristol Pk & Street Rd,40.084698,-74.9338,,,2
-28268,Bristol Pk & Park Av,40.090641,-74.924553,,,2
+28267,Bristol Pk & Street Rd - FS,40.084698,-74.9338,,,2
+28268,Bristol Pk & Park Av - FS,40.090641,-74.924553,,,2
 28270,Overbrook Station,39.98969,-75.249545,,,1
 28273,Bristol Pk & Gray Av,40.093055,-74.916656,,,2
 28274,Bristol Pk & Haunted Ln,40.093309,-74.915483,,,2
-28277,Bristol Pk & Allen Av,40.092339,-74.920625,,,2
+28277,Bristol Pk & Allen Av - FS,40.092339,-74.920625,,,2
 28279,Cedar Av & Main Av,40.090395,-74.905813,,,2
 28281,Lankenau & Lancaster Av - MBFS,39.98988,-75.2583,,,1
 28283,State Rd & Rosa Av,40.088079,-74.900423,,,2
-28285,State Rd & Church St,40.089258,-74.896451,,,2
+28285,State Rd & Church St - FS,40.089258,-74.896451,,,2
 28286,State Rd & Linton Av,40.089988,-74.893985,,,2
 28289,59th St & Woodcrest Av ,39.987349,-75.241919,,,1
 28292,State Rd & Industrial Dr,40.093227,-74.883216,,,2
-28293,State Rd & River Rd,40.096178,-74.876331,,,2
+28293,State Rd & River Rd - FS,40.096178,-74.876331,,,2
 28299,Lancaster Av & 60th St,39.982681,-75.241648,,,1
 28300,Dicks Av & 63rd St ,39.921778,-75.224869,,,1
 28302,Veterans Hwy & Winder Dr,40.1069,-74.876875,,,0
 28303,63rd St & Passyunk Av 1 - MBNS,39.918288,-75.218941,,,1
 28304,Passyunk Av & Oregon Av ,39.921485,-75.190437,,,1
 28307,Veterans Hwy & Rockview Dr,40.111193,-74.878783,,,0
-28308,Veterans Hwy & Rockview Dr,40.111042,-74.879163,,,0
+28308,Veterans Hwy & Rockview Dr - FS,40.111042,-74.879163,,,0
 28309,Winder Dr & Veterans Hwy,40.10712,-74.876199,,,2
 28317,Bath St & Howell St,40.100678,-74.862664,,,0
 28318,Bath St & Mifflin St,40.099434,-74.861999,,,0
@@ -11487,13 +11432,13 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 28346,Market St & 36th St,39.956094,-75.19429,,,1
 28351,Jefferson Av & Wood St,40.100852,-74.847965,,,2
 28352,Jefferson Av & Pond St,40.102241,-74.849196,,,2
-28359,Farragut St & Green Ln,40.110255,-74.837485,,,2
+28359,Green Ln & Farragut St,40.110255,-74.837485,,,2
 28362,Green Ln & Wilson Av,40.113785,-74.840178,,,1
 28378,Ridge Av & Lemonte St ,40.039398,-75.223645,,,1
 28380,New Falls Rd & Wistar Rd,40.160503,-74.847989,,,1
 28382,New Falls Rd & Red Cedar Dr,40.15721,-74.851972,,,1
 28386,Woodbourne Rd & Cobalt Ridge Dr,40.15972,-74.86826,,,1
-28388,Woodbourne Rd & Bristol-Oxford Valley Rd,40.16639,-74.874781,,,1
+28388,Woodbourne Rd & Brist Oxf Val Rd -FS,40.16639,-74.874781,,,1
 28389,Woodbourne Rd & Trenton Rd,40.167844,-74.876547,,,1
 28391,Woodbourne Rd & Harmony Rd,40.170095,-74.8791,,,1
 28393,Lincoln Hwy & Woodbourne Rd - FS,40.176644,-74.884499,,,1
@@ -11514,11 +11459,11 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 28412,Durham Rd & Frosty Hollow Rd,40.143686,-74.892043,,,1
 28415,New Falls Rd & Durham Rd,40.132357,-74.887298,,,1
 28416,New Falls Rd & New Rodgers Rd,40.13406,-74.884787,,,1
-28418,New Falls Rd & Petunia Rd,40.138051,-74.879026,,,1
+28418,New Falls Rd & Petunia Rd 1 - MBNS,40.137289,-74.880181,,,1
 28419,New Falls Rd & Plumbridge Dr,40.139461,-74.876932,,,1
-28420,New Falls & Bristol-Oxford Valley - MBNS,40.140286,-74.875718,,,1
-28421,Bristol-Oxford Valley Rd & Mill Dr,40.136574,-74.874018,,,1
-28423,Mill Creek Rd & Bristol-Oxford Valley -MBFS,40.128174,-74.865737,,,1
+28420,New Falls & Brist Oxf Vly - MBNS,40.140286,-74.875718,,,1
+28421,Bristol Oxford Valley Rd & Mill Dr,40.136574,-74.874018,,,1
+28423,Mill Creek Rd & Brist Oxf Vly - MBFS,40.128174,-74.865737,,,1
 28425,Mill Creek Rd & Blue Ridge Pass,40.130089,-74.86294,,,1
 28426,Green Ln & N Fleetwing Dr,40.12969,-74.855651,,,1
 28429,Green Ln & Pacific Av,40.120491,-74.848563,,,1
@@ -11543,7 +11488,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 28458,Wharton Rd & Rittenhouse Cr,40.117111,-74.883093,,,0
 28459,Rittenhouse Cr & Wharton Rd,40.118295,-74.884446,,,0
 28472,Newportville Rd & New Falls Rd,40.123859,-74.899887,,,2
-28474,Bensalem Blvd & Gibson Rd,40.120253,-74.906163,,,2
+28474,Bensalem Blvd & Gibson Rd - FS,40.120253,-74.906163,,,2
 28475,Bensalem Blvd & Flushing Rd - FS,40.114803,-74.909126,,,2
 28477,Bensalem Blvd & Portside Dr,40.113512,-74.909988,,,2
 28479,Bensalem Blvd & Mt Vernon Dr,40.110672,-74.911867,,,2
@@ -11698,7 +11643,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 28760,Main St & Green St,40.311788,-75.32482,,,1
 28766,Reliance Rd & 4th St,40.319521,-75.327468,,,1
 28768,Reliance Rd & Main St,40.322696,-75.324318,,,1
-28772,Washington St & Lincoln Av,40.326366,-75.325974,,,1
+28772,Washington St & Lincoln Av - MBFS,40.326465,-75.326211,,,1
 28780,Washington St & Broad St,40.326947,-75.327267,,,1
 28781,Washington St & Lincoln Av,40.32625,-75.326129,,,1
 28784,Reliance Rd & Main St,40.323106,-75.324186,,,1
@@ -11706,16 +11651,16 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 28791,Main St & Central Av,40.311976,-75.325402,,,1
 28794,Broad St & 4th St,40.311362,-75.317474,,,1
 28795,Broad St & 5th St,40.311763,-75.316607,,,1
-28796,Broad St & School Ln,40.313402,-75.312985,,,1
-28797,County Line Rd & Broad St,40.313855,-75.309732,,,1
+28796,Broad St & School Ln - FS,40.313402,-75.312985,,,1
+28797,County Line Rd & Broad St - MBFS,40.313855,-75.309732,,,1
 28802,Unionville Pk & N Penn Rd,40.293338,-75.289133,,,1
-28806,Union St & Maple Av,40.285429,-75.296765,,,1
-28816,Welsh Rd & Grist Mill Dr,40.261195,-75.316581,,,1
+28806,Unionville Pk & Maple Av,40.285429,-75.296765,,,1
+28816,Welsh Rd & Grist Mill Dr - FS,40.261195,-75.316581,,,1
 28819,Welsh Rd & Orvilla Rd,40.254115,-75.304982,,,1
-28821,Welsh Rd & Park Rd,40.25179,-75.301168,,,1
-28822,Main St & Oak Blvd,40.250198,-75.298455,,,1
+28821,Welsh Rd & Park Av,40.25179,-75.301168,,,1
+28822,Main St & Oak Blvd - FS,40.250198,-75.298455,,,1
 28826,Main St & Cannon Av,40.24596,-75.29123,,,1
-28831,Broad St & 3rd St,40.242718,-75.28245,,,1
+28831,Broad St & 3rd St - FS,40.242852,-75.282379,,,1
 28837,Broad St & Medical Center Dr,40.251839,-75.273443,,,1
 28838,Broad St & Lynwood Rd,40.25651,-75.268108,,,1
 28840,Cowpath Rd & Brookside Dr,40.257405,-75.263172,,,1
@@ -12024,15 +11969,15 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 29599,Fitzwatertown Rd & Oklahoma Rd ,40.147539,-75.130451,,,1
 29600,Pennsylvania Av & Layfayette Av,40.119717,-75.183217,,,1
 29601,Hulmeville Rd & Bensalem Blvd  ,40.140331,-74.91357,,,1
-29603,Bristol Pk & Appleton Av,40.089185,-74.926528,,,2
-29604,State Rd & Central Av ,40.091001,-74.890664,,,2
+29603,Bristol Pk & Appleton Av - MBNS,40.089185,-74.926528,,,2
+29604,State Rd & Central Av - FS,40.091001,-74.890664,,,2
 29605,State Rd & Oak Av,40.092232,-74.886502,,,2
 29606,State Rd & Mack Rd - MBFS,40.094888,-74.879287,,,2
 29607,Mall Blvd & Ballys,40.090873,-75.390657,,,4
 29610,Swedesford Rd & South Warner Rd -FS,40.082084,-75.402221,,,2
 29612,Mast Charter School,40.114002,-75.00499,,,1
-29613,Lincoln Hwy & Linden Av - FS,40.160818,-74.909739,,,1
-29614,Lincoln Hwy & Sunset Av - MBFS,40.163324,-74.905031,,,1
+29613,Lincoln Hwy & Linden Av 1 - FS,40.160818,-74.909739,,,1
+29614,Lincoln Hwy & Linden Av 2 - MBFS,40.163324,-74.905031,,,1
 29615,Lincoln Hwy & Highland Park Way,40.171284,-74.891824,,,1
 29616,Lincoln Hwy & Woodbourne Rd - MBNS,40.174444,-74.887773,,,1
 29617,Middletown Blvd & Oxford Sq ,40.184964,-74.884802,,,1
@@ -12054,8 +11999,8 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 29638,Durham Rd & Green Meadow Dr,40.139537,-74.890429,,,1
 29639,Durham Rd & Hollybrook Rd,40.148835,-74.893888,,,1
 29641,Durham Rd & Green Meadow Dr ,40.14003,-74.890816,,,1
-29642,New Falls Rd & Petunia Rd  - MBFS,40.138619,-74.878217,,,1
-29643,Bristol-Oxford Valley Rd & Brittany,40.130287,-74.869272,,,1
+29642,New Falls Rd & Petunia Rd 2  - MBFS,40.138619,-74.878217,,,1
+29643,Bristol Oxf Vly Rd & Brittany Springs -FS,40.130287,-74.869272,,,1
 29644,Beaver Dam Rd & Plymouth Av ,40.119244,-74.851094,,,1
 29645,Beaver St & Third St,40.107295,-74.855368,,,0
 29646,Pond St & Grundy Tower Dr ,40.097868,-74.857124,,,0
@@ -12068,7 +12013,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 29655,Radcliffe St & Franklin St,40.096951,-74.851771,,,2
 29656,Radcliffe St & Dorrance St,40.09773,-74.850298,,,2
 29657,Pond St & Farragut St,40.104923,-74.844299,,,2
-29658,Radcliffe St & Monroe St ,40.104222,-74.841429,,,2
+29658,Radcliffe St & Monroe St - FS,40.104222,-74.841429,,,2
 29659,Radcliffe St & Seabird Dr,40.108265,-74.837596,,,2
 29660,Woodbourne Rd & Wister Rd - MBNS,40.163235,-74.871726,,,1
 29661,Woodbourne Rd & Wister Rd - MBFS,40.162841,-74.871623,,,1
@@ -12366,7 +12311,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30117,Red Lion Rd & Sandmeyer Ln,40.107028,-75.036642,,,1
 30118,Sandmeyer Ln & 10071,40.113958,-75.035385,,,1
 30125,Plymouth Meeting Mall,40.11836,-75.279795,,,1
-30127,Conshohocken Av & Lenape Rd,40.000284,-75.224794,,,1
 30129,Bala Av & City Av - FS,40.000538,-75.228992,,,3
 30130,Conshohocken State Rd & Derwin Rd,40.012138,-75.235017,,,3
 30131,Hagys Ford Rd & Tower Ln - FS,40.026502,-75.255478,,,3
@@ -12417,12 +12361,12 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30202,Haldeman Av & Plaza SC2,40.101684,-75.007478,,,1
 30203,Haldeman Av & Plaza SC1,40.101765,-75.007607,,,1
 30204,Haldeman Av & Plaza SC2,40.101046,-75.008807,,,1
-30211,Street Rd & High Av,40.089192,-74.939448,,,2
+30211,Street Rd & High Av - FS,40.089192,-74.939448,,,2
 30212,Street Rd & Brookwood Dr,40.092781,-74.942133,,,2
 30213,Street Rd & Essex Dr,40.089683,-74.939575,,,2
 30214,Street Rd & Pearl Av,40.094635,-74.94367,,,2
-30215,Street Rd & Pearl Av,40.095173,-74.944353,,,2
-30216,Street Rd & Olga Av,40.092254,-74.941971,,,2
+30215,Street Rd & Pearl Av - MBNS,40.095173,-74.944353,,,2
+30216,Street Rd & Olga Av - MBFS,40.092254,-74.941971,,,2
 30218,Rhawn St & Dungan Rd,40.068715,-75.06718,,,1
 30219,Penn St & Pratt St,40.023756,-75.079973,,,1
 30221,Welsh Rd & Old Bustleton Av,40.082258,-75.037613,,,1
@@ -12638,9 +12582,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30551,West Trenton Av & Woolston Dr-MBFS,40.196626,-74.814126,,,1
 30552,Arleans Av & Lincoln Hwy 1 - FS,40.19057,-74.83169,,,1
 30554,Bustleton Av & Deveraux Av - FS,40.032625,-75.072552,,,1
-30555,Kitty Hawk Av & 19th St,39.889523,-75.184491,,,1
-30556,League Island Blvd & 11th St,39.897135,-75.170742,,,1
-30557,League Island Av & 13th St,39.897702,-75.173123,,,1
 30558,Broad St & Zinkoff Blvd - MBNS,39.902898,-75.173966,,,1
 30559,MacDade Blvd & Glenfield Av,39.900311,-75.303226,,,1
 30560,Dayton & Emmett St,40.14111,-75.514466,,,1
@@ -12738,7 +12679,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30675,Baltimore Pk & Valley Rd - FS,39.90562,-75.453849,,,2
 30676,Baltimore Pk & Valley Rd,39.905968,-75.453837,,,2
 30677,Knights & Mechanicsville Rd - MBNS,40.092523,-74.963457,,,2
-30678,Knights & Street Rd,40.105585,-74.9502,,,2
+30678,Knights Rd & Street Rd,40.1057,-74.949986,,,2
 30679,68th St & Lebanon Av,39.975364,-75.255311,,,1
 30680,68th St & Malvern Av,39.977953,-75.255801,,,1
 30681,Malvern Av & 66th St,39.979369,-75.253505,,,1
@@ -12869,7 +12810,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30833,Parkside Av & Belmont Av - FS,39.977429,-75.212798,,,1
 30834,Art Museum Dr & Spring Garden St,39.964534,-75.182255,,,1
 30835,Mantua Av & 32nd St,39.965851,-75.18892,,,1
-30836,Belmont Av & Conshohocken Av - MBNS,39.997365,-75.218781,,,1
+30836,Belmont Av & Conshohocken Rd - MBNS,39.998808,-75.219189,,,1
 30837,Parkside Av & 50th St - MBNS,39.979464,-75.218015,,,1
 30838, Delaware Av & Lewis St - FS,39.986429,-75.076114,,,1
 30839,Delaware Av & Wheatsheaf Ln,39.984565,-75.079668,,,1
@@ -12891,7 +12832,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30859,Germantown Av & Mermaid Ln,40.067747,-75.197266,,,1
 30860,Germantown Av & Mermaid Ln,40.067752,-75.19739,,,1
 30861,Levittown Pkwy & Bristol Pk,40.140778,-74.818052,,,1
-30862,Bristol Pk & Haines Rd,40.132714,-74.830362,,,1
+30862,Bristol Pk & Haines Rd - FS,40.132714,-74.830362,,,1
 30863,Engle St & 12th St,39.842395,-75.391147,,,2
 30864,7th St & Oregon Av - FS,39.915512,-75.159802,,,1
 30865,Chester Av & Yeadon Av,39.92618,-75.247368,,,1
@@ -12947,20 +12888,13 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30919,Domino La & Ridge Av,40.045115,-75.232391,,,1
 30920,Ridge Av & Port Royal Av,40.059619,-75.238394,,,1
 30921,23rd St & Walnut St,39.950923,-75.178566,,,1
-30923,Pond St & Market St,40.096939,-74.858966,,,0
+30923,Pond St & Old U S 13,40.096939,-74.858966,,,0
 30924,Pond St & Mulberry St,40.097858,-74.856817,,,0
-30925,Jefferson Av & Radcliffe St,40.099732,-74.846992,,,2
+30925,Jefferson Av & Radcliffe St - FS,40.099732,-74.846992,,,2
 30926,Easton Rd & 309 Hwy - MBFS,40.08535,-75.168452,,,1
 30927,Erie Av & D St - MBFS,40.006433,-75.117544,,,1
 30928,Erie Av & G St - MBNS,40.005766,-75.111366,,,1
-30935,Conshohocken Av & Cranston Rd,40.002212,-75.210789,,,1
-30936,Kitty Hawk Av & 15th St,39.889902,-75.177198,,,1
-30937,Kitty Hawk Av & 16th St,39.889815,-75.178532,,,1
-30938,Kitty Hawk Av & 17th St,39.889624,-75.181199,,,1
-30939,Kitty Hawk Av & 18th St,39.889477,-75.183347,,,1
-30940,Kitty Hawk Av & Warnock St,39.890508,-75.168016,,,1
-30947,Kitty Hawk Av & 19th St,39.889416,-75.184503,,,1
-30948,Kitty Hawk Av & 18th St,39.889413,-75.18258,,,1
+30935,Conshohocken Av & Cranston Rd -MBNS,40.002212,-75.210789,,,1
 30949,C St & Ashland St,40.028711,-75.117825,,,1
 30950,Washington St & Reliance Rd,40.324489,-75.322926,,,1
 30951,Reliance Rd & 3rd St,40.319976,-75.327313,,,1
@@ -12970,16 +12904,14 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30955,Unionville Pk & Richmond Rd,40.28871,-75.293271,,,1
 30956,Broad St & Market St,40.281591,-75.297128,,,1
 30957,Broad St & Main St,40.279487,-75.299588,,,1
-30958,Broad St & Cowpath Rd,40.258353,-75.264913,,,1
+30958,Broad St & Cowpath Rd,40.25847,-75.265316,,,1
 30959,North Wales Rd & Harbor La - FS,40.240276,-75.244348,,,1
 30960,North Wales Rd & Horsham Rd,40.243671,-75.240273,,,1
 30961,Cowpath Rd & Bethlehem Pk - MBFS,40.248767,-75.245951,,,1
 30962,Cowpath Rd & Taylor Rd,40.252937,-75.253459,,,1
 30963,Cowpath Rd & Brookside Dr,40.257467,-75.262769,,,1
-30964,Forty Foot Rd & Funks Rd,40.265453,-75.316764,,,1
 30965,Forty Foot Rd & Towamencin Av,40.275244,-75.305835,,,1
 30966,Forty Foot Rd & Towamencin Av,40.27544,-75.305787,,,1
-30967,Forty Foot Rd & Funks Rd,40.265052,-75.317441,,,1
 30968,Broad St & Wayne Av,40.27798,-75.301239,,,1
 30969,Broad St & Wayne Av,40.278239,-75.301239,,,1
 30970,Bethlehem Pk & Township Line Rd,40.307819,-75.299607,,,1
@@ -12998,7 +12930,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30985,State Rd & Ashburner St - MBNS,40.03461,-75.015546,,,1
 30986,Cottman Av & Brous Av,40.043186,-75.052115,,,1
 30987,Market St & Schuylkill Av - FS,39.954489,-75.180998,,,1
-30988,Cowpath Rd & Bethlehem Pk,40.248786,-75.246603,,,1
+30988,Cowpath Rd & Bethlehem Pk - MBNS,40.248786,-75.246603,,,1
 30989,Horsham Rd & Bethlehem Pk,40.246898,-75.243276,,,1
 30990,Cowpath Rd & Lansdale Av,40.252831,-75.253637,,,1
 30991,Broad St & Main St,40.279879,-75.299433,,,1
@@ -13006,6 +12938,9 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 30993,Baltimore Pk & State Farm Dr,39.882308,-75.540435,,,2
 30995,Glendale Av & Cottman Av,40.054728,-75.071094,,,1
 30996,Olney Av & Rising Sun Av,40.034363,-75.114999,,,1
+30997,Bustleton Av & Knorr St,40.040486,-75.065549,,,1
+30998,Olney Square 2,40.03809,-75.117323,,,1
+30999,Olney Square 3,40.038148,-75.11912,,,1
 31000,Chelten Av & Germantown Av,40.035881,-75.174615,,,1
 31001,Westbrook Dr & Springfield Rd,39.930722,-75.308615,,,1
 31002,Westbrook Dr & Westpark La,39.931302,-75.308354,,,1
@@ -13037,12 +12972,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 31038,Norristown Transportation Center,40.113709,-75.34509,1,,1
 31039,Parkwest Town Center,39.97876,-75.222638,,,1
 31041,Market St & 2nd St,39.949866,-75.143639,,,1
-31042,Market St & 63rd St - FS,39.962562,-75.246519,,,1
-31043,Market St &  62nd St,39.962381,-75.24489,,,1
-31044,Market St &  61st St,39.962137,-75.242871,,,1
-31045,Market St &  59th St,39.96165,-75.238904,,,1
-31046,Market St &  58th St,39.961406,-75.236932,,,1
-31047,Market St &  57th St,39.961162,-75.234972,,,1
 31048,Whitman Plaza 4,39.913407,-75.154856,,,1
 31049,3rd St & Harwick St,39.830464,-75.393358,,,1
 31050,3rd St & Hayes St,39.832185,-75.390045,,,1
@@ -13125,12 +13054,6 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 31138,Township Line Rd & Linfield Rd,40.2073,-75.507492,,,1
 31139,Township Line & Rittenhouse,40.201914,-75.512784,,,1
 31140,15th St Trolley Station,39.952475,-75.165299,,,1
-31141,Market St & 55th St,39.960664,-75.230911,,,1
-31142,Market St & 53rd St,39.960185,-75.226956,,,1
-31143,Market St & 51st St,39.959705,-75.223,,,1
-31144,Market St & 50th St,39.959461,-75.220958,,,1
-31145,Market St & 49th St,39.959235,-75.219045,,,1
-31146,Market St & 48th St,39.958982,-75.217038,,,1
 31147,Broad St & I95 - no stop,39.900144,-75.175475,,,1
 31148,Walnut St & Farragut St,39.955666,-75.214403,,,1
 31149,Highland Av & 3rd St,39.831847,-75.391177,,,2
@@ -13217,14 +13140,14 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 31310,Marshall Rd & Eldon Av,39.944159,-75.287657,,,1
 31311,Street Rd & Castle Dr - MBNS,40.108101,-74.952242,,,1
 31312,Arleans Av & Lincoln Hwy 2,40.190587,-74.8315,,,1
-31313,Tyburn Rd & New Falls Rd,40.183963,-74.82017,,,1
+31313,Tyburn Rd & New Falls Rd,40.183756,-74.81984,,,1
 31314,Hood Blvd & New Falls Rd,40.171962,-74.834286,,,1
 31315,Pennsylvania Av & Bridge St - MBNS,40.207838,-74.775299,,,1
 31316,Pennsylvania Av & Maple Av,40.215186,-74.782403,,,1
 31317,Lincoln Hwy & Oak Ln,40.190868,-74.828702,,,1
 31318,Arleans Av & Lincoln Hwy 2 - MBFS,40.189078,-74.831549,,,1
 31319,West Trenton Av & Doloro Dr,40.210999,-74.794648,,,1
-31320,Broad St & Pattison Av - 1,39.904602,-75.173571,,,1
+31322,Penrose Av & Island Av,39.889038,-75.233138,,,1
 31323,Penrose Av & 20th St 1,39.912537,-75.182654,,,1
 31324,Columbus Blvd & Oregon Av - MBNS,39.913681,-75.138,,,1
 31325,Cardinal Av & City Av - FS,39.993765,-75.241453,,,1
@@ -13244,6 +13167,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 31343,Old York Rd & Broad St,40.055292,-75.140865,,,1
 31344,Pulaski Av & Chelten Av 1- MBNS,40.031004,-75.181418,,,1
 31345,N Bucks Town Dr & Oxford Valley Rd,40.18588,-74.869832,,,1
+31347,Delaware Av & Frankford Av Loop,39.964936,-75.134178,,,1
 31348,19th St & JFK Blvd,39.954559,-75.17142,,,1
 31349,Godfrey Av & 2nd St,40.045023,-75.123797,,,1
 31351,20th St & Chelten Av,40.051773,-75.151924,,,1
@@ -13307,8 +13231,7 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 31432,Huntingdon Pk & St Joseph Manor,40.107904,-75.082852,,,0
 31433,5th St & Medary Av,40.046248,-75.128261,,,0
 31436,Stenton Av & Wyncote Av,40.054129,-75.155806,,,0
-31437,Hatfield Pointe Shopping Center,40.263528,-75.319696,,,0
-31438,Hatfield Pointe Shopping Center,40.263519,-75.31972,,,0
+31438,Hatfield Pointe Shopping Center,40.263582,-75.32004,,,0
 31442,2nd St & Market St - 1 MBNS,39.950232,-75.143697,,,0
 31443,Girard Av & 62nd St,39.970019,-75.243264,,,0
 31448,Midvale Av & River Rd -FS,40.00851,-75.194153,,,0
@@ -13318,7 +13241,12 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 31452,Penrose & Pattison Av - FS,39.907846,-75.189314,,,0
 31453,Industrial Hwy & Ramada Inn,39.867171,-75.30904,,,0
 31454,Germantown Pk & 1st Av,40.092274,-75.260752,,,0
+31455,Germantown Pk & Launfall Rd - MBNS,40.114368,-75.28539,,,0
+31456,Moyamensing Av & 20th St ,39.913659,-75.181682,,,0
 31458,Delaware Av & Columbia Av,39.967601,-75.12891,,,0
+31460,Germantown Av & Berkley St,40.02389,-75.159586,,,0
+31461,10th St & Packer Av,39.91086,-75.165723,,,0
+31462,Dauphin St & American St - FS,39.985399,-75.137165,,,0
 31463,Delaware Av & Montgomery Av,39.969531,-75.125902,,,0
 31464,Germantown Pk & Swede Rd,40.145508,-75.318943,,,0
 31465,Germantown Pk & Penn Square Rd,40.145947,-75.321346,,,0
@@ -13334,17 +13262,33 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 31475,Island Av & Escort Av,39.883965,-75.230864,,,0
 31476,Enterprise Av & Executive Av,39.882423,-75.226078,,,0
 31478,Levittown Pkwy & Bristol Pike,40.140463,-74.817498,,,0
+31479,Stenton Av & Ogontz Av - FS,40.051717,-75.150434,,,0
+31480,Paschall Av & 49th St,39.940033,-75.211415,,,0
+31481,Aspen St & 45th St - FS,39.965578,-75.21233,,,0
 31482,Bethlehem Pk & W Valley Green Rd,40.113347,-75.214414,,,0
 31483,Bethlehem Pk & Camp Hill Rd,40.122081,-75.217086,,,0
+31486,Erie Av & Front St - FS,40.007503,-75.128105,,,0
 31487,Broad St & Pattison Av - FS,39.90561,-75.173319,,,0
+31488,Lancaster Av & Powelton Av,39.959559,-75.195637,,,0
+31489,Glenwood Av & Frankford Av,40.000714,-75.097504,,,0
+31490,Castor Av & Wingohocking St -FS,40.013905,-75.097112,,,0
+31491,Castor Av & Wyoming Av Circle,40.017617,-75.096929,,,0
+31492,Greenwood Av & Washington Ln -MBNS,40.093215,-75.121816,,,0
 31493,Welsh Rd & Blair Mill Rd -MBNS,40.155928,-75.141169,,,0
+31499,Delaware Av & Castor Av,39.98247,-75.083659,,,0
+31500,Delaware Av & Venango St,39.981218,-75.086146,,,0
 31501,Baltimore Pk & Leamy Av,39.91855,-75.329315,,,0
 31505,Radcliffe St & Mulberry St,40.095935,-74.854063,,,0
 31506,Radcliffe St & Mulberry St,40.095668,-74.854172,,,0
 31509,Bristol Pk & Hillcrest Av,40.093927,-74.909432,,,0
 31511,Harbison Av & Frankford Av - FS,40.027749,-75.062316,,,0
-31515,Pattison Av & Penrose Av,39.907445,-75.189741,,,0
-31516,Westminster Av & 47th St ,39.969002,-75.215922,,,0
+31514,Willow Grove Av & Douglas Rd,40.085813,-75.185321,,,0
+31519,Stenton Av & 21st St,40.053976,-75.155215,,,0
+31520,Stenton Av & Ogontz Av - FS,40.051457,-75.150151,,,0
+31521,Warrington Plaza,40.231329,-75.138778,,,0
+31522,Northeast Av & Red Lion Rd,40.101937,-75.027451,,,0
+31523,Red Lion Rd & Bustleton Av - MBFS,40.103786,-75.030778,,,0
+31524,Red Lion Rd & Bustleton Av - MBNS,40.103024,-75.029741,,,0
 31525,Pennell Rd & Baltimore Pk - FS,39.912681,-75.439606,,,0
 31526,State Rd & Clarendon Rd,39.948242,-75.318776,,,0
 31527,Pennell Rd & Baltimore Pk,39.912673,-75.439818,,,0
@@ -13359,10 +13303,18 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 31536,Ridge Rd & Naamans Rd,39.812254,-75.44413,,,0
 31537,9th St & Ashland Av,39.859176,-75.343515,,,0
 31538,9th St & Edgemont Av - MBNS,39.853029,-75.360032,,,0
+31540,Frankford Av & Girard Av - FS,39.968596,-75.134422,,,0
+31541,2nd St & Erie Av - FS,40.006494,-75.131643,,,0
+31542,Cheltenham Av & Ogontz Av Loop Rt H,40.074897,-75.159145,,,0
 31543,Mall Blvd & Lincoln Hwy,40.178765,-74.877718,,,0
 31544,Woodbourne Rd & Terrace Rd,40.17389,-74.883477,,,0
 31545,Woodbourne Rd & Lincoln Hwy - FS,40.175832,-74.884694,,,0
 31548,Woodbourne Rd & Lincoln Hwy,40.176511,-74.884689,,,0
+31549,Rhawn St & Cresco Av,40.048148,-75.031691,,,0
+31551,Ridge Av & Natrona ST,39.991518,-75.185584,,,0
+31552,33rd St & Dauphin St - NS,39.991671,-75.186339,,,0
+31553,Dauphin St & Ridge Av,39.991661,-75.18576,,,0
+31554,State Rd & Ashburner St - MBNS,40.038708,-75.007825,,,0
 31555,Ardmore Junction Station,39.99619,-75.302998,,,
 31556,Ardmore Junction Station,39.9961,-75.302809,,,
 31557,Butler Av & Maple St - MBFS,40.153334,-75.22475,,,0
@@ -13372,7 +13324,11 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 31561,Street Rd & Smedley Dr,39.9579,-75.50374,,,0
 31562,Tanguy Rd & Portsmouth,39.942935,-75.514528,,,0
 31563,Pennsylvania Av & Camp Hill Rd,40.125846,-75.195767,,,0
+31566,Broad St & Snyder Av - MBNS,39.924791,-75.169627,,,0
+31567,Moreland Rd & Park Av,40.142837,-75.119755,,,0
+31568,Market St & Schuylkill Av - MBNS,39.95466,-75.182143,,,0
 31569,Marshall St & Buttonwood St,40.123846,-75.355542,,,0
+31570,Verree Rd & Bustleton Av - FS,40.107961,-75.027193,,,0
 31572,DeKalb Pk & Town Center Rd - FS,40.09322,-75.368033,,,0
 31574,Blvd of Generals & Gen Armstead Av,40.122382,-75.399814,,,0
 31575,Gen Arnold Av & Gen Armstead Av - FS,40.121284,-75.397482,,,0
@@ -13386,6 +13342,9 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,zone_id
 31584,40th St & Pennsgrove St,39.971614,-75.203795,,,0
 31585,40th St & Poplar St,39.972623,-75.203981,,,0
 31586,Parkside Av & 41st St,39.975278,-75.206512,,,0
+31590,26th St & Tastykake 2,39.895812,-75.191844,,,0
+31591,26th St & Tastykake 3,39.898536,-75.193098,,,0
+31593,11th St & Constitution Av,39.891663,-75.169806,,,0
 31594,Witmer Rd & Blair Mill Rd,40.164618,-75.135615,,,0
 31595,Penn Mutual & Witmer Rd,40.17145,-75.144956,,,0
 31596,Village Dr & Dresher Rd - MBFS,40.165327,-75.149055,,,0

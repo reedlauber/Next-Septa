@@ -1,5 +1,5 @@
 <h2 class="nxs-section nxs-route-type-<%=@route_type %> nxs-route-<%=@route_id.downcase %>">
-	<a href="<%="/#{@route_type}/#{@route_id}" %>"><span class="nxs-routelabel"><%=@route.route_short_name %></span> | </a>
+	<a href="<%="/#{@route_type}/#{@route_id}" %>"><span class="nxs-routelabel"><%=@route.route_short_name %></span></a>
 	<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}" %>" class="nxs-routedirection">
 		<%=@direction.direction_name %>
 		<% if(@direction.direction_long_name != nil) %>
@@ -12,7 +12,7 @@
 		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}" %>" title="<%=@from.stop_name %>">
 			<%=@from.stop_name %>
 		</a>
-		<p>From</p>	
+		<p>From</p>
 	</div>
 	<% if(@to != nil) %>
 	<div class="s-col nxs-stoptimes-stopnames-switch">
@@ -53,9 +53,11 @@
 				<% end %>
 				<div class="nxs-stoptime-aside"></div>
 			</div>
+			<% if(st["coverage_left"] != nil) %>
 			<div class="nxs-stoptime-coverage" title="approx. route coverage">
 				<i class="nxs-stoptime-coverage-value" style="margin-left:<%=st["coverage_left"]%>%;margin-right:<%=st["coverage_right"]%>%;"></i>
 			</div>
+			<% end %>
 		</li>
 		<% end %>
 	</ul>

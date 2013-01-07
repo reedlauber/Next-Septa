@@ -6,21 +6,6 @@
 				components: {}
 			}, options),
 			_state = {};
-		
-		var $dialog;
-		function _setupDialog() {
-			$dialog = $('#isepta-dialog');
-
-			$('.nxs-dialog-open').click(function() {
-				$dialog.css('top', window.scrollY + 8);
-				$dialog.show();
-				return false;
-			});
-
-			$('.close', $dialog).click(function() {
-				$dialog.hide();
-			});
-		}
 
 		_self.getPath = function(add) {
 			var path = '';
@@ -37,7 +22,7 @@
 			}
 			return path;
 		};
-		
+
 		_self.init = function() {
 			var $content = $('#content');
 
@@ -48,16 +33,14 @@
 				from: $content.attr('data-from'),
 				to: $content.attr('data-to')
 			};
-			
+
 			$.each(_options.components, function(p, c) {
 				c.init(_self, _state);
 			});
 
-			_setupDialog();
-			
 			return _self;
 		};
-		
+
 		return _self;
 	};
 })(NextSepta);
