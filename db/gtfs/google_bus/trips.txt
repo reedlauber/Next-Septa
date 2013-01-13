@@ -12806,48 +12806,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10741,1,3344223,"Paoli Railroad Station",8605,1,139942
 10741,1,3344224,"Paoli Railroad Station",8604,1,139935
 10741,1,3344225,"Paoli Railroad Station",8602,1,139942
-10743,1,3501922,"Horsham (To Willow Grove Park Mall)",8551,0,139964
-10743,1,3501923,"Horsham (To Willow Grove Park Mall)",8551,0,139964
-10743,1,3501924,"Horsham (To Willow Grove Park Mall)",8552,0,139964
-10743,1,3501925,"Horsham (To Willow Grove Park Mall)",8551,0,139964
-10743,1,3501926,"Horsham (To Willow Grove Park Mall)",8552,0,139964
-10743,1,3501927,"Horsham",8555,0,139961
-10743,1,3501928,"Horsham (To Willow Grove Park Mall)",8551,0,139964
-10743,1,3501929,"Horsham (To Willow Grove Park Mall)",8552,0,139964
-10743,1,3501930,"Horsham",8555,0,139961
-10743,1,3501931,"Horsham (To Willow Grove Park Mall)",8551,0,139964
-10743,1,3501932,"Horsham (To Willow Grove Park Mall)",8552,0,139964
-10743,1,3501933,"Horsham",8555,0,139961
-10743,1,3501934,"Horsham (To Willow Grove Park Mall)",8551,0,139964
-10743,1,3501935,"Horsham (To Willow Grove Park Mall)",8552,0,139964
-10743,1,3501936,"Horsham",8551,0,139961
-10743,1,3501937,"Horsham (To Willow Grove Park Mall)",8552,0,139964
-10743,1,3501938,"Horsham",8551,0,139961
-10743,1,3501939,"Horsham (To Willow Grove Park Mall)",8552,0,139965
-10743,1,3501940,"Horsham (To Willow Grove Park Mall)",8551,0,139963
-10743,1,3501941,"Horsham (To Willow Grove Station)",8552,0,139970
-10743,1,3501942,"Horsham (To Willow Grove Station)",8551,0,139969
-10743,1,3501943,"Horsham (To Willow Grove Park Mall)",8553,0,139962
-10743,1,3501944,"Horsham (To Willow Grove Station)",8554,0,139969
-10743,1,3501945,"Horsham (To Willow Grove Park Mall)",8553,0,139962
-10743,1,3501946,"Horsham (To Willow Grove Station)",8554,0,139969
-10743,1,3501947,"Horsham (To Willow Grove Park Mall)",8553,0,139966
-10743,1,3501948,"Horsham (To Willow Grove Park Mall)",8556,0,139962
-10743,1,3501949,"Horsham (To Willow Grove Park Mall)",8554,0,139966
-10743,1,3501950,"Horsham (To Willow Grove Station)",8553,0,139969
-10743,1,3501951,"Horsham (To Willow Grove Park Mall)",8556,0,139966
-10743,1,3501952,"Horsham (To Willow Grove Park Mall)",8554,0,139966
-10743,1,3501953,"Horsham (To Willow Grove Park Mall)",8553,0,139966
-10743,1,3501954,"Horsham (To Willow Grove Station)",8556,0,139969
-10743,1,3501955,"Horsham (To Willow Grove Park Mall)",8554,0,139966
-10743,1,3501956,"Horsham (To Willow Grove Park Mall)",8554,0,139966
-10743,1,3501957,"Horsham (To Willow Grove Park Mall)",8554,0,139966
-10743,1,3501958,"Horsham (To Willow Grove Park Mall)",8554,0,139966
-10743,1,3501959,"Horsham (To Willow Grove Park Mall)",8554,0,139967
-10743,1,3501960,"Horsham (To Willow Grove Park Mall)",8554,0,139967
-10743,1,3501961,"Horsham (To Willow Grove Park Mall)",8554,0,139968
-10743,1,3501962,"Horsham (To Willow Grove Park Mall)",8554,0,139967
-10743,1,3501963,"Horsham (To Willow Grove Park Mall)",8554,0,139966
 10746,1,3344363,"LUCY Gold Loop",8501,0,139973
 10746,1,3344364,"LUCY Gold Loop",8508,0,139973
 10746,1,3344365,"LUCY Gold Loop",8510,0,139973
@@ -16912,6 +16870,47 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10938,1,3411838,"Paoli Railroad Station Express",8631,1,141997
 10938,1,3411839,"Paoli Railroad Station",8629,1,141994
 10938,1,3411840,"Paoli Railroad Station",8630,1,141996
+11445,1,3595123,"Horsham (To Willow Grove Park Mall)",8551,0,146952
+11445,1,3595124,"Horsham (To Willow Grove Park Mall)",8551,0,146952
+11445,1,3595125,"Horsham (To Willow Grove Park Mall)",8552,0,146952
+11445,1,3595126,"Horsham (To Willow Grove Park Mall)",8551,0,146952
+11445,1,3595127,"Horsham (To Willow Grove Park Mall)",8552,0,146952
+11445,1,3595128,"Horsham",8555,0,146949
+11445,1,3595129,"Horsham (To Willow Grove Park Mall)",8551,0,146952
+11445,1,3595130,"Horsham (To Willow Grove Park Mall)",8552,0,146952
+11445,1,3595131,"Horsham",8555,0,146949
+11445,1,3595132,"Horsham (To Willow Grove Park Mall)",8551,0,146952
+11445,1,3595133,"Horsham (To Willow Grove Park Mall)",8552,0,146952
+11445,1,3595134,"Horsham",8555,0,146949
+11445,1,3595135,"Horsham (To Willow Grove Park Mall)",8551,0,146952
+11445,1,3595136,"Horsham (To Willow Grove Park Mall)",8552,0,146952
+11445,1,3595137,"Horsham",8551,0,146949
+11445,1,3595138,"Horsham (To Willow Grove Park Mall)",8552,0,146952
+11445,1,3595139,"Horsham",8551,0,146949
+11445,1,3595140,"Horsham (To Willow Grove Park Mall)",8552,0,146953
+11445,1,3595141,"Horsham (To Willow Grove Park Mall)",8551,0,146951
+11445,1,3595142,"Horsham (To Willow Grove Station)",8552,0,146958
+11445,1,3595143,"Horsham (To Willow Grove Station)",8551,0,146957
+11445,1,3595144,"Horsham (To Willow Grove Park Mall)",8553,0,146950
+11445,1,3595145,"Horsham (To Willow Grove Station)",8554,0,146957
+11445,1,3595146,"Horsham (To Willow Grove Park Mall)",8553,0,146950
+11445,1,3595147,"Horsham (To Willow Grove Station)",8554,0,146957
+11445,1,3595148,"Horsham (To Willow Grove Park Mall)",8553,0,146954
+11445,1,3595149,"Horsham (To Willow Grove Park Mall)",8556,0,146950
+11445,1,3595150,"Horsham (To Willow Grove Park Mall)",8554,0,146954
+11445,1,3595151,"Horsham (To Willow Grove Station)",8553,0,146957
+11445,1,3595152,"Horsham (To Willow Grove Park Mall)",8556,0,146954
+11445,1,3595153,"Horsham (To Willow Grove Park Mall)",8554,0,146954
+11445,1,3595154,"Horsham (To Willow Grove Park Mall)",8553,0,146954
+11445,1,3595155,"",8556,0,146944
+11445,1,3595156,"",8554,0,146944
+11445,1,3595157,"",8554,0,146944
+11445,1,3595158,"",8554,0,146944
+11445,1,3595159,"",8554,0,146944
+11445,1,3595160,"",8554,0,146945
+11445,1,3595161,"",8554,0,146944
+11445,1,3595162,"",8554,0,146945
+11445,1,3595163,"",8554,0,146944
 10634,5,3277161,"Parx Casino",1001,0,138844
 10634,5,3277162,"Parx Casino",1002,0,138844
 10634,5,3277163,"Parx Casino",1452,0,138844
@@ -24628,16 +24627,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10741,5,3344270,"Paoli Railroad Station",8607,1,139944
 10741,5,3344271,"Paoli Railroad Station",8607,1,139944
 10741,5,3344272,"Paoli Railroad Station",8606,1,139946
-10743,5,3344353,"Horsham",8557,0,139971
-10743,5,3344354,"Horsham",8557,0,139959
-10743,5,3344355,"Horsham",8557,0,139959
-10743,5,3344356,"Horsham",8557,0,139959
-10743,5,3344357,"Horsham",8557,0,139959
-10743,5,3344358,"Horsham",8558,0,139960
-10743,5,3344359,"Horsham",8558,0,139960
-10743,5,3344360,"Horsham",8558,0,139960
-10743,5,3344361,"Horsham",8558,0,139960
-10743,5,3344362,"Horsham",8558,0,139960
 10748,5,3344658,"Chesterbrook",6191,0,139977
 10748,5,3344659,"Chesterbrook",6193,0,139977
 10748,5,3344660,"King of Prussia",6192,0,139980
@@ -26973,6 +26962,16 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10811,5,3358677,"61st-Baltimore",8210,1,140687
 10811,5,3358678,"61st-Baltimore",8210,1,140687
 10811,5,3358679,"61st-Baltimore",8209,1,140687
+11445,5,3595164,"Horsham",8557,0,146959
+11445,5,3595165,"Horsham",8557,0,146947
+11445,5,3595166,"Horsham",8557,0,146947
+11445,5,3595167,"Horsham",8557,0,146947
+11445,5,3595168,"Horsham",8557,0,146947
+11445,5,3595169,"Horsham",8558,0,146948
+11445,5,3595170,"Horsham",8558,0,146948
+11445,5,3595171,"Horsham",8558,0,146948
+11445,5,3595172,"Horsham",8558,0,146948
+11445,5,3595173,"Horsham",8558,0,146948
 10635,7,3277611,"13th-Market",9056,0,138860
 10635,7,3277612,"13th-Market",9053,0,138860
 10635,7,3277613,"13th-Market",9053,0,138860
@@ -33983,8 +33982,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10781,7,3348811,"69th Street Trans. Ctr.",4464,1,140312
 10781,7,3348812,"69th Street Trans. Ctr.",4443,1,140312
 10781,7,3348813,"69th Street Trans. Ctr.",4464,1,140312
-10781,7,3357370,"69th Street Trans. Ctr.",4444,1,140312
-10781,7,3357371,"69th Street Trans. Ctr.",4444,1,140312
 10782,7,3348975,"Granite Run Mall",4442,0,140322
 10782,7,3348976,"Granite Run Mall",4461,0,140322
 10782,7,3348977,"Chadds Ford",4443,0,140320
@@ -34131,6 +34128,7 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10785,7,3349927,"Granite Run Mall",4441,0,140353
 10785,7,3349928,"Granite Run Mall",4557,0,140353
 10785,7,3349929,"Granite Run Mall",4557,0,140353
+10785,7,3349930,"7th & Yarnall Sts",4558,0,140652
 10785,7,3349931,"Chester Trans. Ctr.",4556,0,140349
 10785,7,3349932,"Darby Trans. Ctr.",4555,1,140672
 10785,7,3349933,"Darby Trans. Ctr.",4612,1,140357
@@ -34148,9 +34146,6 @@ route_id,service_id,trip_id,trip_headsign,block_id,direction_id,shape_id
 10785,7,3349945,"Darby Trans. Ctr.",4557,1,140357
 10785,7,3349946,"Darby Trans. Ctr.",4558,1,140653
 10785,7,3349947,"Darby Trans. Ctr.",4558,1,140653
-10785,7,3357367,"Darby Trans. Ctr.",4560,1,140357
-10785,7,3357368,"Darby Trans. Ctr.",4560,1,140357
-10785,7,3357369,"7th & Yarnall Sts",4558,0,140652
 10786,7,3350076,"Darby Trans. Ctr.",4575,0,140361
 10786,7,3350077,"Darby Trans. Ctr.",4575,0,140361
 10786,7,3350078,"Darby Trans. Ctr.",4576,0,140361
