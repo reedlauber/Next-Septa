@@ -8,32 +8,33 @@ javascripts:
         - public/javascripts/vendor/jquery.scrollTo-1.4.2-min.js
         - public/javascripts/ns-core.js
         - public/javascripts/ns-data.js
-    
-    public:    
+
+    public:
         - public/javascripts/ns-manager.js
 
     stops:
         - public/javascripts/ns-stops.js
         - public/javascripts/ns-templates-stoptime.js
-    
+
     map:
-        - public/javascripts/vendor/ns-openlayers.js
+        - public/javascripts/vendor/leaflet.js
         - public/javascripts/ns-map.js
-        
+
 stylesheets:
     all:
         - public/stylesheets/webapp-reset.css
         - public/stylesheets/sour.css
         - public/stylesheets/typography.css
-    
+
     public:
         - public/stylesheets/main.css
-    
+
     map:
+        - public/stylesheets/vendor/leaflet.css
         - public/stylesheets/map.css
-    
+
     mobile:
         - public/stylesheets/mobile.css
-        
+
     data:
         - public/stylesheets/data.css
