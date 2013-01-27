@@ -17,15 +17,6 @@ class SimplifiedStop < ActiveRecord::Base
 									"AND t.direction_id = ? " +
 									"ORDER BY st.stop_sequence"
 
-	@@longest_trip_sql = "SELECT t.id, t.route_id, t.trip_id, count(st.*) stop_count " +
-							"FROM trips t " +
-							"JOIN stop_times st ON t.trip_id = st.trip_id " +
-							"WHERE t.direction_id = ? " +
-								"AND t.route_id = ? " +
-							"GROUP BY t.id, t.route_id, t.trip_id " +
-							"ORDER BY stop_count DESC " +
-							"LIMIT 1"
-
 	@@distinct_stops_rail_sql = "SELECT s.*, st.stop_sequence " +
 									"FROM stop_times st " +
 									"JOIN stops s ON st.stop_id = s.stop_id " +
@@ -50,7 +41,7 @@ class SimplifiedStop < ActiveRecord::Base
 		stops = []
 
 		RouteDirection.joins("JOIN routes ON routes.route_id = route_directions.route_id").where("routes.route_type = ?", 2).each do |dir|
-			longest_trip = Trip.find_by_sql([@@longest_trip_sql, dir.direction_id, dir.route_id]).first
+			longest_trip = Trip.find_longest_trip(dir.route_id, dir.direction_id)
 
 			if longest_trip != nil
 				Stop.find_by_sql([@@distinct_stops_rail_sql, longest_trip.trip_id]).each do |stop|

@@ -6,4 +6,10 @@ class Route < ActiveRecord::Base
 	def slug
 		(is_rail? ? route_id : route_short_name).downcase
 	end
+
+	def self.assign_route_shapes
+		Route.all.each do |route|
+			Shape.assign_route_shapes(route.route_id)
+		end
+	end
 end
