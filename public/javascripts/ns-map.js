@@ -27,25 +27,40 @@
 
 		var $map;
 
-		var _vehicleLocated = _userLocated = false;
+		var _centering = false;
 		function _setExtendedLocation() {
 			if(_vehicle && _user) {
-				var bounds = _map.getBounds();
-				if(!_vehicleLocated) {
-					bounds.extend([_vehicle.lat, _vehicle.lng]);
-					_vehicleLocated = true;
+				var userPoint = L.latLng(_user.lat, _user.lon),
+					vehiclePoint = L.latLng(_vehicle.lat, _vehicle.lng),
+					bounds = new L.LatLngBounds();
+
+				bounds.extend(userPoint);
+				bounds.extend(vehiclePoint);
+				// If a vehicle or user was already being centered on, wait a bit of the animation to finish.
+				if(_centering) {
+					setTimeout(function() {
+						_map.fitBounds(bounds);
+						_centering = false;
+					}, 500);
+				} else {
+					_map.fitBounds(bounds);
 				}
-				if(!_userLocated) {
-					bounds.extend([_user.lat, _user.lon]);
-					_userLocated = true;
-				}
-				_map.fitBounds(bounds);
 			} else if(_vehicle) {
-				_vehicleLocated = true;
-				_setCenter(_vehicle.lng, _vehicle.lat);
+				_centering = true;
+				// Wait a bit to see if a user comes in and we can just do a bounds extend
+				setTimeout(function() {
+					if(!_user) {
+						_setCenter(_vehicle.lng, _vehicle.lat);
+					}
+				}, 500);
 			} else if(_user) {
-				_userLocated = true;
-				_setCenter(_user.lon, _user.lat);
+				_centering = true;
+				// Wait a bit to see if a vehicle comes in and we can just do a bounds extend
+				setTimeout(function() {
+					if(!_vehicle) {
+						_setCenter(_user.lon, _user.lat);
+					}
+				}, 500);
 			}
 		}
 
