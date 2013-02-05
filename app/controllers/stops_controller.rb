@@ -4,10 +4,17 @@ class StopsController < ApplicationController
 	SERVICE_IDS_RAIL = ["S3", "S1", "S1", "S1", "S1", "S1", "S2"]
 	Time::DATE_FORMATS[:display_time] = "%l:%M %P"
 	Time::DATE_FORMATS[:compare_time] = "%H:%M:%S"
+	Time::DATE_FORMATS[:mins] = "%M:00"
 	Time::DATE_FORMATS[:display_iso_time] = "%FT%H:%M:%S-" + (Time.now.isdst ? "04" : "05") + ":00"
 
 	def index
-		c_time = (Time.now - (60 * 5)).to_formatted_s(:compare_time)
+		now = Time.now - (60 * 5)
+		c_time = now.to_formatted_s(:compare_time)
+
+		# if it's really "after midnight", not "tomorrow", convert to 25:10:00 format for comparison
+		if (now.hour < 5)
+			c_time = (now.hour.to_i + 24).to_s + ":" + now.to_formatted_s(:mins)
+		end
 
 		# handles "backwards" paging
 		# if a negative offset is detected, we reverse the time comparison, reverse the sort order, and then reverse the results
@@ -63,6 +70,10 @@ class StopsController < ApplicationController
 	private
 
 	def service_id
+		wday = Time.now.wday
+		if (Time.now.hour < 5)
+			wday = (Time.now + (60 * 60 * 24) - (60 * 5)).wday
+		end
 		@route.is_rail? ? SERVICE_IDS_RAIL[Time.now.wday] : SERVICE_IDS_BUS[Time.now.wday]
 	end
 end
