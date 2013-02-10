@@ -185,7 +185,9 @@
 
 			_setupRouteOverlay();
 
-			_getBusLocation(state.routeId, vehicleId);
+			if(vehicleId) {
+				_getBusLocation(state.routeId, vehicleId);
+			}
 
 			_setCenter(_options.center.lng, _options.center.lat, 12);
 

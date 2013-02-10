@@ -18,3 +18,5 @@ db/gtfs/google_bus/calendar.txt
 db/gtfs/google_bus/agency.txt
 nxs-favicon.psd
 vendor/OpenLayers*
+
+db-deploy-instructions.md
