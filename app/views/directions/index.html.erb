@@ -1,10 +1,11 @@
-<h2 class="nxs-section nxs-route-type-<%=@route_type %> nxs-route-<%=@route_id.downcase %>">
+<h2 class="nxs-section nxs-route-type-<%=@route_type %> nxs-route nxs-route-<%=@route_id.downcase %>">
 	<a href="<%="/#{@route_type}/#{@route_id}" %>">
 		<span class="nxs-routelabel"><%=@route.route_short_name %></span>
 		<% if !@route.is_rail? %>
 		 | <%=@route.route_long_name %>
 		 <% end %>
 	</a>
+	<a href="<%="/#{@route_type}/#{@route_id}/map" %>" class="s-corner-all-24 nxs-header-btn nxs-header-btn-right nxs-header-iconbtn nxs-map-icon" title="Route Map">map</a>
 </h2>
 <ul id="directions" class="nxs-items nxs-resize">
 	<% @directions.each do |d| %>
