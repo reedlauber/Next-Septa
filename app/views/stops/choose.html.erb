@@ -1,4 +1,4 @@
-<h2 class="nxs-section nxs-route-type-<%=@route_type %> nxs-route-<%=@route_id.downcase %>">
+<h2 class="nxs-section nxs-route-type-<%=@route_type %> nxs-route nxs-route-<%=@route_id.downcase %>">
 	<a href="<%="/#{@route_type}/#{@route_id}" %>"><span class="nxs-routelabel"><%=@route.route_short_name %></span></a>
 	<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}" %>" class="nxs-routedirection">
 		<%=@direction.direction_name %>
@@ -6,6 +6,7 @@
 		<span class="nsx-section-sub">To: <%=@direction.direction_long_name %></span>
 		<% end %>
 	</a>
+	<a href="<%="/#{@route_type}/#{@route_id}/map" %>" class="s-corner-all-24 nxs-header-btn nxs-header-btn-right nxs-header-iconbtn nxs-map-icon" title="Route Map">map</a>
 </h2>
 <h3 class="nxs-section nxs-section-instruction">
 	<% if (@from == nil) %>

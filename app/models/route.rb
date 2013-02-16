@@ -9,7 +9,8 @@ class Route < ActiveRecord::Base
 
 	def self.assign_route_shapes
 		Route.all.each do |route|
-			Shape.assign_route_shapes(route.route_id)
+			route_id = route.is_rail? ? route.route_id : route.route_short_name
+			Shape.assign_route_shapes(route.route_id, route_id)
 		end
 	end
 end

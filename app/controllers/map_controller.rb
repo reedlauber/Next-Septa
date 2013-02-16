@@ -1,5 +1,6 @@
 class MapController < ApplicationController
 	def index
+		@page_title = "Route Map"
 		@back_path = "/#{@route_type}/#{@route_id}"
 
 		coordinates = []
@@ -14,6 +15,7 @@ class MapController < ApplicationController
 	end
 
 	def bus
+		@page_title = "Bus Location"
 		@back_path = "/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}"
 		if(@to != nil)
 			@back_path += "/#{@to.stop_id}"

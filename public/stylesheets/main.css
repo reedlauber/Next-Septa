@@ -151,7 +151,10 @@ html, body { background-color:#5a5a5a;height:100%;background-image:url(../images
 		h2.nxs-route-type-trains { background-color:#477997; }
 		h2.nxs-route-mfl { background-color:#107dc1; }
 
-		h2 a { float:left; }
+		h2.nxs-route { padding-right:48px; }
+			.nxs-route .nxs-map-icon { height:16px;width:16px;background-position:2px 2px;background-image:url(../images/gentleface/black/globe_2_icon&32.png);background-size:16px 16px; }
+
+		/*h2 a { float:left; }*/
 
 	#content { background-color:#fff; }
 

@@ -46,6 +46,7 @@ class Importer
 
 	def import_route_shapes
 		import_extra("Generating Route Shapes") do
+			Shape.update_all ['route_id = ?', '']
 			Route.assign_route_shapes
 		end
 	end
