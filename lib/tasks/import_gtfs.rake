@@ -4,7 +4,7 @@ require "import_timer.rb"
 require "importer.rb"
 
 task :import_gtfs, [:type, :mode] => :environment do |t, args|
-	args.with_defaults(:type => "all", :mode => "all")
+	args.with_defaults(:type => "routeshapes", :mode => "all")
 
 	puts "Starting import for: \"#{args.type}\", mode: \"#{args.mode}\""
 
@@ -36,6 +36,11 @@ task :import_gtfs, [:type, :mode] => :environment do |t, args|
 	if importer.import_routes?
 		importer.import_type("Route", "routes", ['route_id', 'route_short_name', 'route_long_name', 'route_type', 'route_color', 'route_text_color', 'route_url'])
 		importer.import_route_extras
+	end
+
+	# ROUTE SHAPES
+	if importer.import_route_shapes?
+		importer.import_route_shapes
 	end
 
 	# SIMPLIFIED STOPS

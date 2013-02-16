@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130106174637) do
+ActiveRecord::Schema.define(:version => 20130127190003) do
 
   create_table "route_directions", :force => true do |t|
     t.string   "route_id"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20130106174637) do
     t.integer  "shape_pt_sequence"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "route_id"
   end
 
   add_index "shapes", ["shape_id"], :name => "index_shapes_on_shape_id"

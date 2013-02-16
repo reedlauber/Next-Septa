@@ -44,6 +44,13 @@ class Importer
 		end
 	end
 
+	def import_route_shapes
+		import_extra("Generating Route Shapes") do
+			Shape.update_all ['route_id = ?', '']
+			Route.assign_route_shapes
+		end
+	end
+
 	def import_simplified_stops
 		import_extra("Generating Simplified Stops", "simplified_stops") do
 			SimplifiedStop.generate_stops
@@ -76,6 +83,10 @@ class Importer
 		@type == "all" || @type == "routes"
 	end
 
+	def import_route_shapes?
+		@type == "all" || @type == "routeshapes"
+	end
+
 	def import_simplifiedstops?
 		@type == "all" || @type == "simplifiedstops"
 	end
@@ -103,11 +114,13 @@ class Importer
 	end
 
 	# helper function for non-file-based "extras" imports
-	def import_extra(title, table)
+	def import_extra(title, table=nil)
 		puts "\n\n!!! #{title} !!!"
 		timer = ImportTimer.new
 
-		delete_values(table, timer)
+		if(table != nil)
+			delete_values(table, timer)
+		end
 
 		puts "\nCreating new values ..."
 		yield

@@ -4,6 +4,7 @@
 			_options = $.extend({
 				id: 'map',
 				zoom: 16,
+				centerOn: 'shape',
 				center: { lat:39.9523350, lng:-75.163789 } // Philadelphia
 			}, options),
 			_manager,
@@ -12,6 +13,7 @@
 		var _map,
 			_vehicleMarker,
 			_vehicle, _user,
+			_routeLayer,
 			_icons = {
 				bus: {
 					width: 32,
@@ -66,7 +68,9 @@
 
 		function _addUserLocation() {
 			_addMarker(_user.lon, _user.lat, null, 'user');
-			_setExtendedLocation();
+			if(_options.centerOn === 'user') {
+				_setExtendedLocation();
+			}
 		}
 
 		function _updateBusLocation() {
@@ -162,12 +166,25 @@
 			var geoJson = $('#' + _options.id + '-shape').html();
 			if(geoJson) {
 				geoJson = JSON.parse(geoJson);
-				if(geoJson) {
-					L.geoJson(geoJson, {
-
+				if(geoJson && geoJson.coordinates && geoJson.coordinates.length) {
+					_routeLayer = L.geoJson(geoJson, {
+						style: function() {
+							return {
+								color: '#a33',
+								opacity: 0.8
+							};
+						}
 					}).addTo(_map);
+					if(_options.centerOn === 'shape') {
+						_map.fitBounds(_routeLayer.getBounds());
+					}
 				}
 			}
+		}
+
+		function _adjustSize() {
+			var height = $(window).height() -  $('#header').outerHeight();
+			$('#' + _options.id + '-inner').height(height);
 		}
 
 		_self.init = function(manager, state) {
@@ -177,17 +194,23 @@
 			var routeId = $map.attr('data-route'),
 				vehicleId = $map.attr('data-bus');
 
+			_adjustSize();
+
 			_map = L.map(_options.id + '-inner')
 
-			L.tileLayer('http://{s}.tile.cloudmade.com/fdb4e543deef4dccbc7d4383c5f3c783/997/256/{z}/{x}/{y}.png', {
+			L.tileLayer('http://{s}.tile.cloudmade.com/fdb4e543deef4dccbc7d4383c5f3c783/86814/256/{z}/{x}/{y}.png', {
 				maxZoom: 22
 			}).addTo(_map);
 
 			_setupRouteOverlay();
 
-			_getBusLocation(state.routeId, vehicleId);
+			if(vehicleId) {
+				_getBusLocation(state.routeId, vehicleId);
+			}
 
-			_setCenter(_options.center.lng, _options.center.lat, 12);
+			if(!_routeLayer || _options.centerOn != 'shape') {
+				_setCenter(_options.center.lng, _options.center.lat, 12);
+			}
 
 			if(navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(function(position) {
