@@ -9,11 +9,11 @@
 			_state,
 			_stops = [],
 			_buses = null;
-		
+
 		var _intervals = [{ l:'week', s:604800 }, { l:'day', s:86400 }, { l:'hr', s:3600 }, { l:'min', s:60 }];
 
 		var $list;
-		
+
 		function _getRelTime(diff) {
 			if(diff < 0) {
 				return '(GONE)';
@@ -34,7 +34,7 @@
 				return '(' + s + ')';
 			}
 		}
-		
+
 		function _timer() {
 			var now = new Date();
 			$.each(_stops, function(i, stop) {
@@ -47,25 +47,25 @@
 				}, 25000);
 			}
 		}
-		
+
 		function _updateRealTime() {
 			$('.nxs-stoptime').each(function() {
 				var blockId = $(this).attr('data-block'),
 					tripId = $(this).attr('data-trip');
 				if(blockId && blockId in _buses) {
 					var bus = _buses[blockId];
-					var mapUrl = _manager.getPath('map?bus=' + bus.VehicleID + '&trip=' + tripId);
+					var mapUrl = _manager.getPath('map?bus=' + bus.vehicle_id + '&trip=' + tripId);
 					$('.nxs-stoptime-aside', this).html('<a href="' + mapUrl + '">map</a>')
 				}
 			});
 		}
-		
+
 		function _getRealTimeData(routeId) {
 			NXS.Data.get('/locations/' + routeId, function(resp) {
 				_buses = {};
-				if(resp.bus) {
-					$.each(resp.bus, function(i, bus) {
-						_buses[bus.BlockID] = bus;
+				if(resp.vehicles) {
+					$.each(resp.vehicles, function(i, bus) {
+						_buses[bus.block_id] = bus;
 					});
 				}
 				_updateRealTime();
@@ -115,7 +115,7 @@
 				}
 			});
 		}
-		
+
 		_self.init = function(manager, state) {
 			_manager = manager;
 			_state = state;
@@ -124,11 +124,11 @@
 			$list.height($list.height());
 
 			_setupPaging();
-			
+
 			$('.nxs-stoptime-left').each(function() {
 				var ts = $('time', this).attr('datetime'),
 					relText = $('span', this);
-					
+
 				if(ts) {
 					var dt = new Date(Date.parse(ts));
 					if(dt && !$.isNaN(dt)) {
@@ -136,17 +136,17 @@
 					}
 				}
 			});
-			
-			
+
+
 			if(_state.routeType === 'buses' && _state.routeId) {
-				_getRealTimeData(_state.routeId);	
+				_getRealTimeData(_state.routeId);
 			}
-			
+
 			_timer();
-			
+
 			return _self;
 		};
-		
+
 		return _self;
 	};
 })(NextSepta);

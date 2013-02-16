@@ -8,9 +8,11 @@
 				center: { lat:39.9523350, lng:-75.163789 } // Philadelphia
 			}, options),
 			_manager,
-			_zoom = _options.zoom;
+			_state,
+			_initialized = false;
 
 		var _map,
+			_zoom = _options.zoom,
 			_vehicleMarker,
 			_vehicle, _user,
 			_routeLayer,
@@ -75,7 +77,7 @@
 
 		function _updateBusLocation() {
 			var label = '',
-				offset = parseInt(_vehicle.Offset, 10);
+				offset = parseInt(_vehicle.offset, 10);
 			if(!isNaN(offset)) {
 				label = offset + ' min' + (offset == 1 ? '' : 's') + ' ago';
 			}
@@ -96,24 +98,40 @@
 			_setExtendedLocation();
 		}
 
-		function _getBusLocation(routeId, vehicleId) {
+		function _addVehicles(routeId, vehicles) {
+			$.each(vehicles, function(i, vehicle) {
+				if(vehicle.route_id === routeId) {
+					var offset = parseInt(vehicle.offset, 10),
+						late = parseInt(vehicle.late, 10),
+						label = vehicle.mode === 'rail' ? (late + ' min' + (late === 1 ? '' : 's') + '  late') : (offset + ' min' + (offset == 1 ? '' : 's') + ' ago');
+					_addMarker(vehicle.lng, vehicle.lat, label);
+				}
+			});
+		}
+
+		function _getVehicleLocations(vehicleId) {
+			var routeId = _state.routeId;
 			NXS.Data.get('/locations/' + routeId, function(resp) {
-				var buses = {};
-				if(resp.bus) {
-					$.each(resp.bus, function(i, bus) {
-						buses[bus.VehicleID] = bus;
+				var vehicles = {};
+				if(resp.vehicles) {
+					$.each(resp.vehicles, function(i, bus) {
+						vehicles[bus.vehicle_id] = bus;
 					});
 				}
-				if(vehicleId in buses) {
-					_vehicle = buses[vehicleId];
-					_vehicle.lat = parseFloat(_vehicle.lat);
-					_vehicle.lng = parseFloat(_vehicle.lng);
-					_updateBusLocation();
-					setTimeout(function() {
-						_getBusLocation(routeId, vehicleId);
-					}, 60000); // 1 min
+				if(vehicleId) {
+					if(vehicleId in vehicles) {
+						_vehicle = vehicles[vehicleId];
+						_vehicle.lat = parseFloat(_vehicle.lat);
+						_vehicle.lng = parseFloat(_vehicle.lng);
+						_updateBusLocation();
+						setTimeout(function() {
+							_getBusLocation(routeId, vehicleId);
+						}, 60000); // 1 min
+					} else {
+						// SHOW WARNING THAT DATA COULDN'T BE FOUND
+					}
 				} else {
-					// SHOW WARNING THAT DATA COULDN'T BE FOUND
+					_addVehicles(routeId, resp.vehicles);
 				}
 			});
 		}
@@ -187,26 +205,21 @@
 			$('#' + _options.id + '-inner').height(height);
 		}
 
-		_self.init = function(manager, state) {
-			_manager = manager;
-
-			$map = $('#' + _options.id);
+		function _initializeMap() {
 			var routeId = $map.attr('data-route'),
 				vehicleId = $map.attr('data-bus');
 
 			_adjustSize();
 
-			_map = L.map(_options.id + '-inner')
+			_map = L.map(_options.id + '-inner');
 
-			L.tileLayer('http://{s}.tile.cloudmade.com/fdb4e543deef4dccbc7d4383c5f3c783/86814/256/{z}/{x}/{y}.png', {
+			L.tileLayer('http://{s}.tile.cloudmade.com/fdb4e543deef4dccbc7d4383c5f3c783/86814/256/{z}/{x}/{y}.png?v=1', {
 				maxZoom: 22
 			}).addTo(_map);
 
 			_setupRouteOverlay();
 
-			if(vehicleId) {
-				_getBusLocation(state.routeId, vehicleId);
-			}
+			_getVehicleLocations(vehicleId);
 
 			if(!_routeLayer || _options.centerOn != 'shape') {
 				_setCenter(_options.center.lng, _options.center.lat, 12);
@@ -217,6 +230,19 @@
 					_user = { lat:position.coords.latitude, lon:position.coords.longitude };
 					_addUserLocation();
 				});
+			}
+
+			_initialized = true;
+		}
+
+		_self.init = function(manager, state) {
+			_manager = manager;
+			_state = state;
+
+			$map = $('#' + _options.id);
+
+			if($map.is(':visible')) {
+				_initializeMap();
 			}
 
 			return _self;
