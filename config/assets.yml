@@ -11,14 +11,12 @@ javascripts:
 
     public:
         - public/javascripts/ns-manager.js
+        - public/javascripts/vendor/leaflet.js
+        - public/javascripts/ns-map.js
 
     stops:
         - public/javascripts/ns-stops.js
         - public/javascripts/ns-templates-stoptime.js
-
-    map:
-        - public/javascripts/vendor/leaflet.js
-        - public/javascripts/ns-map.js
 
 stylesheets:
     all:
@@ -28,8 +26,6 @@ stylesheets:
 
     public:
         - public/stylesheets/main.css
-
-    map:
         - public/stylesheets/vendor/leaflet.css
         - public/stylesheets/map.css
 

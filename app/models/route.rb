@@ -3,6 +3,14 @@ class Route < ActiveRecord::Base
 		route_type == 2
 	end
 
+	def is_bus?
+		route_type == 3
+	end
+
+	def is_subway?
+		route_type == 1
+	end
+
 	def slug
 		(is_rail? ? route_id : route_short_name).downcase
 	end

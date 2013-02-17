@@ -45,6 +45,8 @@ class ApplicationController < ActionController::Base
 			if(params[:direction] != nil)
 				read_params_direction
 			end
+
+			get_route_shape
 		else
 			render "notfound"
 		end
@@ -79,5 +81,17 @@ class ApplicationController < ActionController::Base
 				end
 			end
 		end
+	end
+
+	def get_route_shape
+		coordinates = []
+		Shape.find_by_route_id(@route_id).each do |point|
+			coordinates << [point.shape_pt_lon, point.shape_pt_lat]
+		end
+
+		@coords = {
+			:type => "LineString",
+			:coordinates => coordinates
+		}
 	end
 end

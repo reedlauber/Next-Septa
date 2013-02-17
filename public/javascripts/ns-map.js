@@ -22,6 +22,16 @@
 					height: 37,
 					path: '/images/markers/bus.png'
 				},
+				rail: {
+					width: 32,
+					height: 37,
+					path: '/images/markers/rail.png'
+				},
+				trolley: {
+					width: 32,
+					height: 37,
+					path: '/images/markers/trolley.png'
+				},
 				user: {
 					width: 24,
 					height: 24,
@@ -31,6 +41,48 @@
 
 		var $map;
 
+		// Marker Functions
+		function _addMarkerInfo(marker, info) {
+			marker.unbindPopup();
+			marker.bindPopup(info, {
+				offset: L.point(57, -5),
+				closeButton: false,
+				className: 'ns-map-markerinfo s-corner-all-4'
+			});
+			marker.openPopup();
+		}
+
+		function _addMarker(x, y, info, type) {
+			var iconInfo = _icons[type || 'bus'],
+				icon = L.icon({
+					iconUrl: iconInfo.path,
+					iconSize: [iconInfo.width, iconInfo.height],
+					iconAnchor: [iconInfo.width/2, iconInfo.height-2]
+				});
+
+			var marker = L.marker([y, x], {
+				icon: icon,
+				title: info || ''
+			}).addTo(_map);
+
+			if(type !== 'user') {
+				_vehicleMarker = marker;
+			}
+
+			if(info) {
+				_addMarkerInfo(marker, info);
+			}
+		}
+
+		function _updateMarker(x, y, marker, label) {
+			marker.setLatLng([y, x]);
+
+			if(label) {
+				_addMarkerInfo(marker, label);
+			}
+		}
+
+		// Data/Location Functions
 		var _centering = false;
 		function _setExtendedLocation() {
 			if(_vehicle && _user) {
@@ -98,86 +150,44 @@
 			_setExtendedLocation();
 		}
 
-		function _addVehicles(routeId, vehicles) {
+		function _addVehicles(vehicles) {
 			$.each(vehicles, function(i, vehicle) {
-				if(vehicle.route_id === routeId) {
+				if(vehicle.route_id === _state.routeId && (!_state.direction || _state.direction === vehicle.direction)) {
 					var offset = parseInt(vehicle.offset, 10),
 						late = parseInt(vehicle.late, 10),
 						label = vehicle.mode === 'rail' ? (late + ' min' + (late === 1 ? '' : 's') + '  late') : (offset + ' min' + (offset == 1 ? '' : 's') + ' ago');
-					_addMarker(vehicle.lng, vehicle.lat, label);
+					_addMarker(vehicle.lng, vehicle.lat, label, vehicle.mode);
 				}
 			});
 		}
 
 		function _getVehicleLocations(vehicleId) {
-			var routeId = _state.routeId;
-			NXS.Data.get('/locations/' + routeId, function(resp) {
-				var vehicles = {};
-				if(resp.vehicles) {
-					$.each(resp.vehicles, function(i, bus) {
-						vehicles[bus.vehicle_id] = bus;
-					});
-				}
-				if(vehicleId) {
-					if(vehicleId in vehicles) {
-						_vehicle = vehicles[vehicleId];
-						_vehicle.lat = parseFloat(_vehicle.lat);
-						_vehicle.lng = parseFloat(_vehicle.lng);
-						_updateBusLocation();
-						setTimeout(function() {
-							_getBusLocation(routeId, vehicleId);
-						}, 60000); // 1 min
-					} else {
-						// SHOW WARNING THAT DATA COULDN'T BE FOUND
+			if(_state.routeId) {
+				NXS.Data.get('/locations/' + _state.routeId, function(resp) {
+					var lookup = {};
+					if(resp.vehicles) {
+						$.each(resp.vehicles, function(i, bus) {
+							lookup[bus.vehicle_id] = bus;
+						});
+
+						if(vehicleId) {
+							if(vehicleId in lookup) {
+								_vehicle = lookup[vehicleId];
+								_vehicle.lat = parseFloat(_vehicle.lat);
+								_vehicle.lng = parseFloat(_vehicle.lng);
+								_updateBusLocation();
+								setTimeout(function() {
+									_getVehicleLocations(vehicleId);
+								}, 60000); // 1 min
+							} else {
+								// SHOW WARNING THAT DATA COULDN'T BE FOUND
+							}
+						} else {
+							_addVehicles(resp.vehicles);
+						}
 					}
-				} else {
-					_addVehicles(routeId, resp.vehicles);
-				}
-			});
-		}
-
-		function _addMarkerInfo(marker, info) {
-			marker.unbindPopup();
-			marker.bindPopup(info, {
-				offset: L.point(57, 10),
-				closeButton: false,
-				className: 'ns-map-markerinfo s-corner-all-4'
-			});
-			marker.openPopup();
-		}
-
-		function _addMarker(x, y, info, type) {
-			var iconInfo = _icons[type || 'bus'],
-				icon = L.icon({
-					iconUrl: iconInfo.path,
-					iconSize: [iconInfo.width, iconInfo.height]
 				});
-
-			var marker = L.marker([y, x], {
-				icon: icon,
-				title: info || ''
-			}).addTo(_map);
-
-			if(type !== 'user') {
-				_vehicleMarker = marker;
 			}
-
-			if(info) {
-				_addMarkerInfo(marker, info);
-			}
-		}
-
-		function _updateMarker(x, y, marker, label) {
-			marker.setLatLng([y, x]);
-
-			if(label) {
-				_addMarkerInfo(marker, label);
-			}
-		}
-
-		function _setCenter(lng, lat, zoom) {
-			zoom = zoom || _zoom;
-			_map.setView([lat, lng], zoom);
 		}
 
 		function _setupRouteOverlay() {
@@ -200,9 +210,27 @@
 			}
 		}
 
+		function _setCenter(lng, lat, zoom) {
+			zoom = zoom || _zoom;
+			_map.setView([lat, lng], zoom);
+		}
+
 		function _adjustSize() {
-			var height = $(window).height() -  $('#header').outerHeight();
+			var height = $(window).height();
+			if(!$map.hasClass('nxs-map')) {
+				height -= $('#header').outerHeight();
+			}
 			$('#' + _options.id + '-inner').height(height);
+			if(_map) {
+				_map.invalidateSize();
+			}
+		}
+
+		function _checkResize() {
+			if(!_initialized && $map.is(':visible')) {
+				_initializeMap();
+			}
+			_adjustSize();
 		}
 
 		function _initializeMap() {
@@ -244,6 +272,8 @@
 			if($map.is(':visible')) {
 				_initializeMap();
 			}
+
+			$(window).resize(_checkResize);
 
 			return _self;
 		};

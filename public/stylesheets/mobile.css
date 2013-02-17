@@ -2,7 +2,7 @@
 
 @media screen and (max-width:320px) {
 	#container, #subfooter { width:320px; }
-	
+
 	#map-inner { height:400px; }
 }
 

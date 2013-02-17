@@ -127,8 +127,7 @@
 
 html, body { background-color:#5a5a5a;height:100%;background-image:url(../images/nxs-bg-noise.png); }
 
-#container { margin:0 auto;width:320px;position:relative;
-	-moz-box-shadow:0 4px 8px rgba(0, 0, 0, 0.5);-webkit-box-shadow:0 4px 8px rgba(0, 0, 0, 0.5);box-shadow:0 4px 8px rgba(0, 0, 0, 0.5); }
+#container { margin:0 auto;width:320px;position:relative;box-shadow:0 4px 8px rgba(0, 0, 0, 0.5); }
 
 	#header { color:#222;letter-spacing:1px;font-weight:bold;text-shadow:0 0 1px rgba(255, 255, 255, 0.8); }
 
@@ -160,6 +159,7 @@ html, body { background-color:#5a5a5a;height:100%;background-image:url(../images
 
 		#lookup { position:relative; }
 			#lookup aside { position:absolute;top:50%;right:0;margin-top:-1.0em;line-height:1.1; }
+			#term { box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2); }
 
 		#times { position:relative; }
 
@@ -177,15 +177,88 @@ html, body { background-color:#5a5a5a;height:100%;background-image:url(../images
 				-webkit-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.4) inset, 1px 1px 0px rgba(200, 200, 200, 0.4);
 				box-shadow:1px 1px 2px rgba(0, 0, 0, 0.4) inset, 1px 1px 0px rgba(200, 200, 200, 0.4); }
 
-	#subfooter { margin:0 auto;width:320px; }
+	#subfooter { margin:0 auto; }
 		#subfooter span { padding:8px; }
 			#subfooter a { font-weight:bold;color:#333; }
-			#subfooter a:hover { color:#aaa; }
+			#subfooter a:hover { color:#000; }
 		#follow { float:left; }
 		#madeby { float:right; }
 
-#beta { }
-	#beta header { font-size:1.6em; }
-	#beta p { margin-top:1em; }
-		#beta a { color:#363; }
-		#beta a:hover { text-decoration:underline; }
+
+.nxs-map {
+	display: none;
+}
+@media (min-width: 480px) {
+	.nxs-map {
+		display: block;
+	}
+		.nxs-map .leaflet-control-container .leaflet-top {
+			top: 1em;
+		}
+		.nxs-map .leaflet-control-container .leaflet-left {
+			left: 382px;
+		}
+		.nxs-map .leaflet-control-container .leaflet-top .leaflet-control {
+			margin-top: 0;
+		}
+	.nxs-map-icon {
+		display: none;
+	}
+	#container {
+		position: fixed;
+		top: 1em;
+		bottom: 1em;
+		left: 1em;
+		min-width: 362px;
+		max-width: 362px;
+		background-color:transparent;
+		box-shadow:none;
+	}
+		#container-inner {
+			position: absolute;
+			top: 0;
+			bottom: 24px;
+			width: 100%;
+			overflow: hidden;
+			background-color: rgba(255, 255, 255, 0.6);
+			box-shadow:0 2px 4px rgba(0, 0, 0, 0.4);
+		}
+			#content {
+				position: absolute;
+				top: 50px;
+				bottom: 44px;
+				width: 100%;
+				background-color: transparent;
+			}
+				#routes, #stops {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+				}
+				#content[data-type=buses] #routes {
+					top: 49px;
+				}
+				#stops {
+					top: 97px;
+				}
+				.nxs-items, #times {
+					background-color: #fff;
+				}
+			#footer {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+			#subfooter {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+				#subfooter span {
+					padding: 4px 16px;
+				}
+}
