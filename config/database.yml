@@ -1,5 +1,5 @@
 default: &DEFAULT
-  adapter: postgresql
+  adapter: pg
   encoding: utf8
   min_messages: warning
   database: septanow_dev
