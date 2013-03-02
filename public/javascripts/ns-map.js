@@ -127,7 +127,7 @@
 			}
 		}
 
-		function _updateBusLocation() {
+		function _updateVehicleLocation() {
 			var label = '',
 				offset = parseInt(_vehicle.offset, 10);
 			if(!isNaN(offset)) {
