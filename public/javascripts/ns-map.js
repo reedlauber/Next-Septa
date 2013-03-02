@@ -241,24 +241,24 @@
 
 			_map = L.map(_options.id + '-inner');
 
-			L.tileLayer('http://{s}.tile.cloudmade.com/fdb4e543deef4dccbc7d4383c5f3c783/86814/256/{z}/{x}/{y}.png?v=1', {
-				maxZoom: 22
-			}).addTo(_map);
+			wax.tilejson('http://api.tiles.mapbox.com/v3/reedlauber.map-55lsrr7u.jsonp', function(tileJson) { //reedlauber.map-55lsrr7u
+				_map.addLayer(new wax.leaf.connector(tileJson));
 
-			_setupRouteOverlay();
+				_setupRouteOverlay();
 
-			_getVehicleLocations(vehicleId);
+				_getVehicleLocations(vehicleId);
 
-			if(!_routeLayer || _options.centerOn != 'shape') {
-				_setCenter(_options.center.lng, _options.center.lat, 12);
-			}
+				if(!_routeLayer || _options.centerOn != 'shape') {
+					_setCenter(_options.center.lng, _options.center.lat, 12);
+				}
 
-			if(navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(function(position) {
-					_user = { lat:position.coords.latitude, lon:position.coords.longitude };
-					_addUserLocation();
-				});
-			}
+				if(navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(function(position) {
+						_user = { lat:position.coords.latitude, lon:position.coords.longitude };
+						_addUserLocation();
+					});
+				}
+			});
 
 			_initialized = true;
 		}

@@ -12,6 +12,7 @@ javascripts:
     public:
         - public/javascripts/ns-manager.js
         - public/javascripts/vendor/leaflet.js
+        - public/javascripts/vendor/wax.leaf.js
         - public/javascripts/ns-map.js
 
     stops:
