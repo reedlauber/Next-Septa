@@ -40,7 +40,7 @@ GEM
     builder (3.0.4)
     daemons (1.1.9)
     erubis (2.7.0)
-    eventmachine (1.0.0)
+    eventmachine (1.0.1)
     excon (0.16.10)
     fattr (2.2.1)
     heroku (2.35.0)
