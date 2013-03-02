@@ -28,7 +28,9 @@
 		$(function() {
 			NextSepta.Manager({
 				components: {
-					map: NextSepta.Map()
+					map: NextSepta.Map({
+						centerOn: 'user'
+					})
 				}
 			}).init();
 		});

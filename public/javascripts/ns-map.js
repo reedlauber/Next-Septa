@@ -75,7 +75,7 @@
 			}
 		}
 
-		function _updateBusLocation() {
+		function _updateVehicleLocation() {
 			var label = '',
 				offset = parseInt(_vehicle.offset, 10);
 			if(!isNaN(offset)) {
@@ -123,9 +123,9 @@
 						_vehicle = vehicles[vehicleId];
 						_vehicle.lat = parseFloat(_vehicle.lat);
 						_vehicle.lng = parseFloat(_vehicle.lng);
-						_updateBusLocation();
+						_updateVehicleLocation();
 						setTimeout(function() {
-							_getBusLocation(routeId, vehicleId);
+							_getVehicleLocations(vehicleId);
 						}, 60000); // 1 min
 					} else {
 						// SHOW WARNING THAT DATA COULDN'T BE FOUND
@@ -213,24 +213,28 @@
 
 			_map = L.map(_options.id + '-inner');
 
-			L.tileLayer('http://{s}.tile.cloudmade.com/fdb4e543deef4dccbc7d4383c5f3c783/86814/256/{z}/{x}/{y}.png?v=1', {
-				maxZoom: 22
-			}).addTo(_map);
+			wax.tilejson('http://api.tiles.mapbox.com/v3/reedlauber.map-55lsrr7u.jsonp', function(tileJson) { //reedlauber.map-55lsrr7u
+				_map.addLayer(new wax.leaf.connector(tileJson));
 
-			_setupRouteOverlay();
+				_setupRouteOverlay();
 
-			_getVehicleLocations(vehicleId);
+				_getVehicleLocations(vehicleId);
 
-			if(!_routeLayer || _options.centerOn != 'shape') {
-				_setCenter(_options.center.lng, _options.center.lat, 12);
-			}
+				if(!_routeLayer || _options.centerOn != 'shape') {
+					_setCenter(_options.center.lng, _options.center.lat, 12);
+				}
 
-			if(navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(function(position) {
-					_user = { lat:position.coords.latitude, lon:position.coords.longitude };
-					_addUserLocation();
-				});
-			}
+				if(navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(function(position) {
+						_user = { lat:position.coords.latitude, lon:position.coords.longitude };
+						_addUserLocation();
+					});
+				}
+			});
+
+			// L.tileLayer('http://{s}.tile.cloudmade.com/fdb4e543deef4dccbc7d4383c5f3c783/86814/256/{z}/{x}/{y}.png?v=1', {
+			// 	maxZoom: 22
+			// }).addTo(_map);
 
 			_initialized = true;
 		}

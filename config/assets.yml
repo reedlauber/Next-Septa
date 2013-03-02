@@ -18,6 +18,7 @@ javascripts:
 
     map:
         - public/javascripts/vendor/leaflet.js
+        - public/javascripts/vendor/wax.leaf.js
         - public/javascripts/ns-map.js
 
 stylesheets:
