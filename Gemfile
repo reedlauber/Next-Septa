@@ -9,5 +9,4 @@ gem "pg"
 
 group :development do
   gem "heroku"
-  gem "sqlite3"
 end
