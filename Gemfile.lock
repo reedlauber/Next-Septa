@@ -118,7 +118,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.35)
+    tzinfo (0.3.36)
     yui-compressor (0.9.6)
       POpen4 (>= 0.1.4)
 
