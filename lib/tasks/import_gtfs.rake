@@ -4,7 +4,7 @@ require "import_timer.rb"
 require "importer.rb"
 
 task :import_gtfs, [:type, :mode] => :environment do |t, args|
-	args.with_defaults(:type => "routeshapes", :mode => "all")
+	args.with_defaults(:type => "all", :mode => "all")
 
 	puts "Starting import for: \"#{args.type}\", mode: \"#{args.mode}\""
 
