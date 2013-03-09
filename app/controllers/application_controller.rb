@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
 
 	def read_params
 		@title = "NEXT&rarr;Septa | Next Stop Times for SEPTA Buses, Subways and Tolleys".html_safe
+		@page_title = "NEXT&rarr;Septa".html_safe
 
 		@route_type = params[:route_type]
 

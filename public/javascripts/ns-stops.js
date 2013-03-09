@@ -8,7 +8,7 @@
 			_manager,
 			_state,
 			_stops = [],
-			_buses = null;
+			_vehicles = {};
 
 		var _intervals = [{ l:'week', s:604800 }, { l:'day', s:86400 }, { l:'hr', s:3600 }, { l:'min', s:60 }];
 
@@ -48,28 +48,31 @@
 			}
 		}
 
-		function _updateRealTime() {
+		function _updateLocations() {
 			$('.nxs-stoptime').each(function() {
 				var blockId = $(this).attr('data-block'),
 					tripId = $(this).attr('data-trip');
-				if(blockId && blockId in _buses) {
-					var bus = _buses[blockId];
-					var mapUrl = _manager.getPath('map?bus=' + bus.vehicle_id + '&trip=' + tripId);
-					$('.nxs-stoptime-aside', this).html('<a href="' + mapUrl + '">map</a>')
+
+				var asideHtml = '';
+				if(blockId && blockId in _vehicles) {
+					var vehicle = _vehicles[blockId];
+					var mapUrl = _manager.getPath('map?vehicle=' + vehicle.vehicle_id + '&trip=' + tripId);
+					asideHtml = '<a href="' + mapUrl + '">map</a>';
 				}
+
+				$('.nxs-stoptime-aside', this).html(asideHtml);
 			});
 		}
 
-		function _getRealTimeData(routeId) {
-			NXS.Data.get('/locations/' + routeId, function(resp) {
-				_buses = {};
-				if(resp.vehicles) {
-					$.each(resp.vehicles, function(i, bus) {
-						_buses[bus.block_id] = bus;
-					});
-				}
-				_updateRealTime();
-			});
+		function _renderVehicles(vehicles) {
+			if(vehicles) {
+				$.each(vehicles, function(i, vehicle) {
+					if(vehicle.block_id) {
+						_vehicles[vehicle.block_id] = vehicle;
+					}
+				});
+				_updateLocations();
+			}
 		}
 
 		function _setupPaging() {
@@ -137,10 +140,14 @@
 				}
 			});
 
+			$(NXS).bind('vehicles-received', function(evt, vehicles) {
+				_renderVehicles(vehicles);
+			});
 
-			if(_state.routeType === 'buses' && _state.routeId) {
-				_getRealTimeData(_state.routeId);
-			}
+
+			// if(_state.routeType === 'buses' && _state.routeId) {
+			// 	_getRealTimeData(_state.routeId);
+			// }
 
 			_timer();
 

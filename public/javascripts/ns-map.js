@@ -185,6 +185,8 @@
 						} else {
 							_addVehicles(resp.vehicles);
 						}
+
+						$(NXS).trigger('vehicles-received', [resp.vehicles]);
 					}
 				});
 			}
@@ -241,7 +243,7 @@
 
 			_map = L.map(_options.id + '-inner');
 
-			wax.tilejson('http://api.tiles.mapbox.com/v3/reedlauber.map-55lsrr7u.jsonp', function(tileJson) { //reedlauber.map-55lsrr7u
+			wax.tilejson('http://api.tiles.mapbox.com/v3/reedlauber.map-55lsrr7u.jsonp', function(tileJson) {
 				_map.addLayer(new wax.leaf.connector(tileJson));
 
 				_setupRouteOverlay();

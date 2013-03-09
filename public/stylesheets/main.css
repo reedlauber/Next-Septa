@@ -228,7 +228,7 @@ html, body { background-color:#5a5a5a;height:100%;background-image:url(../images
 				top: 50px;
 				bottom: 44px;
 				width: 100%;
-				background-color: transparent;
+				/*background-color: transparent;*/
 			}
 				#routes, #stops {
 					position: absolute;

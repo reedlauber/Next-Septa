@@ -17,10 +17,10 @@ Nextsepta::Application.routes.draw do
   get "/data/:route_id" => "data#directions"
   get "/data" => "data#routes"
 
-  match ':controller(/:action(/:id(.:format)))'
+  #match ':controller(/:action(/:id(.:format)))'
 
   get "/:route_type/:route_id/map" => "map#index"
-  get "/:route_type/:route_id/:direction/:from_stop(/:to_stop)/map" => "map#bus"
+  get "/:route_type/:route_id/:direction/:from_stop(/:to_stop)/map" => "map#vehicle"
   get "/:route_type/:route_id/:direction/:from_stop/choose" => "stops#to"
   get "/:route_type/:route_id/:direction/:from_stop/:to_stop" => "stops#index"
   get "/:route_type/:route_id/:direction/:from_stop" => "stops#index"

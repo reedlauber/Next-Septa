@@ -1,5 +1,6 @@
 class MapController < ApplicationController
 	def index
+		create_headers
 		@page_title = "Route Map"
 		@back_path = "/#{@route_type}/#{@route_id}"
 
@@ -14,14 +15,14 @@ class MapController < ApplicationController
 		}
 	end
 
-	def bus
-		@page_title = "Bus Location"
+	def vehicle
+		@page_title = "Vehicle Location"
 		@back_path = "/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}"
 		if(@to != nil)
 			@back_path += "/#{@to.stop_id}"
 		end
 
-		@bus = params[:bus]
+		@bus = params[:vehicle]
 
 		if(params[:trip] != nil)
 			trip = Trip.where("trip_id = ?", params[:trip]).first
