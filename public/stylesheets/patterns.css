@@ -1,0 +1,32 @@
+body {
+	background-color: #fff;
+	background-image: none;
+}
+
+.patterns-header {
+	padding: 3em 2em;
+	background-color: #3c3c3c;
+	color: #e0e0e0;
+}
+	.patterns-header strong {
+		font-size: 2em;
+		font-weight: 100;
+		text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+	}
+
+.patterns-content {
+	padding: 2em;
+}
+	.patterns-section {
+		margin-bottom: 5em;
+	}
+
+	.patterns p {
+		margin: 1em 0;
+	}
+
+h1.patterns-h1 {
+	margin: 0.4em 0 0.2em;
+	font-size: 1.4em;
+	color: #da552d;
+}

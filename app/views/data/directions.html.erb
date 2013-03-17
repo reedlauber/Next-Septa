@@ -6,7 +6,7 @@
 		<% @directions.each do |d| %>
 			<li>
 				<a href="/data/<%=@route.slug %>/<%=d.direction_id %>">
-				<span class="nxs-routelabel"><%=d.direction_id %></span> <%=d.direction_name %><span class="icon"></span></a>
+				<span class="nxs-section-prefix"><%=d.direction_id %></span> <%=d.direction_name %><span class="icon"></span></a>
 			</li>
 		<% end %>
 		</ul>
@@ -18,7 +18,7 @@
 			<% @stops.each do |s| %>
 			<li>
 				<a href="javascript:void(0)">
-					<span class="nxs-routelabel"><%=sequence %></span>
+					<span class="nxs-section-prefix"><%=sequence %></span>
 					<%= s.stop_name %>
 				</a>
 			</li>

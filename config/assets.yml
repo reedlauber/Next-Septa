@@ -35,3 +35,6 @@ stylesheets:
 
     data:
         - public/stylesheets/data.css
+
+    patterns:
+        - public/stylesheets/patterns.css
