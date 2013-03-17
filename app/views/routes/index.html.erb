@@ -14,7 +14,7 @@
 	</ul>
 </div>
 <% end %>
-<ul id="routes" class="nxs-items nxs-resize">
+<ul id="routes" class="nxs-items nxs-scrollable">
 	<% @routes.each do |r| %>
 	<li class="nxs-section nxs-route nxs-route-<%=@route_type %>">
 		<% if(r.route_short_name[0] != @route_letter) %>

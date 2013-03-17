@@ -9,6 +9,7 @@ class Route < ActiveRecord::Base
 
 	def is_subway?
 		route_type == 1
+	end
 
 	def has_realtime?
 		route_type != 1

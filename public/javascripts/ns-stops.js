@@ -58,6 +58,9 @@
 					var vehicle = _vehicles[blockId];
 					var mapUrl = _manager.getPath('map?vehicle=' + vehicle.vehicle_id + '&trip=' + tripId);
 					asideHtml = '<a href="' + mapUrl + '">map</a>';
+					$('.nxs-stoptime-aside', this).addClass('active').find('a').attr('href', mapUrl).attr('title', 'View Vehicle Location');
+				} else {
+					$('.nxs-stoptime-aside', this).removeClass('active').find('a').attr('href', 'javascript:void(0)').attr('title', 'Couldn\'t Find Location Info');
 				}
 
 				$('.nxs-stoptime-aside', this).html(asideHtml);

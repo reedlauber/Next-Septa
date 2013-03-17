@@ -28,5 +28,6 @@ body {
 h1.patterns-h1 {
 	margin: 0.4em 0 0.2em;
 	font-size: 1.4em;
+	text-align: left;
 	color: #da552d;
 }
