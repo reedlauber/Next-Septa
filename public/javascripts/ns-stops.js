@@ -55,7 +55,9 @@
 				if(blockId && blockId in _buses) {
 					var bus = _buses[blockId];
 					var mapUrl = _manager.getPath('map?bus=' + bus.vehicle_id + '&trip=' + tripId);
-					$('.nxs-stoptime-aside', this).html('<a href="' + mapUrl + '">map</a>')
+					$('.nxs-stoptime-aside', this).addClass('active').find('a').attr('href', mapUrl).attr('title', 'View Vehicle Location');
+				} else {
+					$('.nxs-stoptime-aside', this).removeClass('active').find('a').attr('href', 'javascript:void(0)').attr('title', 'Couldn\'t Find Location Info');
 				}
 			});
 		}

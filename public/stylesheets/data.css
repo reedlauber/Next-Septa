@@ -16,7 +16,7 @@ h2 { margin-bottom:0.4em; }
 	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(220, 220, 220, 0.4)), to(rgba(200, 200, 200, 0.4))); }
 	.data-list li:first-child { border-top:0; }
 	.data-list li:last-child { border-bottom:0; }
-	
+
 		.data-list a { display:block;padding:12px 48px 12px 16px;position:relative; }
 			.data-list a .icon { display:none;position:absolute;top:50%;right:16px;margin-top:-8px;background:url(../images/gentleface/black/br_next_icon&16.png) no-repeat; }
 			.data-list a:hover { background-color:rgba(255, 255, 255, 0.3); }
@@ -27,7 +27,7 @@ h2 { margin-bottom:0.4em; }
 		.data-list-last a { cursor:default;background-color:transparent; }
 			.data-list-last a:hover .icon { display:none; }
 
-.nxs-routelabel { font-size:1.8em;color:#444;text-transform:uppercase;position:relative;bottom:-3px;color:#5a5a5a;border-right:1px solid #bbb;padding:0 12px 0 6px;margin-right:12px; }
+.nxs-section-prefix { font-size:1.8em;color:#444;text-transform:uppercase;position:relative;bottom:-3px;color:#5a5a5a;border-right:1px solid #bbb;padding:0 12px 0 6px;margin-right:12px; }
 
 html, body { background-color:#5a5a5a;height:100%;background-image:url(../images/nxs-bg-noise.png); }
 

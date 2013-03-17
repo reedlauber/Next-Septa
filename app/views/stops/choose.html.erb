@@ -1,14 +1,14 @@
-<h2 class="nxs-section nxs-route-type-<%=@route_type %> nxs-route nxs-route-<%=@route_id.downcase %>">
-	<a href="<%="/#{@route_type}/#{@route_id}" %>"><span class="nxs-routelabel"><%=@route.route_short_name %></span></a>
+<h2 class="nxs-section nxs-header-level2 nxs-route-type-<%=@route_type %> nxs-route nxs-route-<%=@route_id.downcase %>">
+	<a href="<%="/#{@route_type}/#{@route_id}" %>"><span class="nxs-section-prefix"><%=@route.route_short_name %></span></a>
 	<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}" %>" class="nxs-routedirection">
 		<%=@direction.direction_name %>
 		<% if(@direction.direction_long_name != nil) %>
 		<span class="nsx-section-sub">To: <%=@direction.direction_long_name %></span>
 		<% end %>
 	</a>
-	<a href="<%="/#{@route_type}/#{@route_id}/map" %>" class="s-corner-all-24 nxs-header-btn nxs-header-btn-right nxs-header-iconbtn nxs-map-icon" title="Route Map">map</a>
+	<a href="<%="/#{@route_type}/#{@route_id}/map" %>" class="s-corner-all-24 nxs-header-btn nxs-header-btn-right nxs-header-iconbtn nxs-icon-map" title="Route Map">map</a>
 </h2>
-<h3 class="nxs-section nxs-section-instruction">
+<h3 class="nxs-section nxs-header-level3">
 	<% if (@from == nil) %>
 	Choose Departing Stop
 	<% else %>
@@ -16,7 +16,7 @@
 	<p>From</p>
 	<% end %>
 </h3>
-<ul id="stops" class="nxs-items nxs-resize">
+<ul id="stops" class="nxs-items nxs-scrollable">
 	<% @stops.each do |s| %>
 	<li class="nxs-section">
 		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/" + (@from == nil ? "" : "#{@from.stop_id}/") + "#{s.stop_id}" %>" class="nxs-nav-link"><%=s.stop_name %></a>

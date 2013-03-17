@@ -9,7 +9,7 @@
 			<% list.each do |t| %>
 			<li>
 				<a href="<%= "/data/#{@route_id}/#{@direction_id}/#{t[:trip_id]}" %>">
-					<span class="nxs-routelabel"><%= t[:start_time].to_formatted_s(:display_time) if t[:start_time] != nil %></span>
+					<span class="nxs-section-prefix"><%= t[:start_time].to_formatted_s(:display_time) if t[:start_time] != nil %></span>
 					To: <%= t[:trip_headsign] %>
 					<span class="icon"></span>
 				</a>

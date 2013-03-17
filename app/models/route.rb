@@ -3,6 +3,10 @@ class Route < ActiveRecord::Base
 		route_type == 2
 	end
 
+	def has_realtime?
+		route_type != 1
+	end
+
 	def slug
 		(is_rail? ? route_id : route_short_name).downcase
 	end

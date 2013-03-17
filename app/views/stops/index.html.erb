@@ -1,14 +1,14 @@
-<h2 class="nxs-section nxs-route-type-<%=@route_type %> nxs-route nxs-route-<%=@route_id.downcase %>">
-	<a href="<%="/#{@route_type}/#{@route_id}" %>"><span class="nxs-routelabel"><%=@route.route_short_name %></span></a>
+<h2 class="nxs-section nxs-header-level2 nxs-route-type-<%=@route_type %> nxs-route nxs-route-<%=@route_id.downcase %>">
+	<a href="<%="/#{@route_type}/#{@route_id}" %>"><span class="nxs-section-prefix"><%=@route.route_short_name %></span></a>
 	<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}" %>" class="nxs-routedirection">
 		<%=@direction.direction_name %>
 		<% if(@direction.direction_long_name != nil) %>
 		<span class="nsx-section-sub">To: <%=@direction.direction_long_name %></span>
 		<% end %>
 	</a>
-	<a href="<%="/#{@route_type}/#{@route_id}/map" %>" class="s-corner-all-24 nxs-header-btn nxs-header-btn-right nxs-header-iconbtn nxs-map-icon" title="Route Map">map</a>
+	<a href="<%="/#{@route_type}/#{@route_id}/map" %>" class="s-corner-all-24 nxs-header-btn nxs-header-btn-right nxs-header-iconbtn nxs-icon-map" title="Route Map">map</a>
 </h2>
-<h3 class="nxs-section nxs-section-instruction nxs-stoptimes-stopnames s-cols">
+<h3 class="nxs-section nxs-header-level3 s-cols">
 	<div class="s-col s-col-1of2 nxs-stoptimes-stopnames-left">
 		<a href="<%="/#{@route_type}/#{@route_id}/#{@direction_id}/#{@from.stop_id}" %>" title="<%=@from.stop_name %>">
 			<%=@from.stop_name %>
@@ -16,8 +16,8 @@
 		<p>From</p>
 	</div>
 	<% if(@to != nil) %>
-	<div class="s-col nxs-stoptimes-stopnames-switch">
-		<a href="<%="/#{@route_type}/#{@route_id}/" + (@direction_id.to_i - 1).abs.to_s + "/#{@to.stop_id}/#{@from.stop_id}" %>" title="Reverse Stations"></a>
+	<div class="s-col">
+		<a href="<%="/#{@route_type}/#{@route_id}/" + (@direction_id.to_i - 1).abs.to_s + "/#{@to.stop_id}/#{@from.stop_id}" %>" title="Reverse Stations" class="nxs-icon-switch"></a>
 	</div>
 	<% end %>
 	<div class="s-col s-col-last nxs-stoptimes-stopnames-right">
@@ -27,7 +27,7 @@
 		<p>To</p>
 	</div>
 </h3>
-<section id="times" data-route="<%=@route_id %>">
+<section id="times" class="nxs-stoptimes<%=" nxs-route-norealtime" if !@route.has_realtime? %>" data-route="<%=@route_id %>">
 	<header class="nxs-stoptime-header s-clearfix">
 		<div class="nxs-stoptime-left">
 			Departs
@@ -38,11 +38,13 @@
 		</div>
 		<% end %>
 	</header>
-	<a href="javascript:void(0)" class="nxs-stoptimes-pager" data-dir="back">back</a>
-	<ul id="times-list" class="nxs-stoptimes">
+	<a href="javascript:void(0)" class="nxs-stoptimes-pager" data-dir="back">
+		<i class="nxs-icon-arrow-up"></i>
+	</a>
+	<ul id="times-list" class="nxs-stoptimes-list">
 		<% @stop_times.each do |st| %>
 		<li class="nxs-stoptime" data-block="<%=st["block_id"]%>" data-trip="<%=st["trip_id"] %>">
-			<div class="s-clearfix">
+			<div class="s-clearfix nxs-stoptime-times">
 				<div class="nxs-stoptime-left<%=" nxs-stoptime-nodest" if st["arrival_stop_time"] == nil %>">
 					<time datetime="<%=st["departure_time"].to_formatted_s(:display_iso_time) %>"><%=st["departure_time_formatted"] %></time>
 					<span data-time="<%=st["departure_time"] %>">(<%=st["from_now"] %>)</span>
@@ -52,7 +54,9 @@
 					<time datetime="<%=st["arrival_time_formatted"] %>"><%=st["arrival_time"].to_formatted_s(:display_time) %></time>
 				</div>
 				<% end %>
-				<div class="nxs-stoptime-aside"></div>
+				<% if(@route.has_realtime?) %>
+				<div class="nxs-stoptime-aside"><a href="javascript:void(0)" title="">map</a></div>
+				<% end %>
 			</div>
 			<% if(st["coverage_left"] != nil) %>
 			<div class="nxs-stoptime-coverage" title="approx. route coverage">
@@ -62,7 +66,9 @@
 		</li>
 		<% end %>
 	</ul>
-	<a href="javascript:void(0)" class="nxs-stoptimes-pager" data-dir="fwd">more</a>
+	<a href="javascript:void(0)" class="nxs-stoptimes-pager" data-dir="fwd">
+		<i class="nxs-icon-arrow-down"></i>
+	</a>
 </section>
 
 <% content_for :js do %>

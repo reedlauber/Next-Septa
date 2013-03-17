@@ -23,7 +23,7 @@
 		<% end %>
 		<a href="/<%=params[:route_type] + "/" + r.slug %>" class="nxs-nav-link">
 			<% if !r.is_rail? %>
-			<span class="nxs-routelabel"><%=r.route_short_name %></span>
+			<span class="nxs-section-prefix"><%=r.route_short_name %></span>
 			<% end %>
 			<%=r.route_long_name %>
 		</a>
