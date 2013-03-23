@@ -83,8 +83,6 @@ class StopTime < ActiveRecord::Base
           time_val, time_period = time_period.divmod(sub[1])
 
           name = sub[0].to_s[0]
-          name = "?"
-          #time_val == 1 ? name = sub[0].to_s.singularize : name = sub[0].to_s
 
           time_str += " " if !time_str.empty?
           time_str += time_val.to_s + "#{name}"

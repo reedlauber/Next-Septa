@@ -1,6 +1,6 @@
 NextSepta.Templates.stopTime = ['{{#stop_times}}',
 								'<li class="nxs-stoptime" data-block="{{block_id}}" data-trip="{{trip_id}}">',
-									'<div class="s-clearfix">',
+									'<div class="s-clearfix nxs-stoptime-times">',
 										'<div class="nxs-stoptime-left{{^arrival_stop_time}} nxs-stoptime-nodest{{/arrival_stop_time}}">',
 											'<time>{{departure_time_formatted}}</time>',
 											'<span data-time="{{departure_time}}">({{from_now}})</span>',
