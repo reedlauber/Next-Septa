@@ -18,7 +18,7 @@
 			if(diff < 0) {
 				return '(GONE)';
 			} else if(diff < 60) {
-				return '(< 1 min)';
+				return '(< 1m)';
 			} else {
 				var s = '', v = 0;
 				$.each(_intervals, function(i, inv) {
@@ -27,7 +27,7 @@
 						if(s) {
 							s += ' ';
 						}
-						s += v + ' ' + inv.l + (v == 1 ? '' : 's');
+						s += v + inv.l[0];
 						diff = diff % inv.s;
 					}
 				});

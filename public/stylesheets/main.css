@@ -24,6 +24,9 @@
 .nxs-icon-switch { background-image:url("../images/gentleface/black/arrow_two_head_2_icon&16.png"); }
 .nxs-icon-arrow-up { background-image:url("../images/gentleface/black/br_up_icon&16.png"); }
 .nxs-icon-arrow-down { background-image:url("../images/gentleface/black/br_down_icon&16.png"); }
+.nxs-icon-monitor { background-image:url("../images/gentleface/black/monitor_icon&16.png"); }
+.nxs-icon-tablet { background-image:url("../images/gentleface/black/phone_touch_icon&16.png"); }
+.nxs-icon-mobile { background-image:url("../images/gentleface/black/iphone_icon&16.png"); }
 
 /* App Headers */
 .nxs-header { color:#222;letter-spacing:1px;font-weight:bold;text-shadow:0 0 1px rgba(255, 255, 255, 0.8); }
@@ -109,7 +112,7 @@
 	.nxs-stoptimes-stopnames a { display:block; }
 	.nxs-stoptimes-stopnames-right { text-align:right; }
 
-.nxs-stoptimes { position:relative;padding:0 16px; }
+.nxs-stoptimes { position:relative;padding:0 8px; }
 .nxs-stoptime-header { padding:8px 0 0;width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box; }
 .nxs-stoptimes-list { overflow:hidden; }
 	.nxs-stoptime { padding:10px 0;position:relative; }
@@ -168,7 +171,7 @@
 			box-shadow:1px 1px 2px rgba(0, 0, 0, 0.4) inset, 1px 1px 0px rgba(200, 200, 200, 0.4); }
 
 /* Sub-footer */
-.nxs-subfooter { margin:0 auto;width:320px; }
+.nxs-subfooter { margin:0 auto;width:320px;max-width:100%; }
 	.nxs-subfooter span { padding:8px; }
 		.nxs-subfooter a { font-weight:bold;color:#333; }
 		.nxs-subfooter a:hover { color:#aaa; }

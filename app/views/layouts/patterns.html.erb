@@ -12,9 +12,23 @@
 <body class="patterns">
 	<header class="patterns-header">
 		<strong>NEXT|Septa UI Patterns</strong>
+		<span class="patterns-rwd-btn active" data-layout="desktop"><i class="nxs-icon-monitor" title="nxs-icon-monitor"></i></span>
+		<span class="patterns-rwd-btn" data-layout="tablet"><i class="nxs-icon-tablet" title="nxs-icon-tablet"></i></span>
+		<span class="patterns-rwd-btn" data-layout="mobile"><i class="nxs-icon-mobile" title="nxs-icon-mobile"></i></span>
 	</header>
 	<div class="patterns-content">
 		<%=yield %>
 	</div>
+	<script src="javascripts/vendor/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$content = $('.patterns-content');
+			$rwd_btns = $('.patterns-rwd-btn').click(function() {
+				$rwd_btns.removeClass('active');
+				$(this).addClass('active');
+				$content.removeClass('desktop tablet mobile').addClass($(this).data('layout'));
+			});
+		});
+	</script>
 </body>
 </html>
