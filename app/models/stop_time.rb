@@ -8,7 +8,7 @@ class StopTime < ActiveRecord::Base
     Time.parse(time_str)
   end
 
-  def convert!(to_stop)
+  def convert(to_stop)
     d_time = self.departure_time.strip
     d_time_parts = d_time.split(':')
     depart_time = 0
@@ -64,7 +64,7 @@ class StopTime < ActiveRecord::Base
   def self.convert_list(stop_times, to_stop)
     converted = []
     stop_times.each do |stop_time|
-      converted.push stop_time.convert!(to_stop)
+      converted.push stop_time.convert(to_stop)
     end
     converted
   end
@@ -76,16 +76,16 @@ class StopTime < ActiveRecord::Base
     if(time_period < 0)
         time_str = 'GONE'
     elsif(time_period < 60)
-        time_str = '< 1 min'
+        time_str = '< 1m'
     else
       interval_array.each do |sub|
         if time_period >= sub[1] then
           time_val, time_period = time_period.divmod(sub[1])
 
-          time_val == 1 ? name = sub[0].to_s.singularize : name = sub[0].to_s
+          name = sub[0].to_s[0]
 
-          (sub[0] != :mins ? time_str += ", " : time_str += " ") if time_str != ''
-          time_str += time_val.to_s + " #{name}"
+          time_str += " " if !time_str.empty?
+          time_str += time_val.to_s + "#{name}"
         end
       end
     end

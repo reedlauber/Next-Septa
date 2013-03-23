@@ -47,7 +47,7 @@
 			<div class="s-clearfix nxs-stoptime-times">
 				<div class="nxs-stoptime-left<%=" nxs-stoptime-nodest" if st["arrival_stop_time"] == nil %>">
 					<time datetime="<%=st["departure_time"].to_formatted_s(:display_iso_time) %>"><%=st["departure_time_formatted"] %></time>
-					<span data-time="<%=st["departure_time"] %>">(<%=st["from_now"] %>)</span>
+					<span data-time="<%=st["departure_time"] %>"> (<%=st["from_now"] %>)</span>
 				</div>
 				<% if(st["arrival_stop_time"] != nil) %>
 				<div class="nxs-stoptime-right">
