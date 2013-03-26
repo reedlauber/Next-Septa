@@ -5,7 +5,7 @@ class LocationController < ApplicationController
 	def index
 		route = Route.where("route_id = ? OR route_short_name = ?", params[:route_id], params[:route_id]).first
 
-		resp = '{ "success":true }'
+		resp = { :vehicles => [] }
 		if (route != nil)
 			if (route.is_rail?)
 				url = "http://www3.septa.org/hackathon/TrainView/"
